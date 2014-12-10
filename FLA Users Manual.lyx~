@@ -1,0 +1,5148 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+%\usepackage[pdf]{pstricks}
+\usepackage{pst-all}
+\usepackage{calc}
+\newcommand{\degree}{$^{\circ}$}
+\end_preamble
+\options DIV13
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman palatino
+\font_sans helvet
+\font_typewriter cmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_title "User's Manual"
+\pdf_author "Synercon Technologies, LLC"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue"
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle headings
+\bullet 2 0 9 -1
+\bullet 3 0 24 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subject
+Synercon Technologies, LLC
+\end_layout
+
+\begin_layout Title
+Forensic Link Adapter User's Manual
+\end_layout
+
+\begin_layout Date
+Version 1.0
+\begin_inset Newline newline
+\end_inset
+
+November 2014
+\end_layout
+
+\begin_layout Subtitle
+\begin_inset Graphics
+	filename SynerconLogo-V3-logoOnly.pdf
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Publishers
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.synercontechnologies.com"
+target "http://www.synercontechnologies.com"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Uppertitleback
+Disclaimer: The Synercon Technologies does not warrant the completeness
+ and accuracy of the information produced by its software.
+ While best efforts by industry experts have been made to generate information
+ from raw digital data, there may be untested variations, add-on packages,
+ errors or mistakes due to the large amount of data being processed.
+ It is the sole responsibility of the user of the Synercon Technologies
+ systems and Software to determine the fitness of the information provided
+ by the Software for any particular application and for each individual
+ case.
+ Synercon Technologies cannot warrant any loss of functionality due to the
+ lack of reliable network connection to the Synercon Server.
+ The user is responsible for establishing a reliable Internet connection
+ for the Software to fully function.
+ Synercon does not warrant that the Equipment and/or Software will be compatible
+ with each vehicle model.
+ Electronic components installed on the vehicles may be replacement parts
+ and not programmed to match the implementations of the Equipment, hence
+ Synercon cannot warrant the existence or accuracy of the data recorded
+ on the vehicle or the existence of a fault-free environment.
+ The information provided by the Software is to be used only by vehicle
+ manufacturer product experts, engineers, professional accident investigators
+ and traffic crash reconstruction specialists.
+ The user should agree that the use of the Software and Equipment requires
+ an appropriate level of skill and competence.
+ Since Synercon cannot warrant that the Equipment will create an environment
+ that does not set new fault codes in the vehicle’s electronic control module(s)
+ which may alter the digital data contained therein, the User assumes all
+ risks in using the Equipment for the purposes of preserving a digital record.
+ The user agrees to verify the Equipment is working according to this manual
+ before using it to support an investigation or reconstruction.
+ Synercon Technologies, LLC assumes no liability for incidental, consequential,
+ special or punitive damages, including but not limited to lost profits
+ and loss of data.
+ The user agrees to indemnify and hold harmless Synercon Technologies, LLC,
+ any of its employees, owners, officers, and managers from any legal action
+ involving the use of the data produced or stored by the software.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Using the Forensic Link Adapter
+\end_layout
+
+\begin_layout Section
+Specifications
+\end_layout
+
+\begin_layout Standard
+The Forensic Link Adapter is based on a powerful processor based on the
+ Texas Instruments AM335x 1GHz ARM® Cortex-A8 Processor.
+ It has 512MB of DDR3 RAM, 16 GB of internal storage, the NEON floating-point
+ accelerator and 2 PRU 32-bit microcontrollers.
+ The device has 2 Controller Area Network (CAN) channels, 2 J1708 Serial
+ Channels, 100/10 Mbps Ethernet, USB 2.0, and a full implementation of the
+ DG tech DPA4+ for RP1210 Compliance.
+ The device has a GPS receiver, Real Time Clock, an accelerometer, and a
+ rate Gyro.
+ The display uses Organic LEDs for better sunlight readability.
+ It runs embedded Linux and serves its own website.
+\end_layout
+
+\begin_layout Section
+Before Using the Forensic Link Adapter
+\end_layout
+
+\begin_layout Subsection
+Register as an Operator
+\end_layout
+
+\begin_layout Standard
+The fla-admin should send you an email to invite you to be an operator for
+ your FLA.
+ The fla-admin email is initiated by the Organization administrator inviting
+ a new operator.
+ For more details, please see Chapter 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "chap:Administrator's-Guide"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Connect the FLA to the Internet
+\end_layout
+
+\begin_layout Standard
+Connecting the FLA to the internet gives the FLA it full features.
+ The best method to connect to the internet is to use a wired Ethernet connectio
+n to a router that has a DHCP server running.
+ This is typical of most home networks.
+ 
+\end_layout
+
+\begin_layout Standard
+If a hard wired connection does not have a DHCP server running to provide
+ an IP address, then the FLA will wait for about 45 seconds then try to
+ serve an IP address to other computers on the network.
+ This is important functionality in the field where a DHCP server and router
+ may not be available.
+ 
+\end_layout
+
+\begin_layout Standard
+An additional DHCP server on a corporate or work network may conflict with
+ the your organization's IT policy.
+ If there are doubts, please discuss providing the FLA with a reliable internet
+ connection with your system administrators.
+ 
+\end_layout
+
+\begin_layout Subsection
+Setting the Time
+\end_layout
+
+\begin_layout Standard
+Once connected to the internet, the Forensic Link Adapter synchronizes the
+ time with a network time server.
+ This also sets the built in real time clock of the FLA, so accurate times
+ are kept in the Forensic Link Adapter.
+ A record of when the time was last set is stored and included in a time
+ log in the data report.
+ 
+\end_layout
+
+\begin_layout Section
+Working with the Forensic Link Adapter
+\end_layout
+
+\begin_layout Standard
+Once an investigator has established permission to download the data from
+ a vehicle, the key needs to be turned to the on (not start) position for
+ the FLA to communicate with the Electronic Control Modules (ECMs).
+ The FLA can be plugged into the 9-pin diagnostic connector, which is usually
+ located below the dash on the left side or to the left of the driver's
+ seat.
+ If the ECM was removed, then it should be connected through a Smart Sensor
+ Simulator that emulates a truck.
+ 
+\end_layout
+
+\begin_layout Subsection
+Powering Up
+\end_layout
+
+\begin_layout Standard
+The FLA should start up automatically if power is available at the 9-pin
+ diagnostic connector.
+ 
+\end_layout
+
+\begin_layout Standard
+If the FLA does not power up when connected, check the voltage between pins
+ A and B with a multimeter.
+ This should read more than 11 volts for you to have sufficient power and
+ time to get the data.
+ If there is power available on those pins and the FLA did not start up,
+ check for loose cables and connections.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAStartupFirstScreen.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Initial Start-up Screen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAStartupSplashScreen.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Splash Screen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAStartupProgramStarting.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Program Starting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAStatusScreen.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Status Screen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Start up sequence on the front display panel.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Shutting Down
+\end_layout
+
+\begin_layout Standard
+Since the Forensic Link Adapter is running the Linux operating system, it
+ is best to shut down the device through the operating system.
+ This means the user should take care to actively shut down the device by
+ selecting shutdown from the menu or pressing the shutdown button on the
+ web interface.
+\end_layout
+
+\begin_layout Standard
+The shut down sequence displayed on the front panel is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Shutdown-sequence-for"
+
+\end_inset
+
+.
+ The user navigates to the Shutdown option by pressing the red button in
+ the Main Menu.
+ Pressing the green button activates the shutdown sequence.
+ The shutdown sequence starts by issuing a command to the operating system
+ to shut down.
+ A message is sent to the display driver to initiate the shutdown sequence
+ also.
+ The display driver waits till the Linux system shuts off then displays
+ the message seen in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Shutdown-Complete"
+
+\end_inset
+
+.
+ At this time, it is safe to unplug the system.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Shutdown-Progress"
+
+\end_inset
+
+ shows an arrow that points to a yellow blinking status LED during the shutdown
+ process.
+ Once the shutdown is complete a solid red LED comes on, as shown by the
+ arrow in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Shutdown-Complete"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAShutdownMenu.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Shutdown-Menu-Option"
+
+\end_inset
+
+Shutdown Menu Option
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAShutdownProgress.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Shutdown-Status-Screen"
+
+\end_inset
+
+Shutdown Status Screen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAShutdownLEDIndicator.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Shutdown-Progress"
+
+\end_inset
+
+Shutdown Progress
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAShutdownFinished.jpg
+	lyxscale 20
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Shutdown-Complete"
+
+\end_inset
+
+Shutdown Complete
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Shutdown-sequence-for"
+
+\end_inset
+
+Shutdown sequence for the Forensic Link Adapter.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Updating the FLA
+\end_layout
+
+\begin_layout Standard
+To update the FLA:
+\end_layout
+
+\begin_layout Enumerate
+Plug the Ethernet connector into a known good internet connection.
+ This may be a live wall jack, a home router, or tethered through a laptop
+ that is sharing a wireless internet connection.
+ A system administrator may have to help configure a work network to provide
+ a sufficient internet connection.
+\end_layout
+
+\begin_layout Enumerate
+Power on the FLA.
+ It will automatically boot an display an IP address on the Status Menu
+ screen.
+ 
+\end_layout
+
+\begin_layout Enumerate
+With a computer connected to the same network as the FLA, navigate a browser
+ to the IP address show on the front panel of the FLA.
+ This should pull up the web interface for the Forensic Link Adapter.
+\end_layout
+
+\begin_layout Enumerate
+From the main web interface, click the Update Software link
+\end_layout
+
+\begin_layout Enumerate
+Confirm a software update by clicking the link on the page to start the
+ updating process.
+\end_layout
+
+\begin_layout Enumerate
+The process to update the FLA takes a long time, so please be patient and
+ leave the device plugged into power and the Internet as it is performing
+ its update.
+\end_layout
+
+\begin_layout Section
+Display Screen Menu System
+\end_layout
+
+\begin_layout Standard
+The FLA has a built in 4X20 character display to give the user an indication
+ of the status of the system.
+ Press the red button to scroll through different menu options.
+ Press the green button to select that highlighted function.
+ Some screens are informational and either button can be used to advance
+ the operation of the menu.
+\end_layout
+
+\begin_layout Standard
+Upon boot, the starup screen will display with a progress bar coming across
+ the bottom, as shown in Figure .
+ Once the progress bar completes, the screen will blank, and then start
+ the FLA extraction screen.
+\end_layout
+
+\begin_layout Section
+Menu Screen Descriptions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Menu-Screen-Descriptions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{unit=.95cm,arrowscale=2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{pspicture}(-1,0)(15,21)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+psgrid[gridcolor=white,subgridcolor=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,22){
+\backslash
+rnode{Startup}{
+\backslash
+ref{enu:Startup}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Synercon Tech.
+ FLA 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}~
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{3ex}Starting Up...
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+[][][]}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,22){
+\backslash
+rnode{Execute}{
+\backslash
+ref{enu:Execute}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Operating~system 
+\end_layout
+
+\begin_layout Plain Layout
+
+successfully~loaded.
+\end_layout
+
+\begin_layout Plain Layout
+
+Data~extraction
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}program~starting...}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Startup}{Execute}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{<30 sec.}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,18.5){
+\backslash
+rnode{Status}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:StatusA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+No~Vehicle~Net~ZZ.ZV 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:StatusB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+CAN Bus Only~~~12.1V 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~Scan}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:StatusC}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+1708/1587~Only~ZZ.ZV 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~Scan}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:StatusD}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+CAN and J1708~~ZZ.ZV 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~Scan}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Execute}{Status}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{<15 sec.}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](9,13){
+\backslash
+rnode{Permission}{
+\backslash
+ref{enu:Permission}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Do~you~have~proper 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{3ex}permission to 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}download digital  
+\end_layout
+
+\begin_layout Plain Layout
+
+No~~~~~data?~~~~~Yes}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Status}{Permission}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Permission}{Status}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](12,9.5){
+\backslash
+circlenode{B}{
+\backslash
+Huge{B}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Permission}{B}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,12){
+\backslash
+rnode{Shutdown}{
+\backslash
+ref{enu:Shutdown}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Shutdown~the~FLA 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{4ex}Safely?
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~Shutdown}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Status}{Shutdown}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](5,9){
+\backslash
+rnode{Shutdown-Confirm}{
+\backslash
+ref{enu:Shutdown-Confirm}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Are you sure you 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}want to shutdown?
+\end_layout
+
+\begin_layout Plain Layout
+
+All files will save.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+No~~~~~~OK,~Shutdown}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown}{Shutdown-Confirm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,14){
+\backslash
+circlenode{A}{
+\backslash
+Huge{A}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{A}{Shutdown}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,6.5){
+\backslash
+rnode{Shutdown-Sequence}{
+\backslash
+ref{enu:Shutdown-Sequence}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Please do not unplug
+\end_layout
+
+\begin_layout Plain Layout
+
+while shutdown is in
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{6ex}progress.
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{3ex}Please wait...}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown-Confirm}{Shutdown-Sequence}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](14,9){
+\backslash
+circlenode{G}{
+\backslash
+Huge{G}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{G}{Shutdown-Sequence}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,3){
+\backslash
+rnode{Shutdown-Complete}{
+\backslash
+ref{enu:Shutdown-Complete}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Shutdown Complete
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}~
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}~
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Ready to Unplug}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown-Sequence}{Shutdown-Complete}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{<35 sec}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,5){
+\backslash
+rnode{Upload}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:UploadA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Upload data on FLA 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Internet Ready
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~Upload}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:UploadB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Upload data on FLA.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+No~Network~to~Server
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown-Confirm}{Upload}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown}{Upload}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,7){
+\backslash
+circlenode{C}{
+\backslash
+Huge{C}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{C}{Upload}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,1.5){
+\backslash
+circlenode{D}{
+\backslash
+Huge{D}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload}{D}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](2,1.5){
+\backslash
+circlenode{E}{
+\backslash
+Huge{E}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](13,18){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{F}{Status}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menu1"
+
+\end_inset
+
+Forensic Link Adapter Screen Menu System as enumerated in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Menu-Screen-Descriptions"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{unit=1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{arrowscale=2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{pspicture}(0,0)(15,21)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+psgrid[gridcolor=white,subgridcolor=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,21.5){
+\backslash
+circlenode{E}{
+\backslash
+Huge{E}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,19.5){
+\backslash
+rnode{Network}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:NetworkA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Change IP Settings? 
+\end_layout
+
+\begin_layout Plain Layout
+
+DHCP Server Disabled
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~Enable}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:NetworkB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Change IP Settings? 
+\end_layout
+
+\begin_layout Plain Layout
+
+DHCP Server Enabled
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~Disable}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{E}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](12.5,20){
+\backslash
+rnode{DHCP}{
+\backslash
+ref{enu:DHCP}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Enabling DHCP may 
+\end_layout
+
+\begin_layout Plain Layout
+
+affect the network.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+For field use only.
+\end_layout
+
+\begin_layout Plain Layout
+
+Cancel~~~~~~~~Enable}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Network}{DHCP}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green(
+\backslash
+ref{enu:NetworkA})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{DHCP}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleA=220,angleB=330,ncurvA=.5,ncurvB=.5]{->}{DHCP}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleA=30,angleB=80,ncurvA=1.5,ncurvB=1.5]{->}{Network}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green(
+\backslash
+ref{enu:NetworkB})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,16){
+\backslash
+rnode{GPS}{
+\backslash
+ref{enu:GPS-Status}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+GPS Lat:~XX.XXXXXX N
+\end_layout
+
+\begin_layout Plain Layout
+
+GPS Lng:YYY.YYYYYY W 
+\end_layout
+
+\begin_layout Plain Layout
+
+Vel:SS.S mph Dir:ddd
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~Pt:nnnn~Save}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Network}{GPS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleA=250,angleB=290,ncurvA=2.5,ncurvB=2.5]{->}{GPS}{GPS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](2,11){
+\backslash
+circlenode{FromFig2D}{
+\backslash
+Huge{D}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,8){
+\backslash
+rnode{UploadToServer}{
+\backslash
+ref{enu:UploadToServer}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Upload to Server
+\end_layout
+
+\begin_layout Plain Layout
+
+Connection: AAAAAAA 
+\end_layout
+
+\begin_layout Plain Layout
+
+Files to Upload: NN
+\end_layout
+
+\begin_layout Plain Layout
+
+Files Remaining: NN}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{FromFig2D}{UploadToServer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,4){
+\backslash
+rnode{Upload-Failed}{
+\backslash
+ref{enu:Upload-Failed}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Server unavailable.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX  
+\end_layout
+
+\begin_layout Plain Layout
+
+Err:~abcdefghijklmno
+\end_layout
+
+\begin_layout Plain Layout
+
+Cancel~~~~~~~~~Retry}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UploadToServer}{Upload-Failed}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,4){
+\backslash
+rnode{Upload-Success}{
+\backslash
+ref{enu:Upload-Success}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Upload Successful.
+\end_layout
+
+\begin_layout Plain Layout
+
+See results at
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}FLA Portal website
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~Shutdown}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UploadToServer}{Upload-Success}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{<60 sec.}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Failed}{UploadToServer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Failed}{UploadToServer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](12,1){
+\backslash
+circlenode{A}{
+\backslash
+Huge{A}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Success}{A}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,1){
+\backslash
+circlenode{E}{
+\backslash
+Huge{E}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Success}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Failed}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,14){
+\backslash
+rnode{Update}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:UpdateA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Update~FLA~software.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Internet Ready
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~Update}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:UpdateB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Update~FLA~software.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+No~Network~to~Server
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{GPS}{Update}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,11){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Update}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,10){
+\backslash
+rnode{UpdateConfirm}{
+\backslash
+ref{enu:UpdateConfirm}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Are~you~sure~you 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}want~to~update?
+\end_layout
+
+\begin_layout Plain Layout
+
+It~takes~some~time.
+\end_layout
+
+\begin_layout Plain Layout
+
+Cancel~~~~OK,~Update}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Update}{UpdateConfirm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UpdateConfirm}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,7){
+\backslash
+rnode{UpdateProgress}{
+\backslash
+ref{enu:Update-Progress}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Updating, please do 
+\end_layout
+
+\begin_layout Plain Layout
+
+not unplug cables.
+\end_layout
+
+\begin_layout Plain Layout
+
+xxxxxxxxxxxxxxxxxxxx
+\end_layout
+
+\begin_layout Plain Layout
+
+|[][][][][][][]|yyy
+\backslash
+%}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UpdateConfirm}{UpdateProgress}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](14,3){
+\backslash
+circlenode{G}{
+\backslash
+Huge{G}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UpdateProgress}{G}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](6,8){
+\backslash
+ovalnode{FLAWeb}{FLA Web Command}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{FLAWeb}{UpdateProgress}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menu2"
+
+\end_inset
+
+Forensic Link Adapter Screen Menu System (cont.) as enumerated in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Menu-Screen-Descriptions"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{unit=1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{arrowscale=2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{pspicture}(-2,0)(15,21)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+psgrid[gridcolor=white,subgridcolor=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,21){
+\backslash
+circlenode{B}{
+\backslash
+Huge{B}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,19){
+\backslash
+rnode{Identify}{
+\backslash
+ref{enu:Identifying-Vehicle}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Scanning~vehicle~net   
+\end_layout
+
+\begin_layout Plain Layout
+
+J1939 Data Count: NN
+\end_layout
+
+\begin_layout Plain Layout
+
+J1587 Data Count: MM
+\end_layout
+
+\begin_layout Plain Layout
+
+|[][][][][][][]|yyy
+\backslash
+%}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{B}{Identify}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](8,19){
+\backslash
+rnode{ID}{
+\backslash
+ref{enu:Id-Vehicle}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+ECM Identification   
+\end_layout
+
+\begin_layout Plain Layout
+
+Make:~AAAAA~MMMMMMMM 
+\end_layout
+
+\begin_layout Plain Layout
+
+VIN:~bbbbbbbbbbbbbbb 
+\end_layout
+
+\begin_layout Plain Layout
+
+Back~~~~~~~~Continue}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Identify}{ID}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{<60 sec}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](13,21){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{ID}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,15){
+\backslash
+rnode{VehicleID}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:ECMa}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}ECM Specific Data 
+\end_layout
+
+\begin_layout Plain Layout
+
+Get Events, Config.,
+\end_layout
+
+\begin_layout Plain Layout
+
+History, and Faults.
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~Get Data}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:ECMb}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}ECM Specific Data 
+\end_layout
+
+\begin_layout Plain Layout
+
+ECM Not Supported.
+\end_layout
+
+\begin_layout Plain Layout
+
+Use OEM PC Software? 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~RP1210}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{ID}{VehicleID}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,11){
+\backslash
+rnode{RP1210}{
+\backslash
+ref{enu:RP1210}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Enable USB RP1210 
+\end_layout
+
+\begin_layout Plain Layout
+
+with forensic write-
+\end_layout
+
+\begin_layout Plain Layout
+
+blocking feature?
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~Enable}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{VehicleID}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green(
+\backslash
+ref{enu:ECMb})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleB=80,angleA=220]{->}{VehicleID}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](6.5,10.5){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,7){
+\backslash
+rnode{RP1210Enabled}{
+\backslash
+ref{enu:RP1210Enabled}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Passthrough mode on.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Plug in USB cable.
+\end_layout
+
+\begin_layout Plain Layout
+
+IP: XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+Back~~~~~~~~~~Upload}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210}{RP1210Enabled}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210Enabled}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](4,4){
+\backslash
+circlenode{C}{
+\backslash
+Huge{C}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210Enabled}{C}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](10,11){
+\backslash
+rnode{GettingECMData}{
+\backslash
+ref{enu:GettingECMdata}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Getting ECM Data...
+\end_layout
+
+\begin_layout Plain Layout
+
+<Data Sought>
+\end_layout
+
+\begin_layout Plain Layout
+
+<Success | Fail>
+\end_layout
+
+\begin_layout Plain Layout
+
+|[][][][][][][]|yyy
+\backslash
+%}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{VehicleID}{GettingECMData}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green(
+\backslash
+ref{enu:ECMa})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](9,7){
+\backslash
+rnode{DoneECMData}{
+\backslash
+ref{enu:DoneECMdata}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Finished ECM Data.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Downloaded YYY.YkB
+\end_layout
+
+\begin_layout Plain Layout
+
+IP: XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+RP1210~~~~~~~~Upload}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{GettingECMData}{DoneECMData}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{DoneECMData}{C}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{DoneECMData}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menu2-1"
+
+\end_inset
+
+Forensic Link Adapter screen display when scanning a vehicle.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Startup"
+
+\end_inset
+
+A startup screen is shown on boot.
+ A progress bar scrolls across the bottom in about 20 seconds.
+ After that, the progress bar may change to say the workds 
+\begin_inset Quotes eld
+\end_inset
+
+Please Wait...
+\begin_inset Quotes erd
+\end_inset
+
+ If the message to please wait stays on and the automatic transition to
+ display 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Execute"
+
+\end_inset
+
+ does not happen within 30 seconds, the system may not have booted.
+ See Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:FailsToBoot"
+
+\end_inset
+
+ for further troubleshooting guidance.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Execute"
+
+\end_inset
+
+Program loading screen
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Status"
+
+\end_inset
+
+Status screen
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusA"
+
+\end_inset
+
+No vehicle Connected
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusB"
+
+\end_inset
+
+Controller Area Network (J1939)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusC"
+
+\end_inset
+
+J1708
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusD"
+
+\end_inset
+
+Both CAN and J1708
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown"
+
+\end_inset
+
+Shutdown
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown-Confirm"
+
+\end_inset
+
+Shutdown Confirm
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown-Sequence"
+
+\end_inset
+
+Shutdown Sequence
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown-Complete"
+
+\end_inset
+
+Shutdown Complete
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Permission"
+
+\end_inset
+
+Permission Screen
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Upload-to-Server"
+
+\end_inset
+
+Upload to Server
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UploadA"
+
+\end_inset
+
+Internet is ready
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UploadB"
+
+\end_inset
+
+Internet is not ready
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UploadToServer"
+
+\end_inset
+
+ Files to upload
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Upload-Failed"
+
+\end_inset
+
+Upload Failed.
+ An error code is displayed in place of abcdefghijklmno.
+ This error code will be important to the Synercon Support staff.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Upload-Success"
+
+\end_inset
+
+Upload Successful
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Change IP network settings
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:NetworkA"
+
+\end_inset
+
+Disabled
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:NetworkB"
+
+\end_inset
+
+Enabled
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:DHCP"
+
+\end_inset
+
+Field use only
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:GPS-Status"
+
+\end_inset
+
+GPS Status Display.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Update FLA software.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UpdateA"
+
+\end_inset
+
+Connection is ready
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UpdateConfirm"
+
+\end_inset
+
+Update Confirm
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Update-Progress"
+
+\end_inset
+
+Update Progress
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UpdateB"
+
+\end_inset
+
+No access to update server
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Identifying-Vehicle"
+
+\end_inset
+
+Scan Vehicle Network.
+ The field of <pid> is either at J1587 PID or a J1939 SPN
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Id-Vehicle"
+
+\end_inset
+
+ECM Identification.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:ECM-Specific-Data"
+
+\end_inset
+
+ECM Specific Data
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:ECMa"
+
+\end_inset
+
+Vehicle supported
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:ECMb"
+
+\end_inset
+
+No current support for getting ECM Specific Data
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:GettingECMdata"
+
+\end_inset
+
+Getting ECM data
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:DoneECMdata"
+
+\end_inset
+
+Done getting ECM data
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+RP1210 Passthrough Mode
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:RP1210"
+
+\end_inset
+
+Choose Mode
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:RP1210Enabled"
+
+\end_inset
+
+Passthrough on.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+IP Addresses
+\end_layout
+
+\begin_layout Standard
+The IP address Line can have the following Statements:
+\end_layout
+
+\begin_layout Description
+IP:
+\begin_inset space ~
+\end_inset
+
+XXX.XXX.XXX.XXX A valid IP address
+\end_layout
+
+\begin_layout Description
+IP:
+\begin_inset space ~
+\end_inset
+
+10.0.0.1 The IP address when the FLA's DHCP server is activated.
+ The FLA will give other devices on the network an IP address too, which
+ may cause problems on an established network.
+ For example, if t
+\end_layout
+
+\begin_layout Description
+Ethernet
+\begin_inset space ~
+\end_inset
+
+Unplugged There is no live connection between the FLA and an outside device.
+\end_layout
+
+\begin_layout Description
+Finding
+\begin_inset space ~
+\end_inset
+
+IP
+\begin_inset space ~
+\end_inset
+
+Address The ethernet connection is plugged in and linked to another connection,
+ but the FLA has not been issued an IP address from the network router.
+\end_layout
+
+\begin_layout Chapter
+Obtaining Data With Manufacturer's Software
+\end_layout
+
+\begin_layout Standard
+There are two protocols used to communicate over a heavy truck: 1) J1939,
+ and 2) J1708.
+ These modes are needed to make use of the DG RP1210 embedded device used
+ to communicate with Manufacturer’s software.
+ 
+\end_layout
+
+\begin_layout Section
+Installing Programs and Drivers
+\end_layout
+
+\begin_layout Subsection
+RP1210 Drivers
+\end_layout
+
+\begin_layout Standard
+The FLA uses the DG Technologies drivers to enable Windows programs to communica
+te with the ECMs.
+ Download and install the drivers on your laptop or local machine from
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.dgtech.com/product/dpa/software/DPA4P_136.zip"
+target "http://www.dgtech.com/product/dpa/software/DPA4P_136.zip"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For more information, see the DG website
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.dgtech.com/product/dpa4plus/downloads/downloads.php"
+
+\end_inset
+
+.
+ The Adapter Validation Tool is a useful program to test the connections
+ between the computer, FLA, and Vehicle.
+\end_layout
+
+\begin_layout Subsection
+Manufacturer's Software
+\end_layout
+
+\begin_layout Standard
+Download Cummins PowerSpec from
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+target "http://cumminsengines.com/powerspec"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+This will only work on Windows 7 or newer.
+ You need to register PowerSpec for free, but you do not have a license
+ the program for it to work.
+\end_layout
+
+\begin_layout Standard
+Download Detroit Diesel DDEC Reports from
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+target " http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The direct download link is
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.ddcsn.com/cps/rde/xbcr/ddcsn/DDECReports805.exe"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Restart your computer after installing.
+ 
+\end_layout
+
+\begin_layout Subsection
+PDF Printer
+\end_layout
+
+\begin_layout Standard
+If a PDF generator is not installed on your computer system, then having
+ the ability to print to PDF is useful.
+ An example of a free PDF printer is the BullZip 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "BullZip PDF printer"
+target "http://www.bullzip.com/products/pdf/download.php"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Enabling RP1210 Passthrough Mode
+\end_layout
+
+\begin_layout Standard
+If the ECM is a Caterpillar, DDEC IV DDEC V, or MBE, then enable the J1708
+ Pass-through mode from the FLA menu screen.
+\end_layout
+
+\begin_layout Standard
+If the ECM is a Cummins, DDEC VI, DDEC 10, then enable J1939.
+\end_layout
+
+\begin_layout Standard
+Once enabled, connect a USB cable from the FLA to the laptop with the DG
+ drivers installed.
+\end_layout
+
+\begin_layout Section
+Cummins PowerSpec Download Protocol
+\end_layout
+
+\begin_layout Enumerate
+Turn the ignition key to the on position (if it is not already on), but
+ do not start the engine.
+\end_layout
+
+\begin_layout Enumerate
+Plug in the FLA to the diagnostic connector.
+ Ensure it powers on and boots.
+\end_layout
+
+\begin_layout Enumerate
+Perform a Standards based download using FLA Diagnostics.
+\end_layout
+
+\begin_layout Enumerate
+Enable J1939 Passthrough mode
+\end_layout
+
+\begin_layout Enumerate
+Launch DG Adapter Validation Tool (AVT).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Select the appropriate installed device driver.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Switch the protocol to J1939 in the adapter validation tool.
+\end_layout
+
+\begin_layout Enumerate
+Click Run Test.
+\end_layout
+
+\begin_layout Enumerate
+If the Adapter Validation Tool passes the test, then two windows will turn
+ green as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Adapter-Validation-Tool"
+
+\end_inset
+
+.
+ This means the ECM and the computer are connected through the RP1210 Device.
+ If a test fails, review the suggestions output by the Adapter Validation
+ Tool and try again.
+ It may require shutting down the FLA, unplugging the USB, and disconnecting
+ the FLA from power.
+ Similarly, the PC may need to be rebooted.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Open Cummins PowerSpec.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Click on Advanced -> Settings and set the settings like the ones shown in
+ Figure
+\end_layout
+
+\begin_layout Enumerate
+Click on Connect.
+\end_layout
+
+\begin_layout Enumerate
+Click Read Data
+\end_layout
+
+\begin_layout Enumerate
+If available:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Press the Fault Codes button and Save the report as a PDF file.
+\end_layout
+
+\begin_layout Enumerate
+Press the Trip Information button and Save the report as a PDF file.
+\end_layout
+
+\begin_layout Enumerate
+Press the Feature Settings button and Save the report as a PDF file.
+\end_layout
+
+\begin_layout Enumerate
+Press the Sudden Decel button and Save the report as a PDF file.
+\end_layout
+
+\begin_layout Enumerate
+Press the Dataplate button and Save the report as a PDF file.
+\end_layout
+
+\begin_layout Enumerate
+Press the Duty Cycle button and Save the report as a PDF file.
+\end_layout
+
+\begin_layout Enumerate
+Press the After Treatment button and Save the report as a PDF file.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Exit passthrough mode by pressing a button on the FLA.
+ Exiting this mode takes some time, so the button press may not work at
+ first.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Establish Internet connection with the FLA.
+ An IP address other than 10.0.0.1 should show up on the FLA display.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Scroll to the Upload to Server option on the FLA and upload the data to
+ the server.
+\end_layout
+
+\begin_layout Section
+DDEC Reports Download Protocol
+\end_layout
+
+\begin_layout Enumerate
+Turn the ignition key to the on position (if it is not already on), but
+ do not start the engine.
+\end_layout
+
+\begin_layout Enumerate
+Plug in the FLA to the diagnostic connector.
+ Ensure it powers on and boots.
+\end_layout
+
+\begin_layout Enumerate
+Perform a Standards based download using FLA Diagnostics.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Enable-the-network"
+
+\end_inset
+
+Enable the network passthrough mode
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Use J1708 Passthrough mode for DDEC IV, DDEC V, and Pre-2008 Mercedes Engines.
+\end_layout
+
+\begin_layout Enumerate
+Use J1939 Passthrough mode (selected from menu screen on FLA) for all newer
+ DDEC or Mercedes modules.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Launch DG Adapter Validation Tool (AVT).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Select the appropriate installed device driver.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Switch the protocol to in the adapter validation tool to the same one selected
+ in Step 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Enable-the-network"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Click Run Test.
+\end_layout
+
+\begin_layout Enumerate
+If the Adapter Validation Tool passes the test, then two windows will turn
+ green as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Adapter-Validation-Tool"
+
+\end_inset
+
+.
+ This means the ECM and the computer are connected through the RP1210 Device.
+ If a test fails, review the suggestions output by the Adapter Validation
+ Tool and try again.
+ It may require shutting down the FLA, unplugging the USB, and disconnecting
+ the FLA from power.
+ Similarly, the PC may need to be rebooted.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Open DDEC Reports.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The Connection Manager may start automatically.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Press Extract Data.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Once the data is extracted, Select File -> Print and print all the data
+ (should be over 30 pages).
+ Print to a PDF file
+\end_layout
+
+\begin_layout Enumerate
+Close DDEC Reports.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Navigate to the DDEC Reports directory to find the recently made .XTR file.
+ (Default installation is C:
+\backslash
+Detroit Diesel
+\backslash
+DDEC Reports
+\backslash
+Diagnostic
+\backslash
+DATA PAGES
+\backslash
+ Copy the .XTR file into your case file directory.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Exit passthrough mode by pressing a button on the FLA.
+ Exiting this mode takes some time, so the button press may not work at
+ first.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Establish Internet connection with the FLA.
+ An IP address other than 10.0.0.1 should show up on the FLA display.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Scroll to the Upload to Server option on the FLA and upload the data to
+ the server.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename AdapterValidationTool.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Adapter-Validation-Tool"
+
+\end_inset
+
+Adapter Validation Tool showing a successful connection between an ECM and
+ the local computer.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Troubleshooting
+\end_layout
+
+\begin_layout Standard
+In this chapter, a guide to overcome problems encountered in the field is
+ presented.
+ The troubleshooting tree will tie back into the menu system an use both
+ the screen menu display and the FLA web interface.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:FailsToBoot"
+
+\end_inset
+
+Forensic Link Adapter Fails to Boot
+\end_layout
+
+\begin_layout Section
+Screen Displays Funny Characters
+\end_layout
+
+\begin_layout Section
+Forensic Link Adapter Cannot Connect to the Internet
+\end_layout
+
+\begin_layout Section
+Software Does Not Connect to Vehicle
+\end_layout
+
+\begin_layout Section
+A System Critical Error is Displayed
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Administrator's-Guide"
+
+\end_inset
+
+Administrator's Guide
+\end_layout
+
+\begin_layout Standard
+The deployment of the Forensic Link Adapter software based on a hierarchy
+ with the following tiers:
+\end_layout
+
+\begin_layout Description
+Organizations are the top level with a site administrator as the person
+ in charge.
+ Typically this is a highway patrol, a state police, or a company.
+ The person in charge of the organization has the ability to oversee the
+ data and use of the different FLAs.
+\end_layout
+
+\begin_layout Description
+Groups are a sub-level within an organization.
+ For example, East District and West District may be groups within an State
+ Police organization.
+ If an organization only has a few operators and a few FLAs, it may not
+ make sense to have different groups.
+ 
+\end_layout
+
+\begin_layout Description
+Operators are trained users of the FLA and are responsible for collecting
+ data in the field.
+ Operators can be assigned to different groups.
+ Every operator in the group is able to see the data packages from all the
+ FLAs assigned to the group, regardless of which operators downloaded the
+ data.
+\end_layout
+
+\begin_layout Description
+Forensic
+\begin_inset space ~
+\end_inset
+
+Link
+\begin_inset space ~
+\end_inset
+
+Adapters are the hardware devices that an organization owns.
+\end_layout
+
+\begin_layout Standard
+For smaller operations, it is likely that the organization, group, and operator
+ are all the same person.
+ 
+\end_layout
+
+\begin_layout Section
+Account Overview
+\end_layout
+
+\begin_layout Standard
+Forensic Link Adapters are assigned to each organization at the time of
+ purchase.
+ Once the organization completes the purchase, the serial numbers of each
+ FLA will be loaded into the Organization's profile.
+ An invitation to set up the Organization will be sent to the site administrator.
+ For example, the Lieutenant in charge of the crash reconstruction division
+ will become the site administrator once he or she registers by following
+ the link sent in the invitation e-mail.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAPortalAccountOverviewScreenShot.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Example-FLA-Account-overview"
+
+\end_inset
+
+Example Forensic Link Adapter Portal web page for the Account overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once logged in as a Site Administrator, an account overview page will be
+ available, much like the one shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Example-FLA-Account-overview"
+
+\end_inset
+
+.
+ Many of the fields on the web page are linked to various functions.
+ The top bar (in black) has links to your default login page, the latest
+ FLA download if you are an operator, a list of all the organizations, FLAs,
+ and some account access settings.
+ The web page is set up in three distinct tables as seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Example-FLA-Account-overview"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Organization Groups
+\end_layout
+
+\begin_layout Enumerate
+FLA Operators
+\end_layout
+
+\begin_layout Enumerate
+Forensic Link Adapter (FLA)
+\end_layout
+
+\begin_layout Section
+Group Management
+\end_layout
+
+\begin_layout Standard
+It is the responsibility of the Organization administrator to set up groups
+ and operators according to the desired structure of the Organization.
+ You can have operators that have access to more than one group.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAPortalFieldOperatorsScreenShot.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Example-Group-Details"
+
+\end_inset
+
+Example Group Details web page from the Forensic Link Adapter Portal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Adding an Operator
+\end_layout
+
+\begin_layout Standard
+There are two ways to get an operator access to the group's FLAs.
+ The first is to invite a new operator and the second is to invite an existing
+ operator.
+ However, the existing operator must have accepted an invitation from the
+ Organization under a unique e-mail address.
+ By clicking on the lower left box the says 
+\family sans
+Invite new operator
+\family default
+ shown in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Example-Group-Details"
+
+\end_inset
+
+, a web page similar to the one shown in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:New-Operator-invitation"
+
+\end_inset
+
+.
+ The required user information includes name and email address.
+ The FLA portal uses e-mail addresses to identify operators.
+ Therefore, if a person belongs to different organizations, they would have
+ to use a different e-mail for each organization.
+ New operators will get an e-mail from 
+\family typewriter
+fla-admin@synercontechnologies.com
+\family default
+ with a link to register with the site.
+ Many times this e-mail will be filtered as junk, so advising the recipient
+ to check their e-mail filters and junk folder may be necessary.
+\end_layout
+
+\begin_layout Standard
+The Work Address details on the Invite and operator page are used to fill
+ in a report with 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAPortalInviteNewOperatorScreenShot.png
+	lyxscale 50
+	height 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:New-Operator-invitation"
+
+\end_inset
+
+New Operator invitation form on the FLA portal website.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Assigning an FLA to the Group
+\end_layout
+
+\begin_layout Standard
+Each group needs to have at least one Forensic Link Adapter assigned to
+ it.
+ To assign an FLA to a group, click the button to see a list of available
+ FLAs for your organization.
+ Only people in the group can see the data on the FLA assigned to that group
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAPortalAssignedFLASuccessScreenShot.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Assigned FLAs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Definitions
+\end_layout
+
+\begin_layout Standard
+When dealing with heavy truck data, there are many acronyms, symbols and
+ phrases that are used to describe the data.
+ This chapter presents a list to help decipher some of the terms used for
+ dealing with heavy vehicle event data recorders.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "FLA"
+description "The Forenisc Link Adapter (FLA) is a field rugged computer that is programmed to download data from heavy vehicles."
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "FLAManual"
+options "bibtotoc,IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

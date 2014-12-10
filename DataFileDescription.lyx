@@ -1,0 +1,151 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Overview of Data Display
+\end_layout
+
+\begin_layout Subsection
+User Entered Data
+\end_layout
+
+\begin_layout Standard
+In order to view the data on the webserver, the operator needs to answer
+ the following questions:
+\end_layout
+
+\begin_layout Itemize
+User entered VIN (17 ASCII characters or a checkbox to turn off validation)
+\end_layout
+
+\begin_layout Itemize
+User entered Crash Date
+\end_layout
+
+\begin_layout Itemize
+User entered Crash Time
+\end_layout
+
+\begin_layout Itemize
+Was this download done as part of an active case or was is done as part
+ of research, training, troubleshooting, or aother activity? (Radio Button)
+\end_layout
+
+\begin_layout Itemize
+Are there any injuries or fatalities for this crash.
+ (Yes, No, I don't know).
+\end_layout
+
+\begin_layout Itemize
+Was the download performed at the crash scene? (Yes, No)
+\end_layout
+
+\begin_layout Itemize
+Case Number 
+\end_layout
+
+\begin_layout Itemize
+User comments
+\end_layout
+
+\begin_layout Subsection
+Summary Information
+\end_layout
+
+\begin_layout Standard
+The header of each heavy vehicle download has the following information:
+\end_layout
+
+\begin_layout Enumerate
+Organization Name
+\end_layout
+
+\begin_layout Enumerate
+Forensic Link Adapter Nickame
+\end_layout
+
+\begin_layout Enumerate
+Forensic Link Adapter Serial Number
+\end_layout
+
+\begin_layout Enumerate
+Date data was downloaded from the heavy vehicle
+\end_layout
+
+\begin_layout Enumerate
+Date data was uploaded to the server for decoding.
+\end_layout
+
+\begin_layout Subsection
+Investigation Time Log
+\end_layout
+
+\begin_layout Standard
+Times are automatically tracked by the FLA to assist the investigator with
+ record keeping.
+ The following events have time stamps associated with them.
+ Raw or native time is kept by counting the number of seconds from a preddermine
+d point in time (called tje epoch).
+ For the FLA, the epoch set a 1 Jan 1970.
+\end_layout
+
+\end_body
+\end_document

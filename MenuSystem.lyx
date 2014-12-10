@@ -1,0 +1,3542 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+\usepackage{pst-all}
+\usepackage{calc}
+\newcommand{\degree}{$^{\circ}$}
+\end_preamble
+\options DIV13
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Menu Screen Descriptions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Menu-Screen-Descriptions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{unit=1cm,arrowscale=2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{pspicture}(-1,0)(15,21)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+psgrid[gridcolor=white,subgridcolor=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,22){
+\backslash
+rnode{Startup}{
+\backslash
+ref{enu:Startup}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Synercon Tech.
+ FLA 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}~
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{3ex}Starting Up...
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+[][][]}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,22){
+\backslash
+rnode{Execute}{
+\backslash
+ref{enu:Execute}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Operating~system 
+\end_layout
+
+\begin_layout Plain Layout
+
+successfully~loaded.
+\end_layout
+
+\begin_layout Plain Layout
+
+Data~extraction
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}program~starting...}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Startup}{Execute}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{<30 sec.}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,18.5){
+\backslash
+rnode{Status}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:StatusA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+No~Vehicle~Net~ZZ.ZV 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:StatusB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+CAN Bus Only~~~12.1V 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~Scan}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:StatusC}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+1708/1587~Only~ZZ.ZV 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~Scan}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:StatusD}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+DD~Mmm~YYYY~HH:MMzzz 
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+CAN and J1708~~ZZ.ZV 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~
+\backslash
+#Sats:YY~Scan}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Execute}{Status}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{<15 sec.}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](9,13){
+\backslash
+rnode{Permission}{
+\backslash
+ref{enu:Permission}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Do~you~have~proper 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{3ex}permission to 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}download digital  
+\end_layout
+
+\begin_layout Plain Layout
+
+No~~~~~data?~~~~~Yes}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Status}{Permission}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Permission}{Status}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](12,9.5){
+\backslash
+circlenode{B}{
+\backslash
+Huge{B}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Permission}{B}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,12){
+\backslash
+rnode{Shutdown}{
+\backslash
+ref{enu:Shutdown}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Shutdown~the~FLA 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{4ex}Safely?
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~Shutdown}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Status}{Shutdown}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](5,9){
+\backslash
+rnode{Shutdown-Confirm}{
+\backslash
+ref{enu:Shutdown-Confirm}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Are you sure you 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}want to shutdown?
+\end_layout
+
+\begin_layout Plain Layout
+
+All files will save.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+No~~~~~~OK,~Shutdown}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown}{Shutdown-Confirm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,14){
+\backslash
+circlenode{A}{
+\backslash
+Huge{A}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{A}{Shutdown}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,6.5){
+\backslash
+rnode{Shutdown-Sequence}{
+\backslash
+ref{enu:Shutdown-Sequence}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Please do not unplug
+\end_layout
+
+\begin_layout Plain Layout
+
+while shutdown is in
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{6ex}progress.
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{3ex}Please wait...}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown-Confirm}{Shutdown-Sequence}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](14,9){
+\backslash
+circlenode{G}{
+\backslash
+Huge{G}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{G}{Shutdown-Sequence}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,3){
+\backslash
+rnode{Shutdown-Complete}{
+\backslash
+ref{enu:Shutdown-Complete}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Shutdown Complete
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}~
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}~
+\backslash
+
+\backslash
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Ready to Unplug}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown-Sequence}{Shutdown-Complete}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{<35 sec}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,5){
+\backslash
+rnode{Upload}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:UploadA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Upload data on FLA 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Internet Ready
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~Upload}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:UploadB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Upload data on FLA.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+No~Network~to~Server
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown-Confirm}{Upload}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Shutdown}{Upload}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,7){
+\backslash
+circlenode{C}{
+\backslash
+Huge{C}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{C}{Upload}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,1.5){
+\backslash
+circlenode{D}{
+\backslash
+Huge{D}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload}{D}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](2,1.5){
+\backslash
+circlenode{E}{
+\backslash
+Huge{E}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](13,18){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{F}{Status}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menu1"
+
+\end_inset
+
+Forensic Link Adapter Screen Menu System as enumerated in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Menu-Screen-Descriptions"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{unit=1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{arrowscale=2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{pspicture}(0,0)(15,21)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+psgrid[gridcolor=white,subgridcolor=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,22){
+\backslash
+circlenode{E}{
+\backslash
+Huge{E}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,20){
+\backslash
+rnode{Network}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:NetworkA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Change IP Settings? 
+\end_layout
+
+\begin_layout Plain Layout
+
+DHCP Server Disabled
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~Enable}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:NetworkB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Change IP Settings? 
+\end_layout
+
+\begin_layout Plain Layout
+
+DHCP Server Enabled
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~Disable}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{E}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](12.5,20){
+\backslash
+rnode{DHCP}{
+\backslash
+ref{enu:DHCP}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Enabling DHCP may 
+\end_layout
+
+\begin_layout Plain Layout
+
+affect the network.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+For field use only.
+\end_layout
+
+\begin_layout Plain Layout
+
+Cancel~~~~~~~~Enable}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Network}{DHCP}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green(
+\backslash
+ref{enu:NetworkA})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{DHCP}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleA=220,angleB=330,ncurvA=.5,ncurvB=.5]{->}{DHCP}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleA=30,angleB=80,ncurvA=1.5,ncurvB=1.5]{->}{Network}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green(
+\backslash
+ref{enu:NetworkB})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,16){
+\backslash
+rnode{GPS}{
+\backslash
+ref{enu:GPS-Status}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+GPS Lat:~XX.XXXXXX N
+\end_layout
+
+\begin_layout Plain Layout
+
+GPS Lng:YYY.YYYYYY W 
+\end_layout
+
+\begin_layout Plain Layout
+
+Vel:SS.S mph Dir:ddd
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~Pt:nnnn~Save}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Network}{GPS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleA=250,angleB=290,ncurvA=2.5,ncurvB=2.5]{->}{GPS}{GPS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](2,11){
+\backslash
+circlenode{FromFig2D}{
+\backslash
+Huge{D}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,8){
+\backslash
+rnode{UploadToServer}{
+\backslash
+ref{enu:UploadToServer}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Upload to Server
+\end_layout
+
+\begin_layout Plain Layout
+
+Connection: AAAAAAA 
+\end_layout
+
+\begin_layout Plain Layout
+
+Files to Upload: NN
+\end_layout
+
+\begin_layout Plain Layout
+
+Files Remaining: NN}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{FromFig2D}{UploadToServer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,4){
+\backslash
+rnode{Upload-Failed}{
+\backslash
+ref{enu:Upload-Failed}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Server unavailable.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX  
+\end_layout
+
+\begin_layout Plain Layout
+
+Err:~abcdefghijklmno
+\end_layout
+
+\begin_layout Plain Layout
+
+Cancel~~~~~~~~~Retry}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UploadToServer}{Upload-Failed}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,4){
+\backslash
+rnode{Upload-Success}{
+\backslash
+ref{enu:Upload-Success}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Upload Successful.
+\end_layout
+
+\begin_layout Plain Layout
+
+See results at
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}FLA Portal website
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~Shutdown}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UploadToServer}{Upload-Success}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{<60 sec.}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Failed}{UploadToServer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Failed}{UploadToServer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](12,1){
+\backslash
+circlenode{A}{
+\backslash
+Huge{A}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Success}{A}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,1){
+\backslash
+circlenode{E}{
+\backslash
+Huge{E}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Success}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Upload-Failed}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,14){
+\backslash
+rnode{Update}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:UpdateA}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Update~FLA~software.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}Internet Ready
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~Update}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:UpdateB}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Update~FLA~software.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+No~Network~to~Server
+\end_layout
+
+\begin_layout Plain Layout
+
+IP:~XXX.XXX.XXX.XXX 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{GPS}{Update}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](7,11){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Update}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,10){
+\backslash
+rnode{UpdateConfirm}{
+\backslash
+ref{enu:UpdateConfirm}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Are~you~sure~you 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{2ex}want~to~update?
+\end_layout
+
+\begin_layout Plain Layout
+
+It~takes~some~time.
+\end_layout
+
+\begin_layout Plain Layout
+
+Cancel~~~~OK,~Update}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Update}{UpdateConfirm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UpdateConfirm}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](11,7){
+\backslash
+rnode{UpdateProgress}{
+\backslash
+ref{enu:Update-Progress}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Updating, please do 
+\end_layout
+
+\begin_layout Plain Layout
+
+not unplug cables.
+\end_layout
+
+\begin_layout Plain Layout
+
+xxxxxxxxxxxxxxxxxxxx
+\end_layout
+
+\begin_layout Plain Layout
+
+|[][][][][][][]|yyy
+\backslash
+%}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UpdateConfirm}{UpdateProgress}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](14,3){
+\backslash
+circlenode{G}{
+\backslash
+Huge{G}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{UpdateProgress}{G}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](6,8){
+\backslash
+ovalnode{FLAWeb}{FLA Web Command}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{FLAWeb}{UpdateProgress}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menu2"
+
+\end_inset
+
+Forensic Link Adapter Screen Menu System (cont.) as enumerated in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Menu-Screen-Descriptions"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{unit=1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+psset{arrowscale=2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{pspicture}(0,0)(15,21)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+psgrid[gridcolor=white,subgridcolor=white]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,21){
+\backslash
+circlenode{B}{
+\backslash
+Huge{B}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,19){
+\backslash
+rnode{Identify}{
+\backslash
+ref{enu:Identifying-Vehicle}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Scanning~vehicle~net   
+\end_layout
+
+\begin_layout Plain Layout
+
+J1939 Data Count: NN
+\end_layout
+
+\begin_layout Plain Layout
+
+J1587 Data Count: MM
+\end_layout
+
+\begin_layout Plain Layout
+
+|[][][][][][][]|yyy
+\backslash
+%}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{B}{Identify}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](8,19){
+\backslash
+rnode{ID}{
+\backslash
+ref{enu:Id-Vehicle}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+ECM Identification   
+\end_layout
+
+\begin_layout Plain Layout
+
+Make:~AAAAA~MMMMMMMM 
+\end_layout
+
+\begin_layout Plain Layout
+
+VIN:~bbbbbbbbbbbbbbb 
+\end_layout
+
+\begin_layout Plain Layout
+
+Back~~~~~~~~Continue}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{Identify}{ID}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{<60 sec}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](13,21){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{ID}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](1,15){
+\backslash
+rnode{VehicleID}{
+\backslash
+psframebox{
+\backslash
+parbox{10cm}{
+\backslash
+centering 
+\backslash
+ref{enu:ECMa}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}ECM Specific Data 
+\end_layout
+
+\begin_layout Plain Layout
+
+Get Events, Config.,
+\end_layout
+
+\begin_layout Plain Layout
+
+History, and Faults.
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~Get Data}}} 
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{enu:ECMb}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}ECM Specific Data 
+\end_layout
+
+\begin_layout Plain Layout
+
+ECM Not Supported.
+\end_layout
+
+\begin_layout Plain Layout
+
+Use OEM PC Software? 
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~RP1210}}}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{ID}{VehicleID}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,11){
+\backslash
+rnode{RP1210}{
+\backslash
+ref{enu:RP1210}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Enable USB RP1210 
+\end_layout
+
+\begin_layout Plain Layout
+
+with forensic write-
+\end_layout
+
+\begin_layout Plain Layout
+
+blocking feature?
+\end_layout
+
+\begin_layout Plain Layout
+
+Scroll~~~~~~~~Enable}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{VehicleID}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green(
+\backslash
+ref{enu:ECMb})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nccurve[angleB=80,angleA=220]{->}{VehicleID}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](6.5,10.5){
+\backslash
+circlenode{F}{
+\backslash
+Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,7){
+\backslash
+rnode{RP1210Enabled}{
+\backslash
+ref{enu:RP1210Enabled}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Passthrough mode on.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Plug in USB cable.
+\end_layout
+
+\begin_layout Plain Layout
+
+IP: XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+Back~~~~~~~~~~Upload}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210}{RP1210Enabled}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210Enabled}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](4,4){
+\backslash
+circlenode{C}{
+\backslash
+Huge{C}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210Enabled}{C}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](10,11){
+\backslash
+rnode{GettingECMData}{
+\backslash
+ref{enu:GettingECMdata}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Getting ECM Data...
+\end_layout
+
+\begin_layout Plain Layout
+
+<Data Sought>
+\end_layout
+
+\begin_layout Plain Layout
+
+<Success | Fail>
+\end_layout
+
+\begin_layout Plain Layout
+
+|[][][][][][][]|yyy
+\backslash
+%}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{VehicleID}{GettingECMData}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nbput{Green(
+\backslash
+ref{enu:ECMa})}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](9,7){
+\backslash
+rnode{DoneECMData}{
+\backslash
+ref{enu:DoneECMdata}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+Finished ECM Data.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Downloaded YYY.YkB
+\end_layout
+
+\begin_layout Plain Layout
+
+IP: XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+RP1210~~~~~~~~Upload}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{GettingECMData}{DoneECMData}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Automatic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{DoneECMData}{C}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{DoneECMData}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{pspicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menu2-1"
+
+\end_inset
+
+Forensic Link Adapter screen display when scanning a vehicle.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Startup"
+
+\end_inset
+
+A startup screen is shown on boot.
+ A progress bar scrolls across the bottom in about 20 seconds.
+ After that, the progress bar may change to say the workds 
+\begin_inset Quotes eld
+\end_inset
+
+Please Wait...
+\begin_inset Quotes erd
+\end_inset
+
+ If the message to please wait stays on and the automatic transition to
+ display 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Execute"
+
+\end_inset
+
+ does not happen within 30 seconds, the system may not have booted.
+ If the system does not boot, 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Execute"
+
+\end_inset
+
+Program loading screen
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Status"
+
+\end_inset
+
+Status screen
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusA"
+
+\end_inset
+
+No vehicle Connected
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusB"
+
+\end_inset
+
+Controller Area Network (J1939)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusC"
+
+\end_inset
+
+J1708
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:StatusD"
+
+\end_inset
+
+Both CAN and J1708
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown"
+
+\end_inset
+
+Shutdown
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown-Confirm"
+
+\end_inset
+
+Shutdown Confirm
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown-Sequence"
+
+\end_inset
+
+Shutdown Sequence
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Shutdown-Complete"
+
+\end_inset
+
+Shutdown Complete
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Permission"
+
+\end_inset
+
+Permission Screen
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Upload-to-Server"
+
+\end_inset
+
+Upload to Server
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UploadA"
+
+\end_inset
+
+Internet is ready
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UploadB"
+
+\end_inset
+
+Internet is not ready
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UploadToServer"
+
+\end_inset
+
+ Files to upload
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Upload-Failed"
+
+\end_inset
+
+Upload Failed.
+ An error code is displayed in place of abcdefghijklmno.
+ This error code will be important to the Synercon Support staff.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Upload-Success"
+
+\end_inset
+
+Upload Successful
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Change IP network settings
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:NetworkA"
+
+\end_inset
+
+Disabled
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:NetworkB"
+
+\end_inset
+
+Enabled
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:DHCP"
+
+\end_inset
+
+Field use only
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:GPS-Status"
+
+\end_inset
+
+GPS Status Display.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Update FLA software.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UpdateA"
+
+\end_inset
+
+Connection is ready
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UpdateConfirm"
+
+\end_inset
+
+Update Confirm
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Update-Progress"
+
+\end_inset
+
+Update Progress
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:UpdateB"
+
+\end_inset
+
+No access to update server
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Identifying-Vehicle"
+
+\end_inset
+
+Scan Vehicle Network.
+ The field of <pid> is either at J1587 PID or a J1939 SPN
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Id-Vehicle"
+
+\end_inset
+
+ECM Identification.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:ECM-Specific-Data"
+
+\end_inset
+
+ECM Specific Data
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:ECMa"
+
+\end_inset
+
+Vehicle supported
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:ECMb"
+
+\end_inset
+
+No current support for getting ECM Specific Data
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:GettingECMdata"
+
+\end_inset
+
+Getting ECM data
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:DoneECMdata"
+
+\end_inset
+
+Done getting ECM data
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+RP1210 Passthrough Mode
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:RP1210"
+
+\end_inset
+
+Choose Mode
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:RP1210Enabled"
+
+\end_inset
+
+Passthrough on.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+IP Addresses
+\end_layout
+
+\begin_layout Standard
+The IP address Line can have the following Statements:
+\end_layout
+
+\begin_layout Description
+IP:
+\begin_inset space ~
+\end_inset
+
+XXX.XXX.XXX.XXX A valid IP address
+\end_layout
+
+\begin_layout Description
+IP:
+\begin_inset space ~
+\end_inset
+
+10.0.0.1 The IP address when the FLA's DHCP server is activated.
+ The FLA will give other devices on the network an IP address too, which
+ may cause problems on an established network.
+ For example, if t
+\end_layout
+
+\begin_layout Description
+Ethernet
+\begin_inset space ~
+\end_inset
+
+Unplugged There is no live connection between the FLA and an outside device.
+\end_layout
+
+\begin_layout Description
+Finding
+\begin_inset space ~
+\end_inset
+
+IP
+\begin_inset space ~
+\end_inset
+
+Address The ethernet connection is plugged in and linked to another connection,
+ but the FLA has not been issued an IP address from the network router.
+\end_layout
+
+\begin_layout Subsection
+Gathering Vehicle Data
+\end_layout
+
+\end_body
+\end_document
