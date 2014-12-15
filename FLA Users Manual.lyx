@@ -3009,7 +3009,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3791,7 +3791,7 @@ name "enu:Startup"
 
 \end_inset
 
-A startup screen is shown on boot.
+A Startup Screen is shown on boot.
  A progress bar scrolls across the bottom in about 20 seconds.
  After that, the progress bar may change to say the workds 
 \begin_inset Quotes eld
@@ -3827,9 +3827,27 @@ name "enu:Execute"
 
 \end_inset
 
-Program loading screen
+The Program Loading screen shows the user that the FLA booted successfully
+ and is loading the program needed to interface with the user through the
+ display.
+ It also sets up the files and directorys for the current session.
+ A few things happen in the background while this screen is present:
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+The FLA system time is updated.
+ If an Internet connection is available (i.e.
+ the Ethernet cable is plugged into a known good network), then the FLA
+ will get its system time from the network time server at NIST.
+ Once it automatically updates the time, it also updates the time on its
+ battery powered real time clock (RTC).
+ If an Internet connection is not available, then the system time is updated
+ from the RTC.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
@@ -3837,7 +3855,8 @@ name "enu:Status"
 
 \end_inset
 
-Status screen
+The Status Screen shows the current time with the time zone.
+ The system time can be changed from the web interface.
 \end_layout
 
 \begin_deeper
@@ -5120,6 +5139,22 @@ description "The Forenisc Link Adapter (FLA) is a field rugged computer that is 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+NIST National Institute for Standards and Technology (
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.nist.gov/"
+target "http://www.nist.gov/"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+RTC Real Time Clock
 \end_layout
 
 \begin_layout Standard

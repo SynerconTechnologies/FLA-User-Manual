@@ -3009,7 +3009,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3090,12 +3090,12 @@ Scanning~vehicle~net
 
 \begin_layout Plain Layout
 
-J1939 Data Count: NN
+J1939 Data Count: NN 
 \end_layout
 
 \begin_layout Plain Layout
 
-J1587 Data Count: MM
+J1587 Data Count: MM 
 \end_layout
 
 \begin_layout Plain Layout
