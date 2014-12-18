@@ -99,11 +99,15 @@ Forensic Link Adapter User's Manual
 \end_layout
 
 \begin_layout Date
-Version 1.0
+Version 1.1
 \begin_inset Newline newline
 \end_inset
 
-November 2014
+FLA Software Revision 0.2beta
+\begin_inset Newline newline
+\end_inset
+
+December 2014
 \end_layout
 
 \begin_layout Subtitle
@@ -228,7 +232,8 @@ Connect the FLA to the Internet
 Connecting the FLA to the internet gives the FLA it full features.
  The best method to connect to the internet is to use a wired Ethernet connectio
 n to a router that has a DHCP server running.
- This is typical of most home networks.
+ This is typical of most home and corporate networks.
+ A DHCP server is usually built into a modem or router.
  
 \end_layout
 
@@ -245,7 +250,7 @@ If a hard wired connection does not have a DHCP server running to provide
 An additional DHCP server on a corporate or work network may conflict with
  the your organization's IT policy.
  If there are doubts, please discuss providing the FLA with a reliable internet
- connection with your system administrators.
+ connection with your network system administrators.
  
 \end_layout
 
@@ -261,6 +266,56 @@ Once connected to the internet, the Forensic Link Adapter synchronizes the
  A record of when the time was last set is stored and included in a time
  log in the data report.
  
+\end_layout
+
+\begin_layout Subsection
+Setting the Timezone
+\end_layout
+
+\begin_layout Standard
+The timezone for the FLA can be set in the web interface.
+ Open the web interface by typing in the IP address on the screen of the
+ FLA into your favorite browser (e.g.
+ Internet Explorer, Firefox, Chrome, etc.).
+ Under the Configure menu, select the desired time zone, as seen in Figure
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Setting the Timezone Capture.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Setting the timezone on the FLA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4724,13 +4779,27 @@ Adapter Validation Tool showing a successful connection between an ECM and
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter
+Using the Forensic Link Adapter Portal Website
+\end_layout
+
+\begin_layout Standard
+Once an FLA operator uploads the data to the server, the data will be decrypted
+ and parsed on the server and made available to members of the group.
+ 
+\end_layout
+
+\begin_layout Section
+Common Data Elements
+\end_layout
+
+\begin_layout Section
+Detroit Diesel Specific Data
 \end_layout
 
 \begin_layout Chapter
@@ -4752,6 +4821,15 @@ name "sec:FailsToBoot"
 \end_inset
 
 Forensic Link Adapter Fails to Boot
+\end_layout
+
+\begin_layout Standard
+As the FLA boots, it may see something that it doesn't like and failes to
+ pass its own self test.
+ Often restarting will fix the problem.
+ If connected to a truck, restart with the key in the off position so only
+ power is connected.
+ 
 \end_layout
 
 \begin_layout Section
