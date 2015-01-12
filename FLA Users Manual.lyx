@@ -99,7 +99,7 @@ Forensic Link Adapter User's Manual
 \end_layout
 
 \begin_layout Date
-Version 1.1
+Manual Version 1.1
 \begin_inset Newline newline
 \end_inset
 
@@ -107,7 +107,7 @@ FLA Software Revision 0.2beta
 \begin_inset Newline newline
 \end_inset
 
-December 2014
+January 2015
 \end_layout
 
 \begin_layout Subtitle
@@ -269,6 +269,12 @@ Once connected to the internet, the Forensic Link Adapter synchronizes the
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Setting-the-Timezone"
+
+\end_inset
+
 Setting the Timezone
 \end_layout
 
@@ -358,7 +364,7 @@ If the FLA does not power up when connected, check the voltage between pins
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -416,6 +422,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Splash-Screen"
+
+\end_inset
+
 Splash Screen
 \end_layout
 
@@ -580,7 +592,7 @@ reference "fig:Shutdown-Complete"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -826,7 +838,14 @@ The FLA has a built in 4X20 character display to give the user an indication
 
 \begin_layout Standard
 Upon boot, the starup screen will display with a progress bar coming across
- the bottom, as shown in Figure .
+ the bottom, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Splash-Screen"
+
+\end_inset
+
+.
  Once the progress bar completes, the screen will blank, and then start
  the FLA extraction screen.
 \end_layout
@@ -1084,7 +1103,7 @@ IP:~XXX.XXX.XXX.XXX
 
 \begin_layout Plain Layout
 
-CAN Bus Only~~~12.1V 
+CAN Bus Only~~~ZZ.ZV 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1696,7 +1715,8 @@ texttt{%
 
 \begin_layout Plain Layout
 
-Upload data on FLA 
+Upload data on FLA.
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1960,7 +1980,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -2060,7 +2080,7 @@ DHCP Server Disabled
 
 \begin_layout Plain Layout
 
-IP:~XXX.XXX.XXX.XXX 
+No Valid IP Found 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2099,7 +2119,7 @@ DHCP Server Enabled
 
 \begin_layout Plain Layout
 
-IP:~XXX.XXX.XXX.XXX 
+IP:~10.0.0.1 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2297,7 +2317,7 @@ Vel:SS.S mph Dir:ddd
 
 \begin_layout Plain Layout
 
-Scroll~~Pt:nnnn~Save}}}}}
+Scroll~~~~~~~~~~}}}}} %Pt:nnnn~~Save
 \end_layout
 
 \begin_layout Plain Layout
@@ -2324,14 +2344,14 @@ naput{Red}
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 nccurve[angleA=250,angleB=290,ncurvA=2.5,ncurvB=2.5]{->}{GPS}{GPS}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 nbput{Green}
 \end_layout
@@ -2390,12 +2410,12 @@ Connection: AAAAAAA
 
 \begin_layout Plain Layout
 
-Files to Upload: NN
+Files~to~Upload:~NN
 \end_layout
 
 \begin_layout Plain Layout
 
-Files Remaining: NN}}}}}
+Files~Uploaded:~~MM}}}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3140,17 +3160,25 @@ texttt{%
 
 \begin_layout Plain Layout
 
-Scanning~vehicle~net   
+Scanning~vehicle~net    
 \end_layout
 
 \begin_layout Plain Layout
 
-J1939 Data Count: NN 
+J1939~Data~Count:~NN 
+\backslash
+
+\backslash
+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-J1587 Data Count: MM 
+J1587~Data~Count:~MM 
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3846,9 +3874,9 @@ name "enu:Startup"
 
 \end_inset
 
-A Startup Screen is shown on boot.
+A Startup Screen is shown when booting the device.
  A progress bar scrolls across the bottom in about 20 seconds.
- After that, the progress bar may change to say the workds 
+ After that, the progress bar may change to say the words 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3856,8 +3884,15 @@ Please Wait...
 \begin_inset Quotes erd
 \end_inset
 
- If the message to please wait stays on and the automatic transition to
- display 
+ If the message to 
+\begin_inset Quotes eld
+\end_inset
+
+Please Wait...
+\begin_inset Quotes erd
+\end_inset
+
+ stays on and the automatic transition to display 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:Execute"
@@ -3902,6 +3937,16 @@ The FLA system time is updated.
  
 \end_layout
 
+\begin_layout Enumerate
+The FLA tries to obtain a GPS lock.
+\end_layout
+
+\begin_layout Enumerate
+The FLA looks to see if vehicle networks are present.
+ It detects the presence of network traffic on the J1708 network (9600 baud)
+ and the J1939 network (CAN bus).
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
@@ -3910,8 +3955,28 @@ name "enu:Status"
 
 \end_inset
 
-The Status Screen shows the current time with the time zone.
- The system time can be changed from the web interface.
+The first line of the Status Screen shows the current time with the time
+ zone.
+ The system time zone can be changed from the web interface, as described
+ in Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Setting-the-Timezone"
+
+\end_inset
+
+.
+ The second line of the status screen shows the status of the Ethernet connectio
+n, as described in Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:IP-Addresses"
+
+\end_inset
+
+.
+ On the third line, the status of the vehicle network connection is displayed.
+ The following options are available:
 \end_layout
 
 \begin_deeper
@@ -3922,7 +3987,21 @@ name "enu:StatusA"
 
 \end_inset
 
-No vehicle Connected
+No Vehicle Net means that network message traffic was not detected on either
+ the J1939 network (CAN bus) or the J1708/J1587 serial bus.
+ A message will also suggest to 
+\begin_inset Quotes eld
+\end_inset
+
+Check Ing.
+ Key
+\begin_inset Quotes erd
+\end_inset
+
+ to remind the operator that the ignition key switch must be turned to the
+ on or run position for network traffic to be present.
+ If the key is on, sufficient power is available, and no vehicle networks
+ are present, then the vehicle network may be compromised.
 \end_layout
 
 \begin_layout Enumerate
@@ -3932,7 +4011,10 @@ name "enu:StatusB"
 
 \end_inset
 
-Controller Area Network (J1939)
+CAN Bus Only means that messages using the Controller Area Network are present.
+ Since SAE J1939 specifies CAN as the network, this detects the presence
+ of J1939 messages.
+ J1708 network traffic was not detected.
 \end_layout
 
 \begin_layout Enumerate
@@ -3942,7 +4024,8 @@ name "enu:StatusC"
 
 \end_inset
 
-J1708
+1708/1587 means no CAN or J1939 messages are present on the vehicle networks.
+ This may be the case for older vehicles.
 \end_layout
 
 \begin_layout Enumerate
@@ -3952,7 +4035,21 @@ name "enu:StatusD"
 
 \end_inset
 
-Both CAN and J1708
+CAN and J1708 mean both networks are present and have traffic.
+\end_layout
+
+\begin_layout Standard
+The system voltage is also displayed as detected by a voltage divider connected
+ to the main processor.
+ This voltage indication is not calibrated, but should give the user some
+ feedback on the health of the vehicle system voltage.
+ On the bottom line, there are button commands and an indicator showing
+ the number of GPS satelites.
+ The Red button advances the FLA to the next screen.
+ The Green button starts the scan of the vehicle network to identify the
+ system.
+ The scan button is not available if no vehicle network is present.
+ 
 \end_layout
 
 \end_deeper
@@ -3963,7 +4060,14 @@ name "enu:Shutdown"
 
 \end_inset
 
-Shutdown
+The Shutdown dialog enables the user to shutdown the FLA computer system
+ in a friendly way.
+ This is similar to pressing the shutdown command on a PC.
+ The shutdown command can also be invoked from within the FLA web interface.
+ If the operator does not want to shutdown the FLA, then he or she can press
+ the Red button to scroll to the next menu option.
+ If the Green button is pushed, then the operator will invoke the shutdown
+ sequence as described in the following displays
 \end_layout
 
 \begin_deeper
@@ -3974,7 +4078,13 @@ name "enu:Shutdown-Confirm"
 
 \end_inset
 
-Shutdown Confirm
+A shutdown confirmation asks the user if that was their intention.
+ This helps catch unintended shutdowns.
+ The Red button will escape the shutdown command and move to the next menu
+ option.
+ The Green button will confirm the shutdown operation.
+ A reminder that all the files will be saved is displayed to the user as
+ well.
 \end_layout
 
 \begin_layout Enumerate
@@ -3984,7 +4094,10 @@ name "enu:Shutdown-Sequence"
 
 \end_inset
 
-Shutdown Sequence
+The shutdown sequence requires power, so the user is advised not to unplug
+ the device.
+ During this phase, an LED indicator on the side may turn yellow.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -3994,7 +4107,11 @@ name "enu:Shutdown-Complete"
 
 \end_inset
 
-Shutdown Complete
+When shutdown is complete the main processor has turned off power.
+ The display driver remains on with a static message that everything is
+ ready to unplug.
+ No commands are available.
+ The LED should turn Red.
 \end_layout
 
 \end_deeper
@@ -4005,7 +4122,20 @@ name "enu:Permission"
 
 \end_inset
 
-Permission Screen
+Once the FLA detects a vehicle network and the user presses the button to
+ scan, the FLA asks the operator if they have the proper permission to download
+ digital data.
+ This permission is dependent on the case and the jurisdiction.
+ The FLA system time is recorded when permission was acknowledged.
+ Pressing the Green button in this menu defines the start of a download.
+ The next screen to display is number 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Identifying-Vehicle"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -4015,7 +4145,25 @@ name "enu:Upload-to-Server"
 
 \end_inset
 
-Upload to Server
+The screen that says Upload data on FLA on the first line enables the user
+ to push data to the server for archiving, decoding, decrypting and display.
+ Upon entry into this screen and a valid IP address, the FLA tries to ping
+ the Synercon Server for 5 seconds or less.
+ After the ping, the FLA will display either 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:UploadA"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:UploadB"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -4026,7 +4174,17 @@ name "enu:UploadA"
 
 \end_inset
 
-Internet is ready
+If there is a good connection to the Synercon server, the message on the
+ second line will say Internet Ready and the Upload option is enabled for
+ the Green button.
+ Pressing the Green button will display Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:UploadToServer"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -4036,7 +4194,11 @@ name "enu:UploadB"
 
 \end_inset
 
-Internet is not ready
+If there is not a connection to the Network server, then a message on the
+ second line will say No Network to Server.
+ Be sure the Ethernet cable is connected, a valid IP address is displayed,
+ and the network administrator has granted your device access to the internet.
+ The operator may want to try connecting the FLA to a different network.
 \end_layout
 
 \begin_layout Enumerate
@@ -4046,7 +4208,31 @@ name "enu:UploadToServer"
 
 \end_inset
 
- Files to upload
+The Upload to Server screen displays the connection status as AAAAAA, where
+ AAAAAA can be 
+\begin_inset Quotes eld
+\end_inset
+
+OK
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+Failed.
+\begin_inset Quotes erd
+\end_inset
+
+ When the connection is valid, the FLA securely uploads data package files
+ to the Synercon Server.
+ The number of files to upload (NN) corresponds to the number of times the
+ FLA downloaded a vehicle or ECM since the last time the data packages were
+ sent to the Synercon Server.
+ The number of files uploaded (MM) shows a counter that increments after
+ each successful upload to the server.
+ 
 \end_layout
 
 \begin_deeper
@@ -4058,8 +4244,13 @@ name "enu:Upload-Failed"
 \end_inset
 
 Upload Failed.
- An error code is displayed in place of abcdefghijklmno.
- This error code will be important to the Synercon Support staff.
+ An error code is displayed in place of 
+\family typewriter
+abcdefghijklmno
+\family default
+.
+ This error code will be important to the Synercon Support staff and may
+ be related to FLA authentication.
 \end_layout
 
 \begin_layout Enumerate
@@ -4069,13 +4260,37 @@ name "enu:Upload-Success"
 
 \end_inset
 
-Upload Successful
+Upload Successful.
+ See results at 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://fla.synercontechnologies.com/"
+target "http://fla.synercontechnologies.com/"
+
+\end_inset
+
+.
+ This website is where the data will be displayed.
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-Change IP network settings
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Change-IP-network"
+
+\end_inset
+
+Change IP network settings.
+ This menu option enables the operator to turn the FLA into a Dynamic Host
+ Configuration Protocol (DHCP) server and serve the computers on its network
+ an IP address.
+ Since only one DHCP server should be on a network at one time, this feature
+ off by default.
+ However, in the field, no other DHCP server may exist so connecting to
+ the FLA may require it to become a DHCP server.
+ The following descriptions explain how to enable and disable the DHCP server.
 \end_layout
 
 \begin_deeper
@@ -4086,7 +4301,28 @@ name "enu:NetworkA"
 
 \end_inset
 
-Disabled
+By default the DHCP server is disabled, as shown on line 2.
+ Pressing the Green button will pull up the confirmation screen shown as
+ display 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:DHCP"
+
+\end_inset
+
+.
+ If the words 
+\begin_inset Quotes eld
+\end_inset
+
+No Valid IP Found
+\begin_inset Quotes erd
+\end_inset
+
+ are displayed on line 3, then turning on DHCP may be a good idea.
+ If a valid IP address (IP: XXX.XXX.XXX.XXX) is displayed, then DHCP may not
+ be needed.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4096,7 +4332,9 @@ name "enu:NetworkB"
 
 \end_inset
 
-Enabled
+After the DHCP server has been enabled, line 2 will display as such.
+ The IP address should reset to 10.0.0.1.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4106,7 +4344,11 @@ name "enu:DHCP"
 
 \end_inset
 
-Field use only
+The field use only warning should remind the operator that an already establishe
+d network does not need another DHCP server.
+ Enabling DHCP on the FLA on an established network may lead to IP address
+ conflicts for other devices on the network.
+ 
 \end_layout
 
 \end_deeper
@@ -4117,12 +4359,24 @@ name "enu:GPS-Status"
 
 \end_inset
 
-GPS Status Display.
+A GPS utiliyt screen exisits to enable th user to see and save GPS information.
+ The GPS coordinates in decimal are displayed along with speed and direction.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The Green button in this menu saves the current state of the GPS as a point.
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
-Update FLA software.
+It is recommended to update the FLA software periodically.
 \end_layout
 
 \begin_deeper
@@ -4133,7 +4387,8 @@ name "enu:UpdateA"
 
 \end_inset
 
-Connection is ready
+If the Internet connection to the update server is ready, then the Green
+ button will be enabled to select Update.
 \end_layout
 
 \begin_deeper
@@ -4144,7 +4399,9 @@ name "enu:UpdateConfirm"
 
 \end_inset
 
-Update Confirm
+An update confirmation display enables to user to cancel an update if it
+ was accidentally pressed.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4154,7 +4411,10 @@ name "enu:Update-Progress"
 
 \end_inset
 
-Update Progress
+Update progress is displayed with current operations shown as xxxxxxxxx
+ on display.
+ This process takes a long time and the scroll bar may seem to pause occasionall
+y.
 \end_layout
 
 \end_deeper
@@ -4165,7 +4425,8 @@ name "enu:UpdateB"
 
 \end_inset
 
-No access to update server
+If there is no access to the update server, then the Green button is disabled.
+ 
 \end_layout
 
 \end_deeper
@@ -4176,8 +4437,11 @@ name "enu:Identifying-Vehicle"
 
 \end_inset
 
-Scan Vehicle Network.
- The field of <pid> is either at J1587 PID or a J1939 SPN
+Once permission was acknowledged, the FLA will scan the available vehicle
+ networks.
+ The program is looking for all data defined in the J1587 or J1939 standards
+ that may be available, as explained in further detail in Section As those
+ data elements 
 \end_layout
 
 \begin_layout Enumerate
@@ -4268,12 +4532,18 @@ Passthrough on.
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:IP-Addresses"
+
+\end_inset
+
 IP Addresses
 \end_layout
 
 \begin_layout Standard
-The IP address Line can have the following Statements:
+The IP address Line can have the following statements:
 \end_layout
 
 \begin_layout Description
@@ -4281,7 +4551,9 @@ IP:
 \begin_inset space ~
 \end_inset
 
-XXX.XXX.XXX.XXX A valid IP address
+XXX.XXX.XXX.XXX A valid IP address.
+ XXX can be any number between 0 and 255.
+ Often on a private home network, the first numbers will be 192.168.XXX.XXX.
 \end_layout
 
 \begin_layout Description
@@ -4292,7 +4564,7 @@ IP:
 10.0.0.1 The IP address when the FLA's DHCP server is activated.
  The FLA will give other devices on the network an IP address too, which
  may cause problems on an established network.
- For example, if t
+ 
 \end_layout
 
 \begin_layout Description
@@ -4314,6 +4586,403 @@ IP
 
 Address The ethernet connection is plugged in and linked to another connection,
  but the FLA has not been issued an IP address from the network router.
+\end_layout
+
+\begin_layout Description
+No
+\begin_inset space ~
+\end_inset
+
+Valid
+\begin_inset space ~
+\end_inset
+
+IP
+\begin_inset space ~
+\end_inset
+
+Found The Ethernet connection could not find a valid DHCP server from which
+ to obtain an IP address.
+ The operator may need to navigate to menu screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Change-IP-network"
+
+\end_inset
+
+ to enable the DHCP server.
+ 
+\end_layout
+
+\begin_layout Section
+Standards Based Data
+\end_layout
+
+\begin_layout Subsection
+J1587 Data
+\end_layout
+
+\begin_layout Standard
+The FLA scans the J1708 for the following data.
+ If the data is not displayed in the report, then it was not available by
+ the network.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter Identification Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Units
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
