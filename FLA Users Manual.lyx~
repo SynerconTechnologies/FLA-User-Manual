@@ -3084,7 +3084,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3288,7 +3288,7 @@ rput[tl](13,21){
 \backslash
 circlenode{F}{
 \backslash
-Huge{F}}}
+Huge{C}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3514,7 +3514,7 @@ rput[tl](6.5,10.5){
 \backslash
 circlenode{F}{
 \backslash
-Huge{F}}}
+Huge{C}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -4359,7 +4359,7 @@ name "enu:GPS-Status"
 
 \end_inset
 
-A GPS utiliyt screen exisits to enable th user to see and save GPS information.
+A GPS utility screen exisits to enable th user to see and save GPS information.
  The GPS coordinates in decimal are displayed along with speed and direction.
  
 \begin_inset Note Note
@@ -4389,6 +4389,7 @@ name "enu:UpdateA"
 
 If the Internet connection to the update server is ready, then the Green
  button will be enabled to select Update.
+ 
 \end_layout
 
 \begin_deeper
@@ -4401,7 +4402,9 @@ name "enu:UpdateConfirm"
 
 An update confirmation display enables to user to cancel an update if it
  was accidentally pressed.
- 
+ Upon confirmation, the update will comence.
+ It is important to not unplug the FLA power and Ethernet cables during
+ the update.
 \end_layout
 
 \begin_layout Enumerate
@@ -4426,7 +4429,7 @@ name "enu:UpdateB"
 \end_inset
 
 If there is no access to the update server, then the Green button is disabled.
- 
+ The FLA will need to be connected to the Internet by the Ethernet cable.
 \end_layout
 
 \end_deeper
@@ -4437,8 +4440,21 @@ name "enu:Identifying-Vehicle"
 
 \end_inset
 
-Scan Vehicle Network.
- The field of <pid> is either at J1587 PID or a J1939 SPN
+Once permission was acknowledged, the FLA will scan the available vehicle
+ networks.
+ The program is looking for all data defined in the J1587 or J1939 standards
+ that may be available, as explained in further detail in Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Standards-Based-Data"
+
+\end_inset
+
+.
+ As those data elements are obtained from their respective networks, the
+ counter will increment reflecting the recording of the data.
+ Once the data elements have been requested, the FLA will be able to Identify
+ the different ECMs.
 \end_layout
 
 \begin_layout Enumerate
@@ -4448,7 +4464,18 @@ name "enu:Id-Vehicle"
 
 \end_inset
 
-ECM Identification.
+The ECM Identification screen shows the identification information stored
+ in the first Engine ECM.
+ The ECM make (AAAAA) and model (MMMMMMMM) comes from requesting the Component
+ Identification.
+ The Component Identification is a J1597 message with PID of 241 or a J1939
+ message with SPNs 586 and 587.
+ The Vehicle Identification Number comes from J1587 PID 237 or J1939 SPN
+ 237.
+ These data may or may not be present depending on how the ECM is programmed.
+ If the data are not present from the Engine ECM, then the next source is
+ used, if available.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4458,7 +4485,8 @@ name "enu:ECM-Specific-Data"
 
 \end_inset
 
-ECM Specific Data
+Once the ECM type is known, supported ECM specific data can be obtained.
+ 
 \end_layout
 
 \begin_deeper
@@ -4469,7 +4497,12 @@ name "enu:ECMa"
 
 \end_inset
 
-Vehicle supported
+If the ECM is supported, then different types of data can be obtained that
+ include Event Data, Configuration Data, Historical Data, and Fault Data.
+ If this menu screen is displayed, then the FLA detected that it can capture
+ data from an ECM on the network.
+ Pressing the Green button will start the process of gathering specific
+ data.
 \end_layout
 
 \begin_layout Enumerate
@@ -4479,7 +4512,11 @@ name "enu:ECMb"
 
 \end_inset
 
-No current support for getting ECM Specific Data
+No current support for getting ECM Specific Data exists of this screen is
+ displayed.
+ As such, both the Red and Green buttons move the interface to the RP1210
+ mode where the operator can use the FLA with other software.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4489,7 +4526,23 @@ name "enu:GettingECMdata"
 
 \end_inset
 
-Getting ECM data
+Getting ECM data...
+ is a display screen that shows the progress of the current download.
+ The tag <Data Sought> is dependent on the ECM and may say things like Hard
+ Brake, Engine Usage Log, Data Plate, or other phrases that to indicate
+ the progress of the download.
+ After each attempt, a flag saying either Success or Failed will be displayed.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Maybe this should be the IP address?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -4499,12 +4552,42 @@ name "enu:DoneECMdata"
 
 \end_inset
 
-Done getting ECM data
+Once the ECM specific data is downloaded, a message saying Finished ECM
+ Data is displayed along with the total number of bytes downloaded.
+ If the operator wants to continue an investigation using PC based software,
+ then he or she can press the Red button to go into RP1210 passthrough mode.
+ Otherwise, the Green button brings the user back to the upload menu.
+ In the field.
+ it may be that a data upload is possible due to the lack of an internet
+ connection.
+ In this case, the operator can press the Red button once to get to menu
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "enu:Status"
+
+\end_inset
+
+ and again to get to the Shutdown menu.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-RP1210 Passthrough Mode
+The RP1210 passthrough mode enables operators to use other software connected
+ by a USB cable to communicate on the vehicle bus.
+ This mode invokes a write blocking feature that prevents certain messages
+ from reaching the ECM.
+ For more details on the messages that get blocked when the write-blocker
+ is running, see Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Forensic-Write-Blocking"
+
+\end_inset
+
+.
+ Both the J1939 and J1708 networks are enabled at the same in passthrough
+ mode.
 \end_layout
 
 \begin_deeper
@@ -4515,7 +4598,17 @@ name "enu:RP1210"
 
 \end_inset
 
-Choose Mode
+This display screen askes to enable the passthrough mode.
+ If the Red button is pressed, then the system goes back to the status display
+ screen of 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "enu:Status"
+
+\end_inset
+
+.
+ Pressing the Green button turns on the Passthrough mode.
 \end_layout
 
 \begin_layout Enumerate
@@ -4525,10 +4618,43 @@ name "enu:RP1210Enabled"
 
 \end_inset
 
-Passthrough on.
+Passthrough mode is on when this screen is displayed.
+ A reminder to plug in the USB cable is printed on line 2.
+ At any time, the operator can terminate the pasthrough mode and either
+ go back one screen or transition to uploading the data.
+ 
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+Network traffic is recorded and logged during screens 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Id-Vehicle"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:GettingECMdata"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:RP1210Enabled"
+
+\end_inset
+
+.
+ A data package is defined from network data coming from the vehicle starting
+ when the user acknowledges permission to when the operation of the FLA
+ transitions back to the Upload option.
+ 
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -4609,6 +4735,750 @@ reference "enu:Change-IP-network"
 
  to enable the DHCP server.
  
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Standards-Based-Data"
+
+\end_inset
+
+Standards Based Data
+\end_layout
+
+\begin_layout Subsection
+J1587 Data
+\end_layout
+
+\begin_layout Standard
+The FLA scans the J1708 for the following data.
+ If the data is not displayed in the report, then it was not available by
+ the network.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter Identification Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Units
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+J1939 Data
+\end_layout
+
+\begin_layout Standard
+The FLA scans the J1708 for the following data.
+ If the data is not displayed in the report, then it was not available by
+ the network.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter Identification Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Units
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -5077,6 +5947,34 @@ Adapter Validation Tool showing a successful connection between an ECM and
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Forensic-Write-Blocking"
+
+\end_inset
+
+Forensic Write Blocking
+\end_layout
+
+\begin_layout Standard
+There are certain messages that should not be transmitted to the ECM during
+ a forensic examination.
+ These messages are the kind that will change the data stored on the ECM
+ in a meaningful way.
+ Resetting or clearing fault codes, changing the ECM time, and resetting
+ trip data should always be avioded.
+ The messages that are blocked from being sent to the ECM are as follows:
+\end_layout
+
+\begin_layout Enumerate
+Clock Reset: 
+\end_layout
+
+\begin_layout Enumerate
+Trip Reset
 \end_layout
 
 \begin_layout Chapter

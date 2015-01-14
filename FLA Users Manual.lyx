@@ -285,6 +285,13 @@ The timezone for the FLA can be set in the web interface.
  Internet Explorer, Firefox, Chrome, etc.).
  Under the Configure menu, select the desired time zone, as seen in Figure
  
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Setting-the-timezone"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -307,6 +314,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Setting-the-timezone"
+
+\end_inset
+
 Setting the timezone on the FLA.
 \end_layout
 
@@ -1980,7 +1993,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -2956,7 +2969,7 @@ xxxxxxxxxxxxxxxxxxxx
 
 \begin_layout Plain Layout
 
-|[][][][][][][]|yyy
+|**************|yyy
 \backslash
 %}}}}}
 \end_layout
@@ -3183,7 +3196,7 @@ J1587~Data~Count:~MM
 
 \begin_layout Plain Layout
 
-|[][][][][][][]|yyy
+|**************|yyy
 \backslash
 %}}}}}
 \end_layout
@@ -3288,7 +3301,7 @@ rput[tl](13,21){
 \backslash
 circlenode{F}{
 \backslash
-Huge{F}}}
+Huge{C}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3514,7 +3527,7 @@ rput[tl](6.5,10.5){
 \backslash
 circlenode{F}{
 \backslash
-Huge{F}}}
+Huge{C}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3697,7 +3710,7 @@ Getting ECM Data...
 
 \begin_layout Plain Layout
 
-|[][][][][][][]|yyy
+|********~~~~~~|yyy
 \backslash
 %}}}}}
 \end_layout
@@ -4174,10 +4187,10 @@ name "enu:UploadA"
 
 \end_inset
 
-If there is a good connection to the Synercon server, the message on the
- second line will say Internet Ready and the Upload option is enabled for
- the Green button.
- Pressing the Green button will display Screen 
+If there is a valid network connection to the Synercon Server, the message
+ on the second line of the FLA display will say Internet Ready and the Upload
+ option is enabled for the Green button.
+ Pressing the Green button will display screen 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:UploadToServer"
@@ -4208,8 +4221,7 @@ name "enu:UploadToServer"
 
 \end_inset
 
-The Upload to Server screen displays the connection status as AAAAAA, where
- AAAAAA can be 
+The Upload to Server screen displays the connection status as 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4228,7 +4240,7 @@ Failed.
  When the connection is valid, the FLA securely uploads data package files
  to the Synercon Server.
  The number of files to upload (NN) corresponds to the number of times the
- FLA downloaded a vehicle or ECM since the last time the data packages were
+ FLA downloaded a vehicle or ECM since the last time data packages were
  sent to the Synercon Server.
  The number of files uploaded (MM) shows a counter that increments after
  each successful upload to the server.
@@ -4283,13 +4295,13 @@ name "enu:Change-IP-network"
 \end_inset
 
 Change IP network settings.
- This menu option enables the operator to turn the FLA into a Dynamic Host
- Configuration Protocol (DHCP) server and serve the computers on its network
- an IP address.
- Since only one DHCP server should be on a network at one time, this feature
+ This screen enables the operator to turn the FLA into a Dynamic Host Configurat
+ion Protocol (DHCP) server and give IP addresses to other computers on the
+ network.
+ Since only one DHCP server should be on a network at a time, this feature
  off by default.
- However, in the field, no other DHCP server may exist so connecting to
- the FLA may require it to become a DHCP server.
+ However, in the field, the FLA may need to set up an FLA network so the
+ operator can connect to the FLA web page.
  The following descriptions explain how to enable and disable the DHCP server.
 \end_layout
 
@@ -4359,7 +4371,7 @@ name "enu:GPS-Status"
 
 \end_inset
 
-A GPS utiliyt screen exisits to enable th user to see and save GPS information.
+A GPS utility screen exisits to enable the user to see and save GPS information.
  The GPS coordinates in decimal are displayed along with speed and direction.
  
 \begin_inset Note Note
@@ -4377,6 +4389,7 @@ The Green button in this menu saves the current state of the GPS as a point.
 
 \begin_layout Enumerate
 It is recommended to update the FLA software periodically.
+ The FLA must be connected to the Internet in order to get software updates.
 \end_layout
 
 \begin_deeper
@@ -4387,8 +4400,9 @@ name "enu:UpdateA"
 
 \end_inset
 
-If the Internet connection to the update server is ready, then the Green
- button will be enabled to select Update.
+If an Internet connection to the update server exists, then the Green button
+ will be enabled for the user to select Update.
+ 
 \end_layout
 
 \begin_deeper
@@ -4399,9 +4413,11 @@ name "enu:UpdateConfirm"
 
 \end_inset
 
-An update confirmation display enables to user to cancel an update if it
- was accidentally pressed.
- 
+Once the Green button is pushed, an update confirmation display enables
+ the user to cancel an update operation.
+ Pressing the Green button again will confirm the update should start.
+ It is important to not unplug the FLA power and Ethernet cables during
+ the update.
 \end_layout
 
 \begin_layout Enumerate
@@ -4426,7 +4442,7 @@ name "enu:UpdateB"
 \end_inset
 
 If there is no access to the update server, then the Green button is disabled.
- 
+ The FLA will need to be connected to the Internet by the Ethernet cable.
 \end_layout
 
 \end_deeper
@@ -4440,8 +4456,19 @@ name "enu:Identifying-Vehicle"
 Once permission was acknowledged, the FLA will scan the available vehicle
  networks.
  The program is looking for all data defined in the J1587 or J1939 standards
- that may be available, as explained in further detail in Section As those
- data elements 
+ that may be available and useful, as explained in further detail in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Standards-Based-Data"
+
+\end_inset
+
+.
+ As those data elements are obtained from their respective networks, the
+ counter will increment reflecting the recording of the data.
+ Once the data elements have been requested, the FLA will be able to identify
+ the different ECMs.
 \end_layout
 
 \begin_layout Enumerate
@@ -4451,7 +4478,18 @@ name "enu:Id-Vehicle"
 
 \end_inset
 
-ECM Identification.
+The ECM Identification screen shows the identification information stored
+ in the first Engine ECM.
+ The ECM make (AAAAA) and model (MMMMMMMM) comes from requesting the Component
+ Identification.
+ The Component Identification is a J1587 message with PID of 241 or a J1939
+ message with SPNs 586 and 587.
+ The Vehicle Identification Number (VIN) comes from J1587 PID 237 or J1939
+ SPN 237.
+ These data may or may not be present depending on how the ECM is programmed.
+ If the data are not present from the Engine ECM, then the next source is
+ used, if available.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4461,7 +4499,9 @@ name "enu:ECM-Specific-Data"
 
 \end_inset
 
-ECM Specific Data
+Once the ECM type is known, the FLA will check to see if the ECM is supported.
+ If it is supported, then ECM specific data can be obtained.
+ 
 \end_layout
 
 \begin_deeper
@@ -4472,7 +4512,12 @@ name "enu:ECMa"
 
 \end_inset
 
-Vehicle supported
+If the ECM is supported, then different types of data can be obtained that
+ include Event Data, Configuration Data, Historical Data, and Fault Data.
+ If this menu screen is displayed, then the FLA detected that it can capture
+ data from an ECM on the network.
+ Pressing the Green button will start the process of gathering specific
+ data.
 \end_layout
 
 \begin_layout Enumerate
@@ -4482,7 +4527,11 @@ name "enu:ECMb"
 
 \end_inset
 
-No current support for getting ECM Specific Data
+No current support for getting ECM Specific Data exists of this screen is
+ displayed.
+ As such, both the Red and Green buttons move the interface to the RP1210
+ mode where the operator can use the FLA with other software.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4492,7 +4541,23 @@ name "enu:GettingECMdata"
 
 \end_inset
 
-Getting ECM data
+Getting ECM data...
+ is a display screen that shows the progress of the current download.
+ The tag <Data Sought> is dependent on the ECM and may say things like Hard
+ Brake, Engine Usage Log, Data Plate, or other phrases that to indicate
+ the progress of the download.
+ After each attempt, a flag saying either Success or Failed will be displayed.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Maybe this should be the IP address?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -4502,12 +4567,54 @@ name "enu:DoneECMdata"
 
 \end_inset
 
-Done getting ECM data
+Once the ECM specific data is downloaded, a message saying Finished ECM
+ Data is displayed along with the total number of bytes downloaded.
+ If the operator wants to continue an investigation using PC based software,
+ then he or she can press the Red button to go into RP1210 passthrough mode.
+ Otherwise, the Green button brings the user back to the upload menu.
+ In the field.
+ it may be that a data upload is possible due to the lack of an internet
+ connection.
+ In this case, the operator can press the Red button once to get to menu
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "enu:Status"
+
+\end_inset
+
+ and again to get to the Shutdown menu.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-RP1210 Passthrough Mode
+The RP1210 passthrough mode enables operators to use other PC based software
+ to interface with the vehicle.
+ The FLA will be connected to a PC by a USB cable to communicate on the
+ vehicle bus.
+ The FLA uses a DGTech eDPA to communicate with the PC.
+ As such, it is important to have the DG Drivers installed before using
+ the RP1210 mode, as described in Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:RP1210-Drivers"
+
+\end_inset
+
+.
+ This mode invokes a write blocking feature that prevents certain messages
+ from reaching the ECM.
+ For more details on the messages that get blocked when the write-blocker
+ is running, see Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Forensic-Write-Blocking"
+
+\end_inset
+
+.
+ Both the J1939 and J1708 networks are enabled at the same time in passthrough
+ mode.
 \end_layout
 
 \begin_deeper
@@ -4518,7 +4625,17 @@ name "enu:RP1210"
 
 \end_inset
 
-Choose Mode
+This display screen askes to enable the passthrough mode.
+ If the Red button is pressed, then the system goes back to the status display
+ (Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Status"
+
+\end_inset
+
+).
+ Pressing the Green button turns on the Passthrough mode.
 \end_layout
 
 \begin_layout Enumerate
@@ -4528,10 +4645,43 @@ name "enu:RP1210Enabled"
 
 \end_inset
 
-Passthrough on.
+Passthrough mode is on when this screen is displayed.
+ A reminder to plug in the USB cable is printed on line 2.
+ At any time, the operator can terminate the pasthrough mode and either
+ go back one screen or transition to uploading the data.
+ 
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+Network traffic is recorded and logged during screens 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Id-Vehicle"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:GettingECMdata"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:RP1210Enabled"
+
+\end_inset
+
+.
+ A data package is defined from network data coming from the vehicle starting
+ when the user acknowledges permission to when the operation of the FLA
+ transitions back to the Upload option.
+ 
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -4573,6 +4723,8 @@ Ethernet
 \end_inset
 
 Unplugged There is no live connection between the FLA and an outside device.
+ If a network connection was present, there may be around a 30 second lag
+ for this message to display after a cable is unplugged.
 \end_layout
 
 \begin_layout Description
@@ -4615,11 +4767,384 @@ reference "enu:Change-IP-network"
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Standards-Based-Data"
+
+\end_inset
+
 Standards Based Data
 \end_layout
 
 \begin_layout Subsection
 J1587 Data
+\end_layout
+
+\begin_layout Standard
+The FLA scans the J1708 for the following data.
+ If the data is not displayed in the report, then it was not available by
+ the network.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter Identification Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PID Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Units
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+J1939 Data
 \end_layout
 
 \begin_layout Standard
@@ -5002,6 +5527,12 @@ Installing Programs and Drivers
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:RP1210-Drivers"
+
+\end_inset
+
 RP1210 Drivers
 \end_layout
 
@@ -5451,6 +5982,34 @@ Adapter Validation Tool showing a successful connection between an ECM and
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Forensic-Write-Blocking"
+
+\end_inset
+
+Forensic Write Blocking
+\end_layout
+
+\begin_layout Standard
+There are certain messages that should not be transmitted to the ECM during
+ a forensic examination.
+ These messages are the kind that will change the data stored on the ECM
+ in a meaningful way.
+ Resetting or clearing fault codes, changing the ECM time, and resetting
+ trip data should always be avioded.
+ The messages that are blocked from being sent to the ECM are as follows:
+\end_layout
+
+\begin_layout Enumerate
+Clock Reset: 
+\end_layout
+
+\begin_layout Enumerate
+Trip Reset
 \end_layout
 
 \begin_layout Chapter
