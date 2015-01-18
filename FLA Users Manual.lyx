@@ -878,7 +878,7 @@ name "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1080,9 +1080,7 @@ No~Vehicle~Net~ZZ.ZV
 
 \begin_layout Plain Layout
 
-Scroll~
-\backslash
-#Sats:YY~}}} 
+Scroll~~}}} 
 \backslash
 hfill
 \end_layout
@@ -1121,9 +1119,7 @@ CAN Bus Only~~~ZZ.ZV
 
 \begin_layout Plain Layout
 
-Scroll~
-\backslash
-#Sats:YY~Scan}}} 
+Scroll~~~~~~~~~~Scan}}} 
 \backslash
 hfill
 \end_layout
@@ -1162,9 +1158,7 @@ IP:~XXX.XXX.XXX.XXX
 
 \begin_layout Plain Layout
 
-Scroll~
-\backslash
-#Sats:YY~Scan}}} 
+Scroll~~~~~~~~~~Scan}}} 
 \backslash
 hfill
 \end_layout
@@ -1203,9 +1197,7 @@ CAN and J1708~~ZZ.ZV
 
 \begin_layout Plain Layout
 
-Scroll~
-\backslash
-#Sats:YY~Scan}}}}}}}
+Scroll~~~~~~~~~Scan}}}}}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3097,7 +3089,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3358,17 +3350,18 @@ hspace*{1ex}ECM Specific Data
 
 \begin_layout Plain Layout
 
-Get Events, Config.,
+ECM Not Supported.
 \end_layout
 
 \begin_layout Plain Layout
 
-History, and Faults.
+Use PC software.
+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-Scroll~~~~~~Get Data}}} 
+RP1210~~~~~~~~}}} 
 \backslash
 hfill
 \end_layout
@@ -3399,17 +3392,17 @@ hspace*{1ex}ECM Specific Data
 
 \begin_layout Plain Layout
 
-ECM Not Supported.
+Get Events, Config.,
 \end_layout
 
 \begin_layout Plain Layout
 
-Use OEM PC Software? 
+History, and Faults?
 \end_layout
 
 \begin_layout Plain Layout
 
-Scroll~~~~~~~~RP1210}}}}}}}
+RP1210~~~~~~Get Data}}}}}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3474,7 +3467,7 @@ blocking feature?
 
 \begin_layout Plain Layout
 
-Scroll~~~~~~~~Enable}}}}}
+Upload~~~~~~~~Enable}}}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3483,18 +3476,18 @@ Scroll~~~~~~~~Enable}}}}}
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 ncarc{->}{VehicleID}{RP1210}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 naput{Green(
 \backslash
-ref{enu:ECMb})}
+ref{enu:ECMa})}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3575,7 +3568,7 @@ texttt{%
 
 \begin_layout Plain Layout
 
-Passthrough mode on.
+CAN pass mode on.
 \end_layout
 
 \begin_layout Plain Layout
@@ -3592,7 +3585,58 @@ IP: XXX.XXX.XXX.XXX
 
 \begin_layout Plain Layout
 
-Back~~~~~~~~~~Upload}}}}}
+Upload~~~~~~~~~J1708}}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](0,3){
+\backslash
+rnode{RP1210EnabledJ1708}{
+\backslash
+ref{enu:J1708-pass-mode.}:
+\backslash
+psframebox{
+\backslash
+parbox{
+\backslash
+widthof{
+\backslash
+texttt{12345678901234567890}}}{
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+J1708 pass mode on.
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace*{1ex}Plug in USB cable.
+\end_layout
+
+\begin_layout Plain Layout
+
+IP: XXX.XXX.XXX.XXX
+\end_layout
+
+\begin_layout Plain Layout
+
+Upload~~~~~~~~~~~CAN}}}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3621,18 +3665,14 @@ naput{Green}
 
 
 \backslash
-ncarc{->}{RP1210Enabled}{RP1210}
+ncarc{->}{RP1210Enabled}{RP1210EnabledJ1708}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-naput{Red}
-\end_layout
-
-\begin_layout Plain Layout
-
+naput{Green}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3643,7 +3683,33 @@ naput{Red}
 
 
 \backslash
-rput[tl](4,4){
+ncarc{->}{RP1210EnabledJ1708}{RP1210Enabled}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rput[tl](8,4){
 \backslash
 circlenode{C}{
 \backslash
@@ -3661,11 +3727,25 @@ ncarc{->}{RP1210Enabled}{C}
 
 
 \backslash
-naput{Green}
+naput{Red}
 \end_layout
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210EnabledJ1708}{C}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+naput{Red}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3701,11 +3781,15 @@ Getting ECM Data...
 \begin_layout Plain Layout
 
 <Data Sought>
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
 
-<Success | Fail>
+IP: XXX.XXX.XXX.XXX
 \end_layout
 
 \begin_layout Plain Layout
@@ -4650,6 +4734,16 @@ Passthrough mode is on when this screen is displayed.
  At any time, the operator can terminate the pasthrough mode and either
  go back one screen or transition to uploading the data.
  
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:J1708-pass-mode."
+
+\end_inset
+
+J1708 pass mode.
 \end_layout
 
 \end_deeper
@@ -5985,6 +6079,351 @@ Adapter Validation Tool showing a successful connection between an ECM and
 \end_layout
 
 \begin_layout Section
+Download data with CatET
+\end_layout
+
+\begin_layout Standard
+This section provides a protocol to use CatET to download Caterpillar ADEM
+ II, ADEMIII, and ADEMIV engine control modules.
+ These modules are found on C series engines (i.e.
+ C-15, C-12, C-9, and C-7).
+ 
+\end_layout
+
+\begin_layout Subsection
+Prerequisites
+\end_layout
+
+\begin_layout Standard
+You must have the DG RP1210 drivers installed on your computer.
+ The procedure for obtaining and installing these drivers is found in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:RP1210-Drivers"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Caterpillar Electronic Technician (ET) must be installed on your computer.
+ The procedure described in this section was based on version 2013A.
+\end_layout
+
+\begin_layout Standard
+Set the preferences to use the DG DPA 4 Plus
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Preferences RP1210.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Setting the Warranty Report Startup helps with the work flow when connected.
+ These settings will remain from session to session.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Preferences Dialogs.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Connecting to an ECM
+\end_layout
+
+\begin_layout Standard
+The FLA needs to be in J1708 passthrough mode, which is screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:J1708-pass-mode."
+
+\end_inset
+
+.
+ Once the FLA is in passthrough mode, it will log and preserve network traffic
+ for a forensically verifiable record.
+\end_layout
+
+\begin_layout Standard
+Once the FLA is in passthrough mode, plug in the USB cable.
+ A screen menu will remind the user to do so.
+\end_layout
+
+\begin_layout Standard
+With the USB connected, starting CatET will automatically connect to the
+ ECM.
+ If not, then the user can press F8 to connect.
+ 
+\end_layout
+
+\begin_layout Subsection
+Warranty Report
+\end_layout
+
+\begin_layout Standard
+Upon Startup, CatET will 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Detecting ECM.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Create Warranty Reports.png
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Yes to Warranty Reports
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Provide User Information.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Download Data.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Downloading Warranty Data.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET  Warranty Report Downloaded.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET  Save as Warranty Report.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Successful Save Warranty Reports.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Select Print Warranty Reports.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Print Comment.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Warranty Report First Page.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Quick Stop Rate.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Click Snapshot Viewer.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Select Snapshot.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Receiving Snapshot.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Select Parameters.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Save Snapshot To File.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Save As Snapshot.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Export Snapshot To File.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Open Snapshot.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Save Snapshot as Excel.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Export Snapshot Confirmation.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Export Snapshot Success.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Open in Excel Open Dialog.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Open in Excel.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Click on Snapshots.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CatET Time Stamp Screenshot.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Forensic-Write-Blocking"
@@ -6074,6 +6513,24 @@ Software Does Not Connect to Vehicle
 
 \begin_layout Section
 A System Critical Error is Displayed
+\end_layout
+
+\begin_layout Chapter
+Smart Sensor Simulators
+\end_layout
+
+\begin_layout Standard
+The Smart Sensor Simulator is a bench downloading harness for different
+ ECMs that is programmed to emulate a working truck.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename No Active Codes from Cat SSS ADEM3 Screenshot.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
