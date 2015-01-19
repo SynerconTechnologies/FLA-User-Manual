@@ -6168,6 +6168,14 @@ With the USB connected, starting CatET will automatically connect to the
  
 \end_layout
 
+\begin_layout Subsection
+Warranty Report
+\end_layout
+
+\begin_layout Standard
+Upon Startup, CatET will 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Graphics
 	filename CAT ET Detecting ECM.png
@@ -6177,12 +6185,13 @@ With the USB connected, starting CatET will automatically connect to the
 
 \end_layout
 
-\begin_layout Subsection
-Warranty Report
-\end_layout
-
 \begin_layout Standard
-Upon Startup, CatET will 
+\begin_inset Graphics
+	filename CAT ET Create Warranty Reports.png
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6236,6 +6245,24 @@ Yes to Warranty Reports
 
 \begin_layout Standard
 \begin_inset Graphics
+	filename CAT ET Successful Save Warranty Reports.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename CAT ET Select Print Warranty Reports.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
 	filename CAT ET Print Comment.png
 
 \end_inset
@@ -6254,7 +6281,7 @@ Yes to Warranty Reports
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename CAT ET Click Snapshot Viewer.png
+	filename CAT ET Quick Stop Rate.png
 
 \end_inset
 
@@ -6263,7 +6290,7 @@ Yes to Warranty Reports
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename CAT ET Quick Stop Rate.png
+	filename CAT ET Click Snapshot Viewer.png
 
 \end_inset
 
