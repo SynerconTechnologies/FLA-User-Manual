@@ -878,7 +878,7 @@ name "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3089,7 +3089,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -4697,8 +4697,7 @@ reference "sec:Forensic-Write-Blocking"
 \end_inset
 
 .
- Both the J1939 and J1708 networks are enabled at the same time in passthrough
- mode.
+ 
 \end_layout
 
 \begin_deeper
@@ -4729,11 +4728,11 @@ name "enu:RP1210Enabled"
 
 \end_inset
 
-Passthrough mode is on when this screen is displayed.
+Passthrough mode for CAN (J1939) is on when this screen is displayed.
  A reminder to plug in the USB cable is printed on line 2.
- At any time, the operator can terminate the pasthrough mode and either
- go back one screen or transition to uploading the data.
- 
+ At any time, the operator can terminate the pasthrough mode and switch
+ to J1708 pass mode or transition to uploading the data.
+ This mode is used for all newer ECMs.
 \end_layout
 
 \begin_layout Enumerate
@@ -4743,7 +4742,11 @@ name "enu:J1708-pass-mode."
 
 \end_inset
 
-J1708 pass mode.
+J1708 pass mode is on when this screen is displayed.
+ A reminder to plug in the USB cable is printed on line 2.
+ At any time, the operator can terminate the pasthrough mode and switch
+ to J1708 pass mode or transition to uploading the data.
+ This mode is used for all Caterpillar, DDEC IV and DDEC V ECMs.
 \end_layout
 
 \end_deeper
@@ -5749,12 +5752,12 @@ Enabling RP1210 Passthrough Mode
 \end_layout
 
 \begin_layout Standard
-If the ECM is a Caterpillar, DDEC IV DDEC V, or MBE, then enable the J1708
- Pass-through mode from the FLA menu screen.
+If the ECM is a Caterpillar, DDEC IV DDEC V, then enable the J1708 Pass-through
+ mode from the FLA menu screen.
 \end_layout
 
 \begin_layout Standard
-If the ECM is a Cummins, DDEC VI, DDEC 10, then enable J1939.
+If the ECM is a Cummins, DDEC VI, DDEC 10, or other then enable J1939.
 \end_layout
 
 \begin_layout Standard
@@ -5828,8 +5831,7 @@ Open Cummins PowerSpec.
 \end_layout
 
 \begin_layout Enumerate
-Click on Advanced -> Settings and set the settings like the ones shown in
- Figure
+Click on Advanced -> Settings and set the Adapter to the DPA4+
 \end_layout
 
 \begin_layout Enumerate
@@ -5875,10 +5877,10 @@ Press the After Treatment button and Save the report as a PDF file.
 
 \end_deeper
 \begin_layout Enumerate
-Exit passthrough mode by pressing a button on the FLA.
- Exiting this mode takes some time, so the button press may not work at
- first.
- 
+Exit passthrough mode by pressing a the Update (red) button on the FLA.
+ If an Internet Connection is available, then the data can be uploaded and
+ archived.
+ Otherwise, shutdown.
 \end_layout
 
 \begin_layout Enumerate

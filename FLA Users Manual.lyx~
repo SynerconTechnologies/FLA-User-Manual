@@ -850,7 +850,7 @@ The FLA has a built in 4X20 character display to give the user an indication
 \end_layout
 
 \begin_layout Standard
-Upon boot, the starup screen will display with a progress bar coming across
+Upon boot, the startup screen will display with a progress bar coming across
  the bottom, as shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -878,7 +878,7 @@ name "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3089,7 +3089,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -4017,7 +4017,7 @@ name "enu:Execute"
 The Program Loading screen shows the user that the FLA booted successfully
  and is loading the program needed to interface with the user through the
  display.
- It also sets up the files and directorys for the current session.
+ It also sets up the files and directories for the current session.
  A few things happen in the background while this screen is present:
 \end_layout
 
@@ -4141,7 +4141,7 @@ The system voltage is also displayed as detected by a voltage divider connected
  This voltage indication is not calibrated, but should give the user some
  feedback on the health of the vehicle system voltage.
  On the bottom line, there are button commands and an indicator showing
- the number of GPS satelites.
+ the number of GPS satellites.
  The Red button advances the FLA to the next screen.
  The Green button starts the scan of the vehicle network to identify the
  system.
@@ -4455,7 +4455,7 @@ name "enu:GPS-Status"
 
 \end_inset
 
-A GPS utility screen exisits to enable the user to see and save GPS information.
+A GPS utility screen exists to enable the user to see and save GPS information.
  The GPS coordinates in decimal are displayed along with speed and direction.
  
 \begin_inset Note Note
@@ -4697,8 +4697,7 @@ reference "sec:Forensic-Write-Blocking"
 \end_inset
 
 .
- Both the J1939 and J1708 networks are enabled at the same time in passthrough
- mode.
+ 
 \end_layout
 
 \begin_deeper
@@ -4709,7 +4708,7 @@ name "enu:RP1210"
 
 \end_inset
 
-This display screen askes to enable the passthrough mode.
+This display screen asks to enable the passthrough mode.
  If the Red button is pressed, then the system goes back to the status display
  (Screen 
 \begin_inset CommandInset ref
@@ -4729,11 +4728,11 @@ name "enu:RP1210Enabled"
 
 \end_inset
 
-Passthrough mode is on when this screen is displayed.
+Passthrough mode for CAN (J1939) is on when this screen is displayed.
  A reminder to plug in the USB cable is printed on line 2.
- At any time, the operator can terminate the pasthrough mode and either
- go back one screen or transition to uploading the data.
- 
+ At any time, the operator can terminate the pasthrough mode and switch
+ to J1708 pass mode or transition to uploading the data.
+ This mode is used for all newer ECMs.
 \end_layout
 
 \begin_layout Enumerate
@@ -4743,7 +4742,11 @@ name "enu:J1708-pass-mode."
 
 \end_inset
 
-J1708 pass mode.
+J1708 pass mode is on when this screen is displayed.
+ A reminder to plug in the USB cable is printed on line 2.
+ At any time, the operator can terminate the pasthrough mode and switch
+ to J1708 pass mode or transition to uploading the data.
+ This mode is used for all Caterpillar, DDEC IV and DDEC V ECMs.
 \end_layout
 
 \end_deeper
@@ -4830,7 +4833,7 @@ IP
 \begin_inset space ~
 \end_inset
 
-Address The ethernet connection is plugged in and linked to another connection,
+Address The Ethernet connection is plugged in and linked to another connection,
  but the FLA has not been issued an IP address from the network router.
 \end_layout
 
@@ -5695,6 +5698,7 @@ Download Detroit Diesel DDEC Reports from
 \begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
+name " http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm"
 target " http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm"
 
 \end_inset
@@ -5729,7 +5733,7 @@ PDF Printer
 \begin_layout Standard
 If a PDF generator is not installed on your computer system, then having
  the ability to print to PDF is useful.
- An example of a free PDF printer is the BullZip 
+ An example of a free PDF printer is the 
 \end_layout
 
 \begin_layout Standard
@@ -5748,12 +5752,12 @@ Enabling RP1210 Passthrough Mode
 \end_layout
 
 \begin_layout Standard
-If the ECM is a Caterpillar, DDEC IV DDEC V, or MBE, then enable the J1708
- Pass-through mode from the FLA menu screen.
+If the ECM is a Caterpillar, DDEC IV DDEC V, then enable the J1708 Pass-through
+ mode from the FLA menu screen.
 \end_layout
 
 \begin_layout Standard
-If the ECM is a Cummins, DDEC VI, DDEC 10, then enable J1939.
+If the ECM is a Cummins, DDEC VI, DDEC 10, or other then enable J1939.
 \end_layout
 
 \begin_layout Standard
@@ -5827,8 +5831,20 @@ Open Cummins PowerSpec.
 \end_layout
 
 \begin_layout Enumerate
-Click on Advanced -> Settings and set the settings like the ones shown in
- Figure
+Click on Advanced -> Settings and set the settings as follows:
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename PowerSpecSetupAdapterCapture.PNG
+	width 6in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -5874,10 +5890,10 @@ Press the After Treatment button and Save the report as a PDF file.
 
 \end_deeper
 \begin_layout Enumerate
-Exit passthrough mode by pressing a button on the FLA.
- Exiting this mode takes some time, so the button press may not work at
- first.
- 
+Exit passthrough mode by pressing a the Update (red) button on the FLA.
+ If an Internet Connection is available, then the data can be uploaded and
+ archived.
+ Otherwise, shutdown.
 \end_layout
 
 \begin_layout Enumerate
@@ -6113,7 +6129,9 @@ Caterpillar Electronic Technician (ET) must be installed on your computer.
 \end_layout
 
 \begin_layout Standard
-Set the preferences to use the DG DPA 4 Plus
+Set the preferences in CatET to use the DG DPA 4 Plus, which is the RP1210
+ device built into the FLA.
+ This is shown in the following picture.
 \end_layout
 
 \begin_layout Standard
@@ -6126,7 +6144,8 @@ Set the preferences to use the DG DPA 4 Plus
 \end_layout
 
 \begin_layout Standard
-Setting the Warranty Report Startup helps with the work flow when connected.
+Setting the Warranty Report Startup helps with the work flow when connected,
+ as seen in the following picture.
  These settings will remain from session to session.
 \end_layout
 
@@ -6139,11 +6158,30 @@ Setting the Warranty Report Startup helps with the work flow when connected.
 
 \end_layout
 
+\begin_layout Standard
+It is recommended to create a new data directory for each download to keep
+ track of the data and not mix it with other information.
+\end_layout
+
 \begin_layout Subsection
 Connecting to an ECM
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Turn the ignition key to the on position (if it is not already on), but
+ do not start the engine.
+\end_layout
+
+\begin_layout Enumerate
+Plug in the FLA to the diagnostic connector.
+ Ensure it powers on and boots.
+\end_layout
+
+\begin_layout Enumerate
+Perform a Standards based download using the FLA.
+\end_layout
+
+\begin_layout Enumerate
 The FLA needs to be in J1708 passthrough mode, which is screen 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6156,58 +6194,121 @@ reference "enu:J1708-pass-mode."
  for a forensically verifiable record.
 \end_layout
 
-\begin_layout Standard
-Once the FLA is in passthrough mode, plug in the USB cable.
- A screen menu will remind the user to do so.
+\begin_layout Enumerate
+Launch DG's Adapter Validation Tool (AVT).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Select the appropriate installed device driver (DG-DPA4 +).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Switch the protocol to J1708 in the adapter validation tool.
+\end_layout
+
+\begin_layout Enumerate
+Click Run Test.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename AdapterValidationTool.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If the Adapter Validation Tool passes the test, then two windows will turn
+ green as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Adapter-Validation-Tool"
+
+\end_inset
+
+.
+ This means the ECM and the computer are connected through the RP1210 Device.
+ If a test fails, review the suggestions output by the Adapter Validation
+ Tool and try again.
+ It may require shutting down the FLA, unplugging the USB, and disconnecting
+ the FLA from power.
+ Similarly, the PC may need to be rebooted.
+\end_layout
+
+\begin_layout Enumerate
+Close the AVT.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+With the FLA connected through USB, start CatET.
+ The program should automatically connect to the ECM, as shown in the following
+ picture.
+ If not, then the user can press F8 to connect once CatET is running.
 \end_layout
 
 \begin_layout Standard
-With the USB connected, starting CatET will automatically connect to the
- ECM.
- If not, then the user can press F8 to connect.
- 
+\begin_inset Graphics
+	filename CAT ET Detecting ECM.png
+	width 6in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Warranty Report
 \end_layout
 
-\begin_layout Standard
-Upon Startup, CatET will 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename CAT ET Detecting ECM.png
-
+\begin_layout Enumerate
+CatET will automatically ask if you would like to create a Warranty Report.
+ Press Yes when the following dialog appears.
+ This can also be accessed through the Information menu.
+ 
+\begin_inset Newline newline
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Graphics
 	filename CAT ET Create Warranty Reports.png
 
 \end_inset
 
- 
+
 \end_layout
 
-\begin_layout Standard
-Yes to Warranty Reports
-\end_layout
+\begin_layout Enumerate
+An information screen will appear.
+ This can be filled out as desired.
+ Leaving the fields blank may be the best option.
+ Press Next to proceed.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
 \begin_inset Graphics
 	filename CAT ET Provide User Information.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Press Yes when asked to download data from the ECM.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Download Data.png
 
@@ -6216,88 +6317,158 @@ Yes to Warranty Reports
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+The software will download data for the report.
+ The Configuration data takes the longest time.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Downloading Warranty Data.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Once the data is downloaded, press Save to create an XML file.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET  Warranty Report Downloaded.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Keep track of where you save the Warranty Report using the Save As dialog.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET  Save as Warranty Report.png
+	width 4in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Record where the file was saved based off the following confirmation:
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Successful Save Warranty Reports.png
+	width 4in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Print the Warranty Report using the Print menu option
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Select Print Warranty Reports.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Enter Comments that will appear on the header of the report.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Print Comment.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+The first page of the Warrany Report appears as follows:
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Warranty Report First Page.png
+	width 5in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Scrolling through the Configuration data will reveal the Quick Stop Rate.
+ If this is set to 0, then there may not be any Sudden Deceleration Snapshots.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Quick Stop Rate.png
+	width 4.5in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+Snapshot Data
+\end_layout
+
+\begin_layout Enumerate
+Select the Snapshot Viewer from the menu options as shown in the following
+ picture:
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Click Snapshot Viewer.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+A menu of recorded Snapshots appear.
+ Please select next one and press View Graph.
+ Taking a screenshot of this dialog box is a good idea to keep track of
+ all the available Snapshots.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Select Snapshot.png
 
@@ -6306,61 +6477,108 @@ Yes to Warranty Reports
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+A progress bar will appear.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Receiving Snapshot.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Once downloaded, select the parameters to graph.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Select Parameters.png
+	width 5in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+The resulting graph will show and all the data (even the data not shown)
+ can be saved by pressing Save to File.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Save Snapshot To File.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Record where the Snapshot File gets saved.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Save As Snapshot.png
+	width 4in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Print the Snapshot from the file menu.
+\end_layout
+
+\begin_layout Enumerate
+Once saved, the Snapshot file can be Exported to MS Excel by pressing the
+ Export option in the File menu.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Export Snapshot To File.png
+	width 5in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+To Export, the file just saved needs to be opened again.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Open Snapshot.png
+	width 4in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+The exported file can be saved as an .XLS file
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Save Snapshot as Excel.png
 
@@ -6369,54 +6587,110 @@ Yes to Warranty Reports
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+A confirmation dialog gives the option to change file names.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Export Snapshot Confirmation.png
+	width 5in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+Record where the file was saved.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Export Snapshot Success.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+The Snapshot can be opened in Excel.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Open in Excel Open Dialog.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+The excel file should appear like to picture below:
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Open in Excel.png
+	width 6in
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+The additional Snapshots can be accessed by pressing the Snapshots...
+ button in CatET.
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename CAT ET Click on Snapshots.png
+	width 6in
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Enumerate
+Repeat this Snapshots section for all the available Snapshots.
+\end_layout
+
+\begin_layout Subsection
+Preserving ECM Date and Time
+\end_layout
+
+\begin_layout Enumerate
+Select ECM Date/Time from the Service Menu.
+\end_layout
+
+\begin_layout Enumerate
+Open the PC System Clock and press the PrntScrn key on the PC keyboard.
+\end_layout
+
+\begin_layout Enumerate
+Paste (Ctrl-v) the captured graphic into Paint or MS Word.
+\end_layout
+
+\begin_layout Enumerate
+Save the document with the screenshot.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename CatET Time Stamp Screenshot.png
+	width 6in
 
 \end_inset
 
@@ -6439,16 +6713,8 @@ There are certain messages that should not be transmitted to the ECM during
  These messages are the kind that will change the data stored on the ECM
  in a meaningful way.
  Resetting or clearing fault codes, changing the ECM time, and resetting
- trip data should always be avioded.
- The messages that are blocked from being sent to the ECM are as follows:
-\end_layout
-
-\begin_layout Enumerate
-Clock Reset: 
-\end_layout
-
-\begin_layout Enumerate
-Trip Reset
+ trip data should always be avoided.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -6491,7 +6757,7 @@ Forensic Link Adapter Fails to Boot
 \end_layout
 
 \begin_layout Standard
-As the FLA boots, it may see something that it doesn't like and failes to
+As the FLA boots, it may see something that it doesn't like and fails to
  pass its own self test.
  Often restarting will fix the problem.
  If connected to a truck, restart with the key in the off position so only
