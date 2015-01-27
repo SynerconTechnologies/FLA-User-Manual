@@ -337,6 +337,101 @@ Setting the timezone on the FLA.
 
 \end_layout
 
+\begin_layout Subsection
+Updating the FLA
+\end_layout
+
+\begin_layout Standard
+To update the FLA:
+\end_layout
+
+\begin_layout Enumerate
+Plug the Ethernet connector into a known good internet connection.
+ This may be a live wall jack, a home router, or tethered through a laptop
+ that is sharing a wireless internet connection.
+ A system administrator may have to help configure a work network to provide
+ a sufficient internet connection.
+\end_layout
+
+\begin_layout Enumerate
+Power on the FLA.
+ It will automatically boot an display an IP address on the Status Menu
+ screen.
+ 
+\end_layout
+
+\begin_layout Enumerate
+With a computer connected to the same network as the FLA, navigate a browser
+ to the IP address show on the front panel of the FLA.
+ This should pull up the web interface for the Forensic Link Adapter.
+\end_layout
+
+\begin_layout Enumerate
+From the main web interface, click the Update Software link, as shown in
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Updating-the-FLA"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Confirm that you want a software update by clicking the link on the page
+ to start the updating process.
+\end_layout
+
+\begin_layout Enumerate
+The process to update the FLA takes a long time, so please be patient and
+ leave the device plugged into power and the Internet as it is performing
+ its update.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Updating the FLA.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Updating-the-FLA"
+
+\end_inset
+
+Updating the FLA through its website.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Working with the Forensic Link Adapter
 \end_layout
@@ -792,50 +887,6 @@ Shutdown sequence for the Forensic Link Adapter.
 
 \end_layout
 
-\begin_layout Subsection
-Updating the FLA
-\end_layout
-
-\begin_layout Standard
-To update the FLA:
-\end_layout
-
-\begin_layout Enumerate
-Plug the Ethernet connector into a known good internet connection.
- This may be a live wall jack, a home router, or tethered through a laptop
- that is sharing a wireless internet connection.
- A system administrator may have to help configure a work network to provide
- a sufficient internet connection.
-\end_layout
-
-\begin_layout Enumerate
-Power on the FLA.
- It will automatically boot an display an IP address on the Status Menu
- screen.
- 
-\end_layout
-
-\begin_layout Enumerate
-With a computer connected to the same network as the FLA, navigate a browser
- to the IP address show on the front panel of the FLA.
- This should pull up the web interface for the Forensic Link Adapter.
-\end_layout
-
-\begin_layout Enumerate
-From the main web interface, click the Update Software link
-\end_layout
-
-\begin_layout Enumerate
-Confirm a software update by clicking the link on the page to start the
- updating process.
-\end_layout
-
-\begin_layout Enumerate
-The process to update the FLA takes a long time, so please be patient and
- leave the device plugged into power and the Internet as it is performing
- its update.
-\end_layout
-
 \begin_layout Section
 Display Screen Menu System
 \end_layout
@@ -875,14 +926,37 @@ name "sec:Menu-Screen-Descriptions"
 \end_layout
 
 \begin_layout Standard
+This section describe all the operational modes of the FLA.
+ The graphics shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Menu1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Menu2-1"
+
+\end_inset
+
+ contain screen displays that show the FLA screen.
+ The curved arrows going to and from the boxes show the transitions that
+ happen when the button is pressed according to the color.
+ The numbers next to the boxes corrospond to enumerated descriptions in
+ this section.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2085,7 +2159,7 @@ DHCP Server Disabled
 
 \begin_layout Plain Layout
 
-No Valid IP Found 
+Finding IP Address 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2124,7 +2198,7 @@ DHCP Server Enabled
 
 \begin_layout Plain Layout
 
-IP:~10.0.0.1 
+IP:~~~~~~~~~10.0.0.1 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3089,7 +3163,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3568,7 +3642,7 @@ texttt{%
 
 \begin_layout Plain Layout
 
-CAN pass mode on.
+CAN/J1939 pass mode.
 \end_layout
 
 \begin_layout Plain Layout
@@ -3580,7 +3654,7 @@ hspace*{1ex}Plug in USB cable.
 
 \begin_layout Plain Layout
 
-IP: XXX.XXX.XXX.XXX
+Use PC software now.
 \end_layout
 
 \begin_layout Plain Layout
@@ -3615,7 +3689,7 @@ texttt{%
 
 \begin_layout Plain Layout
 
-J1708 pass mode on.
+J1708 pass mode for
 \backslash
 
 \backslash
@@ -3624,19 +3698,19 @@ J1708 pass mode on.
 
 \begin_layout Plain Layout
 
-
+CAT 
 \backslash
-hspace*{1ex}Plug in USB cable.
+& DDECIV/V ECMs.
 \end_layout
 
 \begin_layout Plain Layout
 
-IP: XXX.XXX.XXX.XXX
+Use PC software now.
 \end_layout
 
 \begin_layout Plain Layout
 
-Upload~~~~~~~~~~~CAN}}}}}
+Upload~~~~~CAN/J1939}}}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3997,6 +4071,8 @@ reference "enu:Execute"
 \end_inset
 
  does not happen within 30 seconds, the system may not have booted.
+ The FLA may need to be unplugged and restarted if this screen does not
+ automatically go away.
  See Section 
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -4455,7 +4531,8 @@ name "enu:GPS-Status"
 
 \end_inset
 
-A GPS utility screen exists to enable the user to see and save GPS information.
+[Under development] A GPS utility screen exists to enable the user to see
+ and save GPS information.
  The GPS coordinates in decimal are displayed along with speed and direction.
  
 \begin_inset Note Note
@@ -4800,7 +4877,8 @@ IP:
 
 XXX.XXX.XXX.XXX A valid IP address.
  XXX can be any number between 0 and 255.
- Often on a private home network, the first numbers will be 192.168.XXX.XXX.
+ Often a private home network will have a router that serves an IP address
+ with the the first numbers of 192.168.XXX.XXX.
 \end_layout
 
 \begin_layout Description
@@ -4837,31 +4915,9 @@ Address The Ethernet connection is plugged in and linked to another connection,
  but the FLA has not been issued an IP address from the network router.
 \end_layout
 
-\begin_layout Description
-No
-\begin_inset space ~
-\end_inset
-
-Valid
-\begin_inset space ~
-\end_inset
-
-IP
-\begin_inset space ~
-\end_inset
-
-Found The Ethernet connection could not find a valid DHCP server from which
- to obtain an IP address.
- The operator may need to navigate to menu screen 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Change-IP-network"
-
-\end_inset
-
- to enable the DHCP server.
- 
-\end_layout
+\begin_layout Section
+\begin_inset Note Note
+status open
 
 \begin_layout Section
 \begin_inset CommandInset label
@@ -4877,13 +4933,13 @@ Standards Based Data
 J1587 Data
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The FLA scans the J1708 for the following data.
  If the data is not displayed in the report, then it was not available by
  the network.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="4">
 <features rotate="0" tabularvalignment="middle">
@@ -5244,13 +5300,13 @@ Units
 J1939 Data
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The FLA scans the J1708 for the following data.
  If the data is not displayed in the report, then it was not available by
  the network.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="4">
 <features rotate="0" tabularvalignment="middle">
@@ -5607,12 +5663,17 @@ Units
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Obtaining Data With Manufacturer's Software
 \end_layout
 
 \begin_layout Standard
-There are two protocols used to communicate over a heavy truck: 1) J1939,
+There are two protocols used to communicate over a heavy truck: 1) CAN/J1939,
  and 2) J1708.
  These modes are needed to make use of the DG RP1210 embedded device used
  to communicate with Manufacturer’s software.
@@ -5703,8 +5764,14 @@ target " http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm"
 
 \end_inset
 
+, as shown in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Download-page-forDDEC"
+
+\end_inset
+
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -5726,6 +5793,53 @@ Restart your computer after installing.
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename RP1210 DDEC Reports Download page.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Download-page-forDDEC"
+
+\end_inset
+
+Download page for DDEC Reports.
+ The link to download is at the bottom of the page.
+ The link to this page is on the left menu for DiagnosticLink 7.x/8.x and
+ is indicated with a loop.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 PDF Printer
 \end_layout
@@ -5739,7 +5853,7 @@ If a PDF generator is not installed on your computer system, then having
 \begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
-name "BullZip PDF printer"
+name "BullZip PDF printer."
 target "http://www.bullzip.com/products/pdf/download.php"
 
 \end_inset
@@ -5754,10 +5868,18 @@ Enabling RP1210 Passthrough Mode
 \begin_layout Standard
 If the ECM is a Caterpillar, DDEC IV DDEC V, then enable the J1708 Pass-through
  mode from the FLA menu screen.
+ This is screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:J1708-pass-mode."
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-If the ECM is a Cummins, DDEC VI, DDEC 10, or other then enable J1939.
+If the ECM is a Cummins, DDEC VI, DDEC 10, or other then enable CAN/J1939.
 \end_layout
 
 \begin_layout Standard
@@ -6714,12 +6836,84 @@ Once an FLA operator uploads the data to the server, the data will be decrypted
  
 \end_layout
 
+\begin_layout Standard
+Please log in to 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://fla.synercontechnologies.com/"
+target "https://fla.synercontechnologies.com/"
+
+\end_inset
+
+ to access the FLA Portal as shown with the login screen in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:FLA-Portal-Login"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLA Portal Login Screen.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FLA-Portal-Login"
+
+\end_inset
+
+FLA Portal Login page.
+ Your username was obtained when subscribing to the service.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 Common Data Elements
 \end_layout
 
 \begin_layout Section
 Detroit Diesel Specific Data
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -6753,6 +6947,10 @@ As the FLA boots, it may see something that it doesn't like and fails to
 \end_layout
 
 \begin_layout Section
+\begin_inset Note Note
+status open
+
+\begin_layout Section
 Screen Displays Funny Characters
 \end_layout
 
@@ -6768,6 +6966,11 @@ Software Does Not Connect to Vehicle
 A System Critical Error is Displayed
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Smart Sensor Simulators
 \end_layout
@@ -6778,8 +6981,94 @@ The Smart Sensor Simulator is a bench downloading harness for different
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SSS Connected to ADEMIII.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SSS-ADEM3"
+
+\end_inset
+
+A photograph of a Smart Sensor Simulator connected to a Caterpillar ADEM
+ III.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SSS Connections.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SSS-Connections"
+
+\end_inset
+
+Smart Sensor Simulator connections and interface panel.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename No Active Codes from Cat SSS ADEM3 Screenshot.png
+	width 100text%
 
 \end_inset
 
