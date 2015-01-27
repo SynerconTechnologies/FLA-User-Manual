@@ -3698,7 +3698,9 @@ J1708 pass mode for
 
 \begin_layout Plain Layout
 
-CAT & DDECIV/V ECMs.
+CAT 
+\backslash
+& DDECIV/V ECMs.
 \end_layout
 
 \begin_layout Plain Layout
@@ -6834,12 +6836,84 @@ Once an FLA operator uploads the data to the server, the data will be decrypted
  
 \end_layout
 
+\begin_layout Standard
+Please log in to 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://fla.synercontechnologies.com/"
+target "https://fla.synercontechnologies.com/"
+
+\end_inset
+
+ to access the FLA Portal as shown with the login screen in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:FLA-Portal-Login"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLA Portal Login Screen.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FLA-Portal-Login"
+
+\end_inset
+
+FLA Portal Login page.
+ Your username was obtained when subscribing to the service.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 Common Data Elements
 \end_layout
 
 \begin_layout Section
 Detroit Diesel Specific Data
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -6873,6 +6947,10 @@ As the FLA boots, it may see something that it doesn't like and fails to
 \end_layout
 
 \begin_layout Section
+\begin_inset Note Note
+status open
+
+\begin_layout Section
 Screen Displays Funny Characters
 \end_layout
 
@@ -6888,6 +6966,11 @@ Software Does Not Connect to Vehicle
 A System Critical Error is Displayed
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Smart Sensor Simulators
 \end_layout
@@ -6898,8 +6981,94 @@ The Smart Sensor Simulator is a bench downloading harness for different
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SSS Connected to ADEMIII.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SSS-ADEM3"
+
+\end_inset
+
+A photograph of a Smart Sensor Simulator connected to a Caterpillar ADEM
+ III.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SSS Connections.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SSS-Connections"
+
+\end_inset
+
+Smart Sensor Simulator connections and interface panel.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename No Active Codes from Cat SSS ADEM3 Screenshot.png
+	width 100text%
 
 \end_inset
 
