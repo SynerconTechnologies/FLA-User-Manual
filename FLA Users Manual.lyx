@@ -77,7 +77,7 @@
 \defskip medskip
 \quotes_language english
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle headings
 \bullet 2 0 9 -1
 \bullet 3 0 24 -1
@@ -4915,7 +4915,7 @@ Address The Ethernet connection is plugged in and linked to another connection,
  but the FLA has not been issued an IP address from the network router.
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -6925,9 +6925,18 @@ In this chapter, a guide to overcome problems encountered in the field is
  presented.
  The troubleshooting tree will tie back into the menu system an use both
  the screen menu display and the FLA web interface.
+ 
 \end_layout
 
 \begin_layout Section
+Functional Tests
+\end_layout
+
+\begin_layout Section
+Specific Symptoms
+\end_layout
+
+\begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:FailsToBoot"
@@ -6944,31 +6953,6 @@ As the FLA boots, it may see something that it doesn't like and fails to
  If connected to a truck, restart with the key in the off position so only
  power is connected.
  
-\end_layout
-
-\begin_layout Section
-\begin_inset Note Note
-status open
-
-\begin_layout Section
-Screen Displays Funny Characters
-\end_layout
-
-\begin_layout Section
-Forensic Link Adapter Cannot Connect to the Internet
-\end_layout
-
-\begin_layout Section
-Software Does Not Connect to Vehicle
-\end_layout
-
-\begin_layout Section
-A System Critical Error is Displayed
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
@@ -7462,16 +7446,890 @@ target "http://www.nist.gov/"
 RTC Real Time Clock
 \end_layout
 
+\begin_layout Chapter
+Suggested Training and Practice
+\end_layout
+
 \begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintAll"
-bibfiles "FLAManual"
-options "bibtotoc,IEEEtran"
+This chapter helps new and seasoned users of the FLA work with some of its
+ features.
+ Performing the exercises herein should provide the user a familiarity of
+ the operation of the FLA.
+\end_layout
+
+\begin_layout Section
+Powering up the FLA
+\end_layout
+
+\begin_layout Enumerate
+Connect the FLA to its A/C Power adapter without any other connections.
+ Determine the following:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+How many seconds it takes for the FLA to display the screen with the time
+ at the top?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Is the time correct?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the voltage displayed on the screen?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the voltage rating for the A/C power adapter?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What does the third line of the display say?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Press the Red button once to begin the Shutdown Process.
+ This corrosponds to the transition from Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Status"
+
+\end_inset
+
+ to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Shutdown"
+
+\end_inset
+
+, which is the Shutdown Screen.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Press the Green Button to confirm the Shutdown.
+ How many seconds does it take for the LED to turn red and the screen say
+ that it is ok to unplug?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Unplug the FLA.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Plug in the FLA cigarette lighter adapter into power and connect it to the
+ FLA to boot the system.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the voltage displayed on the status screen?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Using the display buttons, shutdown the FLA.
+ After the FLA says it's ok, unplug the 12V cigarette adapter cable.
+\end_layout
+
+\begin_layout Enumerate
+Unscrew the tip of the 12V cigarette lighter adapter and examine the fuse.
+ What is the fuse current rating?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Reassemble the 12V adapter and put it back in the FLA case.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Install the vehicle connection cable (CABLE-01) with a 15 pin DSub connector
+ on one end and a Deutsch style connector with 9 pins on the other.
+ Plug the 9-pin connector into a powered and running Smart Sensor Simulator
+ with the key on (Both Red and Green indicators are on).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What does the voltage on the Status screen show?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Which is faster: Boot time for the FLA or 1 minute?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What does the FLA say on Line 3 of the status screen?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Press the key switch on the SSS for 2 seconds to turn off the key switch.
+ Now what does the third line on the SSS say?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Connecting to the Network and Internet
+\end_layout
+
+\begin_layout Standard
+The learning objective of this section is to 
+\end_layout
+
+\begin_layout Itemize
+teach the user different ways to connect to the FLA using the Ethernet cable.
+ 
+\end_layout
+
+\begin_layout Itemize
+connect the FLA to the Internet.
+\end_layout
+
+\begin_layout Subsection
+Using a Wired Connection
+\end_layout
+
+\begin_layout Enumerate
+Plug the ethernet cable from the FLA into a known good wired Internet connection
+ that is on the same network as your computer.
+ This assumes that you have a known good netwrok connection, usually your
+ home router or a wired connection at the office.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What does the FLA say right after you plug in the Ethernet on the second
+ line of the Status Screen?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Write down the IP address of the FLA:
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Navigate to FLA Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Upload-to-Server"
+
+\end_inset
+
+.
+ What does line 2 say?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Navigate to FLA Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:UpdateA"
+
+\end_inset
+
+.
+ What does line 2 say?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Open your computer's internet browser and type in the FLA's IP address in
+ the address bar (not the search bar).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write down your MAC address:
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Press the Update Software link and confirm by pressing the link that says
+ 
+\bar under
+here
+\bar default
+.
+ How many seconds does it take to update the software?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+After the Update, click the link on the link to Shutdown.
+ How many seconds does it take for the screen to indicate the FLA has shut
+ down?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Connect Directly to a Computer
+\end_layout
+
+\begin_layout Enumerate
+Plug the Ethernet cable from the FLA to your computer's Ethernet port.
+ (A USB to Ethernet adapter is available in the FLA kit if your computer
+ does not have an ethernet jack.)
+\end_layout
+
+\begin_layout Enumerate
+Navigate the FLA menu to the DHCP enable screen (Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:DHCP"
+
+\end_inset
+
+) and enable the DHCP Server on the FLA.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Why would you not enable the DHCP server on a known good network?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the IP address assigned to the FLA after enabling the DHCP Server
+ through Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Change-IP-network"
+
+\end_inset
+
+?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Open the Windows Network and Sharing Center through the Control Panel or
+ by right-clicking on the network icon in the task bar.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determine your computer's IP address when connected to the FLA.
+ See 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Windows-7-NetworkSharing"
+
+\end_inset
+
+ for guidance on where to determine the IP address.
+ Write that number IP address down:
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+How many seconds does it take for the FLA to say Ethernet Unplugged after
+ the Ethernet cable is disconnected?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Disable the DHCP server on the FLA.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Windows 7 Network Connection Details.png
+	width 100text%
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Windows-7-NetworkSharing"
+
+\end_inset
+
+Windows 7 Network and Sharing Center with dialog boxes to show the PC IP
+ address.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Set Up Internet Connection Sharing
+\end_layout
+
+\begin_layout Enumerate
+Connect to a Wireless Network and make sure you have access to the internet
+\end_layout
+
+\begin_layout Enumerate
+Share the Wireless in Connection.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Click on the Change adapter settings on the left side of the Windows Network
+ and Sharing Center.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Select the Wireless connection and then press Change settings of this connection
+, as shown in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Locating-the-Internet"
+
+\end_inset
+
+.
+ Press the Sharing tab.
+\end_layout
+
+\begin_layout Enumerate
+Share the Wireless Connection with the Local Area Connection that can be
+ plugged into the FLA.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Write down the IP address of the Local Area Connection:
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Unplug and replug the FLA Ethernet Connection
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+How many seconds does it take to get a new IP address?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the new IP address for the FLA?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Navigate the FLA to the update screen (Screen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:UpdateA"
+
+\end_inset
+
+).
+ What does the second line say?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Type in the FLA IP address in your computer's web browser.
+ Does the FLA website come up?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Windows 7 Sharing Tab.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Locating-the-Internet"
+
+\end_inset
+
+Locating the Internet Connection Sharing Tab in Windows 7.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Installing PC Software
+\end_layout
+
+\begin_layout Enumerate
+After installing the DG DPA4+ drivers, write down the driver version number.
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What version of DDEC Reports is installed?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What version of Cummins Powerspec is installed?
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Use the Adapter Validation Tool
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+On a J1939 Network
+\end_layout
+
+\begin_layout Enumerate
+On a J1708 Network
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Connecting to a Heavy Vehicle
+\end_layout
+
+\begin_layout Enumerate
+Plug in the FLA to the 9-Pin Diagnostics Connector
+\end_layout
+
+\begin_layout Enumerate
+Turn on the ignition key to run
+\end_layout
+
+\begin_layout Enumerate
+Run a vehicle Scan
+\end_layout
+
+\begin_layout Enumerate
+Download Supported Data (if available)
+\end_layout
+
+\begin_layout Enumerate
+Enable RP1210 Mode
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Connect the USB Cable
+\end_layout
+
+\begin_layout Enumerate
+Run OEM Software
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Shutdown the FLA
+\end_layout
+
+\begin_layout Enumerate
+Connect the FLA to the Internet
+\end_layout
+
+\begin_layout Enumerate
+Upload the data from the field.
+\end_layout
+
+\begin_layout Section
+Using the FLA Portal
+\end_layout
+
+\begin_layout Subsection
+Accessing the Data
+\end_layout
+
+\begin_layout Enumerate
+Login to fla.synercontechnologies.com
+\end_layout
+
+\begin_layout Enumerate
+Find the latest download
+\end_layout
+
+\begin_layout Enumerate
+Enter User information
+\end_layout
+
+\begin_layout Subsection
+Viewing Event Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Historical Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Configuration Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Fault Code Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Network Log Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Session and Timing Data
+\end_layout
+
+\begin_layout Subsection
+Distributing a Report
+\end_layout
+
+\begin_layout Section
+Connecting to Engine Control Modules on a Bench
+\end_layout
+
+\begin_layout Subsection
+DDEC IV 
+\end_layout
+
+\begin_layout Subsection
+DDEC V 
+\end_layout
+
+\begin_layout Subsection
+DDEC 6
+\end_layout
+
+\begin_layout Subsection
+DDEC X
+\end_layout
+
+\begin_layout Subsection
+CAT ADEM III
+\end_layout
+
+\begin_layout Subsection
+CAT ADEM IV
+\end_layout
+
+\begin_layout Subsection
+Cummins CM870
+\end_layout
+
+\begin_layout Subsection
+Cummins CM2250
+\end_layout
+
+\begin_layout Section
+Understanding How Speed Records are Generated
+\end_layout
+
+\begin_layout Subsection
+Tracing Schematics
+\end_layout
+
+\begin_layout Subsection
+Signals from the Tail Shaft Speed Sensor
+\end_layout
+
+\begin_layout Subsection
+Troubleshooting a Vehicle Systems
+\end_layout
+
+\begin_layout Section
+Understanding Network Traffic
+\end_layout
+
+\begin_layout Subsection
+J1708
+\end_layout
+
+\begin_layout Subsection
+J1939
+\end_layout
+
+\begin_layout Section
+Understanding Data based on Standards
+\end_layout
+
+\begin_layout Section
+Working with Manufacturer Specific Data
 \end_layout
 
 \begin_layout Standard
