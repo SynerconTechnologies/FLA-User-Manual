@@ -956,7 +956,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1360,6 +1360,13 @@ No~~~~~data?~~~~~Yes}}}}}
 
 
 \backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Status}{Permission}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Status}{Permission}
 \end_layout
 
@@ -1368,6 +1375,13 @@ ncarc{->}{Status}{Permission}
 
 \backslash
 naput{Green}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Permission}{Status}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1397,6 +1411,13 @@ rput[tl](12,9.5){
 circlenode{B}{
 \backslash
 Huge{B}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Permission}{B}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1468,6 +1489,13 @@ Scroll~~~~~~Shutdown}}}}}
 
 
 \backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Status}{Shutdown}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Status}{Shutdown}
 \end_layout
 
@@ -1532,6 +1560,9 @@ No~~~~~~OK,~Shutdown}}}}}
 
 \begin_layout Plain Layout
 
+
+\backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Shutdown}{Shutdown-Confirm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1625,6 +1656,13 @@ hspace*{3ex}Please wait...}}}}}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Shutdown-Confirm}{Shutdown-Sequence}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1863,6 +1901,13 @@ Scroll~~~~~~~~}}}}}}}
 
 
 \backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Shutdown-Confirm}{Upload}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Shutdown-Confirm}{Upload}
 \end_layout
 
@@ -1879,6 +1924,13 @@ naput{Red}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Shutdown}{Upload}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1940,6 +1992,13 @@ Huge{D}}}
 
 
 \backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Upload}{D}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Upload}{D}
 \end_layout
 
@@ -1963,6 +2022,13 @@ rput[tl](2,1.5){
 circlenode{E}{
 \backslash
 Huge{E}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Upload}{E}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2059,7 +2125,7 @@ reference "sec:Menu-Screen-Descriptions"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -2214,6 +2280,13 @@ Scroll~~~~~~~Disable}}}}}}}
 
 
 \backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{E}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{E}{Network}
 \end_layout
 
@@ -2282,6 +2355,13 @@ Cancel~~~~~~~~Enable}}}}}
 
 
 \backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Network}{DHCP}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Network}{DHCP}
 \end_layout
 
@@ -2296,6 +2376,13 @@ ref{enu:NetworkA})}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{DHCP}{Network}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2320,6 +2407,14 @@ nbput{Red}
 
 
 \backslash
+nccurve[angleA=220,angleB=330,ncurvA=.5,ncurvB=.5,linecolor=green,linewidth=4pt]{-
+}{DHCP}{Network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 nccurve[angleA=220,angleB=330,ncurvA=.5,ncurvB=.5]{->}{DHCP}{Network}
 \end_layout
 
@@ -2336,6 +2431,10 @@ naput{Green}
 
 \begin_layout Plain Layout
 
+
+\backslash
+nccurve[angleA=30,angleB=80,ncurvA=1.5,ncurvB=1.5,linecolor=green,linewidth=4pt]{-
+}{Network}{Network}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2401,6 +2500,13 @@ Scroll~~~~~~~~~~}}}}} %Pt:nnnn~~Save
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Network}{GPS}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2499,6 +2605,17 @@ Files~Uploaded:~~MM}}}}}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{FromFig2D}{UploadToServer}
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
 ncarc{->}{FromFig2D}{UploadToServer}
@@ -2563,9 +2680,13 @@ Cancel~~~~~~~~~Retry}}}}}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
-ncarc{->}{UploadToServer}{Upload-Failed}
+ncarc[angleA=100]{->}{UploadToServer}{Upload-Failed}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2655,6 +2776,9 @@ nbput{<60 sec.}
 
 \begin_layout Plain Layout
 
+
+\backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Upload-Failed}{UploadToServer}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2677,6 +2801,9 @@ naput{Green}
 
 \begin_layout Plain Layout
 
+
+\backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Upload-Failed}{UploadToServer}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2712,6 +2839,13 @@ Huge{A}}}
 
 
 \backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Upload-Success}{A}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Upload-Success}{A}
 \end_layout
 
@@ -2741,6 +2875,13 @@ Huge{E}}}
 
 
 \backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Upload-Success}{E}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Upload-Success}{E}
 \end_layout
 
@@ -2753,6 +2894,13 @@ naput{Red}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Upload-Failed}{E}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2871,6 +3019,13 @@ Scroll~~~~~~~~}}}}}}}
 
 
 \backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{GPS}{Update}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{GPS}{Update}
 \end_layout
 
@@ -2894,6 +3049,13 @@ rput[tl](7,11){
 circlenode{F}{
 \backslash
 Huge{F}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{Update}{F}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2965,6 +3127,13 @@ Cancel~~~~OK,~Update}}}}}
 
 
 \backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{Update}{UpdateConfirm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{Update}{UpdateConfirm}
 \end_layout
 
@@ -2977,6 +3146,13 @@ naput{Green}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linecolor=red,linewidth=4pt]{-}{UpdateConfirm}{F}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3048,6 +3224,13 @@ xxxxxxxxxxxxxxxxxxxx
 
 
 \backslash
+ncarc[linecolor=green,linewidth=4pt]{-}{UpdateConfirm}{UpdateProgress}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{UpdateConfirm}{UpdateProgress}
 \end_layout
 
@@ -3093,7 +3276,7 @@ naput{Automatic}
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 rput[tl](6,8){
 \backslash
@@ -3102,7 +3285,7 @@ ovalnode{FLAWeb}{FLA Web Command}}
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 ncarc{->}{FLAWeb}{UpdateProgress}
 \end_layout
@@ -3275,6 +3458,13 @@ J1587~Data~Count:~MM
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=green]{-}{B}{Identify}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{B}{Identify}
 \end_layout
 
@@ -3374,6 +3564,13 @@ Huge{C}}}
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=red]{-}{ID}{F}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{ID}{F}
 \end_layout
 
@@ -3382,6 +3579,10 @@ ncarc{->}{ID}{F}
 
 \backslash
 naput{Red}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3487,6 +3688,13 @@ RP1210~~~~~~Get Data}}}}}}}
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=green]{-}{ID}{VehicleID}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{ID}{VehicleID}
 \end_layout
 
@@ -3505,7 +3713,7 @@ naput{Green}
 
 
 \backslash
-rput[tl](0,11){
+rput[tl](3,11){
 \backslash
 rnode{RP1210}{
 \backslash
@@ -3572,6 +3780,13 @@ ref{enu:ECMa})}
 
 
 \backslash
+nccurve[angleB=80,angleA=220,linewidth=4pt,linecolor=red]{-}{VehicleID}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 nccurve[angleB=80,angleA=220]{->}{VehicleID}{RP1210}
 \end_layout
 
@@ -3590,18 +3805,33 @@ nbput{Red}
 
 
 \backslash
-rput[tl](6.5,10.5){
+rput[tl](0,6){
 \backslash
-circlenode{F}{
+circlenode{C}{
 \backslash
 Huge{C}}}
 \end_layout
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
-ncarc{->}{RP1210}{F}
+ncarc[linewidth=4pt,linecolor=red]{-}{RP1210}{C}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{RP1210}{C}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3623,7 +3853,7 @@ naput{Red}
 
 
 \backslash
-rput[tl](0,7){
+rput[tl](3,7){
 \backslash
 rnode{RP1210Enabled}{
 \backslash
@@ -3670,7 +3900,7 @@ Upload~~~~~~~~~J1708}}}}}
 
 
 \backslash
-rput[tl](0,3){
+rput[tl](3,3){
 \backslash
 rnode{RP1210EnabledJ1708}{
 \backslash
@@ -3721,6 +3951,13 @@ Upload~~~~~CAN/J1939}}}}}
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=green]{-}{RP1210}{RP1210Enabled}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{RP1210}{RP1210Enabled}
 \end_layout
 
@@ -3739,6 +3976,13 @@ naput{Green}
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=green]{-}{RP1210Enabled}{RP1210EnabledJ1708}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{RP1210Enabled}{RP1210EnabledJ1708}
 \end_layout
 
@@ -3751,6 +3995,13 @@ naput{Green}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linewidth=4pt,linecolor=green]{-}{RP1210EnabledJ1708}{RP1210Enabled}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3783,11 +4034,7 @@ naput{Green}
 
 
 \backslash
-rput[tl](8,4){
-\backslash
-circlenode{C}{
-\backslash
-Huge{C}}}
+ncarc[linewidth=4pt,linecolor=red]{-}{RP1210Enabled}{C}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3812,6 +4059,13 @@ naput{Red}
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=red]{-}{RP1210EnabledJ1708}{C}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{RP1210EnabledJ1708}{C}
 \end_layout
 
@@ -3830,7 +4084,7 @@ naput{Red}
 
 
 \backslash
-rput[tl](10,11){
+rput[tl](9,11){
 \backslash
 rnode{GettingECMData}{
 \backslash
@@ -3881,6 +4135,13 @@ IP: XXX.XXX.XXX.XXX
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=green]{-}{VehicleID}{GettingECMData}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{VehicleID}{GettingECMData}
 \end_layout
 
@@ -3901,7 +4162,7 @@ ref{enu:ECMa})}
 
 
 \backslash
-rput[tl](9,7){
+rput[tl](10,7){
 \backslash
 rnode{DoneECMData}{
 \backslash
@@ -3946,6 +4207,10 @@ RP1210~~~~~~~~Upload}}}}}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
 ncarc{->}{GettingECMData}{DoneECMData}
@@ -3966,7 +4231,29 @@ naput{Automatic}
 
 
 \backslash
-ncarc{->}{DoneECMData}{C}
+rput[tl](13,3){
+\backslash
+circlenode{C1}{
+\backslash
+Huge{C}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc[linewidth=4pt,linecolor=green]{-}{DoneECMData}{C1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ncarc{->}{DoneECMData}{C1}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3984,6 +4271,13 @@ naput{Green}
 
 
 \backslash
+ncarc[linewidth=4pt,linecolor=red]{-}{DoneECMData}{RP1210}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 ncarc{->}{DoneECMData}{RP1210}
 \end_layout
 
@@ -3991,7 +4285,7 @@ ncarc{->}{DoneECMData}{RP1210}
 
 
 \backslash
-naput{Red}
+nbput{Red}
 \end_layout
 
 \begin_layout Plain Layout
@@ -8167,6 +8461,100 @@ On a J1708 Network
 
 \end_deeper
 \begin_layout Section
+Connecting to a Heavy Vehicle
+\end_layout
+
+\begin_layout Enumerate
+Plug in the FLA to the 9-Pin Diagnostics Connector
+\end_layout
+
+\begin_layout Enumerate
+Turn on the ignition key to run
+\end_layout
+
+\begin_layout Enumerate
+Run a vehicle Scan
+\end_layout
+
+\begin_layout Enumerate
+Download Supported Data (if available)
+\end_layout
+
+\begin_layout Enumerate
+Enable RP1210 Mode
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Connect the USB Cable
+\end_layout
+
+\begin_layout Enumerate
+Run OEM Software
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Shutdown the FLA
+\end_layout
+
+\begin_layout Enumerate
+Connect the FLA to the Internet
+\end_layout
+
+\begin_layout Enumerate
+Upload the data from the field.
+\end_layout
+
+\begin_layout Section
+Using the FLA Portal
+\end_layout
+
+\begin_layout Subsection
+Accessing the Data
+\end_layout
+
+\begin_layout Enumerate
+Login to fla.synercontechnologies.com
+\end_layout
+
+\begin_layout Enumerate
+Find the latest download
+\end_layout
+
+\begin_layout Enumerate
+Enter User information
+\end_layout
+
+\begin_layout Subsection
+Viewing Event Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Historical Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Configuration Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Fault Code Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Network Log Data
+\end_layout
+
+\begin_layout Subsection
+Viewing Session and Timing Data
+\end_layout
+
+\begin_layout Subsection
+Distributing a Report
+\end_layout
+
+\begin_layout Section
 Connecting to Engine Control Modules on a Bench
 \end_layout
 
@@ -8203,15 +8591,39 @@ Cummins CM2250
 \end_layout
 
 \begin_layout Section
-Setting Speed Records on a Cummins
+Understanding How Speed Records are Generated
+\end_layout
+
+\begin_layout Subsection
+Tracing Schematics
+\end_layout
+
+\begin_layout Subsection
+Signals from the Tail Shaft Speed Sensor
+\end_layout
+
+\begin_layout Subsection
+Troubleshooting a Vehicle Systems
 \end_layout
 
 \begin_layout Section
-Working with Network Traffic
+Understanding Network Traffic
+\end_layout
+
+\begin_layout Subsection
+J1708
+\end_layout
+
+\begin_layout Subsection
+J1939
 \end_layout
 
 \begin_layout Section
 Understanding Data based on Standards
+\end_layout
+
+\begin_layout Section
+Working with Manufacturer Specific Data
 \end_layout
 
 \begin_layout Standard
