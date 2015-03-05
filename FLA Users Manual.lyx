@@ -8626,6 +8626,38 @@ Understanding Data based on Standards
 Working with Manufacturer Specific Data
 \end_layout
 
+\begin_layout Chapter
+Release Notes
+\end_layout
+
+\begin_layout Standard
+Version 0.4b contains several enhancements and bug fixes.
+\end_layout
+
+\begin_layout Itemize
+Improved reliability and logging for both J1708 and J1939 passthrough
+\end_layout
+
+\begin_layout Itemize
+Extraction of DDEC IV, V, and VI ECMs
+\end_layout
+
+\begin_layout Itemize
+Improved recording and parsing of standards-based data items
+\end_layout
+
+\begin_layout Itemize
+Encrypted verification file for standards-based data
+\end_layout
+
+\begin_layout Itemize
+Improved real-time clock reliability
+\end_layout
+
+\begin_layout Itemize
+Added GPS location data to downloads
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset index_print
 LatexCommand printindex
