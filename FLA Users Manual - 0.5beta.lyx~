@@ -99,11 +99,11 @@ Forensic Link Adapter User's Manual
 \end_layout
 
 \begin_layout Date
-FLA Software Revision 0.4beta
+FLA Software Revision 0.5beta
 \begin_inset Newline newline
 \end_inset
 
-March 2015
+June 2015
 \end_layout
 
 \begin_layout Subtitle
@@ -6049,7 +6049,7 @@ Configuration Data
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="13" columns="4">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top">
 <column alignment="left" valignment="middle" width="2in">
 <column alignment="left" valignment="middle" width="3.5in">
@@ -6577,7 +6577,7 @@ Historical Data
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="4">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top">
 <column alignment="left" valignment="middle" width="2in">
 <column alignment="left" valignment="middle" width="3.5in">
@@ -7191,7 +7191,7 @@ binary bit-mapped
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7257,7 +7257,7 @@ binary bit-mapped
 \end_inset
 </cell>
 </row>
-<row>
+<row endhead="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -7344,7 +7344,7 @@ mph
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7382,7 +7382,7 @@ binary bit-mapped
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7576,7 +7576,7 @@ psi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7615,7 +7615,7 @@ psi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7654,7 +7654,7 @@ Ratio of volume of fuel to the total volume of the primary fuel storage
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7693,7 +7693,7 @@ binary bit-mapped
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7731,7 +7731,7 @@ Ratio of current volume of engine sump oil to maximum required volume.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7770,7 +7770,7 @@ psi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7808,7 +7808,7 @@ psi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7847,7 +7847,7 @@ psi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7885,7 +7885,7 @@ rpm
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7923,7 +7923,7 @@ psi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7962,7 +7962,7 @@ deg F
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8000,7 +8000,7 @@ psi
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8038,7 +8038,7 @@ deg F
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8077,7 +8077,7 @@ volts
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8116,7 +8116,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8154,7 +8154,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8192,7 +8192,7 @@ volts
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8230,7 +8230,7 @@ volts
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8268,7 +8268,7 @@ deg F
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8306,7 +8306,7 @@ deg F
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8344,7 +8344,7 @@ deg F
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8382,7 +8382,7 @@ deg F
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8420,7 +8420,7 @@ deg F
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8458,7 +8458,7 @@ rpm
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8497,7 +8497,7 @@ rpm
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8535,7 +8535,7 @@ Seconds, minutes and hours.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8605,7 +8605,7 @@ reference "tab:CAN-Extended-Frame"
  use the following acronyms:
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -8718,24 +8718,24 @@ status open
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="bottom">
 <column alignment="center" valignment="bottom" width="1em">
-<column alignment="center" valignment="bottom" width="0pt">
+<column alignment="center" valignment="bottom" width="1em">
 <column alignment="center" valignment="bottom" width="1em">
 <column alignment="center" valignment="bottom" width="1em">
 <column alignment="center" valignment="bottom" width="3em">
 <column alignment="center" valignment="bottom" width="1em">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
 <column alignment="center" valignment="bottom" width="1em">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
-<column alignment="center" valignment="bottom">
+<column alignment="center" valignment="bottom" width="1em">
 <column alignment="center" valignment="bottom" width="3em">
-<column alignment="center" valignment="bottom" width="3em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="bottom" width="2em">
+<column alignment="center" valignment="bottom" width="2em">
 <column alignment="center" valignment="bottom" width="2ex">
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -8803,7 +8803,7 @@ Arbitration Field (29 bits)
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="5em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8832,7 +8832,7 @@ Control Field
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8906,7 +8906,7 @@ Data Field (8 bytes)
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="4em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8977,7 +8977,13 @@ F
 \begin_layout Plain Layout
 
 \size small
-ID
+I
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+D
 \end_layout
 
 \end_inset
@@ -9080,7 +9086,13 @@ R
 \begin_layout Plain Layout
 
 \size small
-r1
+r
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+1
 \end_layout
 
 \end_inset
@@ -9091,7 +9103,13 @@ r1
 \begin_layout Plain Layout
 
 \size small
-r0
+r
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+0
 \end_layout
 
 \end_inset
@@ -9125,7 +9143,13 @@ C
 \begin_layout Plain Layout
 
 \size small
-B1
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+1
 \end_layout
 
 \end_inset
@@ -9136,7 +9160,13 @@ B1
 \begin_layout Plain Layout
 
 \size small
-B2
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+2
 \end_layout
 
 \end_inset
@@ -9147,7 +9177,13 @@ B2
 \begin_layout Plain Layout
 
 \size small
-B3
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+3
 \end_layout
 
 \end_inset
@@ -9158,7 +9194,13 @@ B3
 \begin_layout Plain Layout
 
 \size small
-B4
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+4
 \end_layout
 
 \end_inset
@@ -9169,7 +9211,13 @@ B4
 \begin_layout Plain Layout
 
 \size small
-B5
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+5
 \end_layout
 
 \end_inset
@@ -9180,7 +9228,13 @@ B5
 \begin_layout Plain Layout
 
 \size small
-B6
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+6
 \end_layout
 
 \end_inset
@@ -9191,7 +9245,13 @@ B6
 \begin_layout Plain Layout
 
 \size small
-B7
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+7
 \end_layout
 
 \end_inset
@@ -9202,7 +9262,13 @@ B7
 \begin_layout Plain Layout
 
 \size small
-B8
+B
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+8
 \end_layout
 
 \end_inset
@@ -9213,7 +9279,19 @@ B8
 \begin_layout Plain Layout
 
 \size small
-CRC
+C
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+R
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+C
 \end_layout
 
 \end_inset
@@ -9224,7 +9302,19 @@ CRC
 \begin_layout Plain Layout
 
 \size small
-ACK
+A
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+C
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+K
 \end_layout
 
 \end_inset
@@ -9530,27 +9620,27 @@ status open
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="2em">
 <column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
+<column alignment="center" valignment="top" width="1em">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -9877,7 +9967,7 @@ F
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="3em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9946,7 +10036,7 @@ P
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10020,7 +10110,7 @@ PDU Format Byte
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10094,7 +10184,7 @@ PDU Specific Byte
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10558,13 +10648,13 @@ Position
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="4em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="2em">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \size small
-PGN Byte 1
+B1
 \end_layout
 
 \end_inset
@@ -10578,7 +10668,7 @@ PGN Byte 1
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10652,7 +10742,7 @@ PGN Byte 2
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10726,7 +10816,7 @@ PGN Byte 3 for PDU2
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10847,7 +10937,7 @@ SA Byte
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="18em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11442,10 +11532,10 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="2">
 <features rotate="0" tabularvalignment="middle">
-<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rotate="90" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11605,7 +11695,7 @@ Headway Controller (Adaptive Cruise Control, Collision Avoidance, etc.)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11625,7 +11715,7 @@ Cab Controller
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11645,7 +11735,7 @@ Cellular Communications Unit (Telematics System)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11726,11 +11816,11 @@ n data.
 \begin_inset Tabular
 <lyxtabular version="3" rows="18" columns="5">
 <features rotate="0" islongtable="true" headBottomDL="true" longtabularalignment="center">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
+<column alignment="center" valignment="top" width="10ex">
+<column alignment="left" valignment="middle" width="24ex">
+<column alignment="center" valignment="top" width="4ex">
+<column alignment="left" valignment="top" width="26ex">
+<column alignment="left" valignment="top" width="10ex">
 <row endhead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -11741,7 +11831,7 @@ PGN
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11779,7 +11869,7 @@ Units
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11826,7 +11916,7 @@ hp
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11835,7 +11925,7 @@ hp
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11873,7 +11963,7 @@ rpm
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11882,7 +11972,7 @@ rpm
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11920,7 +12010,7 @@ count
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11929,7 +12019,7 @@ count
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11967,7 +12057,7 @@ bit-mapped
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11976,7 +12066,7 @@ bit-mapped
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12014,7 +12104,7 @@ bit-mapped
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12061,7 +12151,7 @@ ASCII
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12070,7 +12160,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12108,7 +12198,7 @@ count
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12135,7 +12225,7 @@ Engine Configuration 1 (EC1)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12144,7 +12234,7 @@ Engine Speed at Idle, Point 1
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12155,7 +12245,7 @@ rpm
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12164,7 +12254,7 @@ rpm
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12182,7 +12272,7 @@ rpm
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12191,7 +12281,7 @@ Engine Speed at High Idle
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12202,7 +12292,7 @@ rpm
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12249,7 +12339,7 @@ ASCII
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12258,7 +12348,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12276,7 +12366,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12285,7 +12375,7 @@ Model
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12296,7 +12386,7 @@ ASCII
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12305,7 +12395,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12323,7 +12413,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12332,7 +12422,7 @@ Serial Number
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12343,7 +12433,7 @@ ASCII
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12352,7 +12442,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12370,7 +12460,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12379,7 +12469,7 @@ Unit Number (Power Unit)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12417,7 +12507,7 @@ Vehicle Identification (VI)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12426,7 +12516,7 @@ Vehicle Identification
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12437,7 +12527,7 @@ ASCII
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12464,7 +12554,7 @@ Cruise Control / Vehicle Speed Setup (CCSS)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12473,7 +12563,7 @@ Maximum Vehicle Speed Limit
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12484,7 +12574,7 @@ mph
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12493,7 +12583,7 @@ mph
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12511,7 +12601,7 @@ mph
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12520,7 +12610,7 @@ Cruise Control High Set Limit Speed
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12531,7 +12621,7 @@ mph
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12540,7 +12630,7 @@ mph
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12558,7 +12648,7 @@ mph
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12567,7 +12657,7 @@ Cruise Control Low Set Limit Speed
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12739,13 +12829,13 @@ The Forensic Link Adapter scans the J1939 network for the following historical
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="25" columns="5">
-<features rotate="0" islongtable="true" longtabularalignment="center">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="left" valignment="top">
-<row>
+<features rotate="0" islongtable="true" headBottomDL="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="10ex">
+<column alignment="left" valignment="top" width="24ex">
+<column alignment="center" valignment="top" width="4ex">
+<column alignment="left" valignment="top" width="26ex">
+<column alignment="left" valignment="top" width="10ex">
+<row endhead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -12755,7 +12845,7 @@ PGN
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12793,7 +12883,7 @@ Units
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12802,7 +12892,7 @@ Units
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12840,7 +12930,7 @@ gallons
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12849,7 +12939,7 @@ gallons
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12887,7 +12977,7 @@ gallons
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12896,7 +12986,7 @@ gallons
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12934,7 +13024,7 @@ gallons
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12943,7 +13033,7 @@ gallons
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12981,7 +13071,7 @@ gallons
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12990,7 +13080,7 @@ gallons
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13028,7 +13118,7 @@ gallons
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13037,7 +13127,7 @@ gallons
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13055,7 +13145,7 @@ gallons
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13064,7 +13154,7 @@ Trip Drive Fuel Economy
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13122,7 +13212,7 @@ miles
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13131,7 +13221,7 @@ miles
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13196,7 +13286,7 @@ miles
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13205,7 +13295,7 @@ Trip Distance in Top Gear
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13263,7 +13353,7 @@ miles
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13272,7 +13362,7 @@ miles
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13290,7 +13380,7 @@ miles
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13299,7 +13389,7 @@ Total Vehicle Distance
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13337,7 +13427,7 @@ High Resolution Vehicle Distance (VDHR)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13346,7 +13436,7 @@ High Resolution Total Vehicle Distance
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13357,7 +13447,7 @@ meters
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13366,7 +13456,7 @@ meters
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13384,7 +13474,7 @@ meters
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13393,7 +13483,7 @@ High Resolution Trip Distance
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13431,7 +13521,7 @@ Engine Speed / Load Factor Information
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13440,7 +13530,7 @@ Trip Maximum Engine Speed
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13451,7 +13541,7 @@ rpm
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13460,7 +13550,7 @@ rpm
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13478,7 +13568,7 @@ rpm
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13487,7 +13577,7 @@ Trip Average Engine Speed
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13498,7 +13588,7 @@ rpm
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13507,7 +13597,7 @@ rpm
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13525,7 +13615,7 @@ rpm
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13534,7 +13624,7 @@ Trip Drive Average Load Factor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13545,7 +13635,7 @@ Trip Drive Average Load Factor
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13554,7 +13644,7 @@ Trip Drive Average Load Factor
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13572,7 +13662,7 @@ Trip Drive Average Load Factor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13581,7 +13671,7 @@ Total Drive Average Load Factor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13592,7 +13682,7 @@ Total Drive Average Load Factor
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13601,7 +13691,7 @@ Total Drive Average Load Factor
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13619,7 +13709,7 @@ Total Drive Average Load Factor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13628,7 +13718,7 @@ Total Engine Cruise Time
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13666,7 +13756,7 @@ Engine Hours, Revolutions (HOURS)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13675,7 +13765,7 @@ Engine Total Hours of Operation
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13686,7 +13776,7 @@ hours
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13695,7 +13785,7 @@ hours
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13713,7 +13803,7 @@ hours
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13722,7 +13812,7 @@ Engine Total Revolutions
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13760,7 +13850,7 @@ Vehicle Hours (VH)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13769,7 +13859,7 @@ Total Vehicle Hours
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13780,7 +13870,7 @@ hours
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13789,7 +13879,7 @@ hours
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13807,7 +13897,7 @@ hours
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13816,7 +13906,7 @@ Total Power Takeoff Hours
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13854,7 +13944,7 @@ Idle Operation (IO)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13863,7 +13953,7 @@ Engine Total Idle Hours
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13874,7 +13964,7 @@ hours
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13883,7 +13973,7 @@ hours
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13901,7 +13991,7 @@ hours
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13910,7 +14000,7 @@ Engine Total Idle Fuel Used
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -14098,7 +14188,6 @@ Download Detroit Diesel DDEC Reports from
 \begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
-name " http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm"
 target " http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm"
 
 \end_inset
@@ -14227,7 +14316,11 @@ Once enabled, connect a USB cable from the FLA to the laptop with the DG
 \end_layout
 
 \begin_layout Section
-Cummins PowerSpec Download Protocol
+Cummins 
+\end_layout
+
+\begin_layout Subsection
+PowerSpec Download Protocol
 \end_layout
 
 \begin_layout Enumerate
@@ -14269,14 +14362,7 @@ Click Run Test.
 
 \begin_layout Enumerate
 If the Adapter Validation Tool passes the test, then two windows will turn
- green as shown in Figure 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "fig:Adapter-Validation-Tool"
-
-\end_inset
-
-.
+ green.
  This means the ECM and the computer are connected through the RP1210 Device.
  If a test fails, review the suggestions output by the Adapter Validation
  Tool and try again.
@@ -14355,7 +14441,15 @@ Scroll to the Upload to Server option on the FLA and upload the data to
  the server.
 \end_layout
 
+\begin_layout Subsection
+Insite Download Protocol
+\end_layout
+
 \begin_layout Section
+Detroit Diesel
+\end_layout
+
+\begin_layout Subsection
 DDEC Reports Download Protocol
 \end_layout
 
@@ -14423,14 +14517,7 @@ Click Run Test.
 
 \begin_layout Enumerate
 If the Adapter Validation Tool passes the test, then two windows will turn
- green as shown in Figure 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "fig:Adapter-Validation-Tool"
-
-\end_inset
-
-.
+ green.
  This means the ECM and the computer are connected through the RP1210 Device.
  If a test fails, review the suggestions output by the Adapter Validation
  Tool and try again.
@@ -14500,12 +14587,12 @@ Scroll to the Upload to Server option on the FLA and upload the data to
  the server.
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Subsection
+DDDL 8 Download Protocol
 \end_layout
 
 \begin_layout Section
-Download data with CatET
+Caterpillar ET Download Protocol
 \end_layout
 
 \begin_layout Standard
@@ -14604,59 +14691,6 @@ reference "enu:J1708-pass-mode."
  for a forensically verifiable record.
 \end_layout
 
-\begin_layout Enumerate
-Launch DG's Adapter Validation Tool (AVT).
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Select the appropriate installed device driver (DG-DPA4 +).
- 
-\end_layout
-
-\begin_layout Enumerate
-Switch the protocol to J1708 in the adapter validation tool.
-\end_layout
-
-\begin_layout Enumerate
-Click Run Test.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Graphics
-	filename AdapterValidationTool.png
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-If the Adapter Validation Tool passes the test, then two windows will turn
- green as shown in Figure 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "fig:Adapter-Validation-Tool"
-
-\end_inset
-
-.
- This means the ECM and the computer are connected through the RP1210 Device.
- If a test fails, review the suggestions output by the Adapter Validation
- Tool and try again.
- It may require shutting down the FLA, unplugging the USB, and disconnecting
- the FLA from power.
- Similarly, the PC may need to be rebooted.
-\end_layout
-
-\begin_layout Enumerate
-Close the AVT.
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
 With the FLA connected through USB, start CatET.
  The program should automatically connect to the ECM, as shown in the following
@@ -14991,6 +15025,7 @@ The exported file can be saved as an .XLS file
 
 \begin_inset Graphics
 	filename CAT ET Save Snapshot as Excel.png
+	width 4in
 
 \end_inset
 
@@ -15233,6 +15268,88 @@ In this chapter, a guide to overcome problems encountered in the field is
 Functional Tests
 \end_layout
 
+\begin_layout Enumerate
+Launch DG's Adapter Validation Tool (AVT).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Select the appropriate installed device driver (DG-DPA4 +).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Switch the protocol to J1708 in the adapter validation tool.
+\end_layout
+
+\begin_layout Enumerate
+Click Run Test.
+ If the Adapter Validation Tool passes the test, then two windows will turn
+ green as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Adapter-Validation-Tool"
+
+\end_inset
+
+.
+ This means the ECM and the computer are connected through the RP1210 Device.
+ If a test fails, review the suggestions output by the Adapter Validation
+ Tool and try again.
+ It may require shutting down the FLA, unplugging the USB, and disconnecting
+ the FLA from power.
+ Similarly, the PC may need to be rebooted.
+\end_layout
+
+\begin_layout Enumerate
+Close the AVT.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename AdapterValidationTool.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Adapter-Validation-Tool"
+
+\end_inset
+
+Adapter Validation Tool after successfully seeing data on the network.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Specific Symptoms
 \end_layout
@@ -15254,6 +15371,10 @@ As the FLA boots, it may see something that it doesn't like and fails to
  If connected to a truck, restart with the key in the off position so only
  power is connected.
  
+\end_layout
+
+\begin_layout Standard
+Try connecting and powering with only the DC power barrel jack.
 \end_layout
 
 \begin_layout Chapter
@@ -16220,7 +16341,7 @@ Disable the DHCP server on the FLA.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -16378,7 +16499,7 @@ Type in the FLA IP address in your computer's web browser.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -16663,6 +16784,10 @@ Improved real-time clock reliability
 
 \begin_layout Itemize
 Added GPS location data to downloads
+\end_layout
+
+\begin_layout Standard
+Version 0.5b added and improved Standards Based Data extraction and rendering.
 \end_layout
 
 \begin_layout Standard
