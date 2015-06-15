@@ -211,7 +211,7 @@ Before Going to the Field
 
 \begin_layout Itemize
 Please plug in the Forensic Link Adapter into a known live and functioning
- Ethernet port with connection to the Internet.
+ Ethernet port with a connection to the Internet.
  
 \end_layout
 
@@ -281,7 +281,7 @@ From the screen with the date at the top, the Green button will be enabled
 \end_layout
 
 \begin_layout Itemize
-Once acknowldging permission to scan the vehicle, the FLA will poll and
+Once acknowledging permission to scan the vehicle, the FLA will poll and
  scan the vehicle networks for common data elements, such as VIN and Component
  Identification.
  The quantity of items found is displayed on the screen.
@@ -311,7 +311,7 @@ Exiting passthrough mode compresses the network traffic log file for storage
 \begin_deeper
 \begin_layout Itemize
 CAN is the most common mode for interfacing with trucks.
- This is hte passthrough mode used for J1939 and is used on all IS series
+ This is the passthrough mode used for J1939 and is used on all IS series
  Cummins, and other newer ECMs.
 \end_layout
 
@@ -359,8 +359,7 @@ The Forensic Link Adapter is based on a powerful processor based on the
  The device has 2 Controller Area Network (CAN) channels, 2 J1708 Serial
  Channels, 100/10 Mbps Ethernet, USB 2.0, and a full implementation of the
  DG tech DPA4+ for RP1210 Compliance.
- The device has a GPS receiver, Real Time Clock, an accelerometer, and a
- rate Gyro.
+ The device has a GPS receiver, Real Time Clock.
  The display uses Organic LEDs for better sunlight readability.
  It runs embedded Linux and serves its own website.
 \end_layout
@@ -403,18 +402,19 @@ n to a router that has a DHCP server running.
 
 \begin_layout Standard
 If a hard wired connection does not have a DHCP server running to provide
- an IP address, then the FLA will wait for about 45 seconds then try to
- serve an IP address to other computers on the network.
+ an IP address, then the FLA can be avtivated to serve an an IP address
+ to other computers on the network.
  This is important functionality in the field where a DHCP server and router
- may not be available.
- 
+ may not be available and only a direct Ethernet connection to the computer
+ is available.
 \end_layout
 
 \begin_layout Standard
 An additional DHCP server on a corporate or work network may conflict with
  the your organization's IT policy.
- If there are doubts, please discuss providing the FLA with a reliable internet
- connection with your network system administrators.
+ If there are doubts whan enabling the DHCP server on the FLA, please discuss
+ providing the FLA with a reliable internet connection with your network
+ system administrators.
  
 \end_layout
 
@@ -423,7 +423,7 @@ Setting the Time
 \end_layout
 
 \begin_layout Standard
-Once connected to the internet, the Forensic Link Adapter synchronizes the
+Once connected to the Internet, the Forensic Link Adapter synchronizes the
  time with a network time server.
  This also sets the built in real time clock of the FLA, so accurate times
  are kept in the Forensic Link Adapter.
@@ -509,9 +509,170 @@ Updating the FLA
 Updating the FLA requires access to the internet through a known good internet
  connection.
  Once established and the FLA is on, scroll to the update screen (Red button)
- and initiate an update.
+ and initiate an update as shown in Figure .
  It may take a while, but it is important not to unplug the FLA during this
  process.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAUpdadeScreen1.jpg
+	lyxscale 20
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Main menu update option
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAUpdadeScreen2.jpg
+	lyxscale 20
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Confirm the desire to update
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAUpdadeScreen3.jpg
+	lyxscale 20
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Update progress indicator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename FLAUpdadeScreen4.jpg
+	lyxscale 20
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Update finished and ready to shutdown
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Photos of the process of updating the FLA from the User Interface.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
