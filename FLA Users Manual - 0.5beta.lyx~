@@ -298,20 +298,20 @@ Once the user continues from this screen, the FLA will detect if it supports
 
 \begin_layout Itemize
 Using the FLA as an RP1210 device enables the user to download data with
- other software, like DDEC Reports or Cummins PowerSpec, in the passthrough
+ other software, like DDEC Reports or Cummins PowerSpec, in the Passthrough
  mode.
 \end_layout
 
 \begin_layout Itemize
-Exiting passthrough mode compresses the network traffic log file for storage
+Exiting Passthrough mode compresses the network traffic log file for storage
  and archiving.
- There are two passthrough modes:
+ There are two Passthrough modes:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 CAN is the most common mode for interfacing with trucks.
- This is the passthrough mode used for J1939 and is used on all IS series
+ This is the Passthrough mode used for J1939 and is used on all IS series
  Cummins, and other newer ECMs.
 \end_layout
 
@@ -402,7 +402,7 @@ n to a router that has a DHCP server running.
 
 \begin_layout Standard
 If a hard wired connection does not have a DHCP server running to provide
- an IP address, then the FLA can be avtivated to serve an an IP address
+ an IP address, then the FLA can be activated to serve an an IP address
  to other computers on the network.
  This is important functionality in the field where a DHCP server and router
  may not be available and only a direct Ethernet connection to the computer
@@ -412,7 +412,7 @@ If a hard wired connection does not have a DHCP server running to provide
 \begin_layout Standard
 An additional DHCP server on a corporate or work network may conflict with
  the your organization's IT policy.
- If there are doubts whan enabling the DHCP server on the FLA, please discuss
+ If there are doubts when enabling the DHCP server on the FLA, please discuss
  providing the FLA with a reliable internet connection with your network
  system administrators.
  
@@ -1001,7 +1001,7 @@ selecting shutdown from the on screen menu
 \end_layout
 
 \begin_layout Itemize
-pressing the shutdown lin on the local web interface
+pressing the shutdown link on the local web interface
 \end_layout
 
 \begin_layout Itemize
@@ -1262,7 +1262,7 @@ The FLA has a built in 4X20 character display to give the user an indication
 \end_layout
 
 \begin_layout Standard
-Upon boot, the startup screen will display with a progress bar coming across
+Upon boot, the start-up screen will display with a progress bar coming across
  the bottom.
  Once the progress bar completes, the screen will blank, and then start
  the FLA extraction loading screen.
@@ -1298,7 +1298,7 @@ reference "fig:Menu2-1"
  contain screen displays that show the FLA screen.
  The curved arrows going to and from the boxes show the transitions that
  happen when the button is pressed according to the color.
- The numbers next to the boxes corrospond to enumerated descriptions in
+ The numbers next to the boxes correspond to enumerated descriptions in
  this section.
 \end_layout
 
@@ -1323,7 +1323,7 @@ psset{unit=.95cm,arrowscale=2}
 
 
 \backslash
-begin{pspicture}(-1,0)(15,21)
+begin{pspicture}(-1,0)(15,21.5)
 \end_layout
 
 \begin_layout Plain Layout
@@ -5336,7 +5336,7 @@ name "enu:GPS-NoStatus"
 \end_inset
 
 If a GPS has not obtained a signal lock, then this message will display.
- It is unlikley that a user will see this screen unless the FLA is new.
+ It is unlikely that a user will see this screen unless the FLA is new.
  
 \end_layout
 
@@ -5409,7 +5409,7 @@ name "enu:Identifying-Vehicle"
 Once permission was acknowledged, the FLA will scan the available vehicle
  networks.
  In this phase, it is looking for all the different components on the network
- by thier MID or Source Address.
+ by their MID or Source Address.
  
 \end_layout
 
@@ -5536,7 +5536,7 @@ name "enu:DoneECMdata"
 Once the ECM specific data is downloaded, a message saying Finished ECM
  Data is displayed along with the total number of bytes downloaded.
  If the operator wants to continue an investigation using PC based software,
- then he or she can press the Red button to go into RP1210 passthrough mode.
+ then he or she can press the Red button to go into RP1210 Passthrough mode.
  Otherwise, the Green button brings the user back to the upload menu.
  In the field.
  it may be that a data upload is possible due to the lack of an internet
@@ -5554,7 +5554,7 @@ reference "enu:Status"
 
 \end_deeper
 \begin_layout Enumerate
-The RP1210 passthrough mode enables operators to use other PC based software
+The RP1210 Passthrough mode enables operators to use other PC based software
  to interface with the vehicle.
  The FLA will be connected to a PC by a USB cable to communicate on the
  vehicle bus.
@@ -5590,7 +5590,7 @@ name "enu:RP1210"
 
 \end_inset
 
-This display screen asks to enable the passthrough mode.
+This display screen asks to enable the Passthrough mode.
  If the Red button is pressed, then the system goes back to the status display
  (Screen 
 \begin_inset CommandInset ref
@@ -5786,9 +5786,9 @@ Pressing the Scan button
 After pressing the Scan button, the FLA prompts the user if they have proper
  permission to download the data from the vehicle.
  Proper permission depends on the context of the download.
- It may involove obtaining a warrant, or the operator may be acting on behalf
+ It may involve obtaining a warrant, or the operator may be acting on behalf
  of the owner.
- Acknlowlegement of proper permission initiates a download.
+ Acknowledgment of proper permission initiates a download.
  The time that the Green button shown in Figure is pushed, along with the
  last GPS coordinates and time of the device are recorded.
  
@@ -5860,7 +5860,7 @@ There are two standards that define data elements for heavy vehicles that
  They contain data elements that are common for all vehicles and this section
  describes what elements the FLA is looking for.
  Not all data is available depending on the vehicle.
- Older vehciles may not have J1939 and newer ones may not have J1708/J1587.
+ Older vehicles may not have J1939 and newer ones may not have J1708/J1587.
 \end_layout
 
 \begin_layout Subsection
@@ -5868,13 +5868,13 @@ J1587 Data
 \end_layout
 
 \begin_layout Standard
-The data decoded using the SAE J1587 standard is tranported on the J1708
+The data decoded using the SAE J1587 standard is transported on the J1708
  bus.
  The J1708 network is a legacy system based on RS-485 running at 9600 baud.
  It uses timing to break up message frames and checksums to ensure integrity.
  Messages are decoding according to a Parameter Identification character
  (PID).
- The PID defines how to decod the bytes that follow.
+ The PID defines how to decode the bytes that follow.
 \end_layout
 
 \begin_layout Standard
@@ -6308,8 +6308,8 @@ Idle Engine Speed
 \begin_inset Text
 
 \begin_layout Plain Layout
-Minimum nontransient rotational velocity of crankshaft while engine is supplying
- power to itself and its attendant support systems.
+Minimum non-transient rotational velocity of crankshaft while engine is
+ supplying power to itself and its attendant support systems.
 \end_layout
 
 \end_inset
@@ -6836,7 +6836,7 @@ Total Vehicle Distance
 \begin_inset Text
 
 \begin_layout Plain Layout
-Accumulated distance travelled by vehicle during its operation.
+Accumulated distance traveled by vehicle during its operation.
 \end_layout
 
 \end_inset
@@ -7204,7 +7204,7 @@ Vehicle Wet Tank Pressure
 \begin_inset Text
 
 \begin_layout Plain Layout
-Identifies the current gage pressure inside the vehicle wet tank.
+Identifies the current gauge pressure inside the vehicle wet tank.
 \end_layout
 
 \end_inset
@@ -8549,7 +8549,7 @@ Date
 
 \begin_layout Plain Layout
 Day, month, year.
- A value of 0 for the year corrosponds to 1985.
+ A value of 0 for the year corresponds to 1985.
 \end_layout
 
 \end_inset
@@ -8624,7 +8624,7 @@ ID Identifier Bit
 \end_layout
 
 \begin_layout Description
-SRR Substutute Remote Request (Always a recessive bit, which has a value
+SRR Substitute Remote Request (Always a recessive bit, which has a value
  of 1)
 \end_layout
 
@@ -8675,7 +8675,7 @@ DP Data Page (usually set to zero)
 \end_layout
 
 \begin_layout Description
-PDU1 Protocol Data Unit 
+PDU Protocol Data Unit 
 \end_layout
 
 \begin_layout Description
@@ -8694,6 +8694,14 @@ PGN Parameter Group Number
 FMI Failure Mode Indicator
 \end_layout
 
+\begin_layout Description
+VSL Vehicle Speed Limiter
+\end_layout
+
+\begin_layout Description
+PTO Power Take Off
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -8707,7 +8715,7 @@ FMI Failure Mode Indicator
 \begin_layout Standard
 \begin_inset Float table
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
@@ -8832,7 +8840,7 @@ Control Field
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
+<cell multicolumn="1" alignment="center" valignment="bottom" topline="true" leftline="true" usebox="none" width="8em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9601,17 +9609,6 @@ CAN Extended Frame
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways true
-status open
-
 \begin_layout Plain Layout
 
 \size small
@@ -9619,36 +9616,36 @@ status open
 <lyxtabular version="3" rows="6" columns="31">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top" width="1em">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
+<column alignment="center" valignment="top" width="1ex">
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -9967,7 +9964,7 @@ F
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="3em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="2em">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10036,7 +10033,7 @@ P
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10110,7 +10107,7 @@ PDU Format Byte
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="8ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10184,7 +10181,7 @@ PDU Specific Byte
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="8em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="8ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10648,7 +10645,7 @@ Position
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="2em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="2ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10816,7 +10813,7 @@ PGN Byte 3 for PDU2
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="8em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="8ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10937,7 +10934,7 @@ SA Byte
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="18em">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="18ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11220,7 +11217,7 @@ Parameter Group Number (PDU2 Format)
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11312,7 +11309,7 @@ Parameter Group Number (PGN)
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none" width="8ex">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11588,7 +11585,7 @@ Engine #1
 \begin_inset Text
 
 \begin_layout Plain Layout
-Transmisssion #1
+Transmission #1
 \end_layout
 
 \end_inset
@@ -11792,7 +11789,7 @@ Table of Common Source Addresses
 \begin_layout Standard
 The data in the following sections will be displayed for each source address
  on the network.
- After pressing the permission to download button, the FAL will scan the
+ After pressing the permission to download button, the FLA will scan the
  vehicle networks for 15 seconds to see what Source Addresses are available
  on the network.
 \end_layout
@@ -11807,7 +11804,7 @@ n data.
  If the data is not displayed in the report, then it was not available by
  the network.
  The units displayed in the FLA report are in US common units; whereas the
- J1939 specification my call for different units.
+ J1939 specification may call for different units.
  Other configuration data may be available that is not listed below.
  
 \end_layout
@@ -11816,13 +11813,13 @@ n data.
 \begin_inset Tabular
 <lyxtabular version="3" rows="18" columns="5">
 <features rotate="0" islongtable="true" headBottomDL="true" longtabularalignment="center">
-<column alignment="center" valignment="top" width="10ex">
+<column alignment="left" valignment="middle" width="10ex">
 <column alignment="left" valignment="middle" width="24ex">
-<column alignment="center" valignment="top" width="4ex">
-<column alignment="left" valignment="top" width="26ex">
-<column alignment="left" valignment="top" width="10ex">
+<column alignment="center" valignment="middle" width="4ex">
+<column alignment="left" valignment="middle" width="32ex">
+<column alignment="left" valignment="middle" width="12ex">
 <row endhead="true">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12489,7 +12486,7 @@ ASCII
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12822,7 +12819,7 @@ The Forensic Link Adapter scans the J1939 network for the following historical
  The units displayed in the FLA report are in US common units; whereas the
  J1939 specification my call for different units.
  Other historical data may be available that is not listed below.
- The preceeding byte consisten of 00 is omitted on the hex representation
+ The preceding byte consisting of 00 is omitted on the hex representation
  of the PGN.
 \end_layout
 
@@ -12833,8 +12830,8 @@ The Forensic Link Adapter scans the J1939 network for the following historical
 <column alignment="center" valignment="top" width="10ex">
 <column alignment="left" valignment="top" width="24ex">
 <column alignment="center" valignment="top" width="4ex">
-<column alignment="left" valignment="top" width="26ex">
-<column alignment="left" valignment="top" width="10ex">
+<column alignment="left" valignment="top" width="32ex">
+<column alignment="left" valignment="top" width="12ex">
 <row endhead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -14017,6 +14014,55 @@ gallons
 
 \end_layout
 
+\begin_layout Standard
+The following descriptions are referenced from the SAE J1939-71 standard
+ and have not been verified for any particular application.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Drive
+\begin_inset space ~
+\end_inset
+
+Fuel
+\begin_inset space ~
+\end_inset
+
+Used Total fuel consumed while the engine speed is greater than zero, vehicle
+ speed is greater than or equal to 2 km/h, and neither the PTO or the remote
+ PTO is controlling the engine power output, since the last trip reset.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+PTO
+\begin_inset space ~
+\end_inset
+
+Governor
+\begin_inset space ~
+\end_inset
+
+Moving
+\begin_inset space ~
+\end_inset
+
+Fuel
+\begin_inset space ~
+\end_inset
+
+Used Total fuel consumed while either the PTO or remote PTO governors are
+ in the hold state, the engine speed is greater than zero, and vehicle speed
+ is greater than or equal to 2 km/h, since the last trip reset.
+\end_layout
+
 \begin_layout Description
 Trip
 \begin_inset space ~
@@ -14089,12 +14135,335 @@ Used Total fuel consumed while the engine is in the cruise hold state since
  be accumulated in the "trip cruise fuel used" parameter.
 \end_layout
 
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Drive
+\begin_inset space ~
+\end_inset
+
+Fuel
+\begin_inset space ~
+\end_inset
+
+Economy Trip drive fuel economy is equal to the distance traveled by vehicle
+ in the drive state (engine speed greater than zero, vehicle speed greater
+ than or equal to 2 km/h, and neither the PTO or remote PTO governors are
+ controlling engine power output) divided by trip drive fuel used (SPN 1001),
+ since the last trip reset.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Distance
+\begin_inset space ~
+\end_inset
+
+on
+\begin_inset space ~
+\end_inset
+
+VSL Total distance accumulated while the engine torque mode is road speed
+ governing since the last trip reset.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Gear
+\begin_inset space ~
+\end_inset
+
+Down
+\begin_inset space ~
+\end_inset
+
+Distance Total distance accumulated while the vehicle has operated in the
+ gear which is one gear down from top gear and exceeds a calibrated minimum
+ time (typically the time to shift the transmission) since the last trip
+ reset.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Distance
+\begin_inset space ~
+\end_inset
+
+in
+\begin_inset space ~
+\end_inset
+
+Top
+\begin_inset space ~
+\end_inset
+
+Gear Total distance accumulated while the vehicle has operated in top gear
+ for a calibrated minimum time since the last trip reset.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Distance Distance traveled during all or part of a journey.
+\end_layout
+
+\begin_layout Description
+Total
+\begin_inset space ~
+\end_inset
+
+Vehicle
+\begin_inset space ~
+\end_inset
+
+Distance Accumulated distance traveled by vehicle during its operation.
+\end_layout
+
+\begin_layout Description
+High
+\begin_inset space ~
+\end_inset
+
+Resolution
+\begin_inset space ~
+\end_inset
+
+Total
+\begin_inset space ~
+\end_inset
+
+Vehicle
+\begin_inset space ~
+\end_inset
+
+Distance Accumulated distance traveled by the vehicle during its operation.
+ 1 bit of the counter = 5 meters.
+\end_layout
+
+\begin_layout Description
+High
+\begin_inset space ~
+\end_inset
+
+Resolution
+\begin_inset space ~
+\end_inset
+
+Trip Distance Distance traveled during all or part of a journey.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Maximum
+\begin_inset space ~
+\end_inset
+
+Engine
+\begin_inset space ~
+\end_inset
+
+Speed Maximum engine speed achieved since the last trip reset.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Average
+\begin_inset space ~
+\end_inset
+
+Engine
+\begin_inset space ~
+\end_inset
+
+Speed Average speed of the engine since the last trip reset.
+ NOTE — Excludes ignition-on time without the engine speed above zero.
+ Includes idle, engine PTO governor (moving and non-moving), and drive operation.
+\end_layout
+
+\begin_layout Description
+Trip
+\begin_inset space ~
+\end_inset
+
+Drive
+\begin_inset space ~
+\end_inset
+
+Average
+\begin_inset space ~
+\end_inset
+
+Load
+\begin_inset space ~
+\end_inset
+
+Factor Average engine load factor while engine speed is greater than zero,
+ vehicle speed is greater than or equal to 2 km/h, and both the PTO (moving/non-
+moving) and remote PTO governors are not in the hold state, since the last
+ trip reset.
+ Engine operation during cruise control operation is included.
+\end_layout
+
+\begin_layout Description
+Total
+\begin_inset space ~
+\end_inset
+
+Drive
+\begin_inset space ~
+\end_inset
+
+Average
+\begin_inset space ~
+\end_inset
+
+Load
+\begin_inset space ~
+\end_inset
+
+Factor Average engine load factor while engine speed is greater than zero,
+ vehicle speed is greater than or equal to 2 km/h, and both the PTO (moving/non-
+moving) and remote PTO governors are not in the hold state, over the life
+ of the engine.
+ Engine operation during cruise control operation is included.
+\end_layout
+
+\begin_layout Description
+Engine
+\begin_inset space ~
+\end_inset
+
+Total
+\begin_inset space ~
+\end_inset
+
+Hours
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+Operation Accumulated time of operation of engine.
+ Resolution: 0.05 hours
+\end_layout
+
+\begin_layout Description
+Total
+\begin_inset space ~
+\end_inset
+
+Power
+\begin_inset space ~
+\end_inset
+
+Takeoff
+\begin_inset space ~
+\end_inset
+
+Hours Accumulated time of operation of power takeoff device.
+ Resolution: 0.05 hours
+\end_layout
+
+\begin_layout Description
+Engine
+\begin_inset space ~
+\end_inset
+
+Total
+\begin_inset space ~
+\end_inset
+
+Revolutions Accumulated number of revolutions of engine crankshaft during
+ its operation.
+ Resolution: 1000 revs/bit
+\end_layout
+
+\begin_layout Description
+Total
+\begin_inset space ~
+\end_inset
+
+Vehicle
+\begin_inset space ~
+\end_inset
+
+Hours Accumulated time of operation of vehicle.
+ Resolution: 0.05 hours
+\end_layout
+
+\begin_layout Description
+Engine
+\begin_inset space ~
+\end_inset
+
+Total
+\begin_inset space ~
+\end_inset
+
+Idle
+\begin_inset space ~
+\end_inset
+
+Hours Accumulated time of operation of the engine while under idle conditions.
+\end_layout
+
+\begin_layout Description
+Engine
+\begin_inset space ~
+\end_inset
+
+Total
+\begin_inset space ~
+\end_inset
+
+Idle
+\begin_inset space ~
+\end_inset
+
+Fuel
+\begin_inset space ~
+\end_inset
+
+Used Accumulated amount of fuel used during vehicle operation while under
+ idle conditions.
+\end_layout
+
+\begin_layout Description
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 Native Downloads
 \end_layout
 
 \begin_layout Subsection
 Detroit Diesel
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -14315,6 +14684,13 @@ Once enabled, connect a USB cable from the FLA to the laptop with the DG
  drivers installed.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Cummins 
 \end_layout
@@ -14424,7 +14800,7 @@ Press the After Treatment button and Save the report as a PDF file.
 
 \end_deeper
 \begin_layout Enumerate
-Exit passthrough mode by pressing a the Update (red) button on the FLA.
+Exit Passthrough mode by pressing a the Update (red) button on the FLA.
  If an Internet Connection is available, then the data can be uploaded and
  archived.
  Otherwise, shutdown.
@@ -14445,6 +14821,17 @@ Scroll to the Upload to Server option on the FLA and upload the data to
 Insite Download Protocol
 \end_layout
 
+\begin_layout Standard
+Under Construction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Detroit Diesel
 \end_layout
@@ -14460,11 +14847,11 @@ Turn the ignition key to the on position (if it is not already on), but
 
 \begin_layout Enumerate
 Plug in the FLA to the diagnostic connector.
- Ensure it powers on and boots.
+ Record the time shown on the FLA.
 \end_layout
 
 \begin_layout Enumerate
-Perform a Standards based download using FLA Diagnostics.
+Perform a Network Scan using the Forensic Link Adapter.
 \end_layout
 
 \begin_layout Enumerate
@@ -14474,7 +14861,7 @@ name "enu:Enable-the-network"
 
 \end_inset
 
-Enable the network passthrough mode
+Enable the RP1210 network Passthrough mode.
 \end_layout
 
 \begin_deeper
@@ -14483,58 +14870,24 @@ Use J1708 Passthrough mode for DDEC IV, DDEC V, and Pre-2008 Mercedes Engines.
 \end_layout
 
 \begin_layout Enumerate
-Use J1939 Passthrough mode (selected from menu screen on FLA) for all newer
- DDEC or Mercedes modules.
+Use J1939/CAN Passthrough mode (selected from menu screen on FLA) for all
+ newer DDEC 10 and DDEC 13.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Launch DG Adapter Validation Tool (AVT).
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Select the appropriate installed device driver.
- 
-\end_layout
-
-\begin_layout Enumerate
-Switch the protocol to in the adapter validation tool to the same one selected
- in Step 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Enable-the-network"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Click Run Test.
-\end_layout
-
-\begin_layout Enumerate
-If the Adapter Validation Tool passes the test, then two windows will turn
- green.
- This means the ECM and the computer are connected through the RP1210 Device.
- If a test fails, review the suggestions output by the Adapter Validation
- Tool and try again.
- It may require shutting down the FLA, unplugging the USB, and disconnecting
- the FLA from power.
- Similarly, the PC may need to be rebooted.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Open DDEC Reports.
+Open DDEC Reports by clicking on the icon on your computer.
  
 \end_layout
 
 \begin_layout Enumerate
 The Connection Manager may start automatically.
  
+\end_layout
+
+\begin_layout Enumerate
+Ensure the Reset Time and Reset Trip options are not checked.
+ Take a screen shot of these features unchecked.
 \end_layout
 
 \begin_layout Enumerate
@@ -14570,9 +14923,10 @@ DATA PAGES
 \end_layout
 
 \begin_layout Enumerate
-Exit passthrough mode by pressing a button on the FLA.
- Exiting this mode takes some time, so the button press may not work at
- first.
+Exit Passthrough mode by pressing Exit
+\backslash
+Upload on the FLA.
+ Exiting this mode will compress log files and takes some time.
  
 \end_layout
 
@@ -14591,6 +14945,17 @@ Scroll to the Upload to Server option on the FLA and upload the data to
 DDDL 8 Download Protocol
 \end_layout
 
+\begin_layout Standard
+Under Construction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Caterpillar ET Download Protocol
 \end_layout
@@ -14599,7 +14964,7 @@ Caterpillar ET Download Protocol
 This section provides a protocol to use CatET to download Caterpillar ADEM
  II, ADEMIII, and ADEMIV engine control modules.
  These modules are found on C series engines (i.e.
- C-15, C-12, C-9, and C-7).
+ C-15, C-12, C-9, and C-7) and 3126.
  
 \end_layout
 
@@ -14679,7 +15044,7 @@ Perform a Standards based download using the FLA.
 \end_layout
 
 \begin_layout Enumerate
-The FLA needs to be in J1708 passthrough mode, which is screen 
+The FLA needs to be in J1708 Passthrough mode, which is screen 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:J1708-pass-mode."
@@ -14687,7 +15052,7 @@ reference "enu:J1708-pass-mode."
 \end_inset
 
 .
- Once the FLA is in passthrough mode, it will log and preserve network traffic
+ Once the FLA is in Passthrough mode, it will log and preserve network traffic
  for a forensically verifiable record.
 \end_layout
 
@@ -15162,6 +15527,65 @@ There are certain messages that should not be transmitted to the ECM during
  
 \end_layout
 
+\begin_layout Standard
+The following messages are actively filtered and blocked by the Forensic
+ Link Adapter.
+ The Forensic Link Adapter will not transmit these messages to the ECM.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Message
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Purpose
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time Reset
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prevent the ECM RTC from being reset.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Using the Forensic Link Adapter Portal Website
 \end_layout
@@ -15368,117 +15792,33 @@ Forensic Link Adapter Fails to Boot
 As the FLA boots, it may see something that it doesn't like and fails to
  pass its own self test.
  Often restarting will fix the problem.
- If connected to a truck, restart with the key in the off position so only
+ 
+\end_layout
+
+\begin_layout Itemize
+If connected to a truck, restart with the key in the off position so only
  power is connected.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Try connecting and powering with only the DC power barrel jack.
 \end_layout
 
-\begin_layout Chapter
-Smart Sensor Simulators
+\begin_layout Subsection
+Time is not correct on the FLA
 \end_layout
 
 \begin_layout Standard
-The Smart Sensor Simulator is a bench downloading harness for different
- ECMs that is programmed to emulate a working truck.
+As the FLA boots it reads its time from a Real Time Clock (RTC) built into
+ the system.
+ If the time is not correct, then the data from the RTC was corrupted.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SSS Connected to ADEMIII.jpg
-	lyxscale 50
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:SSS-ADEM3"
-
-\end_inset
-
-A photograph of a Smart Sensor Simulator connected to a Caterpillar ADEM
- III.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename SSS Connections.jpg
-	lyxscale 50
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:SSS-Connections"
-
-\end_inset
-
-Smart Sensor Simulator connections and interface panel.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename No Active Codes from Cat SSS ADEM3 Screenshot.png
-	width 100text%
-
-\end_inset
-
-
+\begin_layout Itemize
+Reboot the FLA with it plugged into a good internet connection.
+ This will enable it to look for a network server to set the time.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -15831,6 +16171,106 @@ Assigned FLAs
 \end_layout
 
 \begin_layout Chapter
+Smart Sensor Simulators
+\end_layout
+
+\begin_layout Standard
+The Smart Sensor Simulator is a bench downloading harness for different
+ ECMs that is programmed to emulate a working truck.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SSS Connected to ADEMIII.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SSS-ADEM3"
+
+\end_inset
+
+A photograph of a Smart Sensor Simulator connected to a Caterpillar ADEM
+ III.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename SSS Connections.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SSS-Connections"
+
+\end_inset
+
+Smart Sensor Simulator connections and interface panel.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename No Active Codes from Cat SSS ADEM3 Screenshot.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 Definitions
 \end_layout
 
@@ -15953,7 +16393,7 @@ What does the third line of the display say?
 \end_deeper
 \begin_layout Enumerate
 Press the Red button once to begin the Shutdown Process.
- This corrosponds to the transition from Screen 
+ This corresponds to the transition from Screen 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:Status"
@@ -15975,7 +16415,7 @@ reference "enu:Shutdown"
 \begin_layout Enumerate
 Press the Green Button to confirm the Shutdown.
  How many seconds does it take for the LED to turn red and the screen say
- that it is ok to unplug?
+ that it is OK to unplug?
 \begin_inset space \hrulefill{}
 \end_inset
 
@@ -16012,7 +16452,7 @@ What is the voltage displayed on the status screen?
 
 \begin_layout Enumerate
 Using the display buttons, shutdown the FLA.
- After the FLA says it's ok, unplug the 12V cigarette adapter cable.
+ After the FLA says it's OK, unplug the 12V cigarette adapter cable.
 \end_layout
 
 \begin_layout Enumerate
@@ -16113,9 +16553,9 @@ Using a Wired Connection
 \end_layout
 
 \begin_layout Enumerate
-Plug the ethernet cable from the FLA into a known good wired Internet connection
+Plug the Ethernet cable from the FLA into a known good wired Internet connection
  that is on the same network as your computer.
- This assumes that you have a known good netwrok connection, usually your
+ This assumes that you have a known good network connection, usually your
  home router or a wired connection at the office.
 \end_layout
 
@@ -16244,7 +16684,7 @@ Connect Directly to a Computer
 \begin_layout Enumerate
 Plug the Ethernet cable from the FLA to your computer's Ethernet port.
  (A USB to Ethernet adapter is available in the FLA kit if your computer
- does not have an ethernet jack.)
+ does not have an Ethernet jack.)
 \end_layout
 
 \begin_layout Enumerate
@@ -16563,7 +17003,7 @@ What version of DDEC Reports is installed?
 \end_layout
 
 \begin_layout Enumerate
-What version of Cummins Powerspec is installed?
+What version of Cummins PowerSpec is installed?
 \begin_inset space \hrulefill{}
 \end_inset
 
@@ -16635,6 +17075,42 @@ Upload the data from the field.
 \end_layout
 
 \begin_layout Section
+Connecting to Engine Control Modules with a Smart Sensor Simulator
+\end_layout
+
+\begin_layout Standard
+Connect to and download the following:
+\end_layout
+
+\begin_layout Enumerate
+DDEC IV 
+\end_layout
+
+\begin_layout Enumerate
+DDEC V 
+\end_layout
+
+\begin_layout Enumerate
+DDEC 6
+\end_layout
+
+\begin_layout Enumerate
+DDEC X
+\end_layout
+
+\begin_layout Enumerate
+CAT ADEM III
+\end_layout
+
+\begin_layout Enumerate
+CAT ADEM IV
+\end_layout
+
+\begin_layout Enumerate
+Cummins CM870
+\end_layout
+
+\begin_layout Section
 Using the FLA Portal
 \end_layout
 
@@ -16647,12 +17123,24 @@ Login to fla.synercontechnologies.com
 \end_layout
 
 \begin_layout Enumerate
-Find the latest download
+Find the latest download based on time.
 \end_layout
 
 \begin_layout Enumerate
-Enter User information
+Did the GPS time match the FLA time?
 \end_layout
+
+\begin_layout Enumerate
+Enter User information ant report notes.
+\end_layout
+
+\begin_layout Enumerate
+View a network log
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Note Note
+status open
 
 \begin_layout Subsection
 Viewing Event Data
@@ -16669,6 +17157,15 @@ Viewing Configuration Data
 \begin_layout Subsection
 Viewing Fault Code Data
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Note Note
+status open
 
 \begin_layout Subsection
 Viewing Network Log Data
@@ -16754,6 +17251,11 @@ Understanding Data based on Standards
 Working with Manufacturer Specific Data
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Release Notes
 \end_layout
@@ -16763,7 +17265,7 @@ Version 0.4b contains several enhancements and bug fixes.
 \end_layout
 
 \begin_layout Itemize
-Improved reliability and logging for both J1708 and J1939 passthrough
+Improved reliability and logging for both J1708 and J1939 Passthrough
 \end_layout
 
 \begin_layout Itemize
