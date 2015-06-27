@@ -14942,6 +14942,259 @@ Scroll to the Upload to Server option on the FLA and upload the data to
 \end_layout
 
 \begin_layout Subsection
+Diagnostic Link Download Protocol
+\end_layout
+
+\begin_layout Standard
+This protocol is to support data from DDEC III, DDEC IV, and DDEC V control
+ modules.
+ These modules primarily communicate over the J1708/J1587 network.
+ This protocol was written for verison 6.50.
+ Other versions may have a different method.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Setup
+\end_layout
+
+\begin_layout Standard
+Before proceeding, please be sure to not automatically reset the time.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Open Diagnostic Link.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Start Menu.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Options and deselect Allow automatic setting of date/time
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL Options.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set the Local Communications Interface to the DG DPA4 Plus.
+\end_layout
+
+\begin_layout Enumerate
+Restart DDDL 6
+\end_layout
+
+\begin_layout Subsubsection
+Download
+\end_layout
+
+\begin_layout Enumerate
+After obtaining data with the Forensic Link Adapter, connect to the ECM
+ with the RP1210 mode in J1708 and connect the USB cable to your computer.
+\end_layout
+
+\begin_layout Enumerate
+Be sure the the ignition key is still in the the on position, but do not
+ start the engine.
+\end_layout
+
+\begin_layout Enumerate
+A popup Welcome Screen should appear.
+ Press the Retrieve the calibration from the ECM button.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Welcome Screen.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Download the Engine Configuration Data and Print the data.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Engine Configuration Data.png
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Retrieve the Calibration Data and Print it from the file menu.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Retrieved Calibration.png
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Gather and Print Injector Calibration
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Injector Calibration.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Audit Trail from the Calibration Menu and then Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Audit Trail.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+View and Diagnostics -> Fault Codes then File -> Print Fault Codes
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Fault Codes.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics and Diagnostic Instrumentation.
+ Select the List tab and then Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Diagnostic Instrumentation.png
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> ECM I/O Configuration.
+ This can be printed and saved to a text file.
+ The text file may be saved to C:
+\backslash
+Detroit Diesel
+\backslash
+Diagnostic
+\backslash
+IOConfig.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 ECM IO Configuration.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> Injector Response Times to print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Injector Response Times.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> Maintenance Alert
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Maintenance Alert.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Tools -> Engine/Trip Data
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Engine and Trip Data.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Take a screen shot of the software verison number from Help -> About
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 About.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 DDDL 8 Download Protocol
 \end_layout
 
