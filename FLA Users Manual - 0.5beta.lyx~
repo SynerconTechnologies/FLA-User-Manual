@@ -14942,11 +14942,448 @@ Scroll to the Upload to Server option on the FLA and upload the data to
 \end_layout
 
 \begin_layout Subsection
+Diagnostic Link Download Protocol
+\end_layout
+
+\begin_layout Standard
+This protocol is to support data from DDEC III, DDEC IV, and DDEC V control
+ modules.
+ These modules primarily communicate over the J1708/J1587 network.
+ This protocol was written for verison 6.50.
+ Other versions may have a different method.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Setup
+\end_layout
+
+\begin_layout Standard
+Before proceeding, please be sure to not automatically reset the time.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Open Diagnostic Link.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Start Menu.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Options and deselect Allow automatic setting of date/time
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL Options.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set the Local Communications Interface to the DG DPA4 Plus.
+\end_layout
+
+\begin_layout Enumerate
+Restart DDDL 6
+\end_layout
+
+\begin_layout Subsubsection
+Download
+\end_layout
+
+\begin_layout Enumerate
+After obtaining data with the Forensic Link Adapter, connect to the ECM
+ with the RP1210 mode in J1708 and connect the USB cable to your computer.
+\end_layout
+
+\begin_layout Enumerate
+Be sure the the ignition key is still in the the on position, but do not
+ start the engine.
+\end_layout
+
+\begin_layout Enumerate
+A popup Welcome Screen should appear.
+ Press the Retrieve the calibration from the ECM button.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Welcome Screen.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Retrieve the Calibration Data and Print it from the file menu.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Retrieved Calibration.png
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Gather and Print Injector Calibration
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Injector Calibration.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Audit Trail from the Calibration Menu and then Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Audit Trail.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+View and Diagnostics -> Fault Codes then File -> Print Fault Codes
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Fault Codes.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics and Diagnostic Instrumentation.
+ Select the List tab and then Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Diagnostic Instrumentation.png
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> Engine Configuration Data and print the data.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Engine Configuration Data.png
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> ECM I/O Configuration.
+ This can be printed and saved to a text file.
+ The text file may be saved to C:
+\backslash
+Detroit Diesel
+\backslash
+Diagnostic
+\backslash
+IOConfig.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 ECM IO Configuration.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> Injector Response Times to print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Injector Response Times.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> Maintenance Alert
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Maintenance Alert.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Tools -> Engine/Trip Data
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Engine and Trip Data.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Take a screen shot of the software verison number from Help -> About
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 About.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 DDDL 8 Download Protocol
 \end_layout
 
 \begin_layout Standard
-Under Construction
+Detroit Diesel Diagnostic Link version 8 is used for ECMs that communicate
+ using UDS over CAN.
+ This is the DDEC6, DDEC10, and DDEC13, as well as other CAN enabled modules
+ on the system.
+ A DDEC13 with a DD12 Automatic Transmission is also included in this software.
+ DDDL8 can be purchased and downloaded from 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://diagnosticlink.nexiq.com/DTNA/Default.aspx"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Plug in the VDA to the truck and computer.
+\end_layout
+
+\begin_layout Enumerate
+Be sure the key is in the on position, but the engine is not running.
+\end_layout
+
+\begin_layout Enumerate
+Open DDDL8.
+ Connections should be automatic.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Identification Screen.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The Identification bar on the left will be highlighted once the ECM is connected.
+ There are tabs across the top of the main window.
+ Each of these tabs should be printed:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Select the Common tab, then File -> Print.
+\end_layout
+
+\begin_layout Enumerate
+Select the Audit Trail tab, then File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Audit Trail.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select the Stored Data tab, then File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select the Rating tab, the File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Rating.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select the Engine Totals tab, then File -> Print
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Engine Totals.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Select the Fault Codes bar on the left to bring up any fault codes.
+ Press File -> Print to get a print of all the codes and freeze-frame data.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Fault Codes.png
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Press the Test Results tab, then File -> Print.
+\end_layout
+
+\begin_layout Enumerate
+Click on the Instrumentation left side bar.
+ Select the All Instruments tab, then File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Instrumentation.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Click on Parameters on the left bar and select the All Parameters tab, then
+ File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Parameters.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Exit DDDL8.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Locate the recently created log file in C:
+\backslash
+ProgramData
+\backslash
+Detroit Diesel
+\backslash
+Drumroll
+\backslash
+Log Files
+\backslash
+.
+ The file address for this location may need to be typed in the address
+ bar
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Locating the drumroll log file.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -15280,6 +15717,7 @@ A menu of recorded Snapshots appear.
 
 \begin_inset Graphics
 	filename CAT ET Select Snapshot.png
+	width 6in
 
 \end_inset
 
@@ -15740,7 +16178,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename AdapterValidationTool.png
-	width 50text%
+	width 100text%
 
 \end_inset
 
@@ -16168,18 +16606,19 @@ Assigned FLAs
 \end_inset
 
 
-\end_layout
+\begin_inset Note Note
+status open
 
 \begin_layout Chapter
 Smart Sensor Simulators
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The Smart Sensor Simulator is a bench downloading harness for different
  ECMs that is programmed to emulate a working truck.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -16220,7 +16659,7 @@ A photograph of a Smart Sensor Simulator connected to a Caterpillar ADEM
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -16260,7 +16699,7 @@ Smart Sensor Simulator connections and interface panel.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename No Active Codes from Cat SSS ADEM3 Screenshot.png
 	width 100text%
@@ -16274,14 +16713,14 @@ Smart Sensor Simulator connections and interface panel.
 Definitions
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 When dealing with heavy truck data, there are many acronyms, symbols and
  phrases that are used to describe the data.
  This chapter presents a list to help decipher some of the terms used for
  dealing with heavy vehicle event data recorders.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "FLA"
@@ -16306,6 +16745,11 @@ target "http://www.nist.gov/"
 
 \begin_layout Description
 RTC Real Time Clock
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter

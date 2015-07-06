@@ -15029,21 +15029,6 @@ A popup Welcome Screen should appear.
 \end_layout
 
 \begin_layout Enumerate
-Download the Engine Configuration Data and Print the data.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Graphics
-	filename DDDL6 Engine Configuration Data.png
-	width 4in
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
 Retrieve the Calibration Data and Print it from the file menu.
 \begin_inset Newline newline
 \end_inset
@@ -15110,6 +15095,21 @@ Select Diagnostics and Diagnostic Instrumentation.
 \begin_inset Graphics
 	filename DDDL6 Diagnostic Instrumentation.png
 	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select Diagnostics -> Engine Configuration Data and print the data.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL6 Engine Configuration Data.png
+	width 4in
 
 \end_inset
 
@@ -15199,7 +15199,191 @@ DDDL 8 Download Protocol
 \end_layout
 
 \begin_layout Standard
-Under Construction
+Detroit Diesel Diagnostic Link version 8 is used for ECMs that communicate
+ using UDS over CAN.
+ This is the DDEC6, DDEC10, and DDEC13, as well as other CAN enabled modules
+ on the system.
+ A DDEC13 with a DD12 Automatic Transmission is also included in this software.
+ DDDL8 can be purchased and downloaded from 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://diagnosticlink.nexiq.com/DTNA/Default.aspx"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Plug in the VDA to the truck and computer.
+\end_layout
+
+\begin_layout Enumerate
+Be sure the key is in the on position, but the engine is not running.
+\end_layout
+
+\begin_layout Enumerate
+Open DDDL8.
+ Connections should be automatic.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Identification Screen.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The Identification bar on the left will be highlighted once the ECM is connected.
+ There are tabs across the top of the main window.
+ Each of these tabs should be printed:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Select the Common tab, then File -> Print.
+\end_layout
+
+\begin_layout Enumerate
+Select the Audit Trail tab, then File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Audit Trail.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select the Stored Data tab, then File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select the Rating tab, the File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Rating.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Select the Engine Totals tab, then File -> Print
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Engine Totals.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Select the Fault Codes bar on the left to bring up any fault codes.
+ Press File -> Print to get a print of all the codes and freeze-frame data.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Fault Codes.png
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Press the Test Results tab, then File -> Print.
+\end_layout
+
+\begin_layout Enumerate
+Click on the Instrumentation left side bar.
+ Select the All Instruments tab, then File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Instrumentation.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Click on Parameters on the left bar and select the All Parameters tab, then
+ File -> Print.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Parameters.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Exit DDDL8.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Locate the recently created log file in C:
+\backslash
+ProgramData
+\backslash
+Detroit Diesel
+\backslash
+Drumroll
+\backslash
+Log Files
+\backslash
+.
+ The file address for this location may need to be typed in the address
+ bar
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename DDDL8 Locating the drumroll log file.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -15252,6 +15436,7 @@ Set the preferences in CatET to use the DG DPA 4 Plus, which is the RP1210
 \begin_layout Standard
 \begin_inset Graphics
 	filename CAT ET Preferences RP1210.png
+	width 5in
 
 \end_inset
 
@@ -15267,6 +15452,7 @@ Setting the Warranty Report Startup helps with the work flow when connected,
 \begin_layout Standard
 \begin_inset Graphics
 	filename CAT ET Preferences Dialogs.png
+	width 5in
 
 \end_inset
 
@@ -15341,6 +15527,7 @@ CatET will automatically ask if you would like to create a Warranty Report.
 
 \begin_inset Graphics
 	filename CAT ET Create Warranty Reports.png
+	width 4in
 
 \end_inset
 
@@ -15419,7 +15606,7 @@ Keep track of where you save the Warranty Report using the Save As dialog.
 
 \begin_inset Graphics
 	filename CAT ET  Save as Warranty Report.png
-	width 4in
+	width 5in
 
 \end_inset
 
@@ -15524,9 +15711,10 @@ Select the Snapshot Viewer from the menu options as shown in the following
 
 \begin_layout Enumerate
 A menu of recorded Snapshots appear.
- Please select next one and press View Graph.
  Taking a screenshot of this dialog box is a good idea to keep track of
  all the available Snapshots.
+ Please select the next one and press View Graph.
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -15697,7 +15885,7 @@ The Snapshot can be opened in Excel.
 \end_layout
 
 \begin_layout Enumerate
-The excel file should appear like to picture below:
+The Excel file should appear like to picture below:
 \begin_inset Newline newline
 \end_inset
 
@@ -15728,7 +15916,7 @@ The additional Snapshots can be accessed by pressing the Snapshots...
 \end_layout
 
 \begin_layout Enumerate
-Repeat this Snapshots section for all the available Snapshots.
+Repeat the instruction in this Snapshots section for all the available Snapshots.
 \end_layout
 
 \begin_layout Subsection
@@ -15756,6 +15944,13 @@ Save the document with the screenshot.
 	filename CatET Time Stamp Screenshot.png
 	width 6in
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
