@@ -4,7 +4,9 @@
 \begin_header
 \textclass scrbook
 \begin_preamble
-%\usepackage[pdf]{pstricks}
+% \usepackage[pdf]{pstricks}
+\usepackage{auto-pst-pdf}
+\usepackage{pstricks}
 \usepackage{pst-all}
 \usepackage{calc}
 \newcommand{\degree}{$^{\circ}$}
