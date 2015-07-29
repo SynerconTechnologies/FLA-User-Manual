@@ -36,7 +36,7 @@
 \paperfontsize 11
 \spacing single
 \use_hyperref true
-\pdf_title "Users Manual"
+\pdf_title "User's Manual"
 \pdf_author "Synercon Technologies, LLC"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -97,7 +97,7 @@ Synercon Technologies, LLC
 \end_layout
 
 \begin_layout Title
-Forensic Link Adapter Users Manual
+Forensic Link Adapter User's Manual
 \end_layout
 
 \begin_layout Date
