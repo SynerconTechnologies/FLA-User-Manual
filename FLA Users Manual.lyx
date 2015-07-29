@@ -4,7 +4,9 @@
 \begin_header
 \textclass scrbook
 \begin_preamble
-%\usepackage[pdf]{pstricks}
+% \usepackage[pdf]{pstricks}
+\usepackage{auto-pst-pdf}
+\usepackage{pstricks}
 \usepackage{pst-all}
 \usepackage{calc}
 \newcommand{\degree}{$^{\circ}$}
@@ -34,7 +36,7 @@
 \paperfontsize 11
 \spacing single
 \use_hyperref true
-\pdf_title "User's Manual"
+\pdf_title "Users Manual"
 \pdf_author "Synercon Technologies, LLC"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -95,7 +97,7 @@ Synercon Technologies, LLC
 \end_layout
 
 \begin_layout Title
-Forensic Link Adapter User's Manual
+Forensic Link Adapter Users Manual
 \end_layout
 
 \begin_layout Date
