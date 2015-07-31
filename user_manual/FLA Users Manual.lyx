@@ -92,10 +92,170 @@
 
 \begin_body
 
-\begin_layout Subject
-\begin_inset Graphics
-	filename media/logos/synercon_logo_v3_only.pdf
-	width 4cm
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*{
+\backslash
+titleGP}{
+\backslash
+begingroup % Create the command for including the title page in the document
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+centering % Center all text
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+vspace*{
+\backslash
+baselineskip} % White space at the top of the page 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{figure}[tbph] 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+centering 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+includegraphics[width=0.15
+\backslash
+linewidth]{../media/logos/synercon_logo_v3_only}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+label{fig:logo}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+vspace{4cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+Huge 
+\backslash
+textbf{Forensic Link Adapter Users Manual}}
+\backslash
+
+\backslash
+[2
+\backslash
+baselineskip] % Title
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+Huge Synercon Technologies LLC}
+\backslash
+
+\backslash
+[2
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+Large For Software Version 1}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+vfill % Whitespace between editor names and publisher logo
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+textcopyright {
+\backslash
+scshape 2015} 
+\backslash
+
+\backslash
+[0.3
+\backslash
+baselineskip] % Year 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		Synercon Technologies LLC
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+titleGP
+\end_layout
 
 \end_inset
 
@@ -103,29 +263,14 @@
 \end_layout
 
 \begin_layout Title
-Forensic Link Adapter Users Manual
-\end_layout
-
-\begin_layout Subject
-Synercon Technologies, LLC
+Disclamer
 \end_layout
 
 \begin_layout Date
-For Software Version 1
+July, 2015
 \end_layout
 
-\begin_layout Publishers
-\begin_inset CommandInset href
-LatexCommand href
-name "http://www.synercontechnologies.com"
-target "http://www.synercontechnologies.com"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Uppertitleback
+\begin_layout Subtitle
 Disclaimer: The Synercon Technologies does not warrant the completeness
  and accuracy of the information produced by its software.
  While best efforts by industry experts have been made to generate information
@@ -226,7 +371,13 @@ The FLA is a device that communicates with ECMs using the SAE J1939 and
 \end_layout
 
 \begin_layout Standard
-<picture of FLA>
+\begin_inset Graphics
+	filename ../media/fla_pictures/angled_1.jpg
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -243,7 +394,13 @@ url{https://fla.synercontechnologies.com}.
 \end_layout
 
 \begin_layout Standard
-<picture of fla portal>
+\begin_inset Graphics
+	filename ../media/fla_portal_screenshots/user_landing_page.png
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -258,7 +415,13 @@ The FLA Preview is a website hosted by each FLA.
 \end_layout
 
 \begin_layout Standard
-<picture of fla preview>
+\begin_inset Graphics
+	filename ../media/fla_preview_screenshots/main_page.png
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -275,7 +438,13 @@ The SSS simulates sensors of a typical vehicle for ECMs.
 \end_layout
 
 \begin_layout Standard
-<picture of sss>
+\begin_inset Graphics
+	filename ../media/sss_pictures/SSS Connected to ADEMIII.jpg
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -290,6 +459,38 @@ Congratulations on purchasing the only heavy vehicle scan tool purpose built
 \end_layout
 
 \begin_layout Section
+What is Included with the FLA
+\end_layout
+
+\begin_layout Subsection
+The Contents of the FLA Case
+\end_layout
+
+\begin_layout Standard
+The FLA Case has everything operators need to collect data from heavy vehicles.
+ The FLA case has the following items:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/gavin/Documents/Synercon/FLA-User-Manual/media/fla_pictures/fla_case_contents.jpg
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The FLA Portal and FLA Preview
+\end_layout
+
+\begin_layout Standard
+The subscription to the TRUCKcrypt software allows operators to access the
+ FLA Portal and FLA Preview.
+\end_layout
+
+\begin_layout Section
 Register as an Operator
 \end_layout
 
@@ -298,14 +499,7 @@ The fla-admin should send you an email to invite you to be an operator for
  your FLA on the FLA Portal.
  The fla-admin email is initiated by the Organization administrator inviting
  a new operator.
- For more details, please see Chapter 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "chap:Administrator's-Guide"
-
-\end_inset
-
-.
+ For more details, please see Chapter XX.
  It will be neccessary to have a FLA Portal account to view any data you
  collect with your FLA.
 \end_layout
@@ -328,26 +522,139 @@ There are two general types of screens the FLA will display.
 \end_layout
 
 \begin_layout Standard
-1) <picture of main screen>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
 \end_layout
 
-\begin_layout Standard
-The prompt screens will have one or two options on the last line, corresponding
+\begin_layout Plain Layout
+
+	The prompt screens will have one or two options on the last line, corresponding
  to the button on that side of the FLA.
 \end_layout
 
-\begin_layout Standard
-2) <picture of loading screens>
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
 \end_layout
 
-\begin_layout Standard
-The working screens will not have an option on the last line, but usually
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/prompt_screen} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	The working screens will not have an option on the last line, but usually
  a percentage bar.
  During these screens, the FLA is preforming the operation displayed.
  
 \backslash
 textbf{NOTE, during these screens the RED button can cancle the current
  task}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/loading_screen} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -360,20 +667,20 @@ Connecting the FLA to the internet allows the device to get updates, set
 \end_layout
 
 \begin_layout Standard
-To connect the FLA to the internet, plug the device into a functional ethernet
- port using the included ethernet cable.
+To connect the FLA to the internet follow these steps.
 \end_layout
 
-\begin_layout Standard
-<picture of ethernet cable>
+\begin_layout Enumerate
+Plug the device into a functional ethernet port using the included ethernet
+ cable.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 The FLA should display an IP address on the second line of the title screen,
  the screen that is displayed right after the FLA finishes booting.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 If the FLA displays 
 \begin_inset Quotes eld
 \end_inset
@@ -405,42 +712,263 @@ Once connected to the internet, the Forensic Link Adapter can synchronoise
 \end_layout
 
 \begin_layout Standard
-To correct the FLA time, scroll to the System Configuration screen on the
- FLA, using the front-pannel interface.
+To correct the FLA time, follow these steps.
 \end_layout
 
 \begin_layout Standard
-<picture of sys_conf screen>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
 \end_layout
 
-\begin_layout Standard
-Enter the configuration, then scroll to the Update System Clock screen
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
 \end_layout
 
-\begin_layout Standard
-<picture of sys_conf_update_clock>
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{1}
 \end_layout
 
-\begin_layout Standard
-Select 
-\begin_inset Quotes eld
-\end_inset
+\begin_layout Plain Layout
 
-Update
-\begin_inset Quotes erd
-\end_inset
-
- with the Green button.
+	
+\backslash
+end{center}
 \end_layout
 
-\begin_layout Standard
-Once the FLA retrieves the current time, it will confirm the new time with
+\begin_layout Plain Layout
+
+	 scroll to the System Configuration screen on the FLA, and select configure
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{2}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Scroll to the Update System Clock screen, and select Update
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf_update_clock} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{3}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Once the FLA retrieves the current time, it will confirm the new time with
  the operator before setting the time.
+ The FLA will continue to update this time, so the user does not need to
+ imediatly confirm the time.
 \end_layout
 
-\begin_layout Standard
-The FLA will continue to update this time, so the user does not need to
- imediatly confirm the time.
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf_update_clock_confirm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -455,8 +983,15 @@ Setting the Timezone
 
 \begin_layout Standard
 The timezone for the FLA can be set without an internet connection.
- To set the system timezone, scroll to the System Configuration screen (See
- the above section), then scroll to the Change FLA Timezone screen.
+\end_layout
+
+\begin_layout Standard
+To set the system timezone, follow these steps.
+\end_layout
+
+\begin_layout Standard
+scroll to the System Configuration screen (See the above section), then
+ scroll to the Change FLA Timezone screen.
  Select 
 \begin_inset Quotes eld
 \end_inset
@@ -477,7 +1012,256 @@ Set
 \end_layout
 
 \begin_layout Standard
-<picture of sys_conf_update_timezone>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	 Scroll to the System Configuration screen on the FLA, and select configure
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{2}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Scroll to the Change FLA Timezone screen, and select "Change"
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf_change_tz} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{3}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Select "Next" to view the next timezone, and select "Set" to set the timezone
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf_change_tz_option} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -495,43 +1279,600 @@ Updating the FLA provides the latest software, with the most features and
 To preform an update, folow these steps.
 \end_layout
 
-\begin_layout Enumerate
-Ensure the FLA is plugged into an ethernet jack, and has an IP address.
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
 \end_layout
 
-\begin_layout Enumerate
-Scroll to the System Configuration screen, and enter the system configuration
- menu <pic of sys_conf>
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
 \end_layout
 
-\begin_layout Enumerate
-The FLA will now display the Update FLA Software screen.
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Ensure the FLA is plugged into an ethernet jack, and has an IP address.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/title_screen} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{2}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Scroll to the System Configuration screen, select "Configure"
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{3}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	The FLA will now display the Update FLA Software screen.
  If the FLA does not have the Update option, consult the troubleshooting
  section.
- <pic of sys_conf_update>
+ Select "Update"
 \end_layout
 
-\begin_layout Enumerate
-Confirm the update <pic of sys_conf_update_confirmation>
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
 \end_layout
 
-\begin_layout Enumerate
-Wait for the FLA to preform the update.
- This can take several minutes.
- <pif of sys_conf_update_inprogress>
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
 \end_layout
 
-\begin_layout Enumerate
-When the FLA is finished updating, it will need to shutdown and be rebooted
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/update_ready} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{4}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Confirm the update
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/update_confirm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{5}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Wait for the FLA to preform the update.
+ This can take several minutes
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/update_diag} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{5}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	When the FLA is finished updating, it will need to shutdown and be rebooted
  for the updates to be applied.
  Select Shutdown.
- <pic of sys_conf_update_shutdown>
 \end_layout
 
-\begin_layout Enumerate
-After the FLA has completed the shutdown, unplug all sources of power, If
- the operator wishes to continue interacting with the device, wait 10 seconds
- before plugging in power.
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/update_shutdown} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{5}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	After the FLA has completed the shutdown, unplug all sources of power,
+ If the operator wishes to continue interacting with the device, wait 10
+ seconds before plugging in power.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	% 
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/update_shutdown} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	pic of awesome unplug diagram.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -550,7 +1891,13 @@ After the operator has preformed these steps, the FLA is ready for field
 \end_layout
 
 \begin_layout Chapter
-Using the Forensic Link Adapter
+Using the FLA
+\end_layout
+
+\begin_layout Standard
+The FLA is a powerful data extraction device, with many features.
+ This section will teach the reader about the FLA, how to use it, and the
+ features of the FLA.
 \end_layout
 
 \begin_layout Section
@@ -604,6 +1951,13 @@ Using the 12v cigarrette adapter to power the FLA either from a vehicle
 \end_layout
 
 \begin_layout Standard
+The FLA can accept power from both the wall adapter or 12v cigarrett adapter
+ and the vehicle connection cable at the same time.
+ This is useful of an operator needs to preform several downloads in the
+ same area.
+\end_layout
+
+\begin_layout Standard
 Once the FLA is finished booting, the device will display the title screen
  <pic of title_screen>.
  When this screen appears, the device is ready to opperate.
@@ -628,21 +1982,360 @@ Shutting Down
 \end_layout
 
 \begin_layout Standard
-The FLA needs to be shutdown correctly in order to minimize the chance of
- loosing data.
- To shutdown the FLA properly, follow these steps.
+Faulure to shut down the FLA correctly can cause a loss of data.
+\end_layout
+
+\begin_layout Standard
+To shutdown the FLA properly, follow these steps.
 \end_layout
 
 \begin_layout Enumerate
-Scroll to the Shutdown screen, and select shutdown <pic of shutdown_screen>
+<pic of shutdown_screen>
 \end_layout
 
 \begin_layout Enumerate
-Confirm the shutdown <pic of shutdown_confirm_screen>
+<pic of shutdown_confirm_screen>
 \end_layout
 
 \begin_layout Enumerate
 Wait until the FLA indicates it is safe to remove power <pic of safe_to_unplug>
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Scroll to the Shutdown screen, and select "Shutdown"
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/shutdown} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{2}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Confirm the shutdown
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/shutdown_confirm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{3}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Wait until the FLA indicates it is safe to remove power
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/shutdown_wait} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{4}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	When the FLA displays this screen, it is safe to remove power
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/shutdown_done} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -668,516 +2361,572 @@ name "sec:Menu-Screen-Descriptions"
 \end_layout
 
 \begin_layout Standard
-The menu system consists of the main menu, and a Systems Configuration menu.
+Almost all of the features of the FLA can be accessed through the main menu.
+ The only two functions that are not avaliable are the FLA Support Mode,
+ and previewing data, which are soly avaliable on the FLA Preview.
+ Once the FLA boots, the device will enter the main menu, which contains
+ the most used functions, such as running a scan, and uploading data.
+ The below figure describes the layout of the FLA menu system.
 \end_layout
 
 \begin_layout Standard
 <Drawing of menu>
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Startup"
-
-\end_inset
-
-A Startup Screen is shown when booting the device.
- A progress bar scrolls across the bottom in about 20 seconds.
- After that, the progress bar may change to say the words 
-\begin_inset Quotes eld
-\end_inset
-
-Please Wait...
-\begin_inset Quotes erd
-\end_inset
-
- If the message to 
-\begin_inset Quotes eld
-\end_inset
-
-Please Wait...
-\begin_inset Quotes erd
-\end_inset
-
- stays on and the automatic transition to display 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Execute"
-
-\end_inset
-
- does not happen within 30 seconds, the system may not have booted.
- The FLA may need to be unplugged and restarted if this screen does not
- automatically go away.
- See Section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sec:FailsToBoot"
-
-\end_inset
-
- for further troubleshooting guidance.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Execute"
-
-\end_inset
-
-The Program Loading screen shows the user that the FLA booted successfully
- and is loading the program needed to interface with the user through the
- display.
- It also sets up the files and directories for the current session.
- A few things happen in the background while this screen is present:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-The FLA system time is updated.
- If an Internet connection is available (i.e.
- the Ethernet cable is plugged into a known good network), then the FLA
- will get its system time from the network time server at NIST.
- Once it automatically updates the time, it also updates the time on its
- battery powered real time clock (RTC).
- If an Internet connection is not available, then the system time is updated
- from the RTC.
- 
-\end_layout
-
-\begin_layout Enumerate
-The FLA tries to obtain a GPS lock.
-\end_layout
-
-\begin_layout Enumerate
-The FLA looks to see if vehicle networks are present.
- It detects the presence of network traffic on the J1708 network (9600 baud)
- and the J1939 network (CAN bus).
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Status"
-
-\end_inset
-
-The first line of the Status Screen shows the current time with the time
- zone.
- The system time zone can be changed from the web interface, as described
- in Section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sub:Setting-the-Timezone"
-
-\end_inset
-
-.
- The second line of the status screen shows the status of the Ethernet connectio
-n, as described in Section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sub:IP-Addresses"
-
-\end_inset
-
-.
- On the third line, the status of the vehicle network connection is displayed.
- The following options are available:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:StatusA"
-
-\end_inset
-
-No Vehicle Net means that network message traffic was not detected on either
- the J1939 network (CAN bus) or the J1708/J1587 serial bus.
- A message will also suggest to 
-\begin_inset Quotes eld
-\end_inset
-
-Check Ing.
- Key
-\begin_inset Quotes erd
-\end_inset
-
- to remind the operator that the ignition key switch must be turned to the
- on or run position for network traffic to be present.
- If the key is on, sufficient power is available, and no vehicle networks
- are present, then the vehicle network may be compromised.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:StatusB"
-
-\end_inset
-
-CAN Bus Only means that messages using the Controller Area Network are present.
- Since SAE J1939 specifies CAN as the network, this detects the presence
- of J1939 messages.
- J1708 network traffic was not detected.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:StatusC"
-
-\end_inset
-
-1708/1587 means no CAN or J1939 messages are present on the vehicle networks.
- This may be the case for older vehicles.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:StatusD"
-
-\end_inset
-
-CAN and J1708 mean both networks are present and have traffic.
+\begin_layout Standard
+The menu system of the FLA is dynamic, it will only give the operator the
+ option to preform an action if the FLA detects the action is possible.
+ i.e.
+ the FLA will not allow the operator to initiate a vehicle scan if the FLA
+ does not detect any network traffic.
 \end_layout
 
 \begin_layout Standard
-The system voltage is also displayed as detected by a voltage divider connected
- to the main processor.
- This voltage indication is not calibrated, but should give the user some
- feedback on the health of the vehicle system voltage.
- On the bottom line, there are button commands and an indicator showing
- the number of GPS satellites.
- The Red button advances the FLA to the next screen.
- The Green button starts the scan of the vehicle network to identify the
- system.
- The scan button is not available if no vehicle network is present.
- 
+An description of each menu screen is given below
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Shutdown"
-
-\end_inset
-
-The Shutdown dialog enables the user to shutdown the FLA computer system
- in a friendly way.
- This is similar to pressing the shutdown command on a PC.
- The shutdown command can also be invoked from within the FLA web interface.
- If the operator does not want to shutdown the FLA, then he or she can press
- the Red button to scroll to the next menu option.
- If the Green button is pushed, then the operator will invoke the shutdown
- sequence as described in the following displays
+\begin_layout Subsection
+Main Menu
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Shutdown-Confirm"
-
-\end_inset
-
-A shutdown confirmation asks the user if that was their intention.
- This helps catch unintended shutdowns.
- The Red button will escape the shutdown command and move to the next menu
- option.
- The Green button will confirm the shutdown operation.
- A reminder that all the files will be saved is displayed to the user as
- well.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Shutdown-Sequence"
-
-\end_inset
-
-The shutdown sequence requires power, so the user is advised not to unplug
- the device.
- During this phase, an LED indicator on the side may turn yellow.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Shutdown-Complete"
-
-\end_inset
-
-When shutdown is complete the main processor has turned off power.
- The display driver remains on with a static message that everything is
- ready to unplug.
- No commands are available.
- The LED should turn Red.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Permission"
-
-\end_inset
-
-Once the FLA detects a vehicle network and the user presses the button to
- scan, the FLA asks the operator if they have the proper permission to download
- digital data.
- This permission is dependent on the case and the jurisdiction.
- The FLA system time is recorded when permission was acknowledged.
- Pressing the Green button in this menu defines the start of a download.
- The next screen to display is number 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Identifying-Vehicle"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Upload-to-Server"
-
-\end_inset
-
-The screen that says Upload data on FLA on the first line enables the user
- to push data to the server for archiving, decoding, decrypting and display.
- Upon entry into this screen and a valid IP address, the FLA tries to ping
- the Synercon Server for 5 seconds or less.
- After the ping, the FLA will display either 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:UploadA"
-
-\end_inset
-
- or 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:UploadB"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:UploadA"
-
-\end_inset
-
-If there is a valid network connection to the Synercon Server, the message
- on the second line of the FLA display will say Internet Ready and the Upload
- option is enabled for the Green button.
- Pressing the Green button will display screen 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:UploadToServer"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:UploadB"
-
-\end_inset
-
-If there is not a connection to the Network server, then a message on the
- second line will say No Network to Server.
- Be sure the Ethernet cable is connected, a valid IP address is displayed,
- and the network administrator has granted your device access to the internet.
- The operator may want to try connecting the FLA to a different network.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:UploadToServer"
-
-\end_inset
-
-The Upload to Server screen displays the connection status as 
-\begin_inset Quotes eld
-\end_inset
-
-OK
-\begin_inset Quotes erd
-\end_inset
-
- or 
-\begin_inset Quotes eld
-\end_inset
-
-Failed.
-\begin_inset Quotes erd
-\end_inset
-
- When the connection is valid, the FLA securely uploads data package files
- to the Synercon Server.
- The number of files to upload (NN) corresponds to the number of times the
- FLA downloaded a vehicle or ECM since the last time data packages were
- sent to the Synercon Server.
- The number of files uploaded (MM) shows a counter that increments after
- each successful upload to the server.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Upload-Failed"
-
-\end_inset
-
-Upload Failed.
- An error code is displayed in place of 
-\family typewriter
-abcdefghijklmno
-\family default
-.
- This error code will be important to the Synercon Support staff and may
- be related to FLA authentication.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Upload-Success"
-
-\end_inset
-
-Upload Successful.
- See results at 
-\begin_inset CommandInset href
-LatexCommand href
-name "http://fla.synercontechnologies.com/"
-target "http://fla.synercontechnologies.com/"
-
-\end_inset
-
-.
- This website is where the data will be displayed.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Change-IP-network"
-
-\end_inset
-
-Change IP network settings.
- This screen enables the operator to turn the FLA into a Dynamic Host Configurat
-ion Protocol (DHCP) server and give IP addresses to other computers on the
- network.
- Since only one DHCP server should be on a network at a time, this feature
- off by default.
- However, in the field, the FLA may need to set up an FLA network so the
- operator can connect to the FLA web page.
- The following descriptions explain how to enable and disable the DHCP server.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:NetworkA"
-
-\end_inset
-
-By default the DHCP server is disabled, as shown on line 2.
- Pressing the Green button will pull up the confirmation screen shown as
- display 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:DHCP"
-
-\end_inset
-
-.
- If the words 
-\begin_inset Quotes eld
-\end_inset
-
-No Valid IP Found
-\begin_inset Quotes erd
-\end_inset
-
- are displayed on line 3, then turning on DHCP may be a good idea.
- If a valid IP address (IP: XXX.XXX.XXX.XXX) is displayed, then DHCP may not
- be needed.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:NetworkB"
-
-\end_inset
-
-After the DHCP server has been enabled, line 2 will display as such.
- The IP address should reset to 10.0.0.1.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:DHCP"
-
-\end_inset
-
-The field use only warning should remind the operator that an already establishe
-d network does not need another DHCP server.
- Enabling DHCP on the FLA on an established network may lead to IP address
- conflicts for other devices on the network.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:GPS-Status"
-
-\end_inset
-
-[Under development] A GPS utility screen exists to enable the user to see
- and save GPS information.
- The GPS coordinates in decimal are displayed along with speed and direction.
- 
-\begin_inset Note Note
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-The Green button in this menu saves the current state of the GPS as a point.
- 
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Title Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This is the first screen the FLA will display when it finishes booting.
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	line 1 : The current FLA time and date.
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	line 2 : The IP Address line
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	line 3 : The Vehicle Network line
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	If the scan option is not avaliable when the operator wishes to download
+ a vehicle, see the troubleshooting section.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/title_screen} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Shutdown Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen will allow the user to safely shutdown the FLA.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/shutdown} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Upload Data Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen allows the operator to upload data on the FLA to the FLA Portal.
+\end_layout
+
+\begin_layout Plain Layout
+
+	If the Upload option is not avaliable, see the troubleshooting section.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/upload_ready} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{View Faults Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen allows the operator to view active faults on the J1939 network
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/shutdown_done} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{GPS Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen displays the last GPS coordinates, and the FLA system time
+ they were recieved.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/gps} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{System Configuration}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen allows the user to enter the system configuration menu of the
+ FLA.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/gps} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
 \end_layout
 
 \end_inset
@@ -1185,172 +2934,438 @@ The Green button in this menu saves the current state of the GPS as a point.
 
 \end_layout
 
-\begin_layout Enumerate
-It is recommended to update the FLA software periodically.
- The FLA must be connected to the Internet in order to get software updates.
+\begin_layout Subsection
+System Configuration Menu
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:UpdateA"
-
-\end_inset
-
-If an Internet connection to the update server exists, then the Green button
- will be enabled for the user to select Update.
- 
+\begin_layout Standard
+This menu allows the operator to configure and update the FLA.
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:UpdateConfirm"
-
-\end_inset
-
-Once the Green button is pushed, an update confirmation display enables
- the user to cancel an update operation.
- Pressing the Green button again will confirm the update should start.
- It is important to not unplug the FLA power and Ethernet cables during
- the update.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Update-Progress"
-
-\end_inset
-
-Update progress is displayed with current operations shown as xxxxxxxxx
- on display.
- This process takes a long time and the scroll bar may seem to pause occasionall
-y.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:UpdateB"
-
-\end_inset
-
-If there is no access to the update server, then the Green button is disabled.
- The FLA will need to be connected to the Internet by the Ethernet cable.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Identifying-Vehicle"
-
-\end_inset
-
-Once permission was acknowledged, the FLA will scan the available vehicle
- networks.
- The program is looking for all data defined in the J1587 or J1939 standards
- that may be available and useful, as explained in further detail in Section
- 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sec:Standards-Based-Data"
-
-\end_inset
-
-.
- As those data elements are obtained from their respective networks, the
- counter will increment reflecting the recording of the data.
- Once the data elements have been requested, the FLA will be able to identify
- the different ECMs.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Id-Vehicle"
-
-\end_inset
-
-The ECM Identification screen shows the identification information stored
- in the first Engine ECM.
- The ECM make (AAAAA) and model (MMMMMMMM) comes from requesting the Component
- Identification.
- The Component Identification is a J1587 message with PID of 241 or a J1939
- message with SPNs 586 and 587.
- The Vehicle Identification Number (VIN) comes from J1587 PID 237 or J1939
- SPN 237.
- These data may or may not be present depending on how the ECM is programmed.
- If the data are not present from the Engine ECM, then the next source is
- used, if available.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:ECM-Specific-Data"
-
-\end_inset
-
-Once the ECM type is known, the FLA will check to see if the ECM is supported.
- If it is supported, then ECM specific data can be obtained.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:ECMa"
-
-\end_inset
-
-If the ECM is supported, then different types of data can be obtained that
- include Event Data, Configuration Data, Historical Data, and Fault Data.
- If this menu screen is displayed, then the FLA detected that it can capture
- data from an ECM on the network.
- Pressing the Green button will start the process of gathering specific
- data.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:ECMb"
-
-\end_inset
-
-No current support for getting ECM Specific Data exists of this screen is
- displayed.
- As such, both the Red and Green buttons move the interface to the RP1210
- mode where the operator can use the FLA with other software.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:GettingECMdata"
-
-\end_inset
-
-Getting ECM data...
- is a display screen that shows the progress of the current download.
- The tag <Data Sought> is dependent on the ECM and may say things like Hard
- Brake, Engine Usage Log, Data Plate, or other phrases that to indicate
- the progress of the download.
- After each attempt, a flag saying either Success or Failed will be displayed.
- 
-\begin_inset Note Note
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Maybe this should be the IP address?
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Update Software Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen allows the operator to update the FLA software to the latest
+ version.
+\end_layout
+
+\begin_layout Plain Layout
+
+	If the update option is not avaliable, see the troubleshooting section.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/update_ready} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{DHCP Service Configuration Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen allows the operator to enable or disable the DHCP services
+ for the FLA.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf_dhcp_diss} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Update FLA System Time Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen allows the operator to update the FLA System time.
+\end_layout
+
+\begin_layout Plain Layout
+
+	If the Update option is not avaliable, see the troubleshooting section.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/upload_ready} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Change FLA Timezone Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen allows the operator to change the FLA system timezone.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf_change_tz} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{MAC Address Screen}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	This screen displays the MAC Address of the FLA, as well as the IP Address.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/sys_conf_mac} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
 \end_layout
 
 \end_inset
@@ -1358,153 +3373,21 @@ Maybe this should be the IP address?
 
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:DoneECMdata"
-
-\end_inset
-
-Once the ECM specific data is downloaded, a message saying Finished ECM
- Data is displayed along with the total number of bytes downloaded.
- If the operator wants to continue an investigation using PC based software,
- then he or she can press the Red button to go into RP1210 passthrough mode.
- Otherwise, the Green button brings the user back to the upload menu.
- In the field.
- it may be that a data upload is possible due to the lack of an internet
- connection.
- In this case, the operator can press the Red button once to get to menu
- 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "enu:Status"
-
-\end_inset
-
- and again to get to the Shutdown menu.
+\begin_layout Subsection
+Menu Screen Dynamic Lines
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-The RP1210 passthrough mode enables operators to use other PC based software
- to interface with the vehicle.
- The FLA will be connected to a PC by a USB cable to communicate on the
- vehicle bus.
- The FLA uses a DGTech eDPA to communicate with the PC.
- As such, it is important to have the DG Drivers installed before using
- the RP1210 mode, as described in Section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sub:RP1210-Drivers"
-
-\end_inset
-
-.
- This mode invokes a write blocking feature that prevents certain messages
- from reaching the ECM.
- For more details on the messages that get blocked when the write-blocker
- is running, see Section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sec:Forensic-Write-Blocking"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:RP1210"
-
-\end_inset
-
-This display screen asks to enable the passthrough mode.
- If the Red button is pressed, then the system goes back to the status display
- (Screen 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Status"
-
-\end_inset
-
-).
- Pressing the Green button turns on the Passthrough mode.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:RP1210Enabled"
-
-\end_inset
-
-Passthrough mode for CAN (J1939) is on when this screen is displayed.
- A reminder to plug in the USB cable is printed on line 2.
- At any time, the operator can terminate the pasthrough mode and switch
- to J1708 pass mode or transition to uploading the data.
- This mode is used for all newer ECMs.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:J1708-pass-mode."
-
-\end_inset
-
-J1708 pass mode is on when this screen is displayed.
- A reminder to plug in the USB cable is printed on line 2.
- At any time, the operator can terminate the pasthrough mode and switch
- to J1708 pass mode or transition to uploading the data.
- This mode is used for all Caterpillar, DDEC IV and DDEC V ECMs.
-\end_layout
-
-\end_deeper
 \begin_layout Standard
-Network traffic is recorded and logged during screens 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Id-Vehicle"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:GettingECMdata"
-
-\end_inset
-
-, and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:RP1210Enabled"
-
-\end_inset
-
-.
- A data package is defined from network data coming from the vehicle starting
- when the user acknowledges permission to when the operation of the FLA
- transitions back to the Upload option.
- 
+Certian lines of menu screens are dynamic, and display the status of various
+ components of the FLA.
 \end_layout
 
-\begin_layout Section
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:IP-Addresses"
-
-\end_inset
-
-IP Addresses
+\begin_layout Subsubsection
+IP Address Line
 \end_layout
 
 \begin_layout Standard
-The IP address Line can have the following statements:
+The IP address Line can have the following states:
 \end_layout
 
 \begin_layout Description
@@ -1514,8 +3397,7 @@ IP:
 
 XXX.XXX.XXX.XXX A valid IP address.
  XXX can be any number between 0 and 255.
- Often a private home network will have a router that serves an IP address
- with the the first numbers of 192.168.XXX.XXX.
+ An example would be 192.168.2.45
 \end_layout
 
 \begin_layout Description
@@ -1524,9 +3406,7 @@ IP:
 \end_inset
 
 10.0.0.1 The IP address when the FLA's DHCP server is activated.
- The FLA will give other devices on the network an IP address too, which
- may cause problems on an established network.
- 
+ See the DHCP section for more information.
 \end_layout
 
 \begin_layout Description
@@ -1534,9 +3414,9 @@ Ethernet
 \begin_inset space ~
 \end_inset
 
-Unplugged There is no live connection between the FLA and an outside device.
- If a network connection was present, there may be around a 30 second lag
- for this message to display after a cable is unplugged.
+Unplugged The FLA cannot detect a live internet connection.
+ If this screen persists for more than 60 seconds on a known good ethernet
+ port, refer to the troubleshooting section.
 \end_layout
 
 \begin_layout Description
@@ -1548,765 +3428,48 @@ IP
 \begin_inset space ~
 \end_inset
 
-Address The Ethernet connection is plugged in and linked to another connection,
- but the FLA has not been issued an IP address from the network router.
+Address The FLA detected a live internet connection, and is searching for
+ an IP address.
+ If this screen percists for more than 60 seconds on a known good ethernet
+ port, refer to the toubleshooting section.
+\end_layout
+
+\begin_layout Subsubsection
+Vehicle Connection Line
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Section
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Standards-Based-Data"
-
-\end_inset
-
-Standards Based Data
-\end_layout
-
-\begin_layout Subsection
-J1587 Data
-\end_layout
-
-\begin_layout Plain Layout
-The FLA scans the J1708 for the following data.
- If the data is not displayed in the report, then it was not available by
- the network.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="4">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-PID
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Parameter Identification Name
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-PID Description
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Units
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-J1939 Data
-\end_layout
-
-\begin_layout Plain Layout
-The FLA scans the J1708 for the following data.
- If the data is not displayed in the report, then it was not available by
- the network.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="4">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-PID
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Parameter Identification Name
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-PID Description
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Units
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+The vehicle connectoin line displays the status of the vehicle busses.
+ This line can have the folowing states:
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
-
+\begin_layout Description
+No Vehicle Net / Check Ign.
+ Key: The FLA is not able to detect any traffic on the vehicle networks.
+ If this screen percists for more than 10 seconds, refer to the troublshooting
+ section.
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
+\begin_layout Description
+CAN Bus only: The FLA only detects traffic on the CAN bus
 \end_layout
 
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
+\begin_layout Description
+J1708/1587 only: The FLA only detects traffic on the J1708/1587 bus
 \end_layout
-
-\end_inset
-
 
+\begin_layout Description
+CAN and J1708: The FLA detects traffic on both the CAN and J1708 busses
 \end_layout
 
 \begin_layout Chapter
 The FLA Preview
+\end_layout
+
+\begin_layout Standard
+The FLA Preview is a website that each FLA hosts.
+ This allows operators to interact with the FLA in ways the front pannel
+ are not conducive for, such as previewing reports.
 \end_layout
 
 \begin_layout Section
@@ -2323,7 +3486,98 @@ Accessing the FLA Preview is done by entering the IP address of the FLA
 \end_layout
 
 \begin_layout Standard
-<Pic of correct/ incorrect ip addresses>
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs 
+\end_layout
+
+\begin_layout Plain Layout
+
+	%
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	%	
+\backslash
+textbf{Correct:}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip] 
+\end_layout
+
+\begin_layout Plain Layout
+
+	%
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_preview_screenshots/url_correct} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_screens/title_screen_no_veh_net} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2331,7 +3585,13 @@ This will load the FLA Preview main page, shown below.
 \end_layout
 
 \begin_layout Standard
-<pic of fla_preview_main_page>
+\begin_inset Graphics
+	filename /home/gavin/Documents/Synercon/FLA-User-Manual/media/fla_preview_screenshots/main_page.png
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2364,7 +3624,13 @@ Under the View Local Data page, the operator is able to view data on the
 \end_layout
 
 \begin_layout Standard
-<pic of local_data>
+\begin_inset Graphics
+	filename /home/gavin/Documents/Synercon/FLA-User-Manual/media/fla_preview_screenshots/local_data.png
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2426,24 +3692,185 @@ s-based previews.
 \end_layout
 
 \begin_layout Standard
-1.
- Preview of DDEC ECMs
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs 
 \end_layout
 
-\begin_layout Standard
-If non-standards-based data is collected from a DDEC ECM, an XTR file will
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Preview of DDEC ECMs}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip] 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	If non-standards-based data is collected from a DDEC ECM, an XTR file will
  be avaliable for download.
 \end_layout
 
-\begin_layout Standard
-2.
- Preview of CAT ECMs
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
 \end_layout
 
-\begin_layout Standard
-If non-standars-based data is collected from a CAT ECM, a CSV file will
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_preview_screenshots/xtr_download}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth}% adapt widths of minipages to your needs 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Preview of CAT ECMs}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip] 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	If non-standars-based data is collected from a CAT ECM, a CSV file will
  be avaliable containing 5 frames around the trigger for any quick stop
  records.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill% 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}{0.45
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{../media/fla_preview_screenshots/csv_download}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2475,7 +3902,13 @@ Archived Data
 \end_layout
 
 \begin_layout Standard
-<pic of archived_datas>
+\begin_inset Graphics
+	filename /home/gavin/Documents/Synercon/FLA-User-Manual/media/fla_preview_screenshots/archived_data.png
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -2513,7 +3946,7 @@ The FLA Portal will require the operator to login, using the username and
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename media/fla_portal_screenshots/FLA Portal Login Screen.png
+	filename ../media/fla_portal_screenshots/FLA Portal Login Screen.png
 	width 80text%
 
 \end_inset
@@ -2739,7 +4172,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot.png
+	filename ../media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot.png
 	lyxscale 50
 	width 100text%
 
@@ -2825,7 +4258,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot.png
+	filename ../media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot.png
 	lyxscale 50
 	width 100text%
 
@@ -2912,7 +4345,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot.png
+	filename ../media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot.png
 	lyxscale 50
 	height 10cm
 
@@ -2964,7 +4397,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename media/fla_portal_screenshots/FLAPortalAssignedFLASuccessScreenShot.png
+	filename ../media/fla_portal_screenshots/FLAPortalAssignedFLASuccessScreenShot.png
 	lyxscale 50
 	width 100text%
 
@@ -3972,6 +5405,69 @@ description "The Forenisc Link Adapter (FLA) is a field rugged computer that is 
 \end_layout
 
 \begin_layout Description
+ECMs: Electronic Control Modules.
+ These are the 
+\begin_inset Quotes eld
+\end_inset
+
+computers
+\begin_inset Quotes erd
+\end_inset
+
+ that run heavy vehicles, they can contain data useful when investigating
+ a heavy vehicle.
+\end_layout
+
+\begin_layout Description
+OEM: Original Engine Manufacturer.
+\end_layout
+
+\begin_layout Description
+The FLA: the data extraction device device created by Synercon.
+ This is the blue box that the operator uses to comminicate with heavy vehicles.
+\end_layout
+
+\begin_layout Description
+The FLA Portal: the website fla.synercontechnologies.com .
+ This is where operators can view full reports
+\end_layout
+
+\begin_layout Description
+The FLA Preview: the local website hosted by the FLA.
+ This allows operators to preview reports before they are uploaded to the
+ FLA Portal.
+\end_layout
+
+\begin_layout Description
+Data Package: all of the data extracted from a heavy vehicle, as well as
+ metadata about the extracted data, such as GPS coordinates, and timestamps.
+\end_layout
+
+\begin_layout Description
+Preview report: a report that has not been processed by the FLA Portal,
+ these reports only have standards-based data, and some of the non-standards-bas
+ed data.
+\end_layout
+
+\begin_layout Description
+Full report: a report that is being viewed from the FLA Portal, these reports
+ will have all of the data the FLA system is able to understand.
+\end_layout
+
+\begin_layout Description
+Standards-based-data: Data that is defined by the SAE standards J1587 and
+ J1939.
+\end_layout
+
+\begin_layout Description
+Non-Standards-based-data: Data that is not defined by the SAE standards
+ J1587 and J1939.
+ i.e.
+ Snapshot records for CAT ECMs.
+ These data elements are determined by the OEM of the ECMs
+\end_layout
+
+\begin_layout Description
 NIST National Institute for Standards and Technology (
 \begin_inset CommandInset href
 LatexCommand href
@@ -4109,7 +5605,8 @@ Do not expose to excess heat or cold
 \end_layout
 
 \begin_layout Standard
-Do not expose the FLA to temperatures exceeding XXXF, or below XXXF.
+Do not expose the FLA to temperatures exceeding 50C (122F), or below 0C
+ (-32F).
 \end_layout
 
 \begin_layout Chapter

@@ -1,0 +1,1502 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt,letterpaper,oneside,english,DIV13]{scrbook}
+\usepackage{mathpazo}
+\usepackage{helvet}
+\renewcommand{\ttdefault}{cmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\pagestyle{headings}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{varioref}
+\usepackage{textcomp}
+\usepackage{makeidx}
+\makeindex
+\usepackage{graphicx}
+\usepackage{nomencl}
+% the following is useful when we have the old nomencl.sty package
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=true,pdfborder={0 0 0},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftitle={Users Manual},
+ pdfauthor={Synercon Technologies, LLC},
+ linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% \usepackage[pdf]{pstricks}
+\usepackage{auto-pst-pdf}
+\usepackage{pstricks}
+\usepackage{pst-all}
+\usepackage{calc}
+\newcommand{\degree}{$^{\circ}$}
+
+\AtBeginDocument{
+  \def\labelitemiii{\(\circ\)}
+  \def\labelitemiv{\(\diamond\)}
+}
+
+\makeatother
+
+\begin{document}
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+\centering % Center all text
+\vspace*{\baselineskip} % White space at the top of the page 
+\begin{figure}[tbph] 
+\centering 
+\includegraphics[width=0.15\linewidth]{../media/logos/synercon_logo_v3_only}
+\label{fig:logo}
+\end{figure}
+\vspace{4cm}
+{\Huge \textbf{Forensic Link Adapter Field Guide}}\\[2\baselineskip] % Title
+{\Huge Synercon Technologies LLC}\\[2\baselineskip]
+{\Large For Software Version 1}
+\vfill % Whitespace between editor names and publisher logo
+\textcopyright {\scshape 2015} \\[0.3\baselineskip] % Year 
+Synercon Technologies LLC
+\endgroup}
+\titleGP
+
+
+\title{\includegraphics[width=4cm]{media/logos/synercon_logo_v3_only}}
+
+
+\subtitle{Forensic Link Adapter Users Manual}
+
+
+\subject{Synercon Technologies, LLC}
+
+
+\date{For Software Version 1}
+
+
+\publishers{\href{http://www.synercontechnologies.com}{http://www.synercontechnologies.com}}
+
+
+\uppertitleback{Disclaimer: The Synercon Technologies does not warrant the completeness
+and accuracy of the information produced by its software. While best
+efforts by industry experts have been made to generate information
+from raw digital data, there may be untested variations, add-on packages,
+errors or mistakes due to the large amount of data being processed.
+It is the sole responsibility of the user of the Synercon Technologies
+systems and Software to determine the fitness of the information provided
+by the Software for any particular application and for each individual
+case. Synercon Technologies cannot warrant any loss of functionality
+due to the lack of reliable network connection to the Synercon Server.
+The user is responsible for establishing a reliable Internet connection
+for the Software to fully function. Synercon does not warrant that
+the Equipment and/or Software will be compatible with each vehicle
+model. Electronic components installed on the vehicles may be replacement
+parts and not programmed to match the implementations of the Equipment,
+hence Synercon cannot warrant the existence or accuracy of the data
+recorded on the vehicle or the existence of a fault-free environment.
+The information provided by the Software is to be used only by vehicle
+manufacturer product experts, engineers, professional accident investigators
+and traffic crash reconstruction specialists. The user should agree
+that the use of the Software and Equipment requires an appropriate
+level of skill and competence. Since Synercon cannot warrant that
+the Equipment will create an environment that does not set new fault
+codes in the vehicle\textquoteright s electronic control module(s)
+which may alter the digital data contained therein, the User assumes
+all risks in using the Equipment for the purposes of preserving a
+digital record. The user agrees to verify the Equipment is working
+according to this manual before using it to support an investigation
+or reconstruction. Synercon Technologies, LLC assumes no liability
+for incidental, consequential, special or punitive damages, including
+but not limited to lost profits and loss of data. The user agrees
+to indemnify and hold harmless Synercon Technologies, LLC, any of
+its employees, owners, officers, and managers from any legal action
+involving the use of the data produced or stored by the software.}
+
+\maketitle
+\tableofcontents{}
+
+
+\chapter{About this Document}
+
+This manual is intended to teach the operator the features and use
+of the Forensic Link Adapter (FLA). This is manual is designed as
+a teaching tool, rather than a reference guide. There are many acronyms
+and terminology used throughout this document, the reader is adviced
+to familiarize themselves with the Terminology section before reading.
+There are also several other documentation materials provided with
+the FLA. The reader is encouraged to examin all documents before using
+the FLA to help ensure the most data, and most accurate data is retrieved.
+
+The Field Guide provides an overview for use of the FLA in typical
+senarios. This section also provides troubleshooting advice for common
+problems.
+
+The ECM Quick References provide a very brief step-by-step guide to
+aquiring data from different ECMs. These are intended to be quick
+procedures for persons familiar with the FLA and general opperations.
+
+
+\chapter{Synercon Products}
+
+There are four main components of using Synercon Technologies products.
+They will be refered to in the rest of this manual, so the reader
+is advised to familiarize themselved with these components to better
+understand the rest of this manual.
+
+
+\section{The Forensic Link Adapter (FLA)}
+
+The FLA is a device that communicates with ECMs using the SAE J1939
+and SAE J1587 standards. This device can be a stand-alone data extractor,
+or an RP1210 interface to allow the operator to use OEM software.
+
+<picture of FLA>
+
+
+\section{The FLA Portal}
+
+The FLA Portal is also referenced to as Synercon's Servers. This is
+the website \textbackslash{}url\{https://fla.synercontechnologies.com\}.
+Data collected from the FLA is uploaded to this site, and operators
+are able to view full reports here.
+
+<picture of fla portal>
+
+
+\section{The FLA Preview}
+
+The FLA Preview is a website hosted by each FLA. It is accessed by
+entering the IP address of the FLA into a web browser. This website
+provides the operator with the ability to preview data in the field,
+without an internet connection.
+
+<picture of fla preview>
+
+
+\section{The Smart Sensor Simulator (SSS)}
+
+The SSS simulates sensors of a typical vehicle for ECMs. It is used
+when the FLA cannot communicate with the vehicle due to damaged wiring.
+The SSS reduces the chance the ECM will throw a fault compared to
+a standard calibration harness. SSSs are specific to a type of ECM.
+
+<picture of sss>
+
+
+\chapter{Getting Started}
+
+Congratulations on purchasing the only heavy vehicle scan tool purpose
+built for examining vehicles in a forensic or investigative context.
+This section provides a guide to getting the FLA System set up for
+the first time.
+
+
+\section{Register as an Operator}
+
+The fla-admin should send you an email to invite you to be an operator
+for your FLA on the FLA Portal. The fla-admin email is initiated by
+the Organization administrator inviting a new operator. For more details,
+please see Chapter XX. It will be neccessary to have a FLA Portal
+account to view any data you collect with your FLA.
+
+
+\section{Opperating the FLA}
+
+The FLA has a 4x20 character LCD screen, along with two buttons to
+allow the user to interact with the device.
+
+
+\subsection{Interacting with the FLA}
+
+There are two general types of screens the FLA will display.
+
+1) <picture of main screen>
+
+The prompt screens will have one or two options on the last line,
+corresponding to the button on that side of the FLA.
+
+2) <picture of loading screens>
+
+The working screens will not have an option on the last line, but
+usually a percentage bar. During these screens, the FLA is preforming
+the operation displayed. \textbackslash{}textbf\{NOTE, during these
+screens the RED button can cancle the current task\}.
+
+
+\subsection{Connect the FLA to the Internet}
+
+Connecting the FLA to the internet allows the device to get updates,
+set the system time, and upload data to the FLA Portal.
+
+To connect the FLA to the internet, plug the device into a functional
+ethernet port using the included ethernet cable.
+
+<picture of ethernet cable>
+
+The FLA should display an IP address on the second line of the title
+screen, the screen that is displayed right after the FLA finishes
+booting.
+
+If the FLA displays ``Ethernet Unplugged'' or ``Finding IP Address''
+for more than 60 seconds, consult the troubleshooting section.
+
+
+\subsection{Setting the Time}
+
+Once connected to the internet, the Forensic Link Adapter can synchronoise
+with universal time using a dedicated time server. This step is only
+necessary if the time displayed on the title screen is not the correct
+time.
+
+To correct the FLA time, scroll to the System Configuration screen
+on the FLA, using the front-pannel interface.
+
+<picture of sys\_conf screen>
+
+Enter the configuration, then scroll to the Update System Clock screen
+
+<picture of sys\_conf\_update\_clock>
+
+Select ``Update'' with the Green button.
+
+Once the FLA retrieves the current time, it will confirm the new time
+with the operator before setting the time.
+
+The FLA will continue to update this time, so the user does not need
+to imediatly confirm the time.
+
+
+\subsection{\label{sub:Setting-the-Timezone-1}Setting the Timezone}
+
+The timezone for the FLA can be set without an internet connection.
+To set the system timezone, scroll to the System Configuration screen
+(See the above section), then scroll to the Change FLA Timezone screen.
+Select ``Next'' to view the next option, and ``Set'' to set the
+timezone.
+
+<picture of sys\_conf\_update\_timezone>
+
+
+\subsection{Updating the FLA}
+
+Updating the FLA provides the latest software, with the most features
+and highest chance of getting the most data. It is good practice to
+preform an update before downloading a vehicle, or before going out
+in the field to download.
+
+To preform an update, folow these steps.
+\begin{enumerate}
+\item Ensure the FLA is plugged into an ethernet jack, and has an IP address.
+\item Scroll to the System Configuration screen, and enter the system configuration
+menu <pic of sys\_conf>
+\item The FLA will now display the Update FLA Software screen. If the FLA
+does not have the Update option, consult the troubleshooting section.
+<pic of sys\_conf\_update>
+\item Confirm the update <pic of sys\_conf\_update\_confirmation>
+\item Wait for the FLA to preform the update. This can take several minutes.
+<pif of sys\_conf\_update\_inprogress>
+\item When the FLA is finished updating, it will need to shutdown and be
+rebooted for the updates to be applied. Select Shutdown. <pic of sys\_conf\_update\_shutdown>
+\item After the FLA has completed the shutdown, unplug all sources of power,
+If the operator wishes to continue interacting with the device, wait
+10 seconds before plugging in power.
+\end{enumerate}
+
+\section{Familiarize yourself with the FLA}
+
+After the operator has preformed these steps, the FLA is ready for
+field use. The best way to maxamize the validity and completeness
+of data collected, the operator is advised to continue reading this
+manual. After the user is familiar with this, the best way to get
+confortable with using the FLA is to practice. This manual, and the
+other supporting documents will help guide operators through the download
+and review process.
+
+
+\chapter{Using the Forensic Link Adapter}
+
+
+\section{Specifications}
+
+The Forensic Link Adapter is based on a powerful processor based on
+the Texas Instruments AM335x 1GHz ARM\textregistered{} Cortex-A8 Processor.
+It has 512MB of DDR3 RAM, 16 GB of internal storage, the NEON floating-point
+accelerator and 2 PRU 32-bit microcontrollers. The device has 2 Controller
+Area Network (CAN) channels, 2 J1708 Serial Channels, 100/10 Mbps
+Ethernet, USB 2.0, and a full implementation of the DG tech DPA4+
+for RP1210 Compliance. The device has a GPS receiver, Real Time Clock,
+an accelerometer, and a rate Gyro. The display uses Organic LEDs for
+better sunlight readability. It runs embedded Linux and serves its
+own website.
+
+
+\section{Working with the Forensic Link Adapter}
+
+This section will explain the basics of using the FLA. This is intended
+for new users.
+
+
+\subsection{Powering Up}
+
+The FLA will begin to boot whenever a power is supplied to the device.
+This can be done in one of three ways
+\begin{enumerate}
+\item Using the vehicle connection cable to power the FLA using the battery
+of the vehicle
+\item Using the wall adapter to power the FLA using a wall outlet
+\item Using the 12v cigarrette adapter to power the FLA either from a vehicle
+battery, or a portable battery pack
+\end{enumerate}
+Once the FLA is finished booting, the device will display the title
+screen <pic of title\_screen>. When this screen appears, the device
+is ready to opperate. If the device does not reach this screen in
+60 seconds, see the troubleshooting section of this manual.
+
+Once an investigator has established permission to download the data
+from a vehicle, the key needs to be turned to the on (not start) position
+for the FLA to communicate with the Electronic Control Modules (ECMs).
+The FLA can be plugged into the 9-pin diagnostic connector, which
+is usually located below the dash on the left side or to the left
+of the driver's seat. If the ECM was removed, then it should be connected
+through a Smart Sensor Simulator that emulates a truck. 
+
+
+\subsection{Shutting Down}
+
+The FLA needs to be shutdown correctly in order to minimize the chance
+of loosing data. To shutdown the FLA properly, follow these steps.
+\begin{enumerate}
+\item Scroll to the Shutdown screen, and select shutdown <pic of shutdown\_screen>
+\item Confirm the shutdown <pic of shutdown\_confirm\_screen>
+\item Wait until the FLA indicates it is safe to remove power <pic of safe\_to\_unplug>
+\end{enumerate}
+
+\section{Display Screen Menu System}
+
+The FLA uses the front pannel display as the primary way to interact
+with the unit. This section discribes the design of the menu system
+and how to navigate it.
+
+
+\section{Menu Screen Descriptions\label{sec:Menu-Screen-Descriptions}}
+
+The menu system consists of the main menu, and a Systems Configuration
+menu.
+
+<Drawing of menu>
+\begin{enumerate}
+\item \label{enu:Startup}A Startup Screen is shown when booting the device.
+A progress bar scrolls across the bottom in about 20 seconds. After
+that, the progress bar may change to say the words ``Please Wait...''
+If the message to ``Please Wait...'' stays on and the automatic
+transition to display \ref{enu:Execute} does not happen within 30
+seconds, the system may not have booted. The FLA may need to be unplugged
+and restarted if this screen does not automatically go away. See Section
+\vref{sec:FailsToBoot} for further troubleshooting guidance.
+\item \label{enu:Execute}The Program Loading screen shows the user that
+the FLA booted successfully and is loading the program needed to interface
+with the user through the display. It also sets up the files and directories
+for the current session. A few things happen in the background while
+this screen is present:
+
+\begin{enumerate}
+\item The FLA system time is updated. If an Internet connection is available
+(i.e. the Ethernet cable is plugged into a known good network), then
+the FLA will get its system time from the network time server at NIST.
+Once it automatically updates the time, it also updates the time on
+its battery powered real time clock (RTC). If an Internet connection
+is not available, then the system time is updated from the RTC. 
+\item The FLA tries to obtain a GPS lock.
+\item The FLA looks to see if vehicle networks are present. It detects the
+presence of network traffic on the J1708 network (9600 baud) and the
+J1939 network (CAN bus).
+\end{enumerate}
+\item \label{enu:Status}The first line of the Status Screen shows the current
+time with the time zone. The system time zone can be changed from
+the web interface, as described in Section \vref{sub:Setting-the-Timezone}.
+The second line of the status screen shows the status of the Ethernet
+connection, as described in Section \vref{sub:IP-Addresses}. On the
+third line, the status of the vehicle network connection is displayed.
+The following options are available:
+
+\begin{enumerate}
+\item \label{enu:StatusA}No Vehicle Net means that network message traffic
+was not detected on either the J1939 network (CAN bus) or the J1708/J1587
+serial bus. A message will also suggest to ``Check Ing. Key'' to
+remind the operator that the ignition key switch must be turned to
+the on or run position for network traffic to be present. If the key
+is on, sufficient power is available, and no vehicle networks are
+present, then the vehicle network may be compromised.
+\item \label{enu:StatusB}CAN Bus Only means that messages using the Controller
+Area Network are present. Since SAE J1939 specifies CAN as the network,
+this detects the presence of J1939 messages. J1708 network traffic
+was not detected.
+\item \label{enu:StatusC}1708/1587 means no CAN or J1939 messages are present
+on the vehicle networks. This may be the case for older vehicles.
+\item \label{enu:StatusD}CAN and J1708 mean both networks are present and
+have traffic.
+\end{enumerate}
+
+The system voltage is also displayed as detected by a voltage divider
+connected to the main processor. This voltage indication is not calibrated,
+but should give the user some feedback on the health of the vehicle
+system voltage. On the bottom line, there are button commands and
+an indicator showing the number of GPS satellites. The Red button
+advances the FLA to the next screen. The Green button starts the scan
+of the vehicle network to identify the system. The scan button is
+not available if no vehicle network is present. 
+
+\item \label{enu:Shutdown}The Shutdown dialog enables the user to shutdown
+the FLA computer system in a friendly way. This is similar to pressing
+the shutdown command on a PC. The shutdown command can also be invoked
+from within the FLA web interface. If the operator does not want to
+shutdown the FLA, then he or she can press the Red button to scroll
+to the next menu option. If the Green button is pushed, then the operator
+will invoke the shutdown sequence as described in the following displays
+
+\begin{enumerate}
+\item \label{enu:Shutdown-Confirm}A shutdown confirmation asks the user
+if that was their intention. This helps catch unintended shutdowns.
+The Red button will escape the shutdown command and move to the next
+menu option. The Green button will confirm the shutdown operation.
+A reminder that all the files will be saved is displayed to the user
+as well.
+\item \label{enu:Shutdown-Sequence}The shutdown sequence requires power,
+so the user is advised not to unplug the device. During this phase,
+an LED indicator on the side may turn yellow. 
+\item \label{enu:Shutdown-Complete}When shutdown is complete the main processor
+has turned off power. The display driver remains on with a static
+message that everything is ready to unplug. No commands are available.
+The LED should turn Red.
+\end{enumerate}
+\item \label{enu:Permission}Once the FLA detects a vehicle network and
+the user presses the button to scan, the FLA asks the operator if
+they have the proper permission to download digital data. This permission
+is dependent on the case and the jurisdiction. The FLA system time
+is recorded when permission was acknowledged. Pressing the Green button
+in this menu defines the start of a download. The next screen to display
+is number \ref{enu:Identifying-Vehicle}.
+\item \label{enu:Upload-to-Server}The screen that says Upload data on FLA
+on the first line enables the user to push data to the server for
+archiving, decoding, decrypting and display. Upon entry into this
+screen and a valid IP address, the FLA tries to ping the Synercon
+Server for 5 seconds or less. After the ping, the FLA will display
+either \ref{enu:UploadA} or \ref{enu:UploadB}.
+
+\begin{enumerate}
+\item \label{enu:UploadA}If there is a valid network connection to the
+Synercon Server, the message on the second line of the FLA display
+will say Internet Ready and the Upload option is enabled for the Green
+button. Pressing the Green button will display screen \ref{enu:UploadToServer}.
+\item \label{enu:UploadB}If there is not a connection to the Network server,
+then a message on the second line will say No Network to Server. Be
+sure the Ethernet cable is connected, a valid IP address is displayed,
+and the network administrator has granted your device access to the
+internet. The operator may want to try connecting the FLA to a different
+network.
+\item \label{enu:UploadToServer}The Upload to Server screen displays the
+connection status as ``OK'' or ``Failed.'' When the connection
+is valid, the FLA securely uploads data package files to the Synercon
+Server. The number of files to upload (NN) corresponds to the number
+of times the FLA downloaded a vehicle or ECM since the last time data
+packages were sent to the Synercon Server. The number of files uploaded
+(MM) shows a counter that increments after each successful upload
+to the server. 
+
+\begin{enumerate}
+\item \label{enu:Upload-Failed}Upload Failed. An error code is displayed
+in place of \texttt{abcdefghijklmno}. This error code will be important
+to the Synercon Support staff and may be related to FLA authentication.
+\item \label{enu:Upload-Success}Upload Successful. See results at \href{http://fla.synercontechnologies.com/}{http://fla.synercontechnologies.com/}.
+This website is where the data will be displayed.
+\end{enumerate}
+\end{enumerate}
+\item \label{enu:Change-IP-network}Change IP network settings. This screen
+enables the operator to turn the FLA into a Dynamic Host Configuration
+Protocol (DHCP) server and give IP addresses to other computers on
+the network. Since only one DHCP server should be on a network at
+a time, this feature off by default. However, in the field, the FLA
+may need to set up an FLA network so the operator can connect to the
+FLA web page. The following descriptions explain how to enable and
+disable the DHCP server.
+
+\begin{enumerate}
+\item \label{enu:NetworkA}By default the DHCP server is disabled, as shown
+on line 2. Pressing the Green button will pull up the confirmation
+screen shown as display \ref{enu:DHCP}. If the words ``No Valid
+IP Found'' are displayed on line 3, then turning on DHCP may be a
+good idea. If a valid IP address (IP: XXX.XXX.XXX.XXX) is displayed,
+then DHCP may not be needed. 
+\item \label{enu:NetworkB}After the DHCP server has been enabled, line
+2 will display as such. The IP address should reset to 10.0.0.1. 
+\item \label{enu:DHCP}The field use only warning should remind the operator
+that an already established network does not need another DHCP server.
+Enabling DHCP on the FLA on an established network may lead to IP
+address conflicts for other devices on the network. 
+\end{enumerate}
+\item \label{enu:GPS-Status}{[}Under development{]} A GPS utility screen
+exists to enable the user to see and save GPS information. The GPS
+coordinates in decimal are displayed along with speed and direction.
+
+\item It is recommended to update the FLA software periodically. The FLA
+must be connected to the Internet in order to get software updates.
+
+\begin{enumerate}
+\item \label{enu:UpdateA}If an Internet connection to the update server
+exists, then the Green button will be enabled for the user to select
+Update. 
+
+\begin{enumerate}
+\item \label{enu:UpdateConfirm}Once the Green button is pushed, an update
+confirmation display enables the user to cancel an update operation.
+Pressing the Green button again will confirm the update should start.
+It is important to not unplug the FLA power and Ethernet cables during
+the update.
+\item \label{enu:Update-Progress}Update progress is displayed with current
+operations shown as xxxxxxxxx on display. This process takes a long
+time and the scroll bar may seem to pause occasionally.
+\end{enumerate}
+\item \label{enu:UpdateB}If there is no access to the update server, then
+the Green button is disabled. The FLA will need to be connected to
+the Internet by the Ethernet cable.
+\end{enumerate}
+\item \label{enu:Identifying-Vehicle}Once permission was acknowledged,
+the FLA will scan the available vehicle networks. The program is looking
+for all data defined in the J1587 or J1939 standards that may be available
+and useful, as explained in further detail in Section \vref{sec:Standards-Based-Data}.
+As those data elements are obtained from their respective networks,
+the counter will increment reflecting the recording of the data. Once
+the data elements have been requested, the FLA will be able to identify
+the different ECMs.
+\item \label{enu:Id-Vehicle}The ECM Identification screen shows the identification
+information stored in the first Engine ECM. The ECM make (AAAAA) and
+model (MMMMMMMM) comes from requesting the Component Identification.
+The Component Identification is a J1587 message with PID of 241 or
+a J1939 message with SPNs 586 and 587. The Vehicle Identification
+Number (VIN) comes from J1587 PID 237 or J1939 SPN 237. These data
+may or may not be present depending on how the ECM is programmed.
+If the data are not present from the Engine ECM, then the next source
+is used, if available. 
+\item \label{enu:ECM-Specific-Data}Once the ECM type is known, the FLA
+will check to see if the ECM is supported. If it is supported, then
+ECM specific data can be obtained. 
+
+\begin{enumerate}
+\item \label{enu:ECMa}If the ECM is supported, then different types of
+data can be obtained that include Event Data, Configuration Data,
+Historical Data, and Fault Data. If this menu screen is displayed,
+then the FLA detected that it can capture data from an ECM on the
+network. Pressing the Green button will start the process of gathering
+specific data.
+\item \label{enu:ECMb}No current support for getting ECM Specific Data
+exists of this screen is displayed. As such, both the Red and Green
+buttons move the interface to the RP1210 mode where the operator can
+use the FLA with other software. 
+\item \label{enu:GettingECMdata}Getting ECM data... is a display screen
+that shows the progress of the current download. The tag <Data Sought>
+is dependent on the ECM and may say things like Hard Brake, Engine
+Usage Log, Data Plate, or other phrases that to indicate the progress
+of the download. After each attempt, a flag saying either Success
+or Failed will be displayed. 
+\item \label{enu:DoneECMdata}Once the ECM specific data is downloaded,
+a message saying Finished ECM Data is displayed along with the total
+number of bytes downloaded. If the operator wants to continue an investigation
+using PC based software, then he or she can press the Red button to
+go into RP1210 passthrough mode. Otherwise, the Green button brings
+the user back to the upload menu. In the field. it may be that a data
+upload is possible due to the lack of an internet connection. In this
+case, the operator can press the Red button once to get to menu \vref{enu:Status}
+and again to get to the Shutdown menu.
+\end{enumerate}
+\item The RP1210 passthrough mode enables operators to use other PC based
+software to interface with the vehicle. The FLA will be connected
+to a PC by a USB cable to communicate on the vehicle bus. The FLA
+uses a DGTech eDPA to communicate with the PC. As such, it is important
+to have the DG Drivers installed before using the RP1210 mode, as
+described in Section \vref{sub:RP1210-Drivers}. This mode invokes
+a write blocking feature that prevents certain messages from reaching
+the ECM. For more details on the messages that get blocked when the
+write-blocker is running, see Section \vref{sec:Forensic-Write-Blocking}. 
+
+\begin{enumerate}
+\item \label{enu:RP1210}This display screen asks to enable the passthrough
+mode. If the Red button is pressed, then the system goes back to the
+status display (Screen \ref{enu:Status}). Pressing the Green button
+turns on the Passthrough mode.
+\item \label{enu:RP1210Enabled}Passthrough mode for CAN (J1939) is on when
+this screen is displayed. A reminder to plug in the USB cable is printed
+on line 2. At any time, the operator can terminate the pasthrough
+mode and switch to J1708 pass mode or transition to uploading the
+data. This mode is used for all newer ECMs.
+\item \label{enu:J1708-pass-mode.}J1708 pass mode is on when this screen
+is displayed. A reminder to plug in the USB cable is printed on line
+2. At any time, the operator can terminate the pasthrough mode and
+switch to J1708 pass mode or transition to uploading the data. This
+mode is used for all Caterpillar, DDEC IV and DDEC V ECMs.
+\end{enumerate}
+\end{enumerate}
+Network traffic is recorded and logged during screens \ref{enu:Id-Vehicle},
+\ref{enu:GettingECMdata}, and \ref{enu:RP1210Enabled}. A data package
+is defined from network data coming from the vehicle starting when
+the user acknowledges permission to when the operation of the FLA
+transitions back to the Upload option. 
+
+
+\section{\label{sub:IP-Addresses}IP Addresses}
+
+The IP address Line can have the following statements:
+\begin{description}
+\item [{IP:~XXX.XXX.XXX.XXX}] A valid IP address. XXX can be any number
+between 0 and 255. Often a private home network will have a router
+that serves an IP address with the the first numbers of 192.168.XXX.XXX.
+\item [{IP:~10.0.0.1}] The IP address when the FLA's DHCP server is activated.
+The FLA will give other devices on the network an IP address too,
+which may cause problems on an established network. 
+\item [{Ethernet~Unplugged}] There is no live connection between the FLA
+and an outside device. If a network connection was present, there
+may be around a 30 second lag for this message to display after a
+cable is unplugged.
+\item [{Finding~IP~Address}] The Ethernet connection is plugged in and
+linked to another connection, but the FLA has not been issued an IP
+address from the network router.
+\end{description}
+
+
+
+\chapter{The FLA Preview}
+
+
+\section{Accessing the FLA Preview}
+
+Accessing the FLA Preview is done by entering the IP address of the
+FLA into a web browser. Please see the requirements section for more
+information about supported web browsers. As shown below, enter the
+IP Address exactly as it appears on the IP Address line.
+
+<Pic of correct/ incorrect ip addresses>
+
+This will load the FLA Preview main page, shown below.
+
+<pic of fla\_preview\_main\_page>
+
+This page provides an overview of the current status of the device.
+The At a glance section will display the number of pending data packages,
+that is the number of data packages that have been downloaded to the
+FLA but not yet uploaded to the FLA Portal, and if there is a download
+in progress.
+
+
+\section{Using the FLA Preview}
+
+The FLA Preview has many uses, including allowing operators to preview
+data in the field, download the User Manuals, download RP1210 drivers,
+and many other useful tasks we will cover in this section.
+
+
+\subsection{View Local Data}
+
+Under the View Local Data page, the operator is able to view data
+on the FLA. There are two sections to local data, Pending Uploads,
+and Archived Data. Pending Uploads will show any data packages that
+are ready to be uploaded to the FLA Portal.
+
+<pic of local\_data>
+
+This page will give an overview of each pending data package. The
+OEM data column will be YES if the FLA was able to recover some OEM
+data, and NO if the FLA could not. The yellow Archive button will
+remove the data package from being uploaded, and move it to the archived
+section. If an archive is unintentionally archived, the FLA will have
+to be serviced to retrieve the data. For more information about servicing
+the FLA, see the Service section.
+
+When a download is in progress, the row for that entry will indicate
+the download is in progress, and will not provide the ``View Data''
+button. Once the user finishes the download, the operator can refresh
+the page, and will see the ``View Data'' button. For more information
+about when a download is finished, and how to preform a download,
+refer to the Field Guide.
+
+Selecting the ``View Data'' will provide the user with a preview
+of the report. This preview includes all of the standards-based information,
+the components found, and any identification information, as well
+as any in-field non-standards-based previews. Non-standards-based
+information is any data that is provided by OEM software, such as
+DDEC reports' XTR files, and CAT Snapshots. The operator will get
+a pireview of this data here in accordance with the type of ECM being
+analyzed. The full reports will be avaliable through the FLA Portal
+when the operator uploads the data. Typically, the following will
+be avaliable:
+
+1. Preview of DDEC ECMs
+
+If non-standards-based data is collected from a DDEC ECM, an XTR file
+will be avaliable for download.
+
+2. Preview of CAT ECMs
+
+If non-standars-based data is collected from a CAT ECM, a CSV file
+will be avaliable containing 5 frames around the trigger for any quick
+stop records.
+
+The preview will also contain a SHA 256 Sums file for the operator
+to download. This file contains the SHA 256 sums of all data files
+the FLA has created. The operator can download this file, and confirm
+the data uploaded to the FLA Portal was the same data the FLA created.
+For more information on SHA 256 sums, as well as recommended use,
+see the SHA 256 sums of suggested practices.
+
+The operator can also click on the ``Archived Data'' button on the
+View Local Data page to view data packages that were archived. Data
+packages that are uploaded to the FLA Portal are automatically archived.
+From here the user can access all of the same downloads and information
+as when the data package was pending uploading. Meaning, once the
+data is uploaded, the user can still downloa XTR, CSV, or SHA 256
+Sum files, as well as any standards-based data aquired. If the FLA
+has a large number of archived data packages, the archived page may
+take several moments to load.
+
+<pic of archived\_datas>
+
+
+\chapter{Using the FLA Portal}
+
+The FLA Portal is where operators can view full reports of the data
+they collected in the field. Administrators will also use the FLA
+Portal to manage FLAs, and users.
+
+
+\section{Accessing the FLA Portal}
+
+The FLA Portal is accessed by navigating to \href{https://fla.synercontechnologies.com/}{https://fla.synercontechnologies.com/}
+in a web browser. For a list of supported web browsers, refer to the
+XXX section.
+
+The FLA Portal will require the operator to login, using the username
+and password used when the operator created the account. Note that
+BOTH username and password are case-sensative.
+
+\includegraphics[width=0.8\textwidth]{\string"media/fla_portal_screenshots/FLA Portal Login Screen\string".png}
+
+Once logged in, the operator will be able to view data aquired from
+the assigned FLA.
+
+
+\section{Using the FLA Portal}
+
+For operators, the main use of the FLA Portal is to view full reports.
+Administrators should refer to the Administrative Guide for further
+information about administrating on the FLA Portal.
+
+Once an operator uploaded a data package to the FLA Portal, the data
+will be avaliable for viewing by everyone in the group. A Logged-in
+operator will be able to view all data packages uploaded to the server.
+
+<picture of logged-in operator>
+
+Selecting one of these reports will open the full report.
+
+<picture of full report>
+
+The FLA full report has many sections, including
+
+
+\subsection{Vehicle Information}
+
+This section contains any components that responded to a component
+Identification request. The VIN, Vehicle Odometer, and Engine Hours
+will also be displayed under Engine \#1 for the appropriate network.
+This section also contains the time records, including vehicle time
+if avaliable, and time of the last GPS Lock.
+
+<pic of vehicle information>
+
+
+\subsection{Data sections}
+
+Data sections, such as Historical Data, Event Data, etc., are sections
+that contain either standards-based data, or non-standards-based data.
+These sections contain all of the data the FLA has decoded. Due to
+the wide variety of ECMs, and ECM configurations, these sections may
+contain different data depending on the ECM being analyzed.
+
+
+\subsection{Nomenclature}
+
+This section contains a breif overview of the nomenclature used in
+the report.
+
+
+\subsection{Network Logs}
+
+This section contains the logs of all of the FLA's interactions with
+the ECMs. These logs are provided as a means to audit the messages
+being sent. If the RP1210 passthrough is engaged, separate logs for
+any passthrough transactions will be avaliable.
+
+<picture of netowrk logs>
+
+
+\subsection{Version Information}
+
+This section provides the software versions that were used when the
+report was generated.
+
+<picture of version information>
+
+
+\subsection{SHA 256 Sums}
+
+This section provides the SHA 256 Sums for all of the data files the
+FLA generated when the download was preformed. These sums are encryped
+and sent to the FLA Portal for verification. The FLA Portal will generate
+its own SHA 256 Sums of the data files uploaded by the FLA. The FLA
+Portal will then compare the two, and verify the integrety of the
+upload.
+
+<picture of sha\_256\_verified>
+
+If there is a SHA 256 Mismatch, this may suggest the data has been
+tampered with.
+
+<picture of sha\_256\_mismatch>
+
+
+\subsection{Access Information}
+
+This section provides an audit of who is currently accessing the report,
+and the device's IP address.
+
+
+\chapter{Administrator's Guide}
+
+This section is intended to teach administrators how to manage FLAs
+on the FLA Portal.
+
+
+\section{FLA Portal terminology}
+
+The FLA Portal has the following categories:
+\begin{description}
+\item [{Organizations}] are the top level with a site administrator as
+the person in charge. Typically this is a highway patrol, a state
+police, or a company. The person in charge of the organization has
+the ability to oversee the data and use of the different FLAs.
+\item [{Groups}] are a sub-level within an organization. For example, East
+District and West District may be groups within an State Police organization.
+If an organization only has a few operators and a few FLAs, it may
+not make sense to have different groups. 
+\item [{Operators}] are trained users of the FLA and are responsible for
+collecting data in the field. Operators can be assigned to different
+groups. Every operator in the group is able to see the data packages
+from all the FLAs assigned to the group, regardless of which operators
+downloaded the data.
+\item [{Forensic~Link~Adapters}] are the hardware devices that an organization
+owns.
+\end{description}
+
+\section{Account Overview}
+
+Forensic Link Adapters are assigned to each organization at the time
+of purchase. Once the organization completes the purchase, the serial
+numbers of each FLA will be loaded into the Organization's profile.
+An invitation to set up the Organization will be sent to the site
+administrator. For example, the Lieutenant in charge of the crash
+reconstruction division will become the site administrator once he
+or she registers by following the link sent in the invitation e-mail.
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot}
+
+\caption{\label{fig:Example-FLA-Account-overview}Example Forensic Link Adapter
+Portal web page for the Account overview}
+\end{figure}
+
+
+Once logged in as a Site Administrator, an account overview page will
+be available, much like the one shown in Figure \vref{fig:Example-FLA-Account-overview}.
+Many of the fields on the web page are linked to various functions.
+The top bar (in black) has links to your default login page, the latest
+FLA download if you are an operator, a list of all the organizations,
+FLAs, and some account access settings. The web page is set up in
+three distinct tables as seen in Figure \ref{fig:Example-FLA-Account-overview}.
+\begin{enumerate}
+\item Organization Groups
+\item FLA Operators
+\item Forensic Link Adapter (FLA)
+\end{enumerate}
+
+\section{Group Management}
+
+It is the responsibility of the Organization administrator to set
+up groups and operators according to the desired structure of the
+Organization. You can have operators that have access to more than
+one group.
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot}
+
+\caption{\label{fig:Example-Group-Details}Example Group Details web page from
+the Forensic Link Adapter Portal.}
+\end{figure}
+
+
+
+\subsection{Adding an Operator}
+
+There are two ways to get an operator access to the group's FLAs.
+The first is to invite a new operator and the second is to invite
+an existing operator. However, the existing operator must have accepted
+an invitation from the Organization under a unique e-mail address.
+By clicking on the lower left box the says \textsf{Invite new operator}
+shown in \vref{fig:Example-Group-Details}, a web page similar to
+the one shown in \vref{fig:New-Operator-invitation}. The required
+user information includes name and email address. The FLA portal uses
+e-mail addresses to identify operators. Therefore, if a person belongs
+to different organizations, they would have to use a different e-mail
+for each organization. New operators will get an e-mail from \texttt{fla-admin@synercontechnologies.com}
+with a link to register with the site. Many times this e-mail will
+be filtered as junk, so advising the recipient to check their e-mail
+filters and junk folder may be necessary.
+
+The Work Address details on the Invite and operator page are used
+to fill in a report with 
+
+\begin{figure}
+\includegraphics[height=10cm]{media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot}
+
+\caption{\label{fig:New-Operator-invitation}New Operator invitation form on
+the FLA portal website.}
+\end{figure}
+
+
+
+\subsection{Assigning an FLA to the Group}
+
+Each group needs to have at least one Forensic Link Adapter assigned
+to it. To assign an FLA to a group, click the button to see a list
+of available FLAs for your organization. Only people in the group
+can see the data on the FLA assigned to that group
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{media/fla_portal_screenshots/FLAPortalAssignedFLASuccessScreenShot}
+
+\caption{Assigned FLAs}
+\end{figure}
+
+
+
+\chapter{Obtaining Data With Manufacturer's Software}
+
+There are two protocols used to communicate over a heavy truck: 1)
+CAN/J1939, and 2) J1708. These modes are needed to make use of the
+DG RP1210 embedded device used to communicate with Manufacturer\textquoteright s
+software. 
+
+
+\section{Installing Programs and Drivers}
+
+
+\subsection{\label{sub:RP1210-Drivers}RP1210 Drivers}
+
+The FLA uses the DG Technologies drivers to enable Windows programs
+to communicate with the ECMs. Download and install the drivers on
+your laptop or local machine from
+
+\href{http://www.dgtech.com/product/dpa/software/DPA4P_136.zip}{http://www.dgtech.com/product/dpa/software/DPA4P\_{}136.zip}.
+
+For more information, see the DG website
+
+\href{http://www.dgtech.com/product/dpa4plus/downloads/downloads.php}{http://www.dgtech.com/product/dpa4plus/downloads/downloads.php}.
+The Adapter Validation Tool is a useful program to test the connections
+between the computer, FLA, and Vehicle.
+
+
+\subsection{Manufacturer's Software}
+
+Download Cummins PowerSpec from
+
+\href{http://cumminsengines.com/powerspec}{http://cumminsengines.com/powerspec}. 
+
+This will only work on Windows 7 or newer. You need to register PowerSpec
+for free, but you do not have a license the program for it to work.
+
+Download Detroit Diesel DDEC Reports from
+
+\href{ http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm}{ http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm},
+as shown in \vref{fig:Download-page-forDDEC}.
+
+The direct download link is
+
+\href{http://www.ddcsn.com/cps/rde/xbcr/ddcsn/DDECReports805.exe}{http://www.ddcsn.com/cps/rde/xbcr/ddcsn/DDECReports805.exe}.
+
+Restart your computer after installing. 
+
+
+\subsection{PDF Printer}
+
+If a PDF generator is not installed on your computer system, then
+having the ability to print to PDF is useful. An example of a free
+PDF printer is the 
+
+\href{http://www.bullzip.com/products/pdf/download.php}{BullZip PDF printer.}
+
+
+\section{Enabling RP1210 Passthrough Mode}
+
+If the ECM is a Caterpillar, DDEC IV DDEC V, then enable the J1708
+Pass-through mode from the FLA menu screen. This is screen \ref{enu:J1708-pass-mode.}.
+
+If the ECM is a Cummins, DDEC VI, DDEC 10, or other then enable CAN/J1939.
+
+Once enabled, connect a USB cable from the FLA to the laptop with
+the DG drivers installed.
+
+
+\section{Cummins PowerSpec Download Protocol}
+\begin{enumerate}
+\item Turn the ignition key to the on position (if it is not already on),
+but do not start the engine.
+\item Plug in the FLA to the diagnostic connector. Ensure it powers on and
+boots.
+\item Perform a Standards based download using FLA Diagnostics.
+\item Enable J1939 Passthrough mode
+\item Launch DG Adapter Validation Tool (AVT). 
+
+\begin{enumerate}
+\item Select the appropriate installed device driver. 
+\item Switch the protocol to J1939 in the adapter validation tool.
+\item Click Run Test.
+\item If the Adapter Validation Tool passes the test, then two windows will
+turn green as shown in Figure \vref{fig:Adapter-Validation-Tool}.
+This means the ECM and the computer are connected through the RP1210
+Device. If a test fails, review the suggestions output by the Adapter
+Validation Tool and try again. It may require shutting down the FLA,
+unplugging the USB, and disconnecting the FLA from power. Similarly,
+the PC may need to be rebooted.
+\end{enumerate}
+\item Open Cummins PowerSpec. 
+\item Click on Advanced -> Settings and set the Adapter to the DPA4+
+\item Click on Connect.
+\item Click Read Data
+\item If available:
+
+\begin{enumerate}
+\item Press the Fault Codes button and Save the report as a PDF file.
+\item Press the Trip Information button and Save the report as a PDF file.
+\item Press the Feature Settings button and Save the report as a PDF file.
+\item Press the Sudden Decel button and Save the report as a PDF file.
+\item Press the Dataplate button and Save the report as a PDF file.
+\item Press the Duty Cycle button and Save the report as a PDF file.
+\item Press the After Treatment button and Save the report as a PDF file.
+\end{enumerate}
+\item Exit passthrough mode by pressing a the Update (red) button on the
+FLA. If an Internet Connection is available, then the data can be
+uploaded and archived. Otherwise, shutdown.
+\item Establish Internet connection with the FLA. An IP address other than
+10.0.0.1 should show up on the FLA display. 
+\item Scroll to the Upload to Server option on the FLA and upload the data
+to the server.
+\end{enumerate}
+
+\section{\label{sec:Forensic-Write-Blocking}Forensic Write Blocking}
+
+There are certain messages that should not be transmitted to the ECM
+during a forensic examination. These messages are the kind that will
+change the data stored on the ECM in a meaningful way. Resetting or
+clearing fault codes, changing the ECM time, and resetting trip data
+should always be avoided. 
+
+
+\chapter{Suggested Practices}
+
+This section is intended to provide a very brief overview of using
+the FLA, for a more indebth guide, refer to the Field Guide.
+
+
+\section{Connecting the FLA to the Internet}
+
+In order to upload data packages to the FLA Porta, recieve FLA updates,
+or update the FLA system time, the FLA needs to be connected to the
+internet.
+\begin{enumerate}
+\item Plug the ethernet cable from the FLA into a known good wired Internet
+connection that is on the same network as your computer.
+\item Navigate to the FLA Title Screen \ref{enu:Upload-to-Server}. Line
+2 should begin with ``IP:'' followed by 4 sets of numbers separated
+by a ``.''
+\item Navigate to the FLA Upload screen. If the green option is ``Upload'',
+then the FLA has successfully connected to the internet. If not, refer
+to the troubleshooting section.
+\end{enumerate}
+
+\section{Connect to the FLA Preview}
+
+There are two different ways to connect to the FLA Preview, the in-office
+way, and the in-field way. The in-office method requires the internet
+connection outlined in the previous section, and is only required
+if the operater needs the FLA Internet connection, i.e. to open a
+support channel.
+
+
+\subsection{In-Office Connection}
+\begin{enumerate}
+\item Connect the FLA to the internet as in the above section.
+\item Using a web browser on a computer, navigate to the IP Address displayed
+on the FLA. If you are unable to view the page, refer to the troubleshooting
+section.
+\end{enumerate}
+
+\subsection{In-Field Connection}
+\begin{enumerate}
+\item If the computer being used is connected to a WiFi network, disconnect
+from the network before proceeding.
+\item Plug the Ethernet cable from the FLA to your computer's Ethernet port.
+A USB to Ethernet adapter is available in the FLA kit if your computer
+does not have an ethernet jack.
+\item Navigate the FLA menu to the DHCP enable screen (Screen \ref{enu:DHCP})
+and enable the DHCP Server on the FLA.
+
+\begin{enumerate}
+\item The IP Address of the FLA should now be 10.0.0.1
+\end{enumerate}
+\item Using a web browser on a computer, navigate to the IP Address displayed
+on the FLA (10.0.0.1). If you are unable to view the page, refer to
+the troubleshooting section.
+\item When finished, do not forget to disable the DHCP service on the FLA.
+Leaving the DHCP service on could cause problems if the FLA is plugged
+into an office or home network.
+\end{enumerate}
+
+\section{Initiating FLA Support mode}
+
+In order to provide the quickest and most complete support, it may
+be necessary to place the FLA in support mode. This allows Synercon
+Support staff to create a secure connection to an FLA anywhere with
+an internet connection. It may also be refered to as a ``Support
+Channel''.
+
+To place the FLA in support mode, or ``Open a Support Channel'',
+follow these steps
+\begin{enumerate}
+\item Verify a Synercon Support representative is ready for you to initiate
+Support Mode.
+\item Connect the FLA to the internet as described in section XXX.
+\item Navigate to the FLA Preview site as described in section XXX.
+\item Select the ``Support'' option from the menu at the top.
+\item Click the ``Open the support channel'' button to initiate Support
+Mode.
+\item After a brief period, the page will change to say the connection was
+successful, if the connection was not successful, refer to the troubleshooting
+section.
+\item Do not close the web page, or click the ``Back'' or ``Refresh''
+buttons. It is important to stay on this page until the Synercon Support
+representative is finished providing support.
+\item When the Synercon Support representative begins working on your FLA,
+the screen on the device will change to indicate a member is preforming
+work.
+\item When the Synercon Support representative is finished, the unit will
+display a message indicating the work is finished.
+\item The FLA will automatically reboot.
+\item After the device loads the Title Screen, then click the ``Close Support''
+button to return the FLA to normal operational mode.
+\end{enumerate}
+
+\section{Installing PC Software}
+
+
+\subsection{RP 1210 Drivers}
+
+The FLA can opperate as an RP1210 device. This is used for connecting
+OEM software to ECMs. A computer does not need the RP 1210 drivers
+to access the FLA Preview, and the FLA Portal. You will need administrative
+privileges to install these drivers.
+
+To install the RP1210 Drivers, follow these steps
+\begin{enumerate}
+\item Connect to the FLA Preview discribed in the above section (Ether In-Field,
+or In-Office methods will work)
+\item Select the Download Drivers option from the menu at the top of the
+web page
+\item Select ``Download Drivers''
+\item Once the file is downloaded, extract the .zip file to a folder
+\item Open the folder, and double-click ``DPA4Plus\_RP1210.exe''
+\item Follow the on-screen instructions to install the drivers
+\end{enumerate}
+After the drivers are installed, they can be tested with the following
+steps
+\begin{enumerate}
+\item Make sure the FLA is powered on, and connected to an ECM (It is possible
+to test the drivers without a live ECM, to do so see the special instructions)
+
+\begin{enumerate}
+\item Skip steps 2,3,and 4 if not connected to a live ECM
+\end{enumerate}
+\item Begin a scan on the vehicle
+\item After the scan has completed and you see the \textquotedbl{}Enable
+RP1210 Mode\textquotedbl{} screen
+\item Confirm the top line of the FLA read \textquotedbl{}CAN/J1939 Pass
+Mode.\textquotedbl{}
+\item Search on your computer for the program \textquotedbl{}Adapter Validation
+Tool\textquotedbl{} and run it
+\item Select \textquotedbl{}MD/HD\textquotedbl{}
+\item Set the Vendor to \textquotedbl{}DG1210xx - Dearborn Group RP1210\textquotedbl{}
+(the xx will likely be 32)
+\item Set the Device to \textquotedbl{}DG DPA 4 Plus USB\textquotedbl{}
+
+\begin{enumerate}
+\item Skip to step 14 if the ECM does not support J1939
+\end{enumerate}
+\item Set Protocol to \textquotedbl{}J1939\textquotedbl{}
+\item plug the USB cable into the FLA and the computer
+\item Click \textquotedbl{}Run Test\textquotedbl{}
+\item The text boxes labeled \textquotedbl{}RP1210 Status Window (PC-VDA)\textquotedbl{}
+and \textquotedbl{}RP1210 Data Message Window (VDA-Vehicle)\textquotedbl{}
+should turn green
+
+\begin{enumerate}
+\item If you are not connected to a live ECM, the \textquotedbl{}RP1210
+Data Message Window\textquotedbl{} will turn red as there are no messages
+\end{enumerate}
+\item A text box will appear and will describe the results of the test.
+\item Click \textquotedbl{}Quit\textquotedbl{} on the pop-up window titled
+\textquotedbl{}Test Results Discussion\textquotedbl{}
+
+\begin{enumerate}
+\item If the ECM does not support J1708, the test is complete.If it does,
+continue
+\end{enumerate}
+\item Change the protocol to J1708
+\item On the FLA click the Green button to enable J1708 passthrough
+\item Confirm the top line of the FLA read \textquotedbl{}J1708 Pass Mode
+for\textquotedbl{}
+\item Click \textquotedbl{}Run Test\textquotedbl{}
+\item A text box will appear and will describe the results of the test
+\item Click \textquotedbl{}Quit\textquotedbl{} on the pop-up window titled
+\textquotedbl{}Test Results Discussion\textquotedbl{}
+\item Close out of the adapter validation test
+\end{enumerate}
+
+\section{Preforming a download on a Heavy Vehicle}
+
+This section provides a very high level overview of a typical download.
+\begin{enumerate}
+\item Plug in the FLA to the 9-Pin Diagnostics Connector
+\item Turn on the ignition key to run
+\item Run a vehicle Scan
+\item Download Supported Data (if available)
+\item Enable RP1210 Mode (Optional depending on the ECM and user's proceedure)
+
+\begin{enumerate}
+\item Connect the USB Cable
+\item Run OEM Software
+\end{enumerate}
+\item Verify the data collected via the FLA Preview
+
+\begin{enumerate}
+\item If desired, repeat steps 3-6 until satisfied
+\end{enumerate}
+\item Shutdown the FLA
+\item Reach a location that has a working Ethernet port
+\item Connect the FLA to the Internet
+\item Upload the data from the field
+\item View the full report on the FLA Portal
+\end{enumerate}
+
+\section{Connecting to Engine Control Modules on a Bench}
+
+When preforming bench downloads, it is recommended to use a Smart
+Sensor Simulator to mimimize the chance of throwing additional faults
+as compared to a traditional calibration harness. For more information
+about Smart Sensor Simulators, visit \textbackslash{}url\{synercontechnologies.com\}.
+Once connected, use the FLA in accordance to the recomended practices
+outlined in the Field Guide and accompanying Quick Start guides.
+
+The following are typical steps taken during a download.
+\begin{enumerate}
+\item Confirm the correct SSS is being used for the ECM
+\item Connect the SSS to the ECM
+\item Connect power to the SSS via the included power adapter
+\item Press the Key Switch until the Key On lamp is iluminated, about two
+seconds
+\item Verify the Key On lamp stays iluminated for one second before proceeding.
+If not, refer to the troubleshooting section
+\item Plug in the FLA to the 9-Pin Diagnostics Connector located on the
+SSS
+\item Run a vehicle Scan
+\item Download Supported Data (if available)
+\item Enable RP1210 Mode (Optional depending on the ECM and user's proceedure)
+
+\begin{enumerate}
+\item Connect the USB Cable
+\item Run OEM Software
+\end{enumerate}
+\item Verify the data collected via the FLA Preview
+
+\begin{enumerate}
+\item If desired, repeat steps 3-6 until satisfied
+\item Skip to step 13 if there is a working Ethernet port where the bench
+download is occuring
+\end{enumerate}
+\item Shutdown the FLA
+\item Reach a location that has a working Ethernet port
+\item Connect the FLA to the Internet
+\item Upload the data from the field
+\item View the full report on the FLA Portal
+\end{enumerate}
+
+\chapter{Troubleshooting}
+
+This section is dedicated to helping operators troubleshoot common
+issues with the FLA. Please consult this section and preform the suggested
+steps before contacting Synercon Support with any problems. The steps
+outlined in this section are intended to be a guide, express common
+sense when preforming any action that may result in data-loss or damage
+to the FLA.
+
+
+\section{\label{sec:FailsToBoot}FLA Fails to Boot}
+
+As the FLA boots, it may see something that it doesn't like and fails
+to pass its own self test. Often restarting will fix the problem.
+If connected to a truck, restart with the key in the off position
+so only power is connected. 
+
+
+\chapter{Definitions}
+
+When dealing with heavy truck data, there are many acronyms, symbols
+and phrases that are used to describe the data. This chapter presents
+a list to help decipher some of the terms used for dealing with heavy
+vehicle event data recorders.
+
+\nomenclature{FLA}{The Forenisc Link Adapter (FLA) is a field rugged computer that is programmed to download data from heavy vehicles.}
+\begin{description}
+\item [{NIST}] National Institute for Standards and Technology (\href{http://www.nist.gov/}{http://www.nist.gov/})
+\item [{RTC}] Real Time Clock
+\end{description}
+
+\chapter{Requirements}
+
+In order to take full advantage of the Synercon products, such as
+the FLA, FLA Preview, and FLA Portal, the user will need to have access
+to additional software and ports such as those outlined in the following
+sections.
+
+
+\section{Supported Web Browsers}
+
+In order for the FLA Preview and FLA Portal to work correctly, the
+user will need to meet the following browser requirements.
+\begin{description}
+\item [{Internet\_Explorer}] at least version XXX (MM/YYYY)
+\item [{Firefox}] at least version XXX (MM/YYYY)
+\item [{Chrome}] at least version XXX (MM/YYYY)
+\item [{Opera}] at least version XXX (MM/YYYY)
+\end{description}
+
+\section{Drivers}
+
+In order to use the FLA in RP 1210 mode, the operator will need to
+install the drivers first. This will require administrative privilages.
+The drivers are provided with the FLA.
+
+
+\section{OEM Software}
+
+In order to extract data from ECMs that are not fully supported, the
+operator will need the relative OEM software to aquire non-standards-based
+data.
+
+
+\chapter{Warnings}
+
+Synercon Technologies does not warrante any products against user
+caused problems. In order to prevent any damage to the FLA and data
+collected by the FLA, always follow these guidelines.
+
+
+\section{Powering the FLA}
+
+
+\subsection*{Only use the included wall adapter or cigarette adapter to power
+the FLA}
+
+When not using a vehicle to power the FLA, only power the device using
+the included power supplies. Never plug in a forign adapter, espeically
+if the voltage exceeds 12 volts.
+
+
+\subsection*{Never plug the FLA into a diagnostic port that has a vehicle voltage
+above 26 volts}
+
+When plugging in the FLA to a vehicle, ensure the voltage of the diagnostic
+port does not exceed 26 volts. If in doubt, a multi-meter can be used
+to verify voltage
+
+
+\subsection*{Do not remove power from the FLA without first shutting down}
+
+Unless specifically instructed to do so by a troubleshooting guide,
+avoid removing power to the FLA without first shutting down. Use the
+securing screws of the cables to secure all cables against accidental
+dislodgement.
+
+
+\subsection*{Do not expose the FLA to water}
+
+The FLA is NOT waterproof, even powered off. Avoid dropping the unit
+in puddles, or exposing the device to rainfall. Take care to ensure
+a dry environment is avaliable before operating the FLA. If the unit
+is exposed to water, even when powered off, the water can damage the
+unit, and potentially any data stored on the unit. If exposed to water,
+imediatly power the unit off and contact Synercon Support for instructions.
+
+
+\subsection*{Do not expose to excess heat or cold}
+
+Do not expose the FLA to temperatures exceeding XXXF, or below XXXF.
+
+
+\chapter{Synercon Training}
+
+Synercon Technologies provides classes to train users in the proper
+use of FLAs in investigating vehicles. For more information about
+classes, please contact XXX.
+
+
+\chapter{Contact Synercon Techonlogies}
+
+While we strive to provide the hightest quality products, if you have
+an issue with our products and need to contact us, please send an
+email to \textbackslash{}email\{support@synercontechnologies.com\}.
+
+When requesting support, please include the following:
+
+1) the product (i.e. FLA, or SSS)
+
+2) the serial number (it is printed on the bottom of all Synercon
+Products)
+
+3) A detailed explanation of the issue
+
+4) Any steps you have already taken to solve the issue
+
+5) {[}optional{]} any screen shots, or pictures if you believe they
+will help us understand the problem.
+
+We will attempt to respond to you as quickly as possible.
+
+\printindex{}
+\end{document}
