@@ -241,5 +241,5 @@ field_guide/*.gz
 field_guide/*.pdf
 
 #Quick Reference Files
-quick_references/*.gz
-quick_references/*.pdf
+quick_references/*/*.gz
+quick_references/*/*.pdf
