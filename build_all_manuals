@@ -1,0 +1,34 @@
+#!/bin/bash
+
+build()
+{
+    for i in 1 2 3
+    do
+        pdflatex *.tex
+    done
+}
+
+cd ./field_guide
+build
+cd ..
+
+cd ./user_manual
+build
+cd ..
+
+
+cd ./quick_references
+
+cd ./cat_download
+build
+cd ..
+
+cd ./cummins
+build
+cd ..
+
+cd ./ddec_download
+build
+cd ..
+
+cd ..
