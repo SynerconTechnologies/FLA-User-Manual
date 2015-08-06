@@ -1,5 +1,5 @@
 % Example LaTeX document for GP111 - note % sign indicates a comment
-\documentclass[11pt]{article}
+\documentclass[11pt, oneside]{book}
 
 \usepackage{graphicx}
 \usepackage{atbegshi,picture}
@@ -15,8 +15,8 @@
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-
-
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
 
 %--------------------------------VARS-----------------
 
@@ -43,9 +43,9 @@
 \vspace{4cm}
 {\Huge \textbf{Forensic Link Adapter Field Guide}}\\[2\baselineskip] % Title
 {\Huge Synercon Technologies LLC}\\[2\baselineskip]
-{\Large For Software Version 1}
-
-
+{\Large For Software Version 1}\\
+\vspace{2cm}
+A reference guide for operating the FLA
 
 \vfill % Whitespace between editor names and publisher logo
 
@@ -68,6 +68,19 @@ Synercon Technologies LLC
 \setlength{\textheight}{9in}
 \setlength{\oddsidemargin}{.125in}
 \setlength{\textwidth}{6.25in}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\filcenter}
+{\Huge\thechapter}
+{1ex}
+{\titlerule[2pt]
+\vspace{2ex}%
+\LARGE}
+[\vspace{1ex}%
+{\titlerule[2pt]}]
+
+
 \begin{document}
 %\title{{\Huge Lease}}
 %\author{ \\ \\ {\LARGE At Address  6772 E 26th Pl, Tulsa, OK 74129}
@@ -77,52 +90,63 @@ Synercon Technologies LLC
 %\renewcommand{\today}{June 11, 2013}
 %\maketitle
 
+\fancypagestyle{newstyle}{
+\fancyhf{} % clear all header and footer fields
+%\fancyhead[l]{\bfseries \nouppercase \rightmark} % except the center
+\fancyhead[l]{}
+\fancyfoot[C]{\thepage} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\pagestyle{newstyle}
 
 
 
 
-
-
+\thispagestyle{empty}
 \titleGP % This command includes the title page
 
 \newpage
-
+\frontmatter
 \tableofcontents
 
 
 \newpage
-\section{About this document}
-This document is intended to be a reference for users that have already read the FLA User Manual. This will provide higher level instructions for typical operations with the FLA.
-\section{Before Going Out in The Field}
+\mainmatter
+
+%\chapter{About this document}
+%This document is intended to be a reference for users that have already read the FLA User Manual. This will provide higher level instructions for typical operations with the FLA.
+
+\chapter{Before Going Out in The Field}
 \paragraph{  }
 Before preforming a download in the field, please preform the following steps in order to ensure the Forensic Link Adapter (FLA) is opperating with accurate information. Please note that this will require a live Ethernet port and a way to power the FLA. The FLA case has an Ethernet cable, as well as a wall power unit and a car cigarrett lighter adapter to power the FLA.
-\subsection{Preform an Update}
+\section{Preform an Update}
 \paragraph{  }
 Preforming an update ensures the FLA has the latest software. To update the FLA, first plug the device in and plug in the Ethernet cable into a working Ethernet jack. If you have any questions about a working Ethernet Jack, please contact your department IT services.
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{1}\\[\baselineskip]
 \end{center}
-Once the device boots, scroll (red button) to the System Configuration screen.
+Once the device boots, scroll to the System Configuration screen.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/sys_conf}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{2}\\[\baselineskip]
 \end{center}
-Enter the configuration sub-menu with the green button. This will take you to the Update Software screen.
+Enter the configuration sub-menu. This will take you to the Update Software screen.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/update_ready}
 \end{minipage}
 \\[\baselineskip]
-From this screen, use the green button to update the unit. A confirmation screen will appear to prevent accidental updates.\newline
+From this screen, select update. A confirmation screen will appear to prevent accidental updates.\newline
 During the update process, the device will go through four screens, shown below.
 
 \begin{figure*}[tbph]
@@ -139,7 +163,7 @@ During the update process, the device will go through four screens, shown below.
             \centering 
             \includegraphics[width=\textwidth]{../media/fla_screens/update_apt_upgrade}
             \caption[]%
-            {{\small Update Screen 1}}    
+            {{\small Update Screen 2}}    
             \label{fig:fla_update_2}
         \end{subfigure}
         \vskip\baselineskip
@@ -147,7 +171,7 @@ During the update process, the device will go through four screens, shown below.
             \centering 
             \includegraphics[width=\textwidth]{../media/fla_screens/update_diag}
             \caption[hello]%
-            {{\small Update Screen 1}}    
+            {{\small Update Screen 3}}    
             \label{fig:fla_update_3}
         \end{subfigure}
         \quad
@@ -155,307 +179,385 @@ During the update process, the device will go through four screens, shown below.
             \centering 
             \includegraphics[width=\textwidth]{../media/fla_screens/update_web}
             \caption[hello3]%
-            {{\small Network 4}}    
+            {{\small Update Screen 4}}    
             \label{fig:fla_update_4}
         \end{subfigure}
         \caption[Update]
         {\small The FLA Update Process} 
         \label{fig:fla_update}
     \end{figure*}
-After the update completes, the FLA will require a shutdown. Press the green button to shut the device down before unplugging it. After the devices indecates it is safe to do so, unplut the power supply. After waiting 2 seconds, plug the device in to continue.
+After the update completes, the FLA will require a shutdown. Select "Shutdown" to shut the device down before unplugging it. After the devices indecates it is safe to do so, unplut the power supply. After waiting 10 seconds, plug the device in to continue.
 \paragraph{  }
-If time displayed on the FLA is not correct, the time can be updated through the configuration menu. As with the update, an internet connection is required. When updating the time, the FLA will request the current universal time from a dedicated timeserver, and confirm the new time with the user before setting the system time. The user can also change the timezone from the configuration menu.
-\subsection{Download Appropriate Drivers}
-The FLA can act as an RP-1210 device for using OEM software. This onyl required if the ECM being downloaded is not supported. Currently supported ECMs include DDEC and CAT modules. The drivers for the RP-1210 feature of the FLA can be found either at Dearboarn Group's website
+If time displayed on the FLA is not correct, the time can be updated through the configuration menu. As with the update, an internet connection is required. The timezone of the FLA can also be changed in the system configuration menu. For more information about setting the time and timezone, refer to the FLA User Manual.
+\section{Download Appropriate Drivers}
+\paragraph{  }
+The FLA can act as an RP-1210 device for using OEM software. This onyl required if the ECM being downloaded is not supported. For a list of supported modules, refer to the FLA User Manual. The drivers for the RP-1210 feature of the FLA can be found either at Dearboarn Group's website
 \url{http://www.dgtech.com/product/dpa/software/DPA4P_136.zip} 
 Or on the FLA Preview site.
 \paragraph{  }
-The FLA Preview site is a website that is hosted by the FLA. To access it, first ensure it is powered on, and has an IP address. This can be confirmed by the title screen shown in figure \ref{fig:fla_title_screen}.The boxed in area is the IP address.
-\begin{figure}[tbph]
-\centering
-\includegraphics[width=0.5\linewidth]{../media/fla_screens/title_screen}
-\label{fig:fla_title_screen}
-\caption{}
-\end{figure}
-On a computer connected to the same network, type the IP address into a webbrowser. The page will look like figure 
-\begin{figure}[tbph]
-\centering
-\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/main_page}
-\label{fig:preview_main_page}
-\caption{}
-\end{figure}
-From this page, select Download Drivers, and then the Download button. The Download Drivers page also has testing instructions to verify RP 1210 is working correctly. This site can be accessed without an internet connection, as the website is hosted by the FLA. For connecting to the site in the field, see the Setting Up section.
-\subsection{Manufacturer Software}
+The FLA Preview site is a website that is generated by the FLA. To access it, first ensure it is powered on, and has an IP address. This can be confirmed by the title screen shown below.
+\begin{center}
+\includegraphics[width=0.5\linewidth]{../media/fla_screens/title_screen}\label{fig:fla_title_screen}
+\end{center}
+On a computer connected to the same network, type the IP address into a webbrowser. The following page should appear.
+\begin{center}
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/main_page}\label{fig:preview_main_page}
+\end{center}
+From this page, select Download Drivers, and then the Download button. The Download Drivers page also has testing instructions to verify RP 1210 is working correctly. This site can be accessed without an internet connection, as the website is generated by the FLA. For connecting to the site in the field, see section \ref{setting_fla_in_field}.
+\section{Manufacturer Software}
 If the ECM being downloaded is not supported by the FLA, please ensure a computer has a working copy of the OEM software, and also the RP1210 drivers discussed in the previous section.
 
-\section{Setting Up the FLA}
-\subsection{In the Office Use}
+\chapter{Setting Up the FLA}
+\section{In the Office Use}\label{sec:setting_fla_in_office}
+\paragraph{  }
 When the FLA is in use at the office, ensure the DHCP server is off. If left on, this can cause problems with the network the FLA is plugged into.
-\subsection{At Home Use}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_in_office}
+\end{center}
+\paragraph{  }
+When the FLA is being used with a forign network, such as any network that is not your home or work network, extra caution must be taken. The local site can be accessed by anyone on the same network, so caution must be taken when using forign networks. It is not recommended to plug the FLA into an unknown network.
+\section{At Home Use}\label{sec:setting_fla_at_home}
+\paragraph{  }
 When the FLa is in use at a home, or other non-commerical site with an internet connection, the DHCP server should be turned off. If left on, it can cause problems with the network the FLA is connected to.
-\subsection{Use in Unsecure Locations}
-When the FLA is being used with a forign network, such as any network that is not your home or work network, extra caution must be taken. The local site can be accessed by anyone on the same network, so caution must be taken when using forign networks. The recommended practice in the case of unknown networks is to bridge your computers network, for more information on this, see section~\ref{subsec:bridge_computer_network}.
-\section{Downloading ECMs}
-To extract data, start at the Title Page, figure \ref{fig:fla_title_screen}. From there, select scan (green button) to begin the scan. The device will ask if the opperator has sufficient permission to preform the scan and collect data from the vehicle. When the opperator continues, this action is time-stamped and rendered with the reports.\newline
-
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_at_home}
+\end{center}
+\section{In Field Use}\label{setting_fla_in_field}
+\paragraph{  }
+When the FLA is being used in the field, the DHCP services may be tuned on. These services allow the user to connect a computer directly to the FLA using the provided ethernet connection. For more information on DHCP services, refer to section \ref{sec:dhcp_service}.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_in_field}
+\end{center}
+\chapter{Downloading ECMs}
+\paragraph{  }
+Downloading ECMs will require the FLA, the vehicle to download or the EMCs and a Smart Sensor Simulator, and permission to preform the download.
+\\
+These are the general steps to preform a download. Some screens may be different depending on the type of ECM being downloaded.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{1}\\[\baselineskip]
+\end{center}
+start at the Title Pag and select scan to begin the scan. If the scan option is not present, refer to the troubleshooting section.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/title_screen}
+\end{minipage}
+\\[\baselineskip]\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+The device will ask if the opperator has sufficient permission to preform the scan and collect data from the vehicle. When the opperator continues, this action is time-stamped and rendered with the reports.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/scan_1}
+\end{minipage}
+\\[\baselineskip]
+
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{3}\\[\baselineskip]
 \end{center}
 The FLA will first listen to the
 networks and build a list of all
 of the components on the network.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/scan_1}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
-\textbf{2}\\[\baselineskip]
+\textbf{4}\\[\baselineskip]
 \end{center}
 The FLA will then begin the standards-based scan, collecting information such as ECM Component Identification, Milage, etc.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/scan_2}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
-\textbf{3}\\[\baselineskip]
+\textbf{5}\\[\baselineskip]
 \end{center}
-The FLA will display the Component Id of the engine, as well as the first X characters of the VIN. The full vin will be in the report. Selecting Continue (green button) will continue the scan, Back (red button) will cancel the scan.
+The FLA will display the Component Id of the engine, as well as the first X characters of the VIN. The full vin will be in the report. Selecting Continue will continue the scan, Back will cancel the scan.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/comp_id}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
-\textbf{4}\\[\baselineskip]
+\textbf{6}\\[\baselineskip]
 \end{center}
 The FLA will compile the data, and then attempt to identify the ECM.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/comp_id_compile}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
-\textbf{5}\\[\baselineskip]
+\textbf{7}\\[\baselineskip]
 \end{center}
 The FLA will attempt to detect a supported ECM to extract non-standards based data.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/ecm_check}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
-\textbf{6.a}\\[\baselineskip]
+\textbf{8.a}\\[\baselineskip]
 \end{center}
 If the ECM is supported, this screen will ask if the user wishes to collect non-standards based data. See Section X to extract non-standards data with the FLA.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/ecm_confirm}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
-\textbf{6.b}\\[\baselineskip]
+\textbf{8.b}\\[\baselineskip]
 \end{center}
 If the ECM is not supported, please see section X to extract data with OEM software.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/ecm_not_supported}
 \end{minipage}
 
-\subsection{CAT and DDEC ECMs}
+\section{Supported ECMs}
 \paragraph{  }
-The FLA can extract more data from CAT and DDEC ECMs, such as event data and other non-standards based data. Continuing from screen 6.a from the previous section, selct 'Get Data' (green button) to continue the non-standards based data extraction. During the extraction, the FLA will display the current status of the extraction. The extraction make take some time, so please wait for the FLA to indicate it is finished. Once completed, the FLA will ask the user if they wish to enable RP1210 mode, or continue to the upload screen. If desired, the FLA can also enable RP1210 mode after preforming an extraction. See section~\ref{subsec:upload_data} for more details on uploading data.
+The FLA can extract more data from supported ECMs, such as event data and other non-standards based data. For a list of supported ECMs, refer to the FLA User Manual. Continuing from screen 8.a from the previous section, selct 'Get Data' to continue the non-standards based data extraction. During the extraction, the FLA will display the current status of the extraction. The extraction make take some time, so please wait for the FLA to indicate it is finished. Once completed, the FLA will ask the user if they wish to enable RP1210 mode, or continue to the upload screen. If desired, the FLA can also enable RP1210 mode after preforming an extraction. See section~\ref{subsec:upload_data} for more details on uploading data.
 
-\subsection{Non supported ECMs}
+\section{Non supported ECMs}
 \paragraph{  }
 If the FLA is not able to extract data from the ECM, the user can enable RP1210 mode and use the FLA as a passthrough device with the appropriate OEM software.
 
-\section{Verifying Data in the Field}
+\chapter{Verifying Data in the Field}
 \paragraph{  }
-The FLA is able to give the user an overview of the data in the field through the FLA Preview. The FLA Preview is a website hosted by the FLA that allows the user to connect to the device and examine data on it. To access the site, see the Accessing the FLA Preview part of the How Two section.
+The FLA is able to give the user an overview of the data collected in the field through the FLA Preview. The FLA Preview is a website generated by the FLA that allows the user to connect to the device and examine data on it.
+\section{Accessing the FLA Preview}
+There are two ways to access the FLA Preview depending on what is avaliable. If a good ethernet port is avaliable, connect using the at-home/in-office method. If no ethernet port is avaliable, connect to the preview using the in-field method.
+\paragraph{  }
+\subsection{At-Home/In-Office}
+If the operator is in an office, or at home, they can set the FLA up for home use, section \ref{sec:setting_fla_at_home}, or for office use \ref{sec:setting_fla_in_office}. Enter the IP address from the title screen into a web browser. This will take you to the FLA Preview website. If you have trouble accessing the preview, refer to the troubleshooting section.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	%\begin{center} 
+	%	\textbf{Correct:}\\[\baselineskip] 
+	%\end{center} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct} 
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/title_screen_no_veh_net} 
+\end{minipage}
+\subsection{In-Field}
+\paragraph{  }
+The frist step in accessing the FLA Preview is to have the FLA in the correct mode. Unless the operator wishes to place the FLA in support mode, the easiest way to access the FLA Preview is to set up the FLA for the field, as described in section \ref{setting_fla_in_field}. Once the FLA has DHCP enabled, and the computer is directly connected to the FLA with the ethernet cable, enter "10.0.0.1" into a web browser. This will take you to the FLA Preview website.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	%\begin{center} 
+	%	\textbf{Correct:}\\[\baselineskip] 
+	%\end{center} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct_dhcp} 
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/title_screen_no_veh_net_dhcp} 
+\end{minipage}
+\section{Using the FLA Preview}
 \paragraph{}
 The main page of the FLA will show the user how many pending data packages there are on the FLA, as well as if there are any downloads in progress. Under the View Local Data page, the operator can view the data packages that are not yet uploaded to the Synercon Server.
-\begin{figure}[tbph]
-\centering
+\begin{center}
 \includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/local_data}
-\label{fig:fla_preview_local_data}
-\caption{}
-\end{figure}
+\end{center}
+\paragraph{  }
 This page gives a brief overview of each data package on the FLA that is not yet uploaded. The OEM data column indiciates if the FLA has extracted data from the engine that is not a part of the standards-based extraction. From this page the operator can view the data from an individual data, view archived data packages, or archive pending data packages.
 \paragraph{  }
-Archiving a pending data package will move the data package to the archived list, and it will NOT be uploaded to the server. This is only to be used when the operator has a pending data package they do not want to upload on the server, i.e. if it was a practice download, or it contains incomplete data due to a lose cable. Use this with care, archived data packages cannot be un-archived without Synercon support.
+\textbf{Archiving a pending data package will move the data package to the archived list, and it will NOT be uploaded to the server.}
+This is only to be used when the operator has a pending data package they do not want to upload on the server, i.e. if it was a practice download, or it contains incomplete data due to a lose cable. Use this with care, archived data packages cannot be un-archived without Synercon support.
 \paragraph{  }
-The View Data button will allow the operator to view a preview of the report. This will contain all of the standards-based messages, as well as standards-based faults. For DDEC ECMs, an XTR will be avaliable to download if the FLA collected non-standards based data during the download. For CAT ECMs, an abreviated part of the avaliable Quick-Stop records will show the speeds from two frames before the trigger to two frames after. The full records will be avaliable once the operator uploads the data to the Synercon Portal.
+The View Data button will allow the operator to view a preview of the report. This will contain all of the standards-based messages, as well as standards-based faults. If the FLA was able to collect non-standards-based data a portion of the decoded data will be avaliable for download. The full records will be avaliable once the operator uploads the data to the Synercon Portal.
 \paragraph{  }
 The operator can also view archived data with the button at the bottom. Note, the archived page can take some time to load.
 \paragraph{  }
-Under each report, the user can download the SHA256 Sums file. This file contains the SHA 256 sums of all of the files the FLA generated at the time of the download. These sums are criptographic fingerprints of the files that can be used to determin if the file has changed since the FLA created the file. The user can save this file to preform verification of integrety of data obtained. For more information about SHA256 sums, please see section~\ref{subsec:using_shas}.
+\begin{wrapfigure}{r}{0.3\linewidth}
+\centering
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/download_sha_button}
+\end{wrapfigure}
+Under each report, the user can download the SHA256 Sums file.
+This file contains the SHA 256 sums of all of the files the FLA generated at the time of the download. These sums are criptographic fingerprints of the files that can be used to determin if the file has changed since the FLA created the file. The user can save this file to preform verification of integrety of data obtained. For more information about SHA256 sums, refer to section~\ref{subsec:using_shas}.
 
-\section{How To}
-This section in intended to provide guidence to preforming tasks with the FLA. Due to the wide variety of operating systems, web browsers, and configurations of computers, the information and steps in this section are ment as general guidance, and may have to be altered to substituted depending on individual configurations and software on computers used. The operator is advised to consult with any IT or relivant departments or persons before preforming any of these steps.
-\subsection{DHCP Services}
-\label{subsec:dhcp_services}
-DHCP service is the way devices get IP Addresses on a network inorder to communicate with eachother. Home and office networks have these services provided, however when out in the field this is not allways avaliable. This is where the FLA's DHCP service comes in. When the user wishes to comminicate with the FLA, i.e. to preview data on the FLA Preview, they may need to turn on the DHCP services to do so.\\
-\textbf{In general, if you plug a computer directly into the FLA using the ehternet cord, you will need to turn DHCP on. Do not forget to turn it off after you unplug the computer.}
-\subsubsection{Turning DHCP ON}
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
-\begin{center}
-\textbf{1}\\[\baselineskip]
-\end{center}
-Scroll to the system configuration screen
-\end{minipage}%
-\hfill%
-\begin{minipage}{0.6\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf}
-\end{minipage}
-\\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
-\begin{center}
-\textbf{2}\\[\baselineskip]
-\end{center}
-Scroll to the Change IP Settings screen, and select enable
-\end{minipage}%
-\hfill%
-\begin{minipage}{0.6\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf_dhcp_diss}
-\end{minipage}
-\\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
-\begin{center}
-\textbf{3}\\[\baselineskip]
-\end{center}
-Confirm the request
-\end{minipage}%
-\hfill%
-\begin{minipage}{0.6\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf_dhcp_conf_enable}
-\end{minipage}
-\subsubsection{Turning DHCP OFF}
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
-\begin{center}
-\textbf{1}\\[\baselineskip]
-\end{center}
-Scroll to the system configuration screen
-\end{minipage}%
-\hfill%
-\begin{minipage}{0.6\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf}
-\end{minipage}
-\\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
-\begin{center}
-\textbf{2}\\[\baselineskip]
-\end{center}
-Scroll to the Change IP Settings screen, and select dissable
-\end{minipage}%
-\hfill%
-\begin{minipage}{0.6\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf_dhcp_enable}
-\end{minipage}
-\subsection{Bridge Computer Network}
-\label{subsec:bridge_computer_network}
-This is used for when a secure Ethernet port is not avaliable, however the operator has a computer with a wireless connection to the internet. This may require administrative privilages. The operator is advised to consult with department IT services before attempting this.
-\subsubsection{Windows 7}
-\subsubsection{Windows XP}
-God help you.
-\subsection{Uploading Data}
+\chapter{Uploading Data to the FLA Portal}
+\paragraph{  }
+After collecting and verifying data with the FLA, the operator will need to upload the data on the FLA to the FLA Portal to view full reports.
+\section{Uploading Data from the FLA}
 \label{subsec:upload_data}
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{1}\\[\baselineskip]
 \end{center}
-Ensure the FLA is connected to a wroking ethernet port. In the main menu, scroll to the Upload Data screen. Select Upload (green button) to initiate the upload.
+Ensure the FLA is connected to a wroking ethernet port. In the main menu, scroll to the Upload Data screen. Select Upload to initiate the upload.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/upload_ready}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{2}\\[\baselineskip]
 \end{center}
 The FLA will connect with the server and will display the number of data packages being uploaded.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/upload_checking}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{3}\\[\baselineskip]
 \end{center}
 The FLA will then upload the data packages to the Synercon Portal.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/upload_uploading}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{3}\\[\baselineskip]
 \end{center}
-When finished, the operator can view the data on the \href{https://fla.synercontechnologies.com}{FLA Portal}
+When finished, the operator can view the data on the FLA Portal.
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/upload_finished}
 \end{minipage}
-\subsection{Finding the FLA MAC Address}
-\label{subsec:finding_mac}
-The MAC Address for the FLA is located in the configuration screen.
-\\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\section{Viewing Uploaded Data}
+\paragraph{  }
+Once the data is uploaded to the FLA Portal, the operator can view the full report. The FLA Portal is viewed by entering \url{fla.synercontechnologies.com} into a web browser.
+
+\chapter{How To}
+\paragraph{  }
+This section in intended to provide guidence to preforming tasks with the FLA. Due to the wide variety of operating systems, web browsers, and configurations of computers, the information and steps in this section are ment as general guidance, and may have to be altered to substituted depending on individual configurations and software on computers used. The operator is advised to consult with any IT or relivant departments or persons before preforming any of these steps.
+\section{DHCP Services}\label{sec:dhcp_service}
+\label{subsec:dhcp_services}
+DHCP service is the way devices get IP Addresses on a network inorder to communicate with eachother. Home and office networks have these services provided, however when out in the field this is not allways avaliable. This is where the FLA's DHCP service comes in. When the user wishes to comminicate with the FLA, i.e. to preview data on the FLA Preview, they may need to turn on the DHCP services to do so.\\
+\textbf{In general, if you plug a computer directly into the FLA using the ehternet cord, you will need to turn DHCP on. Do not forget to turn it off after you unplug the computer.}
+\subsection{Turning DHCP ON}
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{1}\\[\baselineskip]
 \end{center}
-Scroll (red button) to the system configuration screen, then enter the configuration menu (green button).
+Scroll to the system configuration screen
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/sys_conf}
 \end{minipage}
 \\[\baselineskip]
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{2}\\[\baselineskip]
 \end{center}
-Scroll (red button) to the Ethernet Mac Address screen. The second line of this screen is the MAC Address. Note, all of the characters are important, so when copying the address, do not forget any of the colons or leading zeros.
+Scroll to the Change IP Settings screen, and select enable
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf_dhcp_diss}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{3}\\[\baselineskip]
+\end{center}
+Confirm the request
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf_dhcp_conf_enable}
+\end{minipage}
+\subsection{Turning DHCP OFF}
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Scroll to the system configuration screen
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Scroll to the Change IP Settings screen, and select dissable
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf_dhcp_enable}
+\end{minipage}
+%\section{Bridge Computer Network}
+%\label{subsec:bridge_computer_network}
+%This is used for when a secure Ethernet port is not avaliable, however the operator has a computer with a wireless connection to the internet. This may require administrative privilages. The operator is advised to consult with department IT services before attempting this.
+%\subsection{Windows 7}
+%\subsection{Windows XP}
+%God help you.
+\section{Finding the FLA MAC Address}
+\label{subsec:finding_mac}
+The MAC Address for the FLA is located in the configuration screen.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Scroll to the system configuration screen, then enter the configuration menu.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Scroll to the Ethernet Mac Address screen. The second line of this screen is the MAC Address. Note, all of the characters are important, so when copying the address, do not forget any of the colons or leading zeros.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/sys_conf_mac}
 \end{minipage}
 \\
-\subsection{Using SHA 256 Sums}
+\section{Using SHA 256 Sums}
 \label{subsec:using_shas}
-SHA 256 Sums are a cryptographic fingerprint generated on files. Much like a human fingerprint can identify a person, the SHA 256 Sum can identify a file. The FLA will generate SHA 256 Sums for all files used in the download. If any of the data in the files change, the SHA 256 Sum will also change, thus providing a secure way to identify if alterations have been made to data downloaded. When a data package is uploaded to the Synercon Portal, our servers also calculate the SHA 256 Sums for each file, and compare them to the sums the FLA generated. This is done automatically for the user, and the sha comparisons are shown towards the end of reports on the Synercon Portal. If the user wishes to compare and authenticate the shas, the operator can download the SHA 256 Sums file for the report through the FLA Preview, the local website hosted by the FLa. This file contains all of the sum strings and the file names. If the user has downloaded any files from the data package, i.e. an XTR report for a DDEC, the user can calculate the SHA 256 Sum of the file and compare the result to the sum listed in the file. Unfortunatly Windows does not provide any native program to calculate SHA 256 Sums, the operator would need to download a program to preform the calculations.
+\paragraph{  }
+SHA 256 Sums are a cryptographic fingerprint generated on files. Much like a human fingerprint can identify a person, the SHA 256 Sum can identify a file. The FLA will generate SHA 256 Sums for all files used in the download. If any of the data in the files change, the SHA 256 Sum will also change, thus providing a secure way to identify if alterations have been made to data downloaded. When a data package is uploaded to the Synercon Portal, our servers also calculate the SHA 256 Sums for each file, and compare them to the sums the FLA generated. This is done automatically for the user, and the sha comparisons are shown towards the end of reports on the Synercon Portal. If the user wishes to compare and authenticate the shas, the operator can download the SHA 256 Sums file for the report through the FLA Preview, the local website generated by the FLa. This file contains all of the sum strings and the file names. If the user has downloaded any files from the data package, i.e. an XTR report for a DDEC, the user can calculate the SHA 256 Sum of the file and compare the result to the sum listed in the file. Unfortunatly Windows does not provide any native program to calculate SHA 256 Sums, the operator would need to download a program to preform the calculations.
 
-\section{Troubleshooting}
-\subsection{Do not get the Option to Scan Vehicle}
+\chapter{Troubleshooting}
+\section{Do not get the Option to Scan Vehicle}
 Symptopm:\\
-\noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 The FLA Title Screen does not allow the user to scan the vehicle
 \end{minipage}%
 \hfill%
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/title_screen_no_veh_net}
 \end{minipage}\\
 Solution:\\
@@ -466,7 +568,7 @@ Solution:\\
 \end{itemize}
 If the above list does not solve the issue, the communication wires from the ECM to the diagnostic port may be damaged. If this is the case, the ECM modules may have to be removed and the operator may have to preform a bench download on the unit. The recomended practice is to use a Synercon Smart Sensor Simulator with the truck ECMs in order to help preserve the data on the modules.
 
-\subsection{Cannot access the FLA Preview website}
+\section{Cannot access the FLA Preview website}
 Symptom:\\
 The operator is not able to access the FLA Preview website.
 Solution:\\
@@ -498,8 +600,8 @@ Solution:\\
 \end{itemize}
 If the above steps do not resolve the problem, the operator may need to contact the department IT services. If they are not able to resolve the issue, please contact Synercon support.
 
-\subsection{FLA Does not Have an IP Address}
-\subsubsection{IP says Ethernet Unplugged}
+\section{FLA Does not Have an IP Address}
+\subsection{IP says Ethernet Unplugged}
 Symptom:\\
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 The IP line of the FLA Title screen says Ethernet Unplugged
@@ -516,7 +618,7 @@ Solution:\\
 \item Contact your deprartment IT services, and ensure the FLA is given the permissions to access the internet. Often this is done by 'whitelisting a mac address'. If the operator needs to provide the MAC of the FLA, this can be accessed via the configuation menu. For more information, see section~\ref{subsec:finding_mac}.
 \end{itemize}
 If the above steps do not solve the issue, the operator may need to contact Synercon support.
-\subsubsection{IP says Finding IP Address}
+\subsection{IP says Finding IP Address}
 Symptom:\\
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 The IP line of the FLA Title screen says Ethernet Unplugged
@@ -532,7 +634,7 @@ Solution:\\
 \item Verify the port is working with a computer.
 \item Contact your deprartment IT services, and ensure the FLA is given the permissions to access the internet. Often this is done by 'whitelisting a mac address'. If the operator needs to provide the MAC of the FLA, this can be accessed via the configuation menu. For more information, see section~\ref{subsec:finding_mac}.
 \end{itemize}
-\subsection{FLA Does not Boot When Plugged in}
+\section{FLA Does not Boot When Plugged in}
 Symptom:\\
 The FLA does nothing when plugged into a vehicle.
 Solution:\\
@@ -540,7 +642,7 @@ Solution:\\
 \item The power wires to the diagnostic port may have been damaged, use the cigarette lighter adapter in the FLA case to provide power to the FLA. It is recommended to cary a portable battery for powering the FLA via battery for such situations.
 \end{itemize}
 If the FLA will not boot with either the cigarette lighter adapter plugged into a know charged battery, or the wall adapter, please contact Synercon support.
-\subsection{FLA Does not finish booting}
+\section{FLA Does not finish booting}
 Symptom:\\
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 The FLA reaches this screen, and does not proceed to the Title screen for more than 30 seconds.
