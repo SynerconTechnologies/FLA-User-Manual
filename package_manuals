@@ -19,7 +19,7 @@ EOF
 
 TAR=
 VERBOSE=
-while getopts “ht:r:p:v” OPTION
+while getopts “:tv” OPTION
 do
      case $OPTION in
          h)
@@ -27,7 +27,7 @@ do
              exit 1
              ;;
          t)
-             TAR=$OPTARG
+             TAR=1
              ;;
          v)
              VERBOSE=1
