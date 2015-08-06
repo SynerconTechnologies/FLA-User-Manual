@@ -243,3 +243,7 @@ field_guide/*.pdf
 #Quick Reference Files
 quick_references/*/*.gz
 quick_references/*/*.pdf
+
+#Packaged Manuals
+FLA\ Manuals.tar.gz
+FLA\ Manuals.zip
