@@ -58,6 +58,7 @@
 
 \usepackage{textcomp}
 \usepackage{fancyhdr}
+\usepackage{wrapfig}
 
 %\AtBeginDocument{
 %  \def\labelitemiii{\(\circ\)}
@@ -183,6 +184,9 @@ problems.
 The ECM Quick References provide a very brief step-by-step guide to
 aquiring data from different ECMs. These are intended to be quick
 procedures for persons familiar with the FLA and general opperations.
+
+
+\part{Introduction to Synercon Products}
 
 
 \chapter{Synercon Products}
@@ -338,176 +342,6 @@ The working screens will not have an option on the last line, but usually a perc
 \begin{minipage}{0.45\textwidth} 
 	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/scan_25} 
 \end{minipage}\\
-
-
-\subsection{Connect the FLA to the Internet}
-\paragraph{  }
-Connecting the FLA to the internet allows the device to get updates,
-set the system time, and upload data to the FLA Portal. To connect the FLA to the internet follow these steps.
-\begin{enumerate}
-\item Plug the FLA into a functional ethernet port using the included ethernet cable.
-\item The FLA should display an IP address on the second line of the title
-screen, the screen that is displayed right after the FLA finishes
-booting.
-\item If the FLA displays ``Ethernet Unplugged'' or ``Finding IP Address''
-for more than 60 seconds, consult the troubleshooting section.
-\end{enumerate}
-
-\subsection{Setting the Time}
-\paragraph{  }
-Once connected to the internet, the Forensic Link Adapter can synchronoise
-with universal time using a dedicated time server. This step is only
-necessary if the time displayed on the title screen is not the correct
-time.
-To correct the FLA time, follow these steps.
-\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{1}
-	\end{center}
-	 scroll to the System Configuration screen on the FLA, and select configure
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf} 
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{2}
-	\end{center}
-	Scroll to the Update System Clock screen, and select Update
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{3}
-	\end{center}
-	Once the FLA retrieves the current time, it will confirm the new time with the operator before setting the time. The FLA will continue to update this time, so the user does not need to imediatly confirm the time.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time_recieved}
-\end{minipage}\\
-
-
-\subsection{\label{sub:Setting-the-Timezone-1}Setting the Timezone}
-\paragraph{  }
-The timezone for the FLA can be set without an internet connection.
-To set the system timezone, follow these steps.
-\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{1}
-	\end{center}
-	 Scroll to the System Configuration screen on the FLA, and select configure
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{2}
-	\end{center}
-	Scroll to the Change FLA Timezone screen, and select "Change"
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone} 
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{3}
-	\end{center}
-	Select "Next" to view the next timezone, and select "Set" to set the timezone
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone_select}
-\end{minipage}\\
-
-
-\subsection{Updating the FLA}
-\paragraph{  }
-Updating the FLA provides the latest software, with the most features
-and highest chance of getting the most data. It is good practice to
-preform an update before downloading a vehicle, or before going out
-in the field to download.
-To preform an update, folow these steps.
-\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{1}
-	\end{center}
-	Ensure the FLA is plugged into an ethernet jack, and has an IP address.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{2}
-	\end{center}
-	Scroll to the System Configuration screen, select "Configure"
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{3}
-	\end{center}
-	The FLA will now display the Update FLA Software screen. If the FLA does not have the Update option, consult the troubleshooting section. Select "Update"
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software} 
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{4}
-	\end{center}
-	Confirm the update
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_confirm}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{5}
-	\end{center}
-	Wait for the FLA to preform the update. This can take several minutes
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_upgrading_apt}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{5}
-	\end{center}
-	When the FLA is finished updating, it will need to shutdown and be rebooted for the updates to be applied. Select Shutdown.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_complete}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{5}
-	\end{center}
-	After the FLA has completed the shutdown, unplug all sources of power, If the operator wishes to continue interacting with the device, wait 10 seconds before plugging in power.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/graphics/unplug_fla} 
-\end{minipage}\\[\baselineskip]
 
 
 \section{Familiarize yourself with the FLA}
@@ -783,6 +617,198 @@ bus
 busses
 \end{description}
 
+\subsection{Connect the FLA to the Internet}
+\paragraph{  }
+Connecting the FLA to the internet allows the device to get updates,
+set the system time, and upload data to the FLA Portal. To connect the FLA to the internet follow these steps.
+\begin{enumerate}
+\item Plug the FLA into a functional ethernet port using the included ethernet cable.
+\item The FLA should display an IP address on the second line of the title
+screen, the screen that is displayed right after the FLA finishes
+booting.
+\item If the FLA displays ``Ethernet Unplugged'' or ``Finding IP Address''
+for more than 60 seconds, consult the troubleshooting section.
+\end{enumerate}
+
+\subsection{Setting the Time}
+\paragraph{  }
+Once connected to the internet, the Forensic Link Adapter can synchronoise
+with universal time using a dedicated time server. This step is only
+necessary if the time displayed on the title screen is not the correct
+time.
+To correct the FLA time, follow these steps.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	 scroll to the System Configuration screen on the FLA, and select configure
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Scroll to the Update System Clock screen, and select Update
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	Once the FLA retrieves the current time, it will confirm the new time with the operator before setting the time. The FLA will continue to update this time, so the user does not need to imediatly confirm the time.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time_recieved}
+\end{minipage}\\
+
+
+\subsection{\label{sub:Setting-the-Timezone-1}Setting the Timezone}
+\paragraph{  }
+The timezone for the FLA can be set without an internet connection.
+To set the system timezone, follow these steps.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	 Scroll to the System Configuration screen on the FLA, and select configure
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Scroll to the Change FLA Timezone screen, and select "Change"
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	Select "Next" to view the next timezone, and select "Set" to set the timezone
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone_select}
+\end{minipage}\\
+
+
+\subsection{Updating the FLA}
+\paragraph{  }
+Updating the FLA provides the latest software, with the most features
+and highest chance of getting the most data. It is good practice to
+preform an update before downloading a vehicle, or before going out
+in the field to download.
+To preform an update, folow these steps.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	Ensure the FLA is plugged into an ethernet jack, and has an IP address.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Scroll to the System Configuration screen, select "Configure"
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	The FLA will now display the Update FLA Software screen. If the FLA does not have the Update option, consult the troubleshooting section. Select "Update"
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{4}
+	\end{center}
+	Confirm the update
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_confirm}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{5}
+	\end{center}
+	Wait for the FLA to preform the update. This can take several minutes
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_upgrading_apt}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{5}
+	\end{center}
+	When the FLA is finished updating, it will need to shutdown and be rebooted for the updates to be applied. Select Shutdown.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_complete}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{5}
+	\end{center}
+	After the FLA has completed the shutdown, unplug all sources of power, If the operator wishes to continue interacting with the device, wait 10 seconds before plugging in power.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/graphics/unplug_fla} 
+\end{minipage}\\[\baselineskip]
+
+\chapter{Setting Up the FLA}
+\section{In the Office Use}\label{sec:setting_fla_in_office}
+\paragraph{  }
+When the FLA is in use at the office, ensure the DHCP server is off. If left on, this can cause problems with the network the FLA is plugged into.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_in_office}
+\end{center}
+\paragraph{  }
+When the FLA is being used with a forign network, such as any network that is not your home or work network, extra caution must be taken. The local site can be accessed by anyone on the same network, so caution must be taken when using forign networks. It is not recommended to plug the FLA into an unknown network.
+\section{At Home Use}\label{sec:setting_fla_at_home}
+\paragraph{  }
+When the FLa is in use at a home, or other non-commerical site with an internet connection, the DHCP server should be turned off. If left on, it can cause problems with the network the FLA is connected to.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_at_home}
+\end{center}
+\section{In Field Use}\label{setting_fla_in_field}
+\paragraph{  }
+When the FLA is being used in the field, the DHCP services may be tuned on. These services allow the user to connect a computer directly to the FLA using the provided ethernet connection. For more information on DHCP services, refer to section \ref{sec:dhcp_service}.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_in_field}
+\end{center}
+
+
 \chapter{The FLA Preview}
 \paragraph{  }
 The FLA Preview is a website that each FLA hosts. This allows operators
@@ -996,6 +1022,221 @@ tampered with.
 
 This section provides an audit of who is currently accessing the report,
 and the device's IP address.
+
+
+\part{Using Synercon Products}
+
+
+\chapter{Before Going Out in The Field}
+\paragraph{  }
+Before preforming a download in the field, please preform the following steps in order to ensure the Forensic Link Adapter (FLA) is opperating with accurate information. Please note that this will require a live Ethernet port and a way to power the FLA. The FLA case has an Ethernet cable, as well as a wall power unit and a car cigarrett lighter adapter to power the FLA.
+\section{Preform an Update}
+\paragraph{  }
+Preforming an update ensures the FLA has the latest software. To update the FLA, first plug the device in and plug in the Ethernet cable into a working Ethernet jack. If you have any questions about a working Ethernet Jack, please contact your department IT services.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Once the device boots, scroll to the System Configuration screen.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Enter the configuration sub-menu. This will take you to the Update Software screen.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software}
+\end{minipage}
+\\[\baselineskip]
+From this screen, select update. A confirmation screen will appear to prevent accidental updates.\newline
+After the update completes, the FLA will require a shutdown. Select "Shutdown" to shut the device down before unplugging it. After the devices indecates it is safe to do so, unplut the power supply. After waiting 10 seconds, plug the device in to continue.
+\paragraph{  }
+If time displayed on the FLA is not correct, the time can be updated through the configuration menu. As with the update, an internet connection is required. The timezone of the FLA can also be changed in the system configuration menu. For more information about setting the time and timezone, refer to the FLA User Manual.
+\section{Download Appropriate Drivers}
+\paragraph{  }
+The FLA can act as an RP-1210 device for using OEM software. This onyl required if the ECM being downloaded is not supported. For a list of supported modules, refer to the FLA User Manual. The drivers for the RP-1210 feature of the FLA can be found either at Dearboarn Group's website
+\url{http://www.dgtech.com/product/dpa/software/DPA4P_136.zip} 
+Or on the FLA Preview site.
+\paragraph{  }
+The FLA Preview site is a website that is generated by the FLA. To access it, first ensure it is powered on, and has an IP address. This can be confirmed by the title screen shown below.
+\begin{center}
+\includegraphics[width=0.5\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}\label{fig:fla_title_screen}
+\end{center}
+On a computer connected to the same network, type the IP address into a webbrowser. The following page should appear.
+\begin{center}
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/main_page}\label{fig:preview_main_page}
+\end{center}
+From this page, select Download Drivers, and then the Download button. The Download Drivers page also has testing instructions to verify RP 1210 is working correctly. This site can be accessed without an internet connection, as the website is generated by the FLA. For connecting to the site in the field, see section \ref{setting_fla_in_field}.
+\section{Manufacturer Software}
+If the ECM being downloaded is not supported by the FLA, please ensure a computer has a working copy of the OEM software, and also the RP1210 drivers discussed in the previous section.
+
+\chapter{Downloading ECMs}
+\paragraph{  }
+Downloading ECMs will require the FLA, the vehicle to download or the EMCs and a Smart Sensor Simulator, and permission to preform the download.
+\\
+These are the general steps to preform a download. Some screens may be different depending on the type of ECM being downloaded.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+start at the Title Pag and select scan to begin the scan. If the scan option is not present, refer to the troubleshooting section.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}
+\\[\baselineskip]\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+The device will ask if the opperator has sufficient permission to preform the scan and collect data from the vehicle. When the opperator continues, this action is time-stamped and rendered with the reports.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/permission}
+\end{minipage}
+\\[\baselineskip]
+
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{3}\\[\baselineskip]
+\end{center}
+The FLA will first listen to the
+networks and build a list of all
+of the components on the network.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/analyzing_55}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{4}\\[\baselineskip]
+\end{center}
+The FLA will then begin the standards-based scan, collecting information such as ECM Component Identification, Milage, etc.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/scan_25}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{5}\\[\baselineskip]
+\end{center}
+The FLA will display the Component Id of the engine, as well as the first X characters of the VIN. The full vin will be in the report. Selecting Continue will continue the scan, Back will cancel the scan.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/comp_id}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{7}\\[\baselineskip]
+\end{center}
+The FLA will attempt to detect a supported ECM to extract non-standards based data.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/check_ecm}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{8.a}\\[\baselineskip]
+\end{center}
+If the ECM is supported, this screen will ask if the user wishes to collect non-standards based data. See Section X to extract non-standards data with the FLA.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/get_ecm_specific}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{8.b}\\[\baselineskip]
+\end{center}
+If the ECM is not supported, please see section X to extract data with OEM software.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/get_ecm_specific}
+\end{minipage}
+
+\section{Supported ECMs}
+\paragraph{  }
+The FLA can extract more data from supported ECMs, such as event data and other non-standards based data. For a list of supported ECMs, refer to the FLA User Manual. Continuing from screen 8.a from the previous section, selct 'Get Data' to continue the non-standards based data extraction. During the extraction, the FLA will display the current status of the extraction. The extraction make take some time, so please wait for the FLA to indicate it is finished. Once completed, the FLA will ask the user if they wish to enable RP1210 mode, or continue to the upload screen. If desired, the FLA can also enable RP1210 mode after preforming an extraction. See section~\ref{subsec:upload_data} for more details on uploading data.
+
+\section{Non supported ECMs}
+\paragraph{  }
+If the FLA is not able to extract data from the ECM, the user can enable RP1210 mode and use the FLA as a passthrough device with the appropriate OEM software.
+
+\chapter{Verifying Data in the Field}
+\paragraph{  }
+The FLA is able to give the user an overview of the data collected in the field through the FLA Preview. The FLA Preview is a website generated by the FLA that allows the user to connect to the device and examine data on it.
+\section{Accessing the FLA Preview}
+There are two ways to access the FLA Preview depending on what is avaliable. If a good ethernet port is avaliable, connect using the at-home/in-office method. If no ethernet port is avaliable, connect to the preview using the in-field method.
+\paragraph{  }
+\subsection{At-Home/In-Office}
+If the operator is in an office, or at home, they can set the FLA up for home use, section \ref{sec:setting_fla_at_home}, or for office use \ref{sec:setting_fla_in_office}. Enter the IP address from the title screen into a web browser. This will take you to the FLA Preview website. If you have trouble accessing the preview, refer to the troubleshooting section.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	%\begin{center} 
+	%	\textbf{Correct:}\\[\baselineskip] 
+	%\end{center} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct} 
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}
+\subsection{In-Field}
+\paragraph{  }
+The frist step in accessing the FLA Preview is to have the FLA in the correct mode. Unless the operator wishes to place the FLA in support mode, the easiest way to access the FLA Preview is to set up the FLA for the field, as described in section \ref{setting_fla_in_field}. Once the FLA has DHCP enabled, and the computer is directly connected to the FLA with the ethernet cable, enter "10.0.0.1" into a web browser. This will take you to the FLA Preview website.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	%\begin{center} 
+	%	\textbf{Correct:}\\[\baselineskip] 
+	%\end{center} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct_dhcp} 
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}
+\section{Using the FLA Preview}
+\paragraph{}
+The main page of the FLA will show the user how many pending data packages there are on the FLA, as well as if there are any downloads in progress. Under the View Local Data page, the operator can view the data packages that are not yet uploaded to the Synercon Server.
+\begin{center}
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/local_data}
+\end{center}
+\paragraph{  }
+This page gives a brief overview of each data package on the FLA that is not yet uploaded. The OEM data column indiciates if the FLA has extracted data from the engine that is not a part of the standards-based extraction. From this page the operator can view the data from an individual data, view archived data packages, or archive pending data packages.
+\paragraph{  }
+\textbf{Archiving a pending data package will move the data package to the archived list, and it will NOT be uploaded to the server.}
+This is only to be used when the operator has a pending data package they do not want to upload on the server, i.e. if it was a practice download, or it contains incomplete data due to a lose cable. Use this with care, archived data packages cannot be un-archived without Synercon support.
+\paragraph{  }
+The View Data button will allow the operator to view a preview of the report. This will contain all of the standards-based messages, as well as standards-based faults. If the FLA was able to collect non-standards-based data a portion of the decoded data will be avaliable for download. The full records will be avaliable once the operator uploads the data to the Synercon Portal.
+\paragraph{  }
+The operator can also view archived data with the button at the bottom. Note, the archived page can take some time to load.
+\paragraph{  }
+\begin{wrapfigure}{r}{0.3\linewidth}
+\centering
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/download_sha_button}
+\end{wrapfigure}
+Under each report, the user can download the SHA256 Sums file.
+This file contains the SHA 256 sums of all of the files the FLA generated at the time of the download. These sums are criptographic fingerprints of the files that can be used to determin if the file has changed since the FLA created the file. The user can save this file to preform verification of integrety of data obtained. For more information about SHA256 sums, refer to section~\ref{subsec:using_shas}.
 
 
 \chapter{Administrator's Guide}
@@ -1381,6 +1622,10 @@ download is occuring
 \item Upload the data from the field
 \item View the full report on the FLA Portal
 \end{enumerate}
+
+
+\part{General Information}
+
 
 \chapter{Troubleshooting}
 
