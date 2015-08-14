@@ -164,7 +164,7 @@ involving the use of the data produced or stored by the software.
 \newpage
 \mainmatter
 
-\chapter{About this Document}
+\chapter*{About this Document}
 \paragraph{  }
 This manual is intended to teach the operator the features and use
 of the Forensic Link Adapter (FLA). This is manual is designed as
@@ -1391,60 +1391,6 @@ OEM software varies between manufacturer, so different steps must be taken to co
 This section is intended to provide a very brief overview of using
 the FLA, for a more indebth guide, refer to the Field Guide.
 
-
-\section{Connecting the FLA to the Internet}
-
-In order to upload data packages to the FLA Porta, recieve FLA updates,
-or update the FLA system time, the FLA needs to be connected to the
-internet.
-\begin{enumerate}
-\item Plug the ethernet cable from the FLA into a known good wired Internet
-connection that is on the same network as your computer.
-\item Navigate to the FLA Title Screen \ref{enu:Upload-to-Server}. Line
-2 should begin with ``IP:'' followed by 4 sets of numbers separated
-by a ``.''
-\item Navigate to the FLA Upload screen. If the green option is ``Upload'',
-then the FLA has successfully connected to the internet. If not, refer
-to the troubleshooting section.
-\end{enumerate}
-
-\section{Connect to the FLA Preview}
-
-There are two different ways to connect to the FLA Preview, the in-office
-way, and the in-field way. The in-office method requires the internet
-connection outlined in the previous section, and is only required
-if the operater needs the FLA Internet connection, i.e. to open a
-support channel.
-
-
-\subsection{In-Office Connection}
-\begin{enumerate}
-\item Connect the FLA to the internet as in the above section.
-\item Using a web browser on a computer, navigate to the IP Address displayed
-on the FLA. If you are unable to view the page, refer to the troubleshooting
-section.
-\end{enumerate}
-
-\subsection{In-Field Connection}
-\begin{enumerate}
-\item If the computer being used is connected to a WiFi network, disconnect
-from the network before proceeding.
-\item Plug the Ethernet cable from the FLA to your computer's Ethernet port.
-A USB to Ethernet adapter is available in the FLA kit if your computer
-does not have an ethernet jack.
-\item Navigate the FLA menu to the DHCP enable screen (Screen \ref{enu:DHCP})
-and enable the DHCP Server on the FLA.
-
-\begin{enumerate}
-\item The IP Address of the FLA should now be 10.0.0.1
-\end{enumerate}
-\item Using a web browser on a computer, navigate to the IP Address displayed
-on the FLA (10.0.0.1). If you are unable to view the page, refer to
-the troubleshooting section.
-\item When finished, do not forget to disable the DHCP service on the FLA.
-Leaving the DHCP service on could cause problems if the FLA is plugged
-into an office or home network.
-\end{enumerate}
 
 \section{Initiating FLA Support mode}
 

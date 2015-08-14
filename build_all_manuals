@@ -8,9 +8,9 @@ build()
     done
 }
 
-cd ./field_guide
-build
-cd ..
+# cd ./field_guide
+# build
+# cd ..
 
 cd ./user_manual
 build
