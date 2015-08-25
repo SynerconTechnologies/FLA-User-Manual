@@ -230,7 +230,7 @@ FLA Features
 \newpage
 
 
-\section{The FLA Preview}
+\section{The FLA Preview}\label{sec:fla_preview}
 \vspace{1cm}
 \paragraph{  }
 The FLA Preview provides an expanded interface to the FLA while out in the field. The FLA Preview is used to preview reports while in the field to confirm the operator has the data they wish to obtain. The FLA Preview is a website hosted by each FLA. It is accessed by
@@ -304,12 +304,13 @@ The FLA Case has everything operators need to collect data from heavy vehicles. 
 
 \subsection{The FLA Portal and FLA Preview}
 \paragraph{  }
-The subscription to the TruckCrypt software allows operators to access the FLA Portal and FLA Preview. These will be discussed in more detail in section XXX.%TODO: fix with section labels.
+The subscription to the TruckCrypt software allows operators to access the FLA Portal and FLA Preview. These will be discussed in more detail in sections
+\ref{sec:fla_portal} and \ref{sec:fla_preview}.
 
 
 \section{Register as an Operator}
 \paragraph{  }
-The fla-admin should send you an email to invite you to be an operator for your FLA on the FLA Portal. The fla-admin email is initiated by the Organization administrator inviting a new operator. For more details, please see Chapter XXX. It will be necessary to have a FLA Portal account to view any data you collect with your FLA.
+The fla-admin should send you an email to invite you to be an operator for your FLA on the FLA Portal. The fla-admin email is initiated by the Organization administrator inviting a new operator. For more details, please see Chapter \ref{chap:admin_guide}. It will be necessary to have a FLA Portal account to view any data you collect with your FLA.
 
 
 \section{Operating the FLA}
@@ -617,7 +618,7 @@ bus
 busses
 \end{description}
 
-\subsection{Connect the FLA to the Internet}
+\subsection{Connect the FLA to the Internet}\label{subsec:internet_connect}
 \paragraph{  }
 Connecting the FLA to the Internet allows the device to get updates,
 set the system time, and upload data to the FLA Portal. To connect the FLA to the Internet follow these steps.
@@ -809,7 +810,7 @@ When the FLA is being used in the field, the DHCP services may be tuned on. Thes
 \end{center}
 
 
-\chapter{The FLA Preview}
+\chapter{The FLA Preview}\label{sec:fla_preview}
 \paragraph{  }
 The FLA Preview is a website that each FLA hosts. This allows operators
 to interact with the FLA in ways the front panel are not conducive
@@ -910,7 +911,7 @@ take several moments to load.
 \end{center}
 
 
-\chapter{Using the FLA Portal}
+\chapter{Using the FLA Portal}\label{sec:fla_portal}
 \paragraph{  }
 The FLA Portal is where operators can view full reports of the data
 they collected in the field. Administrators will also use the FLA
@@ -920,8 +921,7 @@ Portal to manage FLAs, and users.
 \section{Accessing the FLA Portal}
 \paragraph{  }
 The FLA Portal is accessed by navigating to \href{https://fla.synercontechnologies.com/}{https://fla.synercontechnologies.com/}
-in a supported web browser. For a list of supported web browsers, refer to the
-XXX section.
+in a supported web browser. For a list of supported web browsers, refer to section \ref{sec:fla_portal}
 \paragraph{  }
 The FLA Portal will require the operator to login, using the username and password used when the operator created the account. Note that BOTH username and password are case-sensitive.
 \begin{center}
@@ -1239,7 +1239,7 @@ Under each report, the user can download the SHA256 Sums file.
 This file contains the SHA 256 sums of all of the files the FLA generated at the time of the download. These sums are cryptographic fingerprints of the files that can be used to determine if the file has changed since the FLA created the file. The user can save this file to perform verification of integrity of data obtained. For more information about SHA256 sums, refer to section~\ref{subsec:using_shas}.
 
 
-\chapter{Administrator's Guide}
+\chapter{Administrator's Guide}\label{chap:admin_guide}
 
 This section is intended to teach administrators how to manage FLAs
 on the FLA Portal.
@@ -1375,7 +1375,7 @@ The FLA can obtain additional information from the following ECMs
 \item DDEC IV
 \item DDEC V
 \item Some DDEC VI
-\item Some XXX/XXX
+\item Some VCU/PLD
 \end{itemize}
 \end{itemize}
 It is important to use the FLA to obtain data whenever possible. The OEM software is typically designed with maintenance in mind, not forensic soundness. Most OEM software will allow the user to erase data, while the FLA prevents accidental data loss.
@@ -1405,8 +1405,8 @@ follow these steps
 \begin{enumerate}
 \item Verify a Synercon Support representative is ready for you to initiate
 Support Mode.
-\item Connect the FLA to the Internet as described in section XXX.
-\item Navigate to the FLA Preview site as described in section XXX.
+\item Connect the FLA to the Internet as described in subsection \ref{subsec:internet_connect}.
+\item Navigate to the FLA Preview site as described in section \ref{sec:fla_preview}.
 \item Select the ``Support'' option from the menu at the top.
 \item Click the ``Open the support channel'' button to initiate Support
 Mode.
@@ -1809,7 +1809,7 @@ Do not expose the FLA to temperatures exceeding 50C (122F), or below
 \chapter{Synercon Training}
 
 Synercon Technologies provides classes to train users in the proper
-use of Synercon Products in investigating vehicles. For more information about classes, please contact XXX.
+use of Synercon Products in investigating vehicles. For more information about classes, please contact \url{jeremy@synercontechnologies.com}.
 
 \begingroup
 \renewcommand{\cleardoublepage}{}
