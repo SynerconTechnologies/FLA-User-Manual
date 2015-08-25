@@ -90,9 +90,9 @@ This document is intended to be a quick guide to gathering data from CAT ADEM 3 
 
 \section{Downloading CAT ECMs}
 \paragraph{  }
-The FLA can extract standards-based data, such as vehicle miles, engine hours, and fault codes, as well as non-standards-based sata, such as "Snapshot" and OEM History and Configuration data.
+The FLA can extract standards-based data, such as vehicle miles, engine hours, and fault codes, as well as non-standards-based data, such as "Snapshot" and OEM History and Configuration data.
 \paragraph{  }
-To preform a download on a CAT ECM, plug the FLA into the diagnostic port, typically located on the driver's side, near the door and either under the dash, or by the seat. If the FLA does not power on, refer to the troubleshooting section of the Field Guide.
+To perform a download on a CAT ECM, plug the FLA into the diagnostic port, typically located on the driver's side, near the door and either under the dash, or by the seat. If the FLA does not power on, refer to the troubleshooting section of the Field Guide.
 \\[\baselineskip]
 \noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
 \begin{center}
@@ -120,7 +120,7 @@ The FLA will first extract standards based data.
 \begin{center}
 \textbf{3}\\[\baselineskip]
 \end{center}
-The FLA will display the Component Id of the engine, as well as the first X characters of the VIN. The full vin will be in the report. Selecting Continue (green button) will continue the scan, Back (red button) will cancel the scan.
+The FLA will display the Component Id of the engine, as well as the first X characters of the VIN. The full VIN will be in the report. Selecting Continue (green button) will continue the scan, Back (red button) will cancel the scan.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.6\textwidth}
@@ -161,20 +161,20 @@ After complete, the operator will be asked if they wish to enter RP1210 mode, or
 \end{minipage}\\[\baselineskip]
 The download is now complete, and the data package can be previewed on the FLA Preview.
 \paragraph{  }
-If the download was preformed in the field, the operator can enable the DHCP service, and connect a computer to the FLA using the ethernet cable in the FLA case. Your computer should detect a network with no internet connection.
+If the download was performed in the field, the operator can enable the DHCP service, and connect a computer to the FLA using the Ethernet cable in the FLA case. Your computer should detect a network with no Internet connection.
 \paragraph{  }
-If the download was preformed in a location that has a working ethernet jack, such as a bench download at a office, the user can upload the data imediatly, and examine the full report on the FLA Portal.
+If the download was performed in a location that has a working Ethernet jack, such as a bench download at a office, the user can upload the data immediately, and examine the full report on the FLA Portal.
 
 \section{Verifying Data in the Field}
 \paragraph{  }
 The FLA is able to give the user an overview of the data in the field through the FLA Preview. The FLA Preview is a website hosted by the FLA that allows the user to connect to the device and examine data on it.
 \subsection{Accessing the FLA Preview in the field}
-To access the FLA Preview without an internet connection, follow these steps.\\[\baselineskip]
+To access the FLA Preview without an Internet connection, follow these steps.\\[\baselineskip]
 \noindent\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
 \begin{center}
 \textbf{1}\\[\baselineskip]
 \end{center}
-Power on the FLA. If no download is in progress, the FLA does not need to be connected to the vehicle via the diagnostic cable, the cigarrette lighter adapter can be used.
+Power on the FLA. If no download is in progress, the FLA does not need to be connected to the vehicle via the diagnostic cable, the cigarette lighter adapter can be used.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.6\textwidth}
@@ -194,7 +194,7 @@ Enable the DHCP services on the FLA. For more information on how to enable DHCP 
 \begin{center}
 \textbf{3}\\[\baselineskip]
 \end{center}
-Connect the computer to the FLA via the included ethernet cable.
+Connect the computer to the FLA via the included Ethernet cable.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.6\textwidth}
@@ -227,7 +227,7 @@ Verify the DHCP services are off by examining the IP address of the title screen
 \begin{center}
 \textbf{2}\\[\baselineskip]
 \end{center}
-Plug the FLA into a known working ethernet port. The FLA should find an IP address and display it on the title screen.
+Plug the FLA into a known working Ethernet port. The FLA should find an IP address and display it on the title screen.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.6\textwidth}
@@ -237,7 +237,7 @@ Plug the FLA into a known working ethernet port. The FLA should find an IP addre
 \begin{center}
 \textbf{3}\\[\baselineskip]
 \end{center}
-Enter this address into the address bar of a webbrowser of a computer connected to the same network. If the FLA Preview site does not load, refer to the troubleshooting section of the Field Guide.
+Enter this address into the address bar of a web browser of a computer connected to the same network. If the FLA Preview site does not load, refer to the troubleshooting section of the Field Guide.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.6\textwidth}
@@ -252,7 +252,7 @@ The main page of the FLA will show the user how many pending data packages there
 \label{fig:fla_preview_main_page}
 \end{figure}
 \paragraph{  }
-Navigating to the View Local Data page gives a brief overview of each data package on the FLA that is not yet uploaded. The OEM data column indiciates if the FLA has extracted data from the engine that is not a part of the standards-based extraction. From this page the operator can view the data from an individual data, view archived data packages, or archive pending data packages.
+Navigating to the View Local Data page gives a brief overview of each data package on the FLA that is not yet uploaded. The OEM data column indicates if the FLA has extracted data from the engine that is not a part of the standards-based extraction. From this page the operator can view the data from an individual data, view archived data packages, or archive pending data packages.
 \begin{figure}[tbph]
 \centering
 \includegraphics[width=.95\linewidth]{../../media/fla_preview_screenshots/local_data}
@@ -261,14 +261,14 @@ Navigating to the View Local Data page gives a brief overview of each data packa
 \paragraph{  }
 Archiving a pending data package will move the data package to the archived list, and it will NOT be uploaded to the server. For more information about archiving a pending data package, refer to the Field Guide.
 \paragraph{  }
-The View Data button will allow the operator to view a preview of the report. This will contain all of the standards-based messages, as well as standards-based faults. For CAT ECMs, an abreviated part of the avaliable Quick-Stop, Diagnostic, and External Trigger Snapshots. The full records will be avaliable once the operator uploads the data to the Synercon Portal. When viewing the report, there will be buttons to download the avaliable snapshots at the top of the report, as shown below.
+The View Data button will allow the operator to view a preview of the report. This will contain all of the standards-based messages, as well as standards-based faults. For CAT ECMs, an abbreviated part of the avaliable Quick-Stop, Diagnostic, and External Trigger Snapshots. The full records will be avaliable once the operator uploads the data to the Synercon Portal. When viewing the report, there will be buttons to download the avaliable snapshots at the top of the report, as shown below.
 \begin{figure}[tbph]
 \centering
 \includegraphics[width=.3\linewidth]{../../media/fla_preview_screenshots/csv_download}
 \end{figure}
 
 \paragraph{  }
-The data in the FLA Preview is intended to be a summery of the information gathered by the FLA. A full report is only avaliable once the user uploads the report to the FLA Portal. For more information about the FLA Preview, or uploading data, refer to the Field Guide.
+The data in the FLA Preview is intended to be a summary of the information gathered by the FLA. A full report is only avaliable once the user uploads the report to the FLA Portal. For more information about the FLA Preview, or uploading data, refer to the Field Guide.
 
 
 \end{document}
