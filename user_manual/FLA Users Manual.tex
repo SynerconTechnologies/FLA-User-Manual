@@ -60,7 +60,7 @@
 \usepackage{fancyhdr}
 \usepackage{wrapfig}
 
-%\AtBeginDocument{
+% \AtBeginDocument{
 %  \def\labelitemiii{\(\circ\)}
 %  \def\labelitemiv{\(\diamond\)}
 %}
@@ -361,100 +361,18 @@ The FLA is a powerful data extraction device, with many features.
 This section will teach the reader about the FLA, how to use it, and the features of the FLA.
 
 
-\section{Working with the Forensic Link Adapter}
-\paragraph{  }
-This section will explain the basics of using the FLA. This section is is intended for users with little experience operating the FLA.
-
-
-\subsection{Powering Up}
-\paragraph{  }
-The FLA will begin to boot whenever a power is supplied to the device. This can be done in one of three ways
-\begin{enumerate}
-\item Using the vehicle connection cable to power the FLA using the battery
-of the vehicle
-\item Using the wall adapter to power the FLA using a wall outlet
-\item Using the 12v cigarette adapter to power the FLA either from a vehicle
-battery, or a portable battery pack
-\end{enumerate}
-\paragraph{  }
-The FLA can accept power from both the wall adapter or 12v cigarette adapter and the vehicle connection cable at the same time. This is useful of an operator needs to perform several downloads in the same area.
-\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-%	\begin{center}
-%		\textbf{5}
-%	\end{center}
-	Once the FLA is finished booting, the device will display the title screen
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
-\end{minipage}\\[\baselineskip]
-\paragraph{  }
-When this screen appears, the device is ready to operate. If the device does not reach this screen in 60 seconds, see the troubleshooting section of this manual.
-\paragraph{  }
-Once an investigator has established permission to download the data from a vehicle, the key needs to be turned to the on (not start) position for the FLA to communicate with the Electronic Control Modules (ECMs).
-\paragraph{  }
-The FLA can be plugged into the 9-pin diagnostic connector, which is usually located below the dash on the left side or to the left of the driver's seat. If the ECM was removed, then it should be connected through a Smart Sensor Simulator that emulates a truck. 
-
-
-\subsection{Shutting Down}
-
-Failure to shut down the FLA correctly can cause loss of data. To shutdown the FLA properly, follow these steps.
-\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{1}
-	\end{center}
-	Scroll to the Shutdown screen, and select "Shutdown"
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{2}
-	\end{center}
-	Confirm the shutdown
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_confirm}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{3}
-	\end{center}
-	Wait until the FLA indicates it is safe to remove power
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_in_progress} 
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
-	\begin{center}
-		\textbf{4}
-	\end{center}
-	When the FLA displays this screen, it is safe to remove power
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_complete}
-\end{minipage}\\[\baselineskip]
-
-
 \section{Display Screen Menu System}
 \paragraph{  }
-The FLA uses the front panel display as the primary way to interact with the unit. This section describes the design of the menu system and how to navigate it.
 
-
-\section{Menu Screen Descriptions\label{sec:Menu-Screen-Descriptions}}
-\paragraph{  }
 Almost all of the features of the FLA can be accessed through the
 main menu. The only two functions that are not available are the FLA Support Mode, and previewing data, which are solely available on the FLA Preview. Once the FLA boots, the device will enter the main menu, which contains the most used functions, such as running a scan, and uploading data. The below figure describes the layout of the FLA menu system.
 \begin{center}
 \includegraphics[width=\linewidth]{../media/graphics/menu_system}
 \end{center}
+\paragraph{  }
+
+
+\section{Menu Screen Descriptions\label{sec:Menu-Screen-Descriptions}}
 \paragraph{  }
 The menu system of the FLA is dynamic, it will only give the operator the option to perform an action if the FLA detects the action is possible. i.e. the FLA will not allow the operator to initiate a vehicle scan if the FLA does not detect any network traffic.
 
@@ -581,42 +499,123 @@ The menu system of the FLA is dynamic, it will only give the operator the option
 
 
 \subsection{Menu Screen Dynamic Lines}
-
+\paragraph{  }
 Certain lines of menu screens are dynamic, and display the status
 of various components of the FLA.
-
 
 \subsubsection{IP Address Line}
 
 The IP address Line can have the following states:
-\begin{description}
-\item [{IP: XXX.XXX.XXX.XXX}] A valid IP address. XXX can be any number
+\begin{itemize}
+\item \textbf{IP: XXX.XXX.XXX.XXX} A valid IP address. XXX can be any number
 between 0 and 255. An example would be 192.168.2.45
-\item [{IP: 10.0.0.1}] The IP address when the FLA's DHCP server is activated.
+\item \textbf{IP: 10.0.0.1} The IP address when the FLA's DHCP server is activated.
 See the DHCP section for more information.
-\item [{Ethernet Unplugged}] The FLA cannot detect a live Internet connection.
+\item \textbf{Ethernet Unplugged} The FLA cannot detect a live Internet connection.
 If this screen persists for more than 60 seconds on a known good Ethernet
 port, refer to the troubleshooting section.
-\item [{Finding IP Address}] The FLA detected a live Internet connection,
+\item \textbf{Finding IP Address} The FLA detected a live Internet connection,
 and is searching for an IP address. If this screen persists for more
 than 60 seconds on a known good Ethernet port, refer to the troubleshooting
 section.
-\end{description}
+\end{itemize}
 
 \subsubsection{Vehicle Connection Line}
-
+\paragraph{  }
 The vehicle connection line displays the status of the vehicle busses.
 This line can have the following states:
-\begin{description}
-\item [{No Vehicle Net / Check Ign. Key}] The FLA is not able to detect
+\begin{itemize}
+\item \textbf{No Vehicle Net / Check Ign. Key} The FLA is not able to detect
 any traffic on the vehicle networks. If this screen persists for more
 than 10 seconds, refer to the troubleshooting section.
-\item [{CAN Bus only}] The FLA only detects traffic on the CAN bus
-\item [{J1708/1587 only}] The FLA only detects traffic on the J1708/1587
+\item \textbf{CAN Bus only} The FLA only detects traffic on the CAN bus
+\item \textbf{J1708/1587 only} The FLA only detects traffic on the J1708/1587
 bus
-\item [{CAN and J1708}] The FLA detects traffic on both the CAN and J1708
+\item \textbf{CAN and J1708} The FLA detects traffic on both the CAN and J1708
 busses
-\end{description}
+\end{itemize}
+
+
+\section{Working with the Forensic Link Adapter}
+\paragraph{  }
+This section will explain the basics of using the FLA. This section is is intended for users with little experience operating the FLA.
+
+
+\subsection{Powering Up}
+\paragraph{  }
+The FLA will begin to boot whenever a power is supplied to the device. This can be done in one of three ways
+\begin{enumerate}
+\item Using the vehicle connection cable to power the FLA using the battery
+of the vehicle
+\item Using the wall adapter to power the FLA using a wall outlet
+\item Using the 12v cigarette adapter to power the FLA either from a vehicle
+battery, or a portable battery pack
+\end{enumerate}
+\paragraph{  }
+The FLA can accept power from both the wall adapter or 12v cigarette adapter and the vehicle connection cable at the same time. This is useful of an operator needs to perform several downloads in the same area.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+%	\begin{center}
+%		\textbf{5}
+%	\end{center}
+	Once the FLA is finished booting, the device will display the title screen
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}\\[\baselineskip]
+\paragraph{  }
+When this screen appears, the device is ready to operate. If the device does not reach this screen in 60 seconds, see the troubleshooting section of this manual.
+\paragraph{  }
+Once an investigator has established permission to download the data from a vehicle, the key needs to be turned to the on (not start) position for the FLA to communicate with the Electronic Control Modules (ECMs).
+\paragraph{  }
+The FLA can be plugged into the 9-pin diagnostic connector, which is usually located below the dash on the left side or to the left of the driver's seat. If the ECM was removed, then it should be connected through a Smart Sensor Simulator that emulates a truck. 
+
+
+\subsection{Shutting Down}
+\paragraph{  }
+Failure to shut down the FLA correctly can cause loss of data. To shutdown the FLA properly, follow these steps.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	Scroll to the Shutdown screen, and select "Shutdown"
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Confirm the shutdown
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_confirm}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	Wait until the FLA indicates it is safe to remove power
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_in_progress} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{4}
+	\end{center}
+	When the FLA displays this screen, it is safe to remove power
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_complete}
+\end{minipage}\\[\baselineskip]
 
 \subsection{Connect the FLA to the Internet}\label{subsec:internet_connect}
 \paragraph{  }
@@ -787,6 +786,72 @@ To perform an update, follow these steps.
 	\includegraphics[width=\linewidth]{../media/graphics/unplug_fla} 
 \end{minipage}\\[\baselineskip]
 
+%\section{DHCP Services}\label{sec:dhcp_service}
+%\label{subsec:dhcp_services}
+%DHCP service is the way devices get IP Addresses on a network in order to communicate with each other. Home and office networks have these services provided, however when out in the field this is not always available. This is where the FLA's DHCP service comes in. When the user wishes to communicate with the FLA, i.e. to preview data on the FLA Preview, they may need to turn on the DHCP services to do so.\\
+%\textbf{In general, if you plug a computer directly into the FLA using the Ethernet cord, you will need to turn DHCP on. Do not forget to turn it off after you unplug the computer.}
+\subsection{Turning DHCP ON}\label{subsec:enable_dhcp}
+\paragraph{  }
+Enabling DHCP allows the FLA to communicate with computers when a network is not present. I.E. to preview data in the field. Do not enable DHCP services while the FLA is plugged into an active network.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Scroll to the system configuration screen
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Scroll to the Change IP Settings screen, and select enable
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_dissabled}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{3}\\[\baselineskip]
+\end{center}
+Confirm the request
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_enabling}
+\end{minipage}
+\subsection{Turning DHCP OFF}\label{subsec:disable_dhcp}
+\paragraph{  }
+Dissabling DHCP allows the FLA to communicate with an active network. DHCP is disabled when the FLA boots.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Scroll to the system configuration screen
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Scroll to the Change IP Settings screen, and select disable
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_enabled}
+\end{minipage}
+
 \chapter{Setting Up the FLA}
 \section{In the Office Use}\label{sec:setting_fla_in_office}
 \paragraph{  }
@@ -804,7 +869,7 @@ When the FLA is in use at a home, or other non-commercial site with an Internet 
 \end{center}
 \section{In Field Use}\label{setting_fla_in_field}
 \paragraph{  }
-When the FLA is being used in the field, the DHCP services may be tuned on. These services allow the user to connect a computer directly to the FLA using the provided Ethernet connection. For more information on DHCP services, refer to section \ref{sec:dhcp_service}.
+When the FLA is being used in the field, the DHCP services may be tuned on. These services allow the user to connect a computer directly to the FLA using the provided Ethernet connection. For more information on enabling DHCP services, refer to section \ref{subsec:enable_dhcp}.
 \begin{center}
 \includegraphics[width=.9\linewidth]{../media/graphics/fla_in_field}
 \end{center}
@@ -952,7 +1017,7 @@ The FLA full report has many sections, including those listed in the next sectio
 
 
 \subsection{Vehicle Information}
-
+\paragraph{  }
 This section contains any components that responded to a component
 Identification request. The VIN, Vehicle Odometer, and Engine Hours
 will also be displayed under Engine \#1 for the appropriate network.
@@ -1023,6 +1088,10 @@ tampered with.
 This section provides an audit of who is currently accessing the report,
 and the device's IP address.
 
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/access_info}
+\end{center}
+
 
 \part{Using Synercon Products}
 
@@ -1057,6 +1126,7 @@ Enter the configuration sub-menu. This will take you to the Update Software scre
 \end{minipage}
 \\[\baselineskip]
 From this screen, select update. A confirmation screen will appear to prevent accidental updates.\newline
+\paragraph{  }
 After the update completes, the FLA will require a shutdown. Select "Shutdown" to shut the device down before unplugging it. After the devices indicates it is safe to do so, unplug the power supply. After waiting 10 seconds, plug the device in to continue.
 \paragraph{  }
 If time displayed on the FLA is not correct, the time can be updated through the configuration menu. As with the update, an Internet connection is required. The timezone of the FLA can also be changed in the system configuration menu. For more information about setting the time and timezone, refer to the FLA User Manual.
@@ -1074,6 +1144,7 @@ On a computer connected to the same network, type the IP address into a web brow
 \begin{center}
 \includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/main_page}\label{fig:preview_main_page}
 \end{center}
+\paragraph{  }
 From this page, select Download Drivers, and then the Download button. The Download Drivers page also has testing instructions to verify RP 1210 is working correctly. This site can be accessed without an Internet connection, as the website is generated by the FLA. For connecting to the site in the field, see section \ref{setting_fla_in_field}.
 \section{Manufacturer Software}
 If the ECM being downloaded is not supported by the FLA, please ensure a computer has a working copy of the OEM software, and also the RP1210 drivers discussed in the previous section.
@@ -1186,9 +1257,10 @@ If the FLA is not able to extract data from the ECM, the user can enable RP1210 
 \paragraph{  }
 The FLA is able to give the user an overview of the data collected in the field through the FLA Preview. The FLA Preview is a website generated by the FLA that allows the user to connect to the device and examine data on it.
 \section{Accessing the FLA Preview}
-There are two ways to access the FLA Preview depending on what is available. If a good Ethernet port is available, connect using the at-home/in-office method. If no Ethernet port is available, connect to the preview using the in-field method.
 \paragraph{  }
+There are two ways to access the FLA Preview depending on what is available. If a good Ethernet port is available, connect using the at-home/in-office method. If no Ethernet port is available, connect to the preview using the in-field method.
 \subsection{At-Home/In-Office}
+\paragraph{  }
 If the operator is in an office, or at home, they can set the FLA up for home use, section \ref{sec:setting_fla_at_home}, or for office use \ref{sec:setting_fla_in_office}. Enter the IP address from the title screen into a web browser. This will take you to the FLA Preview website. If you have trouble accessing the preview, refer to the troubleshooting section.
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
@@ -1267,7 +1339,7 @@ owns.
 \end{description}
 
 \section{Account Overview}
-
+\paragraph{  }
 Forensic Link Adapters are assigned to each organization at the time
 of purchase. Once the organization completes the purchase, the serial
 numbers of each FLA will be loaded into the Organization's profile.
@@ -1276,8 +1348,8 @@ administrator. For example, the Lieutenant in charge of the crash
 reconstruction division will become the site administrator once he
 or she registers by following the link sent in the invitation e-mail.
 
-\begin{figure}
-\includegraphics[width=1\textwidth]{../media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot}
+\begin{figure}[h]
+\includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot}
 
 \caption{\label{fig:Example-FLA-Account-overview}Example Forensic Link Adapter
 Portal web page for the Account overview}
@@ -1304,8 +1376,8 @@ up groups and operators according to the desired structure of the
 Organization. You can have operators that have access to more than
 one group.
 
-\begin{figure}
-\includegraphics[width=1\textwidth]{../media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot}
+\begin{figure}[h]
+\includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot}
 
 \caption{\label{fig:Example-Group-Details}Example Group Details web page from
 the Forensic Link Adapter Portal.}
@@ -1333,8 +1405,8 @@ filters and junk folder may be necessary.
 The Work Address details on the Invite and operator page are used
 to fill in a report with 
 
-\begin{figure}
-\includegraphics[height=10cm]{../media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot}
+\begin{figure}[h]
+\includegraphics[height=.6\linewidth]{../media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot}
 
 \caption{\label{fig:New-Operator-invitation}New Operator invitation form on
 the FLA portal website.}
@@ -1349,7 +1421,7 @@ to it. To assign an FLA to a group, click the button to see a list
 of available FLAs for your organization. Only people in the group
 can see the data on the FLA assigned to that group
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=1\textwidth]{../media/fla_portal_screenshots/FLAPortalAssignedFLASuccessScreenShot}
 
 \caption{Assigned FLAs}
@@ -1378,6 +1450,7 @@ The FLA can obtain additional information from the following ECMs
 \item Some VCU/PLD
 \end{itemize}
 \end{itemize}
+\paragraph{  }
 It is important to use the FLA to obtain data whenever possible. The OEM software is typically designed with maintenance in mind, not forensic soundness. Most OEM software will allow the user to erase data, while the FLA prevents accidental data loss.
 
 \section{Using Manufacturer's Software}
