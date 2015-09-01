@@ -1138,7 +1138,7 @@ From this page, select Download Drivers, and then the Download button. The Downl
 \section{Manufacturer Software}
 If the ECM being downloaded is not supported by the FLA, please ensure a computer has a working copy of the OEM software, and also the RP1210 drivers discussed in the previous section.
 
-\chapter{Downloading ECMs}
+\chapter{Downloading ECMs With the FLA}
 \paragraph{  }
 Downloading ECMs will require the FLA, the vehicle to download or the ECMs and a Smart Sensor Simulator, and permission to perform the download.
 \\
@@ -1254,7 +1254,7 @@ The FLA can obtain additional information from the following ECMs
 \end{itemize}
 \end{itemize}
 
-\section{Downloading ECMs with OEM Software}
+\chapter{Downloading ECMs with OEM Software}
 \paragraph{  }
 If the FLA is not able to extract data from the ECM, the user can enable RP1210 mode and use the FLA as a passthrough device with the appropriate OEM software.
 There are two protocols used to communicate over a heavy truck: 1)
@@ -1263,71 +1263,11 @@ DG RP1210 embedded device used to communicate with Manufacturer\textquoteright{}
 software. 
 
 
-\section{Installing Programs and Drivers}
-
-
-\subsection{\label{sub:RP1210-Drivers}RP1210 Drivers}
-
-The FLA uses the DG Technologies drivers to enable Windows programs
-to communicate with the ECMs. Download and install the drivers on
-your laptop or local machine from
-
-\href{http://www.dgtech.com/product/dpa/software/DPA4P_136.zip}{http://www.dgtech.com/product/dpa/software/DPA4P\_{}136.zip}.
-
-For more information, see the DG website
-
-\href{http://www.dgtech.com/product/dpa4plus/downloads/downloads.php}{http://www.dgtech.com/product/dpa4plus/downloads/downloads.php}.
-The Adapter Validation Tool is a useful program to test the connections
-between the computer, FLA, and Vehicle.
-
-
-\subsection{Manufacturer's Software}
-
-Download Cummins PowerSpec from
-
-\href{http://cumminsengines.com/powerspec}{http://cumminsengines.com/powerspec}. 
-
-This will only work on Windows 7 or newer. You need to register PowerSpec
-for free, but you do not have a license the program for it to work.
-
-Download Detroit Diesel DDEC Reports from
-
-\href{ http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm}{ http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm},
-as shown in \ref{fig:Download-page-forDDEC}.
-
-The direct download link is
-
-\href{http://www.ddcsn.com/cps/rde/xbcr/ddcsn/DDECReports805.exe}{http://www.ddcsn.com/cps/rde/xbcr/ddcsn/DDECReports805.exe}.
-
-Restart your computer after installing. 
-
-\begin{figure}
-\includegraphics[width=.9\textwidth]{../media/ddec_screenshots/rp1210_ddec_reports_download_page}
-
-\caption{\label{fig:Download-page-forDDEC}Download page for DDEC Reports.
-The link to download is at the bottom of the page. The link to this
-page is on the left menu for DiagnosticLink 7.x/8.x and is indicated
-with a loop. }
-
-
-\end{figure}
 
 
 
-\section{Enabling RP1210 Passthrough Mode}
 
-If the ECM is a Caterpillar, DDEC IV DDEC V, then enable the J1708
-Pass-through mode from the FLA menu screen. This is screen \ref{enu:J1708-pass-mode.}.
-
-If the ECM is a Cummins, DDEC VI, DDEC 10, or other then enable CAN/J1939.
-
-Once enabled, connect a USB cable from the FLA to the laptop with
-the DG drivers installed.
-
-\newpage{}
-
-
-\section{Cummins}
+\section{Downloading Cummins ECMs}
 
 
 \subsection{PowerSpec Download Protocol}
@@ -1375,14 +1315,14 @@ uploaded and archived. Otherwise, shutdown.
 to the server.
 \end{enumerate}
 
-\subsection{Insite Download Protocol}
+%\subsection{Insite Download Protocol}
 
-Under Construction
+%Under Construction
 
-\newpage{}
+%\newpage{}
 
 
-\section{Detroit Diesel}
+\section{Downloading Detroit Diesel ECMs}
 
 
 \subsection{DDEC Reports Download Protocol}
@@ -1478,14 +1418,14 @@ Diesel\textbackslash{}Diagnostic\textbackslash{}IOConfig.\\
 \includegraphics{../media/dddl_screenshots/dddl6_about}
 \end{enumerate}
 
-\subsection{DDDL 8 Download Protocol}
+%\subsection{DDDL 8 Download Protocol}
 
-Under Construction
+%Under Construction
 
-\newpage{}
+%\newpage{}
 
 
-\section{Caterpillar ET Download Protocol}
+\section{Downloading Caterpillar ET ECMs}
 
 This section provides a protocol to use CatET to download Caterpillar
 ADEM II, ADEMIII, and ADEMIV engine control modules. These modules
@@ -1637,6 +1577,8 @@ Message & Purpose\\
 Time Reset & Prevent the ECM RTC from being reset.\\
 \hline 
 \end{tabular}
+
+
 
 \chapter{Verifying Data in the Field}
 \paragraph{  }
