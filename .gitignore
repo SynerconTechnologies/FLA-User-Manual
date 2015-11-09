@@ -219,3 +219,31 @@ pip-log.txt
 *.lyx~
 *.lyx#
 *.lyx~
+
+
+#############
+## LaTeX
+#############
+*.aux
+*.glo
+*.idx
+*.log
+*.nlo
+*.out
+*.toc
+
+#User Manual Files
+user_manual/*.gz
+user_manual/*.pdf
+
+#Field Guide Files
+field_guide/*.gz
+field_guide/*.pdf
+
+#Quick Reference Files
+quick_references/*/*.gz
+quick_references/*/*.pdf
+
+#Packaged Manuals
+FLA\ Manuals.tar.gz
+FLA\ Manuals.zip

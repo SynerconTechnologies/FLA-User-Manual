@@ -1,0 +1,211 @@
+% Example LaTeX document for GP111 - note % sign indicates a comment
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{atbegshi,picture}
+\usepackage{lipsum}
+\usepackage{verbatim}
+
+\usepackage{subcaption}
+\usepackage{mwe}
+\usepackage{hyperref}
+
+\usepackage{textcomp}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+
+
+%--------------------------------VARS-----------------
+
+
+
+
+
+
+
+%------ Copy Pasta from the webs logo
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+\centering % Center all text
+\vspace*{\baselineskip} % White space at the top of the page
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.15\linewidth]{../../media/logos/synercon_logo_v3_only}
+\end{figure}
+{\Huge \textbf{Forensic Link Adapter \\Quick Reference}}\\[2\baselineskip] % Title
+{\Huge \textbf{CAT ECMs}}\\[2\baselineskip] % Title
+{\Huge Synercon Technologies LLC}\\[2\baselineskip]
+{\Large For Software Version 1}\\[3cm]
+
+\tableofcontents
+\vfill % Whitespace between editor names and publisher logo
+
+
+\textcopyright {\scshape 2015} \\[0.3\baselineskip] % Year
+Synercon Technologies LLC
+
+\endgroup}
+%------ End copy pasta
+
+
+
+
+
+
+
+
+% Default margins are too wide all the way around.  I reset them here
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\textwidth}{6.25in}
+\begin{document}
+%\title{{\Huge Lease}}
+%\author{ \\ \\ {\LARGE At Address  6772 E 26th Pl, Tulsa, OK 74129}
+%Gavin Bauer\\
+%(832) 630-9337
+%}
+%\renewcommand{\today}{June 11, 2013}
+%\maketitle
+
+
+
+
+
+
+
+\titleGP % This command includes the title page
+
+\newpage
+\section{About this document}
+\paragraph{  }
+This document is intended to be a quick guide to gathering data from CAT ECMs. For a full explanation of the steps, or troubleshooting, please refer to the Field Guide or the User Manual.
+
+There are two protocols used to communicate over a heavy truck: 1)
+CAN/J1939, and 2) J1708. These modes are needed to make use of the
+DG RP1210 embedded device used to communicate with Manufacturer\textquoteright s
+software. 
+
+
+\section{Installing Programs and Drivers}
+
+
+\subsection{\label{sub:RP1210-Drivers}RP1210 Drivers}
+
+The FLA uses the DG Technologies drivers to enable Windows programs
+to communicate with the ECMs. Download and install the drivers on
+your laptop or local machine from
+
+\href{http://www.dgtech.com/product/dpa/software/DPA4P_136.zip}{http://www.dgtech.com/product/dpa/software/DPA4P\_{}136.zip}.
+
+For more information, see the DG website
+
+\href{http://www.dgtech.com/product/dpa4plus/downloads/downloads.php}{http://www.dgtech.com/product/dpa4plus/downloads/downloads.php}.
+The Adapter Validation Tool is a useful program to test the connections
+between the computer, FLA, and Vehicle.
+
+
+\subsection{Manufacturer's Software}
+
+Download Cummins PowerSpec from
+
+\href{http://cumminsengines.com/powerspec}{http://cumminsengines.com/powerspec}. 
+
+This will only work on Windows 7 or newer. You need to register PowerSpec
+for free, but you do not have a license the program for it to work.
+
+Download Detroit Diesel DDEC Reports from
+
+\href{ http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm}{ http://www.ddcsn.com/cps/rde/xchg/ddcsn/hs/3448.htm},
+as shown in \ref{fig:Download-page-forDDEC}.
+
+The direct download link is
+
+\href{http://www.ddcsn.com/cps/rde/xbcr/ddcsn/DDECReports805.exe}{http://www.ddcsn.com/cps/rde/xbcr/ddcsn/DDECReports805.exe}.
+
+Restart your computer after installing. 
+
+
+\subsection{PDF Printer}
+
+If a PDF generator is not installed on your computer system, then
+having the ability to print to PDF is useful. An example of a free
+PDF printer is the 
+
+\href{http://www.bullzip.com/products/pdf/download.php}{BullZip PDF printer.}
+
+
+\section{Enabling RP1210 Passthrough Mode}
+
+If the ECM is a Caterpillar, DDEC IV DDEC V, then enable the J1708
+Pass-through mode from the FLA menu screen. This is screen \ref{enu:J1708-pass-mode.}.
+
+If the ECM is a Cummins, DDEC VI, DDEC 10, or other then enable CAN/J1939.
+
+Once enabled, connect a USB cable from the FLA to the laptop with
+the DG drivers installed.
+
+
+\section{Cummins PowerSpec Download Protocol}
+\begin{enumerate}
+\item Turn the ignition key to the on position (if it is not already on),
+but do not start the engine.
+\item Plug in the FLA to the diagnostic connector. Ensure it powers on and
+boots.
+\item Perform a Standards based download using FLA Diagnostics.
+\item Enable J1939 Passthrough mode
+\item Launch DG Adapter Validation Tool (AVT). 
+
+\begin{enumerate}
+\item Select the appropriate installed device driver. 
+\item Switch the protocol to J1939 in the adapter validation tool.
+\item Click Run Test.
+\item If the Adapter Validation Tool passes the test, then two windows will
+turn green as shown in Figure \ref{fig:Adapter-Validation-Tool}.
+This means the ECM and the computer are connected through the RP1210
+Device. If a test fails, review the suggestions output by the Adapter
+Validation Tool and try again. It may require shutting down the FLA,
+unplugging the USB, and disconnecting the FLA from power. Similarly,
+the PC may need to be rebooted.
+\end{enumerate}
+\item Open Cummins PowerSpec. 
+\item Click on Advanced -> Settings and set the Adapter to the DPA4+
+\item Click on Connect.
+\item Click Read Data
+\item If available:
+
+\begin{enumerate}
+\item Press the Fault Codes button and Save the report as a PDF file.
+\item Press the Trip Information button and Save the report as a PDF file.
+\item Press the Feature Settings button and Save the report as a PDF file.
+\item Press the Sudden Decel button and Save the report as a PDF file.
+\item Press the Dataplate button and Save the report as a PDF file.
+\item Press the Duty Cycle button and Save the report as a PDF file.
+\item Press the After Treatment button and Save the report as a PDF file.
+\end{enumerate}
+\item Exit passthrough mode by pressing a the Update (red) button on the
+FLA. If an Internet Connection is available, then the data can be
+uploaded and archived. Otherwise, shutdown.
+\item Establish Internet connection with the FLA. An IP address other than
+10.0.0.1 should show up on the FLA display. 
+\item Scroll to the Upload to Server option on the FLA and upload the data
+to the server.
+\end{enumerate}
+
+\section{\label{sec:Forensic-Write-Blocking}Forensic Write Blocking}
+
+There are certain messages that should not be transmitted to the ECM
+during a forensic examination. These messages are the kind that will
+change the data stored on the ECM in a meaningful way. Resetting or
+clearing fault codes, changing the ECM time, and resetting trip data
+should always be avoided. 
+
+
+\end{document}

@@ -1,0 +1,166 @@
+#!/bin/bash
+
+##########
+## getopts
+##########
+usage()
+{
+cat << EOF
+usage: $0 options
+
+Package the various FLA Manuals for user land.
+
+OPTIONS:
+   -h      Show this message
+   -t      Create a .tar.gz instead of a .zip
+   -v      Verbose
+EOF
+}
+
+TAR=
+VERBOSE=
+while getopts “:tv” OPTION
+do
+     case $OPTION in
+         h)
+             usage
+             exit 1
+             ;;
+         t)
+             TAR=1
+             ;;
+         v)
+             VERBOSE=1
+             ;;
+         ?)
+             usage
+             exit
+             ;;
+     esac
+done
+
+#######################
+## Make the directories
+#######################
+
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "Making Directories"
+    echo "----------------------------------------------------------------------"
+fi
+
+
+mkdir ./FLA\ Manuals
+mkdir ./FLA\ Manuals/Quick\ References
+
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "Directories created"
+    echo "----------------------------------------------------------------------"
+fi
+
+
+########################################
+## Copy the manuals into the directories
+########################################
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "Copying files"
+    echo "----------------------------------------------------------------------"
+fi
+
+if [[ $VERBOSE ]]
+then
+    echo "Copying Field Guide"
+fi
+cp ./field_guide/*.pdf ./FLA\ Manuals/FLA\ Field\ Guide.pdf
+if [[ $VERBOSE ]]
+then
+    echo "Copying User Manuals"
+fi
+
+cp ./user_manual/*.pdf ./FLA\ Manuals/FLA\ Users\ Manual.pdf
+if [[ $VERBOSE ]]
+then
+    echo "Copying Quick reference: CAT"
+fi
+
+cp ./quick_references/cat_download/*.pdf ./FLA\ Manuals/Quick\ References/CAT\ Quick\ Reference.pdf
+if [[ $VERBOSE ]]
+then
+    echo "Copying Quick reference: DDEC"
+fi
+
+cp ./quick_references/ddec_download/*.pdf ./FLA\ Manuals/Quick\ References/DDEC\ Quick\ Reference.pdf
+if [[ $VERBOSE ]]
+then
+    echo "Copying Quick reference: cummins"
+fi
+
+cp ./quick_references/cummins/*.pdf ./FLA\ Manuals/Quick\ References/Cummins\ Quick\ Reference.pdf
+
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "All files copied"
+    echo "----------------------------------------------------------------------"
+fi
+
+#####################
+## Create the archive
+#####################
+
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "Creating archive"
+    echo "----------------------------------------------------------------------"
+fi
+
+if [[ $TAR ]]
+then
+    if [[ $VERBOSE ]]
+    then
+        tar -vzcf ./FLA\ Manuals.tar.gz FLA\ Manuals
+    else
+        tar -zcf ./FLA\ Manuals.tar.gz FLA\ Manuals
+    fi
+else
+    if [[ $VERBOSE ]]
+    then
+        zip -vr ./FLA\ Manuals.zip FLA\ Manuals
+    else
+        zip -qr ./FLA\ Manuals.zip FLA\ Manuals
+    fi
+fi
+
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "Archived created"
+    echo "----------------------------------------------------------------------"
+fi
+
+##############
+## Cleaning up
+##############
+
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "Cleaning up"
+    echo "----------------------------------------------------------------------"
+fi
+
+rm -r ./FLA\ Manuals
+
+if [[ $VERBOSE ]]
+then
+    echo "----------------------------------------------------------------------"
+    echo "Finished"
+    echo "----------------------------------------------------------------------"
+fi
+

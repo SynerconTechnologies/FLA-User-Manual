@@ -1,0 +1,2238 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt, oneside]{book}
+%\usepackage{mathpazo}
+%\usepackage{helvet}
+%\renewcommand{\ttdefault}{cmtt}
+%\usepackage[T1]{fontenc}
+%\usepackage[latin9]{inputenc}
+\pagestyle{headings}
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+%\setlength{\parskip}{\medskipamount}
+%\setlength{\parindent}{0pt}
+%\usepackage{color}
+%\usepackage{babel}
+%\usepackage{varioref}
+%\usepackage{textcomp}
+\usepackage{makeidx}
+%\makeindex
+%\usepackage{graphicx}
+%\usepackage{nomencl}
+% the following is useful when we have the old nomencl.sty package
+%\providecommand{\printnomenclature}{\printglossary}
+%\providecommand{\makenomenclature}{\makeglossary}
+%\makenomenclature
+%\usepackage[unicode=true,
+% bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,bookmarksopenlevel=2,
+% breaklinks=true,pdfborder={0 0 0},backref=false,colorlinks=true]
+% {hyperref}
+%\hypersetup{pdftitle={Users Manual},
+% pdfauthor={Synercon Technologies, LLC},
+% linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue}
+%
+%\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%\pdfpageheight\paperheight
+%\pdfpagewidth\paperwidth
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% \usepackage[pdf]{pstricks}
+% \usepackage{auto-pst-pdf}
+% \usepackage{pstricks}
+%\usepackage{pst-all}
+\usepackage{calc}
+\newcommand{\degree}{$^{\circ}$}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{atbegshi,picture}
+\usepackage{lipsum}
+\usepackage{verbatim}
+
+\usepackage{subcaption}
+\usepackage{mwe}
+\usepackage{hyperref}
+
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+
+% \AtBeginDocument{
+%  \def\labelitemiii{\(\circ\)}
+%  \def\labelitemiv{\(\diamond\)}
+%}
+%
+%\makeatother
+
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+	\centering % Center all text
+	\vspace*{\baselineskip} % White space at the top of the page 
+	\begin{figure}[tbph] 
+		\centering 
+		\includegraphics[width=0.15\linewidth]{../media/logos/synercon_logo_v3_only}
+		\label{fig:logo}
+	\end{figure}
+	\vspace{4cm}
+	{\Huge \textbf{Forensic Link Adapter Users Manual}}\\[2\baselineskip] % Title
+	{\Huge Synercon Technologies LLC}\\[2\baselineskip]
+	{\Large For Software Version 1}
+	\vfill % Whitespace between editor names and publisher logo
+	\textcopyright {\scshape 2015} \\[0.3\baselineskip] % Year 
+	\begin{center}
+		Synercon Technologies LLC
+	\end{center}
+\endgroup}
+
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\textwidth}{6.25in}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\filcenter}
+{\Huge\thechapter}
+{1ex}
+{\titlerule[2pt]
+\vspace{2ex}%
+\LARGE}
+[\vspace{1ex}%
+{\titlerule[2pt]}]
+
+\begin{document}
+
+%\fancyfoot[C]{\thepage}
+
+\fancypagestyle{newstyle}{
+\fancyhf{} % clear all header and footer fields
+%\fancyhead[l]{\bfseries \nouppercase \rightmark} % except the center
+\fancyhead[l]{}
+\fancyfoot[C]{\thepage} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\pagestyle{newstyle}
+
+\thispagestyle{empty}
+\titleGP
+\newpage
+\frontmatter
+\begin{center}
+\Large{\textbf{Disclaimer}\\[\baselineskip]}
+July, 2015
+\end{center}
+Disclaimer: Synercon Technologies does not warrant the completeness
+and accuracy of the information produced by its software. While best
+efforts by industry experts have been made to generate information
+from raw digital data, there may be untested variations, add-on packages,
+errors or mistakes due to the large amount of data being processed.
+It is the sole responsibility of the user of the Synercon Technologies
+systems and Software to determine the fitness of the information provided
+by the Software for any particular application and for each individual
+case. Synercon Technologies cannot warrant any loss of functionality
+due to the lack of reliable network connection to the Synercon Server.
+The user is responsible for establishing a reliable Internet connection
+for the Software to fully function. Synercon does not warrant that
+the Equipment and/or Software will be compatible with each vehicle
+model. Electronic components installed on the vehicles may be replacement
+parts and not programmed to match the implementations of the Equipment,
+hence Synercon cannot warrant the existence or accuracy of the data
+recorded on the vehicle or the existence of a fault-free environment.
+The information provided by the Software is to be used only by vehicle
+manufacturer product experts, engineers, professional accident investigators
+and traffic crash reconstruction specialists. The user should agree
+that the use of the Software and Equipment requires an appropriate
+level of skill and competence. Since Synercon cannot warrant that
+the Equipment will create an environment that does not set new fault
+codes in the vehicle\textquoteright s electronic control module(s)
+which may alter the digital data contained therein, the User assumes
+all risks in using the Equipment for the purposes of preserving a
+digital record. The user agrees to verify the Equipment is working
+according to this manual before using it to support an investigation
+or reconstruction. Synercon Technologies, LLC assumes no liability
+for incidental, consequential, special or punitive damages, including
+but not limited to lost profits and loss of data. The user agrees
+to indemnify and hold harmless Synercon Technologies, LLC, any of
+its employees, owners, officers, and managers from any legal action
+involving the use of the data produced or stored by the software.
+\newpage
+%\maketitle
+\tableofcontents
+\newpage
+\mainmatter
+
+\chapter*{About this Document}
+\paragraph{  }
+This manual is intended to teach the operator the features and use
+of the Forensic Link Adapter (FLA). This is manual is designed as
+a teaching tool, rather than a reference guide. There are many acronyms
+and terminology used throughout this document; the reader is advised
+to familiarize themselves with the Terminology section before reading.
+It is suggested that operators examine this document entirely before using
+the FLA to help ensure that the most data, and the most accurate data are retrieved.
+
+
+\part{Introduction to Synercon Products}
+
+
+\chapter{Synercon Products}
+\paragraph{  }
+There are four main Synercon Technologies products.
+They will be referred to in the rest of this manual, so readers
+are advised to familiarize themselves with these components to better understand the rest of this manual.
+\paragraph{  }
+The 4 Synercon products are
+\begin{itemize}
+\item The Forensic Link Adapter (FLA)
+\item The FLA Preview
+\item The FLA Portal
+\item The Smart Sensor Simulator (SSS)
+\end{itemize}
+\paragraph{  }
+All of these products work together to create an easy, secure system to extract data from heavy vehicles.
+or an RP1210 interface to allow the operator to use OEM software.
+\begin{center}
+	\includegraphics[width=.8\linewidth]{../media/syercon_synergisics/single_laptop}
+\end{center}
+\newpage
+\section{The Forensic Link Adapter (FLA)}
+\vspace{1cm}
+\paragraph{  }
+The FLA is the device used to extract data from Engine Control Modules (ECMs). The FLA is designed to extract data from ECMs in a forensically secure way. The FLA uses the SAE J1939 and SAE J1587 standard protocols to communicate with ECMs. The FLA can extract data from ECMs by itself for select ECMs, meaning there is no need to carry a computer with OEM software to obtain data. For ECMs that the FLA cannot directly support, the FLA can be an RP1210-compliant diagnostic connector. This allows the operator to use OEM software to collect data through the FLA.
+\vspace{1cm}
+\begin{center}
+	\includegraphics[width=.9\linewidth]{../media/fla_angled/fla_angle_1}
+\end{center}
+\vspace{1cm}
+\paragraph{  }
+FLA Features
+\begin{itemize}
+\item Forensically secure data collection
+\item Stand alone data collection for select ECMs
+\item Easy to read OLED screen
+\item Simple and durable two button interface
+\item Built in GPS antenna
+\end{itemize}
+\newpage
+
+
+\section{The FLA Preview}
+\vspace{1cm}
+\paragraph{  }
+The FLA Preview provides an expanded interface to the FLA while out in the field. The FLA Preview is used to preview reports while in the field to confirm the operator has the data they wish to obtain. The FLA Preview is a website hosted by each FLA. It is accessed by
+entering the IP address of the FLA into a web browser.
+The FLA Preview can be accessed without an Internet connection, though the computer on which the FLA Preview site is accessed must be on the same Local Area Network as the FLA.
+\vspace{1cm}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/main_page}
+\end{center}
+\vspace{1cm}
+FLA Preview Features
+\begin{itemize}
+\item Ability to preview data in field
+\item Ability to download event data from select ECMs
+\item Ability to view old data that has been uploaded
+\end{itemize}
+\newpage
+
+\section{The FLA Portal}
+\vspace{1cm}
+The FLA Portal is also referred to as Synercon's Servers. It is located at the URL  \url{https://fla.synercontechnologies.com}.
+Data collected from the FLA is uploaded to this site, and operators
+are able to view full reports there.
+\vspace{1cm}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/fla_portal_screenshots/user_landing_page}
+\end{center}
+\vspace{1cm}
+FLA Portal Features
+\begin{itemize}
+\item View full reports with all available event data
+\item View the FLAs last known location
+\item Check subscription status
+\end{itemize}
+\newpage
+
+
+\section{The Smart Sensor Simulator (SSS)}
+\vspace{1cm}
+The SSS simulates sensors of a typical vehicle for ECMs. It is used
+when the FLA cannot communicate with the vehicle due to damaged wiring. The SSS reduces the chance the ECM will throw a fault compared to a standard calibration harness. SSSs are specific to a type of ECM.
+\vspace{1cm}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/sss/sss_solo}
+\end{center}
+\vspace{1cm}
+SSS Features
+\begin{itemize}
+\item Reduces chances of throwing new faults during download
+\item Provides reliable communications to ECMs
+\item Can be brought to the field to eliminate the need to remove ECMs from vehicles.
+\end{itemize}
+
+
+\chapter{Getting Started}
+\paragraph{  }
+Congratulations on purchasing the only heavy vehicle scan tool purpose-built for examining vehicles in a forensic or investigative context. This section provides a guide to getting the FLA System set up for the first time.
+
+
+\section{What is Included with the FLA}
+
+
+\subsection{The Contents of the FLA Case}
+\paragraph{  }
+The FLA Case has everything operators need to collect data from heavy vehicles. The FLA case has the following items:
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/cables_all}
+\end{center}
+
+
+\subsection{The FLA Portal and FLA Preview}
+\paragraph{  }
+The subscription to the TruckCrypt software allows operators to access the FLA Portal and FLA Preview. These will be discussed in more detail in sections
+ \ref{sec:fla_preview} and \ref{sec:fla_portal}.
+
+
+\section{Register as an Operator}
+\paragraph{  }
+The fla-admin should send you an email to invite you to be an operator for your FLA on the FLA Portal. The fla-admin email is initiated by the Organization administrator inviting a new operator. For more details, please see Chapter \ref{chap:admin_guide}. It will be necessary to have a FLA Portal account to view any data you collect with your FLA.
+
+
+\section{Operating the FLA}
+\paragraph{  }
+The FLA has a 4x20 character LCD screen, along with two buttons to
+allow the user to interact with the device.
+
+
+\subsection{Interacting with the FLA}
+
+There are two general types of screens the FLA will display.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{Prompt Screens}
+\end{center}
+	The prompt screens will have one or two options on the last line, corresponding to the button on that side of the FLA.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/graphics/fla_option_screen} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{Working Screens}
+\end{center}
+The working screens will not have an option on the last line, but usually a percentage bar. During these screens, the FLA is performing the operation displayed. \textbf{NOTE, during these screens the RED button can cancel the current task}.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/scan_25} 
+\end{minipage}\\
+
+
+\section{Familiarize yourself with the FLA}
+\paragraph{  }
+After the operator has performed these steps, the FLA is ready for
+field use. To maximize the validity and completeness
+of data collected, the operator is advised to continue reading this
+manual. After the user is familiar with this, the best way to get
+comfortable with using the FLA is to practice. This manual, and the
+other supporting documents will help guide operators through the data collection and review process.
+
+
+\chapter{Using the FLA}
+\paragraph{  }
+The FLA is a powerful data extraction device, with many features.
+This section will teach the reader about the FLA, how to use it, and the features of the FLA.
+
+
+\section{Display Screen Menu System}
+\paragraph{  }
+
+Almost all of the features of the FLA can be accessed through the
+main menu. The only two functions that are not available are the FLA Support Mode, and previewing data, which are solely available on the FLA Preview. Once the FLA boots, the device will enter the main menu, which contains the most used functions, such as running a scan, and uploading data. The below figure describes the layout of the FLA menu system.
+\begin{center}
+\includegraphics[width=\linewidth]{../media/graphics/menu_system}
+\end{center}
+\paragraph{  }
+
+
+\section{Menu Screen Descriptions\label{sec:Menu-Screen-Descriptions}}
+\paragraph{  }
+The menu system of the FLA is dynamic: it will only give the operator the option to perform an action if the FLA detects the action is possible. For example,
+the FLA will not allow the operator to initiate a vehicle scan if the FLA does not detect any network traffic.
+
+
+\subsection{Main Menu}
+\vspace{\baselineskip}
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{Title Screen}
+	\end{center}
+	This is the first screen the FLA will display when it finishes booting. This screen provides the user with an overview of the FLA's state.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/graphics/title_screen_breakout}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{Shutdown Screen}
+	\end{center}
+	This screen will allow the user to safely shutdown the FLA.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{Upload Data Screen}
+	\end{center}
+  \label{subsec:upload_data}
+	This screen allows the operator to upload data on the FLA to the FLA Portal.
+	If the Upload option is not available, see the troubleshooting section.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/upload_data}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{View Faults Screen}
+	\end{center}
+	This screen allows the operator to view active faults on the J1939 network.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/show_faults}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{GPS Screen}
+	\end{center}
+	This screen displays the last available GPS coordinates, and the FLA system time when they were received.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/gps} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{System Configuration}
+	\end{center}
+	This screen allows the user to enter the system configuration menu of the FLA.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}\\[\baselineskip]
+
+
+\subsection{System Configuration Menu}
+\vspace{\baselineskip}
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{Update Software Screen}
+	\end{center}
+	This screen allows the operator to update the FLA software to the latest version.
+	If the update option is not available, see the troubleshooting section.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{DHCP Service Configuration Screen}
+	\end{center}
+	This screen allows the operator to enable or disable the DHCP services for the FLA.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_dissabled}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{Update FLA System Time Screen}
+	\end{center}
+	This screen allows the operator to update the FLA System time.
+	If the Update option is not available, see the troubleshooting section.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{Change FLA Timezone Screen}
+	\end{center}
+	This screen allows the operator to change the FLA system timezone.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{MAC Address Screen}\label{subsec:finding_mac}
+	\end{center}
+	This screen displays the MAC Address of the FLA, as well as the IP Address.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/mac} 
+\end{minipage}\\[\baselineskip]
+
+
+\subsection{Menu Screen Dynamic Lines}
+\paragraph{  }
+Certain lines of menu screens are dynamic, and display the status
+of various components of the FLA.
+
+\subsubsection{IP Address Line}
+
+The IP address Line can have the following states:
+\begin{itemize}
+\item \textbf{IP: XXX.XXX.XXX.XXX} A valid IP address. XXX can be any number
+between 0 and 255. An example would be 192.168.2.45
+\item \textbf{IP: 10.0.0.1} The IP address when the FLA's DHCP server is activated.
+See the DHCP section for more information.
+\item \textbf{Ethernet Unplugged} The FLA cannot detect a live Internet connection.
+If this screen persists for more than 60 seconds on a known good Ethernet
+port, refer to the troubleshooting section.
+\item \textbf{Finding IP Address} The FLA detected a live Internet connection,
+and is searching for an IP address. If this screen persists for more
+than 60 seconds on a known good Ethernet port, refer to the troubleshooting
+section.
+\end{itemize}
+
+\subsubsection{Vehicle Connection Line}
+\paragraph{  }
+The vehicle connection line displays the status of the vehicle busses.
+This line can have the following states:
+\begin{itemize}
+\item \textbf{No Vehicle Net / Check Ign. Key} The FLA is not able to detect
+any traffic on the vehicle networks. If this screen persists for more
+than 10 seconds, refer to the troubleshooting section.
+\item \textbf{CAN Bus only} The FLA only detects traffic on the CAN bus.
+\item \textbf{J1708/1587 only} The FLA only detects traffic on the J1708/1587
+bus.
+\item \textbf{CAN and J1708} The FLA detects traffic on both the CAN and J1708
+buses.
+\end{itemize}
+
+
+\section{Working with the Forensic Link Adapter}
+\paragraph{  }
+This section will explain the basics of using the FLA. This section is is intended for users with little experience operating the FLA.
+
+
+\subsection{Powering Up}
+\paragraph{  }
+The FLA will begin to boot whenever power is supplied to the device. This can be done in one of three ways:
+\begin{enumerate}
+\item Using the vehicle connection cable to power the FLA using the battery
+of the vehicle
+\item Using the wall adapter to power the FLA using a wall outlet
+\item Using the 12v cigarette adapter to power the FLA, either from a vehicle
+battery or a portable battery pack
+\end{enumerate}
+\paragraph{  }
+The FLA can accept power from both the wall adapter or 12v cigarette adapter and the vehicle connection cable at the same time. This is useful of an operator needs to perform several downloads in the same area.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+%	\begin{center}
+%		\textbf{5}
+%	\end{center}
+	Once the FLA is finished booting, the device will display the title screen.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}\\[\baselineskip]
+\paragraph{  }
+When this screen appears, the device is ready to operate. If the device does not reach this screen in 60 seconds, see the troubleshooting section of this manual.
+\paragraph{  }
+Once an investigator has established permission to download the data from a vehicle, the key needs to be turned to the on (not start) position for the FLA to communicate with the Electronic Control Modules (ECMs).
+\paragraph{  }
+The FLA can be plugged into the 9-pin diagnostic connector, which is usually located below the dash on the left side or to the left of the driver's seat. If the ECM was removed, then it should be connected through a Smart Sensor Simulator that emulates a truck. 
+
+
+\subsection{Shutting Down}
+\paragraph{  }
+Failure to shut down the FLA correctly can cause loss of data. To shutdown the FLA properly, follow these steps:
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	Scroll to the Shutdown screen, and select "Shutdown."
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Confirm the shutdown.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_confirm}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	Wait until the FLA indicates it is safe to remove power.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_in_progress} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{4}
+	\end{center}
+	When the FLA displays this screen, it is safe to remove power.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_complete}
+\end{minipage}\\[\baselineskip]
+
+\subsection{Connect the FLA to the Internet}\label{subsec:internet_connect}
+\paragraph{  }
+Connecting the FLA to the Internet allows the device to get updates,
+set the system time, and upload data to the FLA Portal. To connect the FLA to the Internet, follow these steps:
+\begin{enumerate}
+\item Plug the FLA into a functional Ethernet port using the included Ethernet cable.
+\item The FLA should display an IP address on the second line of the title
+screen, the screen that is displayed right after the FLA finishes
+booting.
+\item If the FLA displays ``Ethernet Unplugged'' or ``Finding IP Address''
+for more than 60 seconds, consult the troubleshooting section.
+\end{enumerate}
+
+\subsection{Setting the Time}
+\paragraph{  }
+Once connected to the Internet, the Forensic Link Adapter can synchronize
+with universal time using a dedicated time server. This step is only
+necessary if the time displayed on the title screen is not the correct
+time.
+To correct the FLA time, follow these steps:
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	 Scroll to the System Configuration screen on the FLA, and select ``Configure.''
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Scroll to the Update System Clock screen, and select ``Update.''
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	Once the FLA retrieves the current time, it will confirm the new time with the operator before setting the time. The FLA will continue to update this time, so the user does not need to immediately confirm the time.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time_recieved}
+\end{minipage}\\
+
+
+\subsection{\label{sub:Setting-the-Timezone-1}Setting the Timezone}
+\paragraph{  }
+The timezone for the FLA can be set without an Internet connection.
+To set the system timezone, follow these steps:
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	 Scroll to the System Configuration screen on the FLA, and select ``Configure.''
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Scroll to the Change FLA Timezone screen, and select "Change."
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	Select "Next" to view the next timezone, and select "Set" to set the timezone
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone_select}
+\end{minipage}\\
+
+
+\subsection{Updating the FLA}
+\paragraph{  }
+Updating the FLA provides the latest software, with the most features
+and highest chance of getting the most data. It is good practice to
+perform an update before downloading a vehicle, or before going out
+in the field to download.
+To perform an update, follow these steps:
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{1}
+	\end{center}
+	Ensure the FLA is plugged into an Ethernet jack, and has an IP address.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{2}
+	\end{center}
+	Scroll to the System Configuration screen, select "Configure."
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{3}
+	\end{center}
+	The FLA will now display the Update FLA Software screen. If the FLA does not have the Update option, consult the troubleshooting section. Select "Update."
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software} 
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{4}
+	\end{center}
+	Confirm the update.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_confirm}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{5}
+	\end{center}
+	Wait for the FLA to perform the update. This can take several minutes.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_upgrading_apt}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{5}
+	\end{center}
+	When the FLA is finished updating, it will need to shutdown and be rebooted for the updates to be applied. Select ``Shutdown.''
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_complete}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+	\begin{center}
+		\textbf{5}
+	\end{center}
+	After the FLA has completed the shutdown, unplug all sources of power, If the operator wishes to continue interacting with the device, wait 10 seconds before plugging in power.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/graphics/unplug_fla} 
+\end{minipage}\\[\baselineskip]
+
+%\section{DHCP Services}\label{sec:dhcp_service}
+%\label{subsec:dhcp_services}
+%DHCP service is the way devices get IP Addresses on a network in order to communicate with each other. Home and office networks have these services provided, however when out in the field this is not always available. This is where the FLA's DHCP service comes in. When the user wishes to communicate with the FLA, i.e. to preview data on the FLA Preview, they may need to turn on the DHCP services to do so.\\
+%\textbf{In general, if you plug a computer directly into the FLA using the Ethernet cord, you will need to turn DHCP on. Do not forget to turn it off after you unplug the computer.}
+\subsection{Turning DHCP ON}\label{subsec:enable_dhcp}
+\paragraph{  }
+Enabling DHCP allows the FLA to communicate with computers when an Internet connection is not present.
+One example usage is to preview data in the field. Do not enable DHCP services while the FLA is plugged into an active network, as this may
+create issues with the network.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Scroll to the system configuration screen.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Scroll to the Change IP Settings screen, and select ``Enable.''
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_dissabled}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{3}\\[\baselineskip]
+\end{center}
+Confirm the request.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_enabling}
+\end{minipage}
+\subsection{Turning DHCP OFF}\label{subsec:disable_dhcp}
+\paragraph{  }
+Disabling DHCP allows the FLA to communicate with an active network. DHCP is disabled when the FLA boots.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Scroll to the system configuration screen.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Scroll to the Change IP Settings screen, and select ``Disable.''
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_enabled}
+\end{minipage}
+
+\chapter{Setting Up the FLA}
+\section{In the Office Use}\label{sec:setting_fla_in_office}
+\paragraph{  }
+When the FLA is in use at the office, ensure that the DHCP server is off. If left on, this can cause problems with the network the FLA is connected to.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_in_office}
+\end{center}
+\paragraph{  }
+When the FLA is being used with a foreign network, such as any network that is not your home or work network, extra caution must be taken. The local site can be accessed by anyone on the same network.
+It is not recommended to plug the FLA into an unknown network.
+\section{At Home Use}\label{sec:setting_fla_at_home}
+\paragraph{  }
+When the FLA is in use at a home, or another non-commercial site with an Internet connection, the DHCP server should be turned off. If left on, it can cause problems with the network the FLA is connected to.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_at_home}
+\end{center}
+\section{In Field Use}\label{setting_fla_in_field}
+\paragraph{  }
+When the FLA is being used in the field, the DHCP service may be turned on. This service allows the user to connect a computer directly to the FLA using the provided Ethernet connection. For more information on enabling DHCP services, refer to section \ref{subsec:enable_dhcp}.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/graphics/fla_in_field}
+\end{center}
+
+
+\chapter{The FLA Preview}\label{sec:fla_preview}
+\paragraph{  }
+The FLA Preview is a website that each FLA hosts. This allows operators
+to interact with the FLA in ways the front panel is not able to
+support, such as previewing reports.
+
+
+\section{Accessing the FLA Preview}
+\paragraph{  }
+Accessing the FLA Preview is done by entering the IP address of the
+FLA into a web browser. Please see the requirements section for more
+information about supported web browsers. As shown below, enter the
+IP Address exactly as it appears on the IP Address line.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	%\begin{center} 
+	%	\textbf{Correct:}\\[\baselineskip] 
+	%\end{center} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct_2} 
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_no_net}
+\end{minipage}
+\\[\baselineskip]
+This will load the FLA Preview main page, shown below.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/main_page}
+\end{center}
+\paragraph{  }
+This page provides an overview of the current status of the device. The ``At a glance section'' will display the number of pending data packages, that is the number of data packages that have been downloaded to the FLA but not yet uploaded to the FLA Portal, and if there is a download
+in progress.
+
+
+\section{Using the FLA Preview}
+\paragraph{  }
+The FLA Preview has many uses, including allowing operators to preview data in the field, download the User Manuals, download RP1210 drivers, and many other useful tasks we will cover in this section.
+
+
+\subsection{View Local Data}
+\paragraph{  }
+Under the View Local Data page, the operator is able to view data
+on the FLA. There are two sections to local data, Pending Uploads,
+and Archived Data. Pending Uploads will show any data packages that
+are ready to be uploaded to the FLA Portal.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/local_data}
+\end{center}
+
+This page will give an overview of each pending data package. The value in the
+OEM data column will be YES if the FLA was able to recover OEM
+data for that download, and NO if the FLA could not. The yellow Archive button will
+remove the data package from being uploaded, and move it to the archived section. If an archive is unintentionally archived, the FLA will have to be serviced to retrieve the data. For more information about servicing the FLA, see the Service section.
+\paragraph{  }
+When a download is in progress, the row for that entry will indicate the download is in progress, and will not provide the ``View Data'' button. Once the user finishes the download, the operator can refresh the page, and will see the ``View Data'' button. For more information about when a download is finished, and how to perform a download, refer to the Field Guide.
+\paragraph{  }
+Selecting the ``View Data'' will provide the user with a preview of the report. This preview includes all of the standards-based information, the components found, and any identification information, as well as any in-field non-standards-based previews. Non-standards-based information is any data that is provided by OEM software, such as DDEC reports' XTR files, and CAT Snapshots. The operator will get a preview of this data here in accordance with the type of ECM being analyzed. The full reports will be available through the FLA Portal when the operator uploads the data. Typically, the following will be available:
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	\begin{center} 
+		\textbf{Preview of DDEC ECMs}\\[\baselineskip] 
+	\end{center} 
+	If non-standards-based data is collected from a DDEC ECM, an XTR file will be available for download.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/xtr_download}
+\end{minipage}\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	\begin{center} 
+		\textbf{Preview of CAT ECMs}\\[\baselineskip] 
+	\end{center}
+	If non-standards-based data is collected from a CAT ECM, a CSV file will be available containing 5 frames around the trigger for any quick stop records.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/csv_download}
+\end{minipage}
+\\[\baselineskip]
+\paragraph{  }
+The preview will also contain a SHA 256 Sums file for the operator
+to download. This file contains the SHA 256 sums of all data files
+the FLA has created. The operator can download this file, and confirm
+the data uploaded to the FLA Portal was the same data the FLA created.
+For more information on SHA 256 sums, as well as recommended use,
+see the SHA 256 sums of suggested practices.
+\paragraph{  }
+The operator can also click on the ``Archived Data'' button on the
+View Local Data page to view data packages that were archived. Data
+packages that are uploaded to the FLA Portal are automatically archived.
+From here the user can access all of the same downloads and information
+as when the data package was pending uploading. Meaning, once the
+data is uploaded, the user can still download XTR, CSV, or SHA 256
+Sum files, as well as any standards-based data acquired. If the FLA
+has a large number of archived data packages, the archived page may
+take several moments to load.
+\begin{center}
+\includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/archived_data}
+\end{center}
+
+
+\chapter{Using the FLA Portal}\label{sec:fla_portal}
+\paragraph{  }
+The FLA Portal is where operators can view full reports of the data
+they collected in the field. Administrators will also use the FLA
+Portal to manage FLAs, and users.
+
+
+\section{Accessing the FLA Portal}
+\paragraph{  }
+The FLA Portal is accessed by navigating to \href{https://fla.synercontechnologies.com/}{https://fla.synercontechnologies.com/}
+in a supported web browser. For a list of supported web browsers, refer to section \ref{sec:supported_browsers}.
+\paragraph{  }
+The FLA Portal will require the operator to login, using the username and password used when the operator created the account. Note that BOTH username and password are case-sensitive.
+\begin{center}
+\includegraphics[width=0.8\textwidth]{../media/fla_portal_screenshots/login_screen}
+\end{center}
+
+Once logged in, the operator will be able to view data acquired from
+the assigned FLA.
+
+
+\section{Using the FLA Portal}
+\paragraph{  }
+For operators, the main use of the FLA Portal is to view full reports. Administrators should refer to the Administrative Guide for further information about administrating on the FLA Portal.
+\paragraph{  }
+Once an operator uploaded a data package to the FLA Portal, the data will be available for viewing by everyone in the group. A logged-in operator
+will be able to view all data packages uploaded to the server.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/user_landing_page}
+\end{center}
+
+Selecting one of these reports will open the full report.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/top}
+\end{center}
+
+The FLA full report has many sections, including those listed in the next sections.
+
+
+\subsection{Vehicle Information}
+\paragraph{  }
+This section contains any components that responded to a component
+Identification request. The VIN, Vehicle Odometer, and Engine Hours
+will also be displayed under Engine \#1 for the appropriate network.
+This section also contains the time records from the download, including vehicle time
+if available, and time of the last GPS Lock.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/vehicle_info}
+\end{center}
+
+
+\subsection{Data sections}
+\paragraph{  }
+Data sections, such as Historical Data, Event Data, etc., are sections that contain either standards-based data, or non-standards-based data. These sections contain all of the data the FLA has decoded. Due to the wide variety of ECMs, and ECM configurations, these sections may contain different data depending on the ECM being analyzed.
+
+
+\subsection{Nomenclature}
+\paragraph{  }
+This section contains a brief overview of the nomenclature used in
+the report.
+
+
+\subsection{Network Logs}
+\paragraph{  }
+This section contains the logs of all of the FLA's interactions with
+the ECMs. These logs are provided as a means to audit the messages
+being sent. If the RP1210 passthrough is engaged, separate logs for
+any passthrough transactions will be available.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/network_logs}
+\end{center}
+
+
+
+\subsection{Version Information}
+
+This section provides the software versions that were used when the
+report was generated.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/version_info}
+\end{center}
+
+
+\subsection{SHA 256 Sums}\label{subsec:using_shas}
+\paragraph{  }
+This section provides the SHA 256 sums for all of the data files the
+FLA generated when the download was performed. These sums are encrypted
+and sent to the FLA Portal for verification. The FLA Portal will generate
+its own SHA 256 sums of the data files uploaded by the FLA. The FLA
+Portal will then compare the two, and verify the integrity of the
+upload.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/valid_shas}
+\end{center}
+If there is a SHA 256 mismatch, this may suggest the data has been
+tampered with.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/invalid_shas}
+\end{center}
+
+\newpage
+
+\subsection{Access Information}
+
+This section provides an audit of who is currently accessing the report,
+and the device's IP address.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/access_info}
+\end{center}
+
+
+\part{Using Synercon Products}
+
+
+\chapter{Before Going Out in The Field}
+\paragraph{  }
+Before performing a download in the field, please perform the following steps in order to ensure the Forensic Link Adapter (FLA) is operating with accurate information. Please note that this will require a live Ethernet port and a way to power the FLA. The FLA case has an Ethernet cable, as well as a wall power unit and a car cigarette lighter adapter to power the FLA.
+\section{Perform an Update}
+\paragraph{  }
+Performing an update ensures the FLA has the latest software. To update the FLA, first plug the device in and plug in the Ethernet cable into a working Ethernet jack. If you have any questions about a working Ethernet jack, please contact your department IT services.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Once the device boots, scroll to the System Configuration screen.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+Enter the configuration sub-menu. This will take you to the Update Software screen.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software}
+\end{minipage}
+\\[\baselineskip]
+From this screen, select update. A confirmation screen will appear to prevent accidental updates.\newline
+\paragraph{  }
+After the update completes, the FLA will require a shutdown. Select "Shutdown" to shut the device down before unplugging it. After the device indicates it is safe to do so, unplug the power supply. After waiting 10 seconds, plug the device in to continue.
+\paragraph{  }
+If time displayed on the FLA is not correct, the time can be updated through the configuration menu. As with the update, an Internet connection is required. The timezone of the FLA can also be changed in the system configuration menu. For more information about setting the time and timezone, refer to Section \ref{sub:Setting-the-Timezone-1}.
+\section{Download Appropriate Drivers}\label{subsec:RP1210_Drivers}
+\paragraph{  }
+The FLA can act as an RP1210 device for using OEM software. This only required if the ECM being downloaded is not supported. For a list of supported modules, refer to the FLA User Manual. The drivers for the RP1210 feature of the FLA can be found either at Dearborn Group's website
+\url{http://www.dgtech.com/product/dpa/software/DPA4P_136.zip} 
+Or on the FLA Preview site.
+\paragraph{  }
+The FLA Preview site is a website that is generated by the FLA. To access it, first ensure it is powered on, and has an IP address. This can be confirmed by the title screen shown below.
+\begin{center}
+\includegraphics[width=0.5\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}\label{fig:fla_title_screen}
+\end{center}
+On a computer connected to the same network, type the IP address into a web browser. The following page should appear.
+\begin{center}
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/main_page}\label{fig:preview_main_page}
+\end{center}
+\paragraph{  }
+From this page, select Download Drivers, and then the Download button. The Download Drivers page also has testing instructions to verify RP1210 is working correctly. This site can be accessed without an Internet connection, as the website is generated by the FLA. For connecting to the site in the field, see section \ref{setting_fla_in_field}.
+\section{Manufacturer Software}
+If the ECM being downloaded is not supported by the FLA, please ensure a computer has a working copy of the OEM software, and also the RP1210 drivers discussed in the previous section.
+
+\chapter{Downloading ECMs With the FLA}
+\paragraph{  }
+Downloading ECMs will require the FLA, the vehicle to download or the ECMs and a Smart Sensor Simulator, and permission to perform the download.
+\\
+These are the general steps to perform a download. Some screens may be different depending on the type of ECM being downloaded.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{1}\\[\baselineskip]
+\end{center}
+Start at the Title Page and select scan to begin the scan. If the scan option is not present, refer to the troubleshooting section.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}
+\\[\baselineskip]\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{2}\\[\baselineskip]
+\end{center}
+The device will ask if the operator has sufficient permission to perform the scan and collect data from the vehicle. When the operator continues, this action is time-stamped and rendered with the reports.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/permission}
+\end{minipage}
+\\[\baselineskip]
+
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{3}\\[\baselineskip]
+\end{center}
+The FLA will first listen to the
+networks and build a list of all
+of the components on each network.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/analyzing_55}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{4}\\[\baselineskip]
+\end{center}
+The FLA will then begin the standards-based scan, collecting information such as ECM Component Identification, Mileage, etc.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/scan_25}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{5}\\[\baselineskip]
+\end{center}
+The FLA will display the Component Id of the engine, as well as the first 15 characters of the VIN. The full VIN will be in the report. Selecting Continue will continue the scan, Back will cancel the scan.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/comp_id}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{7}\\[\baselineskip]
+\end{center}
+The FLA will attempt to detect a supported ECM to extract proprietary data.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/check_ecm}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{8.a}\\[\baselineskip]
+\end{center}
+If the ECM is supported, this screen will ask if the user wishes to collect non-standards based data. See Section X to extract non-standards data with the FLA.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/get_ecm_specific}
+\end{minipage}
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{8.b}\\[\baselineskip]
+\end{center}
+If the ECM is not supported, please see chapter \ref{chap:oem_software} to extract data with OEM software.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/get_ecm_specific}
+\end{minipage}
+
+\section{Supported ECMs}
+\paragraph{  }
+The FLA can extract more data from supported ECMs, such as event data and other non-standards based data. For a list of supported ECMs, refer to the FLA User Manual. Continuing from screen 8.a from the previous section, select 'Get Data' to continue the non-standards based data extraction. During the extraction, the FLA will display the current status of the extraction. The extraction make take some time, so please wait for the FLA to indicate it is finished. Once completed, the FLA will ask the user if they wish to enable RP1210 mode, or continue to the upload screen. If desired, the FLA can also enable RP1210 mode after performing an extraction. See section \ref{subsec:upload_data} for more details on uploading data.
+\paragraph{  }
+The FLA can obtain additional information from the following ECMs
+\begin{itemize}
+\item CAT
+\begin{itemize}
+\item ADEM 3
+\item ADEM 4
+\end{itemize}
+\item DDEC
+\begin{itemize}
+\item DDEC IV
+\item DDEC V
+\item Some DDEC VI
+\item Some VCU/PLD
+\end{itemize}
+\end{itemize}
+
+\chapter{Downloading ECMs with OEM Software}\label{chap:oem_software}
+\paragraph{  }
+If the FLA is not able to extract data from the ECM, the user can enable RP1210 mode and use the FLA as a passthrough device with the appropriate OEM software.
+There are two protocols used to communicate over a heavy truck: 1)
+CAN/J1939, and 2) J1708. These modes are needed to make use of the
+DG RP1210 embedded device used to communicate with Manufacturer\textquoteright{}s
+software. 
+
+
+
+
+
+
+\section{Downloading Cummins ECMs}
+
+
+\subsection{PowerSpec Download Protocol}
+\begin{enumerate}
+\item Turn the ignition key to the on position (if it is not already on),
+but do not start the engine.
+\item Plug in the FLA to the diagnostic connector. Ensure it powers on and
+boots.
+\item Perform a Standards based download using FLA Diagnostics.
+\item Enable J1939 Passthrough mode
+\item Launch DG Adapter Validation Tool (AVT). 
+
+\begin{enumerate}
+\item Select the appropriate installed device driver. 
+\item Switch the protocol to J1939 in the adapter validation tool.
+\item Click Run Test.
+\item If the Adapter Validation Tool passes the test, then two windows will
+turn green. This means the ECM and the computer are connected through
+the RP1210 Device. If a test fails, review the suggestions output
+by the Adapter Validation Tool and try again. It may require shutting
+down the FLA, unplugging the USB, and disconnecting the FLA from power.
+Similarly, the PC may need to be rebooted.
+\end{enumerate}
+\item Open Cummins PowerSpec. 
+\item Click on Advanced \(\rightarrow\) Settings and set the Adapter to the DPA4+
+\item Click on Connect.
+\item Click Read Data
+\item If available:
+
+\begin{enumerate}
+\item Press the Fault Codes button and Save the report as a PDF file.
+\item Press the Trip Information button and Save the report as a PDF file.
+\item Press the Feature Settings button and Save the report as a PDF file.
+\item Press the Sudden Decel button and Save the report as a PDF file.
+\item Press the Dataplate button and Save the report as a PDF file.
+\item Press the Duty Cycle button and Save the report as a PDF file.
+\item Press the After Treatment button and Save the report as a PDF file.
+\end{enumerate}
+\item Exit Passthrough mode by pressing a the Update (red) button on the
+FLA. If an Internet Connection is available, then the data can be
+uploaded and archived. Otherwise, shutdown.
+\item Establish Internet connection with the FLA. An IP address other than
+10.0.0.1 should show up on the FLA display. 
+\item Scroll to the Upload to Server option on the FLA and upload the data
+to the server.
+\end{enumerate}
+
+%\subsection{Insite Download Protocol}
+
+%Under Construction
+
+%\newpage{}
+
+
+\section{Downloading Detroit Diesel ECMs}
+
+
+\subsection{DDEC Reports Download Protocol}
+\begin{enumerate}
+\item Turn the ignition key to the on position (if it is not already on),
+but do not start the engine.
+\item Plug in the FLA to the diagnostic connector. Record the time shown
+on the FLA.
+\item Perform a Network Scan using the Forensic Link Adapter.
+\item \label{enu:Enable-the-network}Enable the RP1210 network Passthrough
+mode.
+
+\begin{enumerate}
+\item Use J1708 Passthrough mode for DDEC IV, DDEC V, and Pre-2008 Mercedes
+Engines.
+\item Use J1939/CAN Passthrough mode (selected from menu screen on FLA)
+for all newer DDEC 10 and DDEC 13.
+\end{enumerate}
+\item Open DDEC Reports by clicking on the icon on your computer. 
+\item The Connection Manager may start automatically. 
+\item Ensure the Reset Time and Reset Trip options are not checked. Take
+a screen shot of these features unchecked.
+\item Press Extract Data. 
+\item Once the data is extracted, Select File \(\rightarrow\) Print and print all the
+data (should be over 30 pages). Print to a PDF file
+\item Close DDEC Reports. 
+\item Navigate to the DDEC Reports directory to find the recently made .XTR
+file. (Default installation is C:\textbackslash{}Detroit Diesel\textbackslash{}DDEC
+Reports\textbackslash{}Diagnostic\textbackslash{}DATA PAGES\textbackslash{}
+Copy the .XTR file into your case file directory. 
+\item Exit Passthrough mode by pressing Exit\textbackslash{}Upload on the
+FLA. Exiting this mode will compress log files and takes some time. 
+\item Establish Internet connection with the FLA. An IP address other than
+10.0.0.1 should show up on the FLA display. 
+\item Scroll to the Upload to Server option on the FLA and upload the data
+to the server.
+\end{enumerate}
+
+\subsection{Diagnostic Link Download Protocol}
+
+This protocol is to support data from DDEC III, DDEC IV, and DDEC
+V control modules. These modules primarily communicate over the J1708/J1587
+network. This protocol was written for verison 6.50. Other versions
+may have a different method. 
+
+
+\subsubsection{Setup}
+
+Before proceeding, please be sure to not automatically reset the time. 
+\begin{enumerate}
+\item Open Diagnostic Link.\\
+\includegraphics{../media/dddl_screenshots/dddl6_start_menu}
+\item Select Options and deselect Allow automatic setting of date/time\\
+\includegraphics{../media/dddl_screenshots/dddl_options}
+\item Set the Local Communications Interface to the DG DPA4 Plus.
+\item Restart DDDL 6
+\end{enumerate}
+
+\subsubsection{Download}
+\begin{enumerate}
+\item After obtaining data with the Forensic Link Adapter, connect to the
+ECM with the RP1210 mode in J1708 and connect the USB cable to your
+computer.
+\item Be sure the the ignition key is still in the the on position, but
+do not start the engine.
+\item A popup Welcome Screen should appear. Press the Retrieve the calibration
+from the ECM button.\\
+\includegraphics{../media/dddl_screenshots/dddl6_welcome_screen}
+\item Download the Engine Configuration Data and Print the data.\\
+\includegraphics[width=4in]{../media/dddl_screenshots/dddl6_engine_configuration_data}
+\item Retrieve the Calibration Data and Print it from the file menu.\\
+\includegraphics[width=6in]{../media/dddl_screenshots/dddl6_retrieved_calibration}
+\item Gather and Print Injector Calibration\\
+\includegraphics{../media/dddl_screenshots/dddl6_injector_calibration}
+\item Select Audit Trail from the Calibration Menu and then Print.\\
+\includegraphics{../media/dddl_screenshots/dddl6_audit_trail}
+\item View and Diagnostics \(\rightarrow\) Fault Codes then File \(\rightarrow\) Print Fault Codes\\
+\includegraphics{../media/dddl_screenshots/dddl6_fault_codes}
+\item Select Diagnostics and Diagnostic Instrumentation. Select the List
+tab and then Print.\\
+\includegraphics[width=6in]{../media/dddl_screenshots/dddl6_diagnostic_instrumentation}
+\item Select Diagnostics \(\rightarrow\) ECM I/O Configuration. This can be printed and
+saved to a text file. The text file may be saved to C:\textbackslash{}Detroit
+Diesel\textbackslash{}Diagnostic\textbackslash{}IOConfig.\\
+\includegraphics{../media/dddl_screenshots/dddl6_ecm_io_configuration}
+\item Select Diagnostics \(\rightarrow\) Injector Response Times to print.\\
+\includegraphics{../media/dddl_screenshots/dddl6_injector_response_times}
+\item Select Diagnostics \(\rightarrow\) Maintenance Alert\\
+\includegraphics{../media/dddl_screenshots/dddl6_maintenance_alert}
+\item Select Tools \(\rightarrow\) Engine/Trip Data\\
+\includegraphics{../media/dddl_screenshots/dddl6_engine_and_trip_data}
+\item Take a screen shot of the software verison number from Help \(\rightarrow\) About\\
+\includegraphics{../media/dddl_screenshots/dddl6_about}
+\end{enumerate}
+
+%\subsection{DDDL 8 Download Protocol}
+
+%Under Construction
+
+%\newpage{}
+
+
+\section{Downloading Caterpillar ET ECMs}
+
+This section provides a protocol to use CatET to download Caterpillar
+ADEM II, ADEMIII, and ADEMIV engine control modules. These modules
+are found on C series engines (i.e. C-15, C-12, C-9, and C-7) and
+3126. 
+
+
+\subsection{Prerequisites}
+
+You must have the DG RP1210 drivers installed on your computer. The
+procedure for obtaining and installing these drivers is found in subsection
+\ref{subsec:RP1210_Drivers}
+
+Caterpillar Electronic Technician (ET) must be installed on your computer.
+The procedure described in this section was based on version 2013A.
+
+Set the preferences in CatET to use the DG DPA 4 Plus, which is the
+RP1210 device built into the FLA. This is shown in the following picture.
+
+\includegraphics{../media/cat_et_screenshots/cat_et_preferences_rp1210}
+
+Setting the Warranty Report Startup helps with the work flow when
+connected, as seen in the following picture. These settings will remain
+from session to session.
+
+\includegraphics{../media/cat_et_screenshots/cat_et_preferences_dialogs}
+
+It is recommended to create a new data directory for each download
+to keep track of the data and not mix it with other information.
+
+
+\subsection{Connecting to an ECM}
+\begin{enumerate}
+\item Turn the ignition key to the on position (if it is not already on),
+but do not start the engine.
+\item Plug in the FLA to the diagnostic connector. Ensure it powers on and
+boots.
+\item Perform a Standards based download using the FLA.
+\item The FLA needs to be in J1708 Passthrough mode, which is screen \ref{enu:J1708-pass-mode}.
+Once the FLA is in Passthrough mode, it will log and preserve network
+traffic for a forensically verifiable record.
+\item With the FLA connected through USB, start CatET. The program should
+automatically connect to the ECM, as shown in the following picture.
+If not, then the user can press F8 to connect once CatET is running.
+\end{enumerate}
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_detecting_ecm}
+
+
+\subsection{Warranty Report}
+\begin{enumerate}
+\item CatET will automatically ask if you would like to create a Warranty
+Report. Press Yes when the following dialog appears. This can also
+be accessed through the Information menu. \\
+\includegraphics{../media/cat_et_screenshots/cat_et_create_warranty_reports}
+\item An information screen will appear. This can be filled out as desired.
+Leaving the fields blank may be the best option. Press Next to proceed.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_provide_user_information}
+\item Press Yes when asked to download data from the ECM.\\
+\includegraphics{../media/cat_et_screenshots/cat_et_download_data}
+\item The software will download data for the report. The Configuration
+data takes the longest time.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_downloading_warranty_data}
+\item Once the data is downloaded, press Save to create an XML file.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_warranty_report_downloaded}
+\item Keep track of where you save the Warranty Report using the Save As
+dialog. \\
+\includegraphics[width=4in]{../media/cat_et_screenshots/cat_et_save_as_warranty_report}
+\item Record where the file was saved based off the following confirmation:\\
+\includegraphics[width=4in]{../media/cat_et_screenshots/cat_et_successful_save_warranty_reports}
+\item Print the Warranty Report using the Print menu option\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_select_print_warranty_reports}
+\item Enter Comments that will appear on the header of the report.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_print_comment}
+\item The first page of the Warrany Report appears as follows:\\
+\includegraphics[width=5in]{../media/cat_et_screenshots/cat_et_warranty_report_first_page}
+\item Scrolling through the Configuration data will reveal the Quick Stop
+Rate. If this is set to 0, then there may not be any Sudden Deceleration
+Snapshots.\\
+\includegraphics[width=4.5in]{../media/cat_et_screenshots/cat_et_quick_stop_rate}
+\end{enumerate}
+
+\subsection{Snapshot Data}
+\begin{enumerate}
+\item Select the Snapshot Viewer from the menu options as shown in the following
+picture:\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_click_snapshot_viewer}
+\item A menu of recorded Snapshots appear. Please select next one and press
+View Graph. Taking a screenshot of this dialog box is a good idea
+to keep track of all the available Snapshots.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_select_snapshot}
+\item A progress bar will appear.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_receiving_snapshot}
+\item Once downloaded, select the parameters to graph.\\
+\includegraphics[width=5in]{../media/cat_et_screenshots/cat_et_select_parameters}
+\item The resulting graph will show and all the data (even the data not
+shown) can be saved by pressing Save to File.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_save_snapshot_to_file}
+\item Record where the Snapshot File gets saved.\\
+\includegraphics[width=4in]{../media/cat_et_screenshots/cat_et_save_as_snapshot}
+\item Print the Snapshot from the file menu.
+\item Once saved, the Snapshot file can be Exported to MS Excel by pressing
+the Export option in the File menu.\\
+\includegraphics[width=5in]{../media/cat_et_screenshots/cat_et_export_snapshot_to_file}
+\item To Export, the file just saved needs to be opened again.\\
+\includegraphics[width=4in]{../media/cat_et_screenshots/cat_et_open_snapshot}
+\item The exported file can be saved as an .XLS file\\
+\includegraphics[width=4in]{../media/cat_et_screenshots/cat_et_save_snapshot_as_excel}
+\item A confirmation dialog gives the option to change file names.\\
+\includegraphics[width=5in]{../media/cat_et_screenshots/cat_et_export_snapshot_confirmation}
+\item Record where the file was saved.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_export_snapshot_success}
+\item The Snapshot can be opened in Excel.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_open_in_excel_open_dialog}
+\item The excel file should appear like to picture below:\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_open_in_excel}
+\item The additional Snapshots can be accessed by pressing the Snapshots...
+button in CatET.\\
+\includegraphics[width=6in]{../media/cat_et_screenshots/cat_et_click_on_snapshots}
+\item Repeat this Snapshots section for all the available Snapshots.
+\end{enumerate}
+
+\subsection{Preserving ECM Date and Time}
+\begin{enumerate}
+\item Select ECM Date/Time from the Service Menu.
+\item Open the PC System Clock and press the PrntScrn key on the PC keyboard.
+\item Paste (Ctrl-v) the captured graphic into Paint or MS Word.
+\item Save the document with the screenshot.
+\end{enumerate}
+\includegraphics[width=6in]{../media/cat_et_screenshots/catet_time_stamp_screenshot}
+
+
+\section{\label{sec:Forensic-Write-Blocking}Forensic Write Blocking}
+
+There are certain messages that should not be transmitted to the ECM
+during a forensic examination. These messages are the kind that will
+change the data stored on the ECM in a meaningful way. Resetting or
+clearing fault codes, changing the ECM time, and resetting trip data
+should always be avoided. 
+
+The following messages are actively filtered and blocked by the Forensic
+Link Adapter. The Forensic Link Adapter will not transmit these messages
+to the ECM.
+
+\begin{tabular}{|c|c|}
+\hline 
+Message & Purpose\\
+\hline 
+\hline 
+Time Reset & Prevent the ECM RTC from being reset.\\
+\hline 
+\end{tabular}
+
+
+
+\chapter{Verifying Data in the Field}
+\paragraph{  }
+The FLA is able to give the user an overview of the data collected in the field through the FLA Preview. The FLA Preview is a website generated by the FLA that allows the user to connect to the device and examine data on it.
+\section{Accessing the FLA Preview}
+\paragraph{  }
+There are two ways to access the FLA Preview depending on what is available. If a good Ethernet port is available, connect using the at-home/in-office method. If no Ethernet port is available, connect to the preview using the in-field method.
+\subsection{At-Home/In-Office}
+\paragraph{  }
+If the operator is in an office, or at home, they can set the FLA up for home use, section \ref{sec:setting_fla_at_home}, or for office use \ref{sec:setting_fla_in_office}. Enter the IP address from the title screen into a web browser. This will take you to the FLA Preview website. If you have trouble accessing the preview, refer to the troubleshooting section.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	%\begin{center} 
+	%	\textbf{Correct:}\\[\baselineskip] 
+	%\end{center} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct} 
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}
+\subsection{In-Field}
+\paragraph{  }
+The first step in accessing the FLA Preview is to have the FLA in the correct mode. Unless the operator wishes to place the FLA in support mode, the easiest way to access the FLA Preview is to set up the FLA for the field, as described in section \ref{setting_fla_in_field}. Once the FLA has DHCP enabled, and the computer is directly connected to the FLA with the Ethernet cable, enter "10.0.0.1" into a web browser. This will take you to the FLA Preview website.
+\\[\baselineskip]
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	%\begin{center} 
+	%	\textbf{Correct:}\\[\baselineskip] 
+	%\end{center} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct_dhcp} 
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\end{minipage}
+\section{Using the FLA Preview}
+\paragraph{}
+The main page of the FLA will show the user how many pending data packages there are on the FLA, as well as if there are any downloads in progress. Under the View Local Data page, the operator can view the data packages that are not yet uploaded to the Synercon Server.
+\begin{center}
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/local_data}
+\end{center}
+\paragraph{  }
+This page gives a brief overview of each data package on the FLA that is not yet uploaded. The OEM data column indicates if the FLA has extracted data from the engine that is not a part of the standards-based extraction. From this page the operator can view the data from an individual data, view archived data packages, or archive pending data packages.
+\paragraph{  }
+\textbf{Archiving a pending data package will move the data package to the archived list, and it will NOT be uploaded to the server.}
+This is only to be used when the operator has a pending data package they do not want to upload on the server, i.e. if it was a practice download, or it contains incomplete data due to a lose cable. Use this with care, archived data packages cannot be un-archived without Synercon support.
+\paragraph{  }
+The View Data button will allow the operator to view a preview of the report. This will contain all of the standards-based messages, as well as standards-based faults. If the FLA was able to collect non-standards-based data a portion of the decoded data will be available for download. The full records will be available once the operator uploads the data to the Synercon Portal.
+\paragraph{  }
+The operator can also view archived data with the button at the bottom. Note, the archived page can take some time to load.
+\paragraph{  }
+\begin{wrapfigure}{r}{0.3\linewidth}
+\centering
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/download_sha_button}
+\end{wrapfigure}
+Under each report, the user can download the SHA256 Sums file.
+This file contains the SHA 256 sums of all of the files the FLA generated at the time of the download. These sums are cryptographic fingerprints of the files that can be used to determine if the file has changed since the FLA created the file. The user can save this file to perform verification of integrity of data obtained. For more information about SHA256 sums, refer to section~\ref{subsec:using_shas}.
+
+
+\chapter{Administrator's Guide}\label{chap:admin_guide}
+
+This section is intended to teach administrators how to manage FLAs
+on the FLA Portal.
+
+
+\section{FLA Portal terminology}
+
+The FLA Portal has the following categories:
+\begin{description}
+\item [{Organizations}] are the top level with a site administrator as
+the person in charge. Typically this is a highway patrol, a state
+police, or a company. The person in charge of the organization has
+the ability to oversee the data and use of the different FLAs.
+\item [{Groups}] are a sub-level within an organization. For example, East
+District and West District may be groups within an State Police organization.
+If an organization only has a few operators and a few FLAs, it may
+not make sense to have different groups. 
+\item [{Operators}] are trained users of the FLA and are responsible for
+collecting data in the field. Operators can be assigned to different
+groups. Every operator in the group is able to see the data packages
+from all the FLAs assigned to the group, regardless of which operators
+downloaded the data.
+\item [{Forensic~Link~Adapters}] are the hardware devices that an organization
+owns.
+\end{description}
+
+\section{Account Overview}
+\paragraph{  }
+Forensic Link Adapters are assigned to each organization at the time
+of purchase. Once the organization completes the purchase, the serial
+numbers of each FLA will be loaded into the Organization's profile.
+An invitation to set up the Organization will be sent to the site
+administrator. For example, the Lieutenant in charge of the crash
+reconstruction division will become the site administrator once he
+or she registers by following the link sent in the invitation e-mail.
+
+\begin{figure}[h]
+\includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot}
+
+\caption{\label{fig:Example-FLA-Account-overview}Example Forensic Link Adapter
+Portal web page for the Account overview}
+\end{figure}
+
+
+Once logged in as a Site Administrator, an account overview page will
+be available, much like the one shown in Figure \ref{fig:Example-FLA-Account-overview}.
+Many of the fields on the web page are linked to various functions.
+The top bar (in black) has links to your default login page, the latest
+FLA download if you are an operator, a list of all the organizations,
+FLAs, and some account access settings. The web page is set up in
+three distinct tables as seen in Figure \ref{fig:Example-FLA-Account-overview}.
+\begin{enumerate}
+\item Organization Groups
+\item FLA Operators
+\item Forensic Link Adapter (FLA)
+\end{enumerate}
+
+\section{Group Management}
+
+It is the responsibility of the Organization administrator to set
+up groups and operators according to the desired structure of the
+Organization. You can have operators that have access to more than
+one group.
+
+\begin{figure}[h]
+\includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot}
+
+\caption{\label{fig:Example-Group-Details}Example Group Details web page from
+the Forensic Link Adapter Portal.}
+\end{figure}
+
+
+
+\subsection{Adding an Operator}
+
+There are two ways to get an operator access to the group's FLAs.
+The first is to invite a new operator and the second is to invite
+an existing operator. However, the existing operator must have accepted
+an invitation from the Organization under a unique e-mail address.
+By clicking on the lower left box the says \textsf{Invite new operator}
+shown in \ref{fig:Example-Group-Details}, a web page similar to
+the one shown in \ref{fig:New-Operator-invitation}. The required
+user information includes name and email address. The FLA portal uses
+e-mail addresses to identify operators. Therefore, if a person belongs
+to different organizations, they would have to use a different e-mail
+for each organization. New operators will get an e-mail from \texttt{fla-admin@synercontechnologies.com}
+with a link to register with the site. Many times this e-mail will
+be filtered as junk, so advising the recipient to check their e-mail
+filters and junk folder may be necessary.
+
+The Work Address details on the Invite and operator page are used
+to fill in a report with 
+
+\begin{figure}[h]
+\includegraphics[height=.6\linewidth]{../media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot}
+
+\caption{\label{fig:New-Operator-invitation}New Operator invitation form on
+the FLA portal website.}
+\end{figure}
+
+
+
+\subsection{Assigning an FLA to the Group}
+
+Each group needs to have at least one Forensic Link Adapter assigned
+to it. To assign an FLA to a group, click the button to see a list
+of available FLAs for your organization. Only people in the group
+can see the data on the FLA assigned to that group
+
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{../media/fla_portal_screenshots/FLAPortalAssignedFLASuccessScreenShot}
+
+\caption{Assigned FLAs}
+\end{figure}
+
+
+
+\chapter{Suggested Practices}
+\paragraph{  }
+This section is intended to provide a very brief overview of using
+the FLA, for a more in-depth guide, refer to the Field Guide.
+
+
+\section{Initiating FLA Support mode}
+
+In order to provide the quickest and most complete support, it may
+be necessary to place the FLA in support mode. This allows Synercon
+Support staff to create a secure connection to an FLA anywhere with
+an Internet connection. It may also be referred to as a ``Support
+Channel''.
+
+To place the FLA in support mode, or ``Open a Support Channel'',
+follow these steps
+\begin{enumerate}
+\item Verify a Synercon Support representative is ready for you to initiate
+Support Mode.
+\item Connect the FLA to the Internet as described in subsection \ref{subsec:internet_connect}.
+\item Navigate to the FLA Preview site as described in section \ref{sec:fla_preview}.
+\item Select the ``Support'' option from the menu at the top.
+\item Click the ``Open the support channel'' button to initiate Support
+Mode.
+\item After a brief period, the page will change to say the connection was
+successful, if the connection was not successful, refer to the troubleshooting
+section.
+\item Do not close the web page, or click the ``Back'' or ``Refresh''
+buttons. It is important to stay on this page until the Synercon Support
+representative is finished providing support.
+\item When the Synercon Support representative begins working on your FLA,
+the screen on the device will change to indicate a member is performing
+work.
+\item When the Synercon Support representative is finished, the unit will
+display a message indicating the work is finished.
+\item The FLA will automatically reboot.
+\item After the device loads the Title Screen, then click the ``Close Support''
+button to return the FLA to normal operational mode.
+\end{enumerate}
+
+\section{Installing PC Software}
+
+
+\subsection{RP 1210 Drivers}
+
+The FLA can operate as an RP1210 device. This is used for connecting
+OEM software to ECMs. A computer does not need the RP 1210 drivers
+to access the FLA Preview, and the FLA Portal. You will need administrative
+privileges to install these drivers.
+
+To install the RP1210 Drivers, follow these steps
+\begin{enumerate}
+\item Connect to the FLA Preview described in the above section (Either In-Field,
+or In-Office methods will work)
+\item Select the Download Drivers option from the menu at the top of the
+web page
+\item Select ``Download Drivers''
+\item Once the file is downloaded, extract the .zip file to a folder
+\item Open the folder, and double-click ``DPA4Plus\_RP1210.exe''
+\item Follow the on-screen instructions to install the drivers
+\end{enumerate}
+After the drivers are installed, they can be tested with the following
+steps
+\begin{enumerate}
+\item Make sure the FLA is powered on, and connected to an ECM (It is possible
+to test the drivers without a live ECM, to do so see the special instructions)
+
+\begin{enumerate}
+\item Skip steps 2,3,and 4 if not connected to a live ECM
+\item Begin a scan on the vehicle
+\item After the scan has completed and you see the "Enable
+RP1210 Mode" screen
+\item Confirm the top line of the FLA read "CAN/J1939 Pass
+Mode."
+\item Search on your computer for the program "Adapter Validation
+Tool" and run it
+\item Select "MD/HD"
+\item Set the Vendor to "DG1210xx - Dearborn Group RP1210"
+(the xx will likely be 32)
+\item Set the Device to "DG DPA 4 Plus USB"
+\end{enumerate}
+
+\begin{enumerate}
+\item Skip to step 14 if the ECM does not support J1939
+\end{enumerate}
+\item Set Protocol to "J1939"
+\item plug the USB cable into the FLA and the computer
+\item Click "Run Test"
+\item The text boxes labeled "RP1210 Status Window (PC-VDA)"
+and "RP1210 Data Message Window (VDA-Vehicle)"
+should turn green
+
+\begin{enumerate}
+\item If you are not connected to a live ECM, the "RP1210
+Data Message Window" will turn red as there are no messages
+\end{enumerate}
+\item A text box will appear and will describe the results of the test.
+\item Click "Quit" on the pop-up window titled
+"Test Results Discussion"
+
+\begin{enumerate}
+\item If the ECM does not support J1708, the test is complete.If it does,
+continue
+\end{enumerate}\label{enu:J1708-pass-mode}
+\item Change the protocol to J1708
+\item On the FLA click the Green button to enable J1708 passthrough
+\item Confirm the top line of the FLA read "J1708 Pass Mode
+for"
+\item Click "Run Test"
+\item A text box will appear and will describe the results of the test
+\item Click "Quit" on the pop-up window titled
+"Test Results Discussion"
+\item Close out of the adapter validation test
+\end{enumerate}
+
+\section{Performing a download on a Heavy Vehicle}
+
+This section provides a very high level overview of a typical download.
+\begin{enumerate}
+\item Plug in the FLA to the 9-Pin Diagnostics Connector
+\item Turn on the ignition key to run
+\item Run a vehicle Scan
+\item Download Supported Data (if available)
+\item Enable RP1210 Mode (Optional depending on the ECM and user's procedure)
+
+\begin{enumerate}
+\item Connect the USB Cable
+\item Run OEM Software
+\end{enumerate}
+\item Verify the data collected via the FLA Preview
+
+\begin{enumerate}
+\item If desired, repeat steps 3-6 until satisfied
+\end{enumerate}
+\item Shutdown the FLA
+\item Reach a location that has a working Ethernet port
+\item Connect the FLA to the Internet
+\item Upload the data from the field
+\item View the full report on the FLA Portal
+\end{enumerate}
+
+\section{Connecting to Engine Control Modules on a Bench}
+
+When performing bench downloads, it is recommended to use a Smart
+Sensor Simulator to minimize the chance of throwing additional faults
+as compared to a traditional calibration harness. For more information
+about Smart Sensor Simulators, visit \textbackslash{}url\{synercontechnologies.com\}.
+Once connected, use the FLA in accordance to the recommended practices
+outlined in the Field Guide and accompanying Quick Start guides.
+
+The following are typical steps taken during a download.
+\begin{enumerate}
+\item Confirm the correct SSS is being used for the ECM
+\item Connect the SSS to the ECM
+\item Connect power to the SSS via the included power adapter
+\item Press the Key Switch until the Key On lamp is illuminated, about two
+seconds
+\item Verify the Key On lamp stays illuminated for one second before proceeding.
+If not, refer to the troubleshooting section
+\item Plug in the FLA to the 9-Pin Diagnostics Connector located on the
+SSS
+\item Run a vehicle Scan
+\item Download Supported Data (if available)
+\item Enable RP1210 Mode (Optional depending on the ECM and user's procedure)
+
+\begin{enumerate}
+\item Connect the USB Cable
+\item Run OEM Software
+\end{enumerate}
+\item Verify the data collected via the FLA Preview
+
+\begin{enumerate}
+\item If desired, repeat steps 3-6 until satisfied
+\item Skip to step 13 if there is a working Ethernet port where the bench
+download is occurring
+\end{enumerate}
+\item Shutdown the FLA
+\item Reach a location that has a working Ethernet port
+\item Connect the FLA to the Internet
+\item Upload the data from the field
+\item View the full report on the FLA Portal
+\end{enumerate}
+
+
+\part{General Information}
+
+
+\chapter{Troubleshooting}
+
+\section{Vehicle Connection Problems}
+\subsection{Do not get the Option to Scan Vehicle}
+Symptom:\\
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+The FLA Title Screen does not allow the user to scan the vehicle
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_no_net}
+\end{minipage}\\
+Solution:\\
+\begin{itemize}
+\item Check that the key is in the ON position, with the engine not running.
+\item Check to see if the vehicle voltage is nominal, low voltage may prevent ECMs from responding.
+\item Check all cables for secure connections.
+\end{itemize}
+If the above list does not solve the issue, the communication wires from the ECM to the diagnostic port may be damaged. If this is the case, the ECM modules may have to be removed and the operator may have to perform a bench download on the unit. The recommended practice is to use a Synercon Smart Sensor Simulator with the truck ECMs in order to help preserve the data on the modules.
+\section{FLA Internet Problems}
+\subsection{Cannot access the FLA Preview website}
+Symptom:\\
+The operator is not able to access the FLA Preview website.
+Solution:\\
+\begin{itemize}
+\item navigate to the title screen and verify the FLA has an IP address. If the IP line reads 'cable unplugged', or 'finding IP address', see the FLA Does not have an IP Address section.
+\item If the FLA is not connected directly to a computer (i.e. the FLA is plugged into an Ethernet port in an office, or home) ensure the DHCP service is off. If the IP address of the FLA is 10.0.0.1, the DHCP service is likely on. For more information about the DHCP service, see section~\ref{subsec:enable_dhcp}.
+\item Ensure the operator has typed in the IP address exactly as it appears on the FLA, do not add any extra characters, such as leading zeros before the numbers, or extra spaces.
+\end{itemize}
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+\begin{center}
+\textbf{Correct:}\\[\baselineskip]
+\end{center}
+\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct}
+\begin{center}
+\textbf{Incorrect:}\\[\baselineskip]
+\end{center}
+\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_wrong_1}
+\\[0.5\baselineskip]
+\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_wrong_2}
+\\[0.5\baselineskip]
+\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_wrong_3}
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_no_net}
+\end{minipage}
+\begin{itemize}
+\item Ensure the FLA is on the same network as the computer used to access it. Depending on the configuration, if the computer is connected to a wireless network, try to plug into an Ethernet cable near the port the FLA is plugged into.
+\end{itemize}
+If the above steps do not resolve the problem, the operator may need to contact the department IT services. If they are not able to resolve the issue, please contact Synercon support.
+
+\subsection{FLA Does not Have an IP Address}
+\subsubsection{IP says Ethernet Unplugged}
+Symptom:\\
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+The IP line of the FLA Title screen says Ethernet Unplugged
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/no_ethernet/title_both}
+\end{minipage}\\
+Solution:\\
+\begin{itemize}
+\item Check cables are plugged in all the way.
+\item Reboot the FLA with the Ethernet cable plugged in.
+\item Verify the port is working with a computer.
+\item Contact your department IT services, and ensure the FLA is given the permissions to access the Internet. Often this is done by 'whitelisting a MAC address'. If the operator needs to provide the MAC of the FLA, this can be accessed via the configuration menu. For more information, see section~\ref{subsec:finding_mac}.
+\end{itemize}
+If the above steps do not solve the issue, the operator may need to contact Synercon support.
+\subsubsection{IP says Finding IP Address}
+Symptom:\\
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+The IP line of the FLA Title screen says Ethernet Unplugged
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/no_ethernet/title_both_finding_ip}
+\end{minipage}\\
+Solution:\\
+\begin{itemize}
+\item If the FLA is being used in the field, and directly connected to a computer, enable the DHCP service. See section~\ref{subsec:enable_dhcp}.
+\item Reboot the FLA with the Ethernet cable plugged in.
+\item Verify the port is working with a computer.
+\item Contact your department IT services, and ensure the FLA is given the permissions to access the Internet. Often this is done by 'whitelisting a MAC address'. If the operator needs to provide the MAC of the FLA, this can be accessed via the configuration menu. For more information, see section~\ref{subsec:finding_mac}.
+\end{itemize}
+\section{FLA Boot Problems}
+\subsection{FLA Does not Boot When Plugged in}
+Symptom:\\
+The FLA does nothing when plugged into a vehicle.
+Solution:\\
+\begin{itemize}
+\item The power wires to the diagnostic port may have been damaged, use the cigarette lighter adapter in the FLA case to provide power to the FLA. It is recommended to carry a portable battery for powering the FLA via battery for such situations.
+\end{itemize}
+If the FLA will not boot with either the cigarette lighter adapter plugged into a know charged battery, or the wall adapter, please contact Synercon support.
+\subsection{FLA Does not finish booting}
+Symptom:\\
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
+The FLA reaches this screen, and does not proceed to the Title screen for more than 30 seconds.
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/boot/please_wait}
+\end{minipage}\\
+Solution:\\
+\begin{itemize}
+\item Wait 30 seconds for the system to attempt to boot.
+\item If the system does not boot, remove power sources, wait 30 seconds and then plug the FLA in. Note this is not recommended as a standard method to shut the FLA down, only do this when you have exhausted all other methods to shut the system down safely.
+\end{itemize}
+If the device continues to fail to boot for more than 2 times, please contact Synercon support.
+
+
+\chapter{Definitions}
+
+When dealing with heavy truck data, there are many acronyms, symbols
+and phrases that are used to describe the data. This chapter presents
+a list to help decipher some of the terms used for dealing with heavy
+vehicle event data recorders.
+
+The Forensic Link Adapter (FLA) is a field rugged computer that is programmed to download data from heavy vehicles.
+\begin{description}
+\item [{ECMs:}] Electronic Control Modules. These are the ``computers''
+that run heavy vehicles, they can contain data useful when investigating
+a heavy vehicle.
+\item [{OEM}] Original Engine Manufacturer.
+\item [{The FLA}] the data extraction device device created by Synercon.
+This is the blue box that the operator uses to communicate with heavy
+vehicles.
+\item [{The FLA Portal}] the website fla.synercontechnologies.com . This
+is where operators can view full reports
+\item [{The FLA Preview}] the local website hosted by the FLA. This allows
+operators to preview reports before they are uploaded to the FLA Portal.
+\item [{Data Package}] all of the data extracted from a heavy vehicle,
+as well as metadata about the extracted data, such as GPS coordinates,
+and timestamps.
+\item [{Preview Report}] a report that has not been processed by the FLA
+Portal, these reports only have standards-based data, and some of
+the non-standards-based data.
+\item [{Full Report}] a report that is being viewed from the FLA Portal,
+these reports will have all of the data the FLA system is able to
+understand.
+\item [{Standards-based-data}] Data that is defined by the SAE standards
+J1587 and J1939.
+\item [{Non-Standards-based-data}] Data that is not defined by the SAE
+standards J1587 and J1939. i.e. Snapshot records for CAT ECMs. These
+data elements are determined by the OEM of the ECMs
+\item [{NIST}] National Institute for Standards and Technology (\href{http://www.nist.gov/}{http://www.nist.gov/})
+\item [{RTC}] Real Time Clock
+\end{description}
+
+\chapter{Requirements}
+\paragraph{  }
+In order to take full advantage of the Synercon products, such as
+the FLA, FLA Preview, and FLA Portal, the user will need to have access to additional software and ports such as those outlined in the following sections.
+
+\label{sec:supported_browsers}
+\section{Supported Web Browsers}
+\paragraph{  }
+In order for the FLA Preview and FLA Portal to work correctly, the
+user will need to meet the following browser requirements.
+
+\begin{description}
+\item [{Internet Explorer}] at least version 10 (2012)
+\item [{Firefox}] at least version 31 (2012)
+\item [{Chrome}] at least version 31 (2013)
+\item [{Safari}] at least version 7 (2013)
+\item [{Opera}] at least version 29 (2015)
+\end{description}
+
+\section{Drivers}
+\paragraph{  }
+In order to use the FLA in RP 1210 mode, the operator will need to
+install the drivers first. This will require administrative privileges.
+The drivers are provided with the FLA.
+
+
+\section{OEM Software}
+\paragraph{  }
+In order to extract data from ECMs that are not fully supported, the
+operator will need the relative OEM software to acquire non-standards-based
+data.
+
+
+\chapter{Warnings}
+\paragraph{  }
+Synercon Technologies does not warranty any products against user
+caused problems. In order to prevent any damage to the FLA and data
+collected by the FLA, always follow these guidelines.
+
+
+%\section{Powering the FLA}
+
+
+\subsection*{Only use the included wall adapter or cigarette adapter to power
+the FLA}
+
+When not using a vehicle to power the FLA, only power the device using
+the included power supplies. Never plug in a foreign adapter, especially
+if the voltage exceeds 12 volts.
+
+
+\subsection*{Never plug the FLA into a diagnostic port that has a vehicle voltage
+above 26 volts}
+
+When plugging in the FLA to a vehicle, ensure the voltage of the diagnostic
+port does not exceed 26 volts. If in doubt, a multi-meter can be used
+to verify voltage
+
+
+\subsection*{Do not remove power from the FLA without first shutting down}
+
+Unless specifically instructed to do so by a troubleshooting guide,
+avoid removing power to the FLA without first shutting down. Use the
+securing screws of the cables to secure all cables against accidental
+disconnection.
+
+
+\subsection*{Do not expose the FLA to water}
+
+The FLA is NOT waterproof, even powered off. Avoid dropping the unit
+in puddles, or exposing the device to rainfall. Take care to ensure
+a dry environment is available before operating the FLA. If the unit
+is exposed to water, even when powered off, the water can damage the
+unit, and potentially any data stored on the unit. If exposed to water,
+immediately power the unit off and contact Synercon Support for instructions.
+
+
+\subsection*{Do not expose to excess heat or cold}
+
+Do not expose the FLA to temperatures exceeding 50C (122F), or below
+0C (-32F).
+
+
+\chapter{Synercon Training}
+
+Synercon Technologies provides classes to train users in the proper
+use of Synercon Products in investigating vehicles. For more information about classes, please contact \url{jeremy@synercontechnologies.com}.
+
+\begingroup
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
+\chapter{Contact Synercon Technologies}\label{chap:contact_syn}
+\endgroup
+\section*{Sales}
+\paragraph{  }
+If you need to extend an extending an FLA subscription, or are interested in purchasing additional FLAs, or SSSs, please contact our sales department at email\{sales@synercontechnologies.com\}
+\section*{Support}
+\paragraph{  }
+While we strive to provide the highest quality products, if you have
+an issue with our products and need to contact us, please send an
+email to \textbackslash{}email\{support@synercontechnologies.com\}.
+
+When requesting support, please include the following:
+
+1) the product (i.e. FLA, or SSS)
+
+2) the serial number (it is printed on the bottom of all Synercon
+Products)
+
+3) A detailed explanation of the issue
+
+4) Any steps you have already taken to solve the issue
+
+5) {[}optional{]} any screen shots, or pictures if you believe they
+will help us understand the problem.
+
+We will attempt to respond to you as quickly as possible.
+
+\printindex{}
+
+
+%\section{Specifications}
+%
+%The Forensic Link Adapter is based on a powerful processor based on
+%the Texas Instruments AM335x 1GHz ARM\textregistered{} Cortex-A8 Processor.
+%It has 512MB of DDR3 RAM, 16 GB of internal storage, the NEON floating-point
+%accelerator and 2 PRU 32-bit microcontrollers. The device has 2 Controller
+%Area Network (CAN) channels, 2 J1708 Serial Channels, 100/10 Mbps
+%Ethernet, USB 2.0, and a full implementation of the DG tech DPA4+
+%for RP1210 Compliance. The device has a GPS receiver, Real Time Clock,
+%an accelerometer, and a rate Gyro. The display uses Organic LEDs for
+%better sunlight readability. It runs embedded Linux and serves its
+%own website.
+
+\end{document}
+
+%%  LocalWords:  Performing minipages Mileage VIN
