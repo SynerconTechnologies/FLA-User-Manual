@@ -333,6 +333,81 @@ The working screens will not have an option on the last line, but usually a perc
 \end{minipage}\\
 
 
+\section{Installing PC Software}
+
+\subsection{RP 1210 Drivers}
+
+The FLA can operate as an RP1210 device. This is used for connecting
+OEM software to ECMs. A computer does not need the RP 1210 drivers
+to access the FLA Preview, and the FLA Portal. You will need administrative
+privileges to install these drivers.
+
+To install the RP1210 Drivers, follow these steps
+\begin{enumerate}
+\item Connect to the FLA Preview described in the above section (Either In-Field,
+or In-Office methods will work)
+\item Select the Download Drivers option from the menu at the top of the
+web page
+\item Select ``Download Drivers''
+\item Once the file is downloaded, extract the .zip file to a folder
+\item Open the folder, and double-click ``DPA4Plus\_RP1210.exe''
+\item Follow the on-screen instructions to install the drivers
+\end{enumerate}
+After the drivers are installed, they can be tested with the following
+steps
+\begin{enumerate}
+\item Make sure the FLA is powered on, and connected to an ECM (It is possible
+to test the drivers without a live ECM, to do so see the special instructions)
+
+\begin{enumerate}
+\item Skip steps 2,3,and 4 if not connected to a live ECM
+\item Begin a scan on the vehicle
+\item After the scan has completed and you see the "Enable
+RP1210 Mode" screen
+\item Confirm the top line of the FLA read "CAN/J1939 Pass
+Mode."
+\item Search on your computer for the program "Adapter Validation
+Tool" and run it
+\item Select "MD/HD"
+\item Set the Vendor to "DG1210xx - Dearborn Group RP1210"
+(the xx will likely be 32)
+\item Set the Device to "DG DPA 4 Plus USB"
+\end{enumerate}
+
+\begin{enumerate}
+\item Skip to step 14 if the ECM does not support J1939
+\end{enumerate}
+\item Set Protocol to "J1939"
+\item plug the USB cable into the FLA and the computer
+\item Click "Run Test"
+\item The text boxes labeled "RP1210 Status Window (PC-VDA)"
+and "RP1210 Data Message Window (VDA-Vehicle)"
+should turn green
+
+\begin{enumerate}
+\item If you are not connected to a live ECM, the "RP1210
+Data Message Window" will turn red as there are no messages
+\end{enumerate}
+\item A text box will appear and will describe the results of the test.
+\item Click "Quit" on the pop-up window titled
+"Test Results Discussion"
+
+\begin{enumerate}
+\item If the ECM does not support J1708, the test is complete.If it does,
+continue
+\end{enumerate}\label{enu:J1708-pass-mode}
+\item Change the protocol to J1708
+\item On the FLA click the Green button to enable J1708 passthrough
+\item Confirm the top line of the FLA read "J1708 Pass Mode
+for"
+\item Click "Run Test"
+\item A text box will appear and will describe the results of the test
+\item Click "Quit" on the pop-up window titled
+"Test Results Discussion"
+\item Close out of the adapter validation test
+\end{enumerate}
+
+
 \section{Familiarize yourself with the FLA}
 \paragraph{  }
 After the operator has performed these steps, the FLA is ready for
@@ -871,8 +946,8 @@ When the FLA is being used in the field, the DHCP service may be turned on. This
 \chapter{The FLA Preview}\label{sec:fla_preview}
 \paragraph{  }
 The FLA Preview is a website that each FLA hosts. This allows operators
-to interact with the FLA in ways the front panel is not able to
-support, such as previewing reports.
+to verify data they aquire in the field. No internet connection is required to
+view the FLA Preview.
 
 
 \section{Accessing the FLA Preview}
@@ -898,8 +973,7 @@ This will load the FLA Preview main page, shown below.
 \includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/main_page}
 \end{center}
 \paragraph{  }
-This page provides an overview of the current status of the device. The ``At a glance section'' will display the number of pending data packages, that is the number of data packages that have been downloaded to the FLA but not yet uploaded to the FLA Portal, and if there is a download
-in progress.
+This page provides an overview of the current status of the device. The ``Pending Data Packages'' section will display all data packages that have not been uploaded to the FLA Portal. Each line provides a brief description of the package. Clicking on a row will display a detailed preview of that data package. The ``Device Information'' section will display information related to the status of the device. Free space and vehicle voltage are live values that are updated every second. The ``GPS Information '' section will display information about the current GPS fix the FLA has. All values in this section are live and updated every second.
 
 
 \section{Using the FLA Preview}
@@ -909,59 +983,38 @@ The FLA Preview has many uses, including allowing operators to preview data in t
 
 \subsection{View Local Data}
 \paragraph{  }
-Under the View Local Data page, the operator is able to view data
-on the FLA. There are two sections to local data, Pending Uploads,
-and Archived Data. Pending Uploads will show any data packages that
-are ready to be uploaded to the FLA Portal.
+Under the Home page, the operator is able to view pending data
+on the FLA. Pending packages are data packages that have not been uploaded to the FLA Portal. Archived Data Packages are data packages
+that have been uploaded. The FLA never deletes data packages, so at any point an operator can view old data packages.
 \begin{center}
 \includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/local_data}
 \end{center}
 
-This page will give an overview of each pending data package. The value in the
-OEM data column will be YES if the FLA was able to recover OEM
-data for that download, and NO if the FLA could not. The yellow Archive button will
-remove the data package from being uploaded, and move it to the archived section. If an archive is unintentionally archived, the FLA will have to be serviced to retrieve the data. For more information about servicing the FLA, see the Service section.
+This section will give an overview of each pending data package. The value in the
+OEM data column will be a check if the FLA was able to recover OEM
+data for that download, and a warning sign if the FLA could not.
 \paragraph{  }
-When a download is in progress, the row for that entry will indicate the download is in progress, and will not provide the ``View Data'' button. Once the user finishes the download, the operator can refresh the page, and will see the ``View Data'' button. For more information about when a download is finished, and how to perform a download, refer to the Field Guide.
+When a download is in progress, the row for that entry will indicate the download is in progress, and will not be clickable. Once the user finishes the download, the operator can refresh the page, and be able to click the row. For more information about when a download is finished, and how to perform a download, refer to the Field Guide.
 \paragraph{  }
-Selecting the ``View Data'' will provide the user with a preview of the report. This preview includes all of the standards-based information, the components found, and any identification information, as well as any in-field non-standards-based previews. Non-standards-based information is any data that is provided by OEM software, such as DDEC reports' XTR files, and CAT Snapshots. The operator will get a preview of this data here in accordance with the type of ECM being analyzed. The full reports will be available through the FLA Portal when the operator uploads the data. Typically, the following will be available:
+Clicking the row will provide the user with a preview of the report. This preview includes all of the standards-based information, the components found, and any identification information, as well as any in-field non-standards-based previews. Non-standards-based information is any data that is provided by OEM software, such as DDEC reports' XTR files, and CAT Snapshots. The operator will get a preview of this data here in accordance with the type of ECM being analyzed. The full reports will be available through the FLA Portal when the operator uploads the data. Typically, the following will be available:
 \\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
-	\begin{center} 
-		\textbf{Preview of DDEC ECMs}\\[\baselineskip] 
-	\end{center} 
-	If non-standards-based data is collected from a DDEC ECM, an XTR file will be available for download.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/xtr_download}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
-	\begin{center} 
-		\textbf{Preview of CAT ECMs}\\[\baselineskip] 
-	\end{center}
-	If non-standards-based data is collected from a CAT ECM, a CSV file will be available containing 5 frames around the trigger for any quick stop records.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/csv_download}
-\end{minipage}
-\\[\baselineskip]
+\begin{center}
+	\includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/event_graph}
+\end{center}
+
 \paragraph{  }
-The preview will also contain a SHA 256 Sums file for the operator
+The preview will also contain a list of the SHA 256 Sums the operator
 to download. This file contains the SHA 256 sums of all data files
-the FLA has created. The operator can download this file, and confirm
+the FLA has created. The operator can download all files individually, and confirm
 the data uploaded to the FLA Portal was the same data the FLA created.
-For more information on SHA 256 sums, as well as recommended use,
-see the SHA 256 sums of suggested practices.
 \paragraph{  }
-The operator can also click on the ``Archived Data'' button on the
-View Local Data page to view data packages that were archived. Data
+The operator can also navigate to ``Archived Data Packages''
+ to view data packages that were archived. Data
 packages that are uploaded to the FLA Portal are automatically archived.
 From here the user can access all of the same downloads and information
 as when the data package was pending uploading. Meaning, once the
-data is uploaded, the user can still download XTR, CSV, or SHA 256
-Sum files, as well as any standards-based data acquired. If the FLA
+data is uploaded, the user can still download files and see SHA 256
+Sums. If the FLA
 has a large number of archived data packages, the archived page may
 take several moments to load.
 \begin{center}
@@ -980,14 +1033,17 @@ Portal to manage FLAs, and users.
 \paragraph{  }
 The FLA Portal is accessed by navigating to \href{https://fla.synercontechnologies.com/}{https://fla.synercontechnologies.com/}
 in a supported web browser. For a list of supported web browsers, refer to section \ref{sec:supported_browsers}.
-\paragraph{  }
-The FLA Portal will require the operator to login, using the username and password used when the operator created the account. Note that BOTH username and password are case-sensitive.
-\begin{center}
-\includegraphics[width=0.8\textwidth]{../media/fla_portal_screenshots/login_screen}
-\end{center}
 
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
+	\paragraph{  }
+The FLA Portal will require the operator to login, using the username and password used when the operator created the account. Note that BOTH username and password are case-sensitive.
 Once logged in, the operator will be able to view data acquired from
 the assigned FLA.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth} 
+\includegraphics[width=0.8\textwidth]{../media/fla_portal_screenshots/login_screen}
+\end{minipage}
 
 
 \section{Using the FLA Portal}
@@ -1016,7 +1072,7 @@ This section contains any components that responded to a component
 Identification request. The VIN, Vehicle Odometer, and Engine Hours
 will also be displayed under Engine \#1 for the appropriate network.
 This section also contains the time records from the download, including vehicle time
-if available, and time of the last GPS Lock.
+if available, and time of the last GPS Lock. All time records are adjusted to the timezone indicated.
 
 \begin{center}
 \includegraphics[width=0.9\textwidth]{../media/fla_portal_screenshots/full_report/vehicle_info}
@@ -1638,7 +1694,7 @@ The operator can also view archived data with the button at the bottom. Note, th
 \paragraph{  }
 \begin{wrapfigure}{r}{0.3\linewidth}
 \centering
-\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/download_sha_button}
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/sha_sums}
 \end{wrapfigure}
 Under each report, the user can download the SHA256 Sums file.
 This file contains the SHA 256 sums of all of the files the FLA generated at the time of the download. These sums are cryptographic fingerprints of the files that can be used to determine if the file has changed since the FLA created the file. The user can save this file to perform verification of integrity of data obtained. For more information about SHA256 sums, refer to section~\ref{subsec:using_shas}.
@@ -1681,21 +1737,29 @@ administrator. For example, the Lieutenant in charge of the crash
 reconstruction division will become the site administrator once he
 or she registers by following the link sent in the invitation e-mail.
 
-\begin{figure}[h]
-\includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot}
-
-\caption{\label{fig:Example-FLA-Account-overview}Example Forensic Link Adapter
-Portal web page for the Account overview}
-\end{figure}
-
-
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
 Once logged in as a Site Administrator, an account overview page will
-be available, much like the one shown in Figure \ref{fig:Example-FLA-Account-overview}.
+be available, much like the one shown to the right.
 Many of the fields on the web page are linked to various functions.
 The top bar (in black) has links to your default login page, the latest
 FLA download if you are an operator, a list of all the organizations,
 FLAs, and some account access settings. The web page is set up in
-three distinct tables as seen in Figure \ref{fig:Example-FLA-Account-overview}.
+three distinct tables as seen to the right.
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.50\textwidth} 
+	% \includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+	\includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot}
+\end{minipage}
+
+% \begin{figure}[h]
+% \includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalAccountOverviewScreenShot}
+
+% \caption{\label{fig:Example-FLA-Account-overview}Example Forensic Link Adapter
+% Portal web page for the Account overview}
+% \end{figure}
+
+
 \begin{enumerate}
 \item Organization Groups
 \item FLA Operators
@@ -1709,24 +1773,19 @@ up groups and operators according to the desired structure of the
 Organization. You can have operators that have access to more than
 one group.
 
-\begin{figure}[h]
-\includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot}
-
-\caption{\label{fig:Example-Group-Details}Example Group Details web page from
-the Forensic Link Adapter Portal.}
-\end{figure}
 
 
 
 \subsection{Adding an Operator}
 
+\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
 There are two ways to get an operator access to the group's FLAs.
 The first is to invite a new operator and the second is to invite
 an existing operator. However, the existing operator must have accepted
 an invitation from the Organization under a unique e-mail address.
 By clicking on the lower left box the says \textsf{Invite new operator}
-shown in \ref{fig:Example-Group-Details}, a web page similar to
-the one shown in \ref{fig:New-Operator-invitation}. The required
+shown on top to the right, a web page similar to
+the one shown on bottom to the right. The required
 user information includes name and email address. The FLA portal uses
 e-mail addresses to identify operators. Therefore, if a person belongs
 to different organizations, they would have to use a different e-mail
@@ -1736,15 +1795,13 @@ be filtered as junk, so advising the recipient to check their e-mail
 filters and junk folder may be necessary.
 
 The Work Address details on the Invite and operator page are used
-to fill in a report with 
-
-\begin{figure}[h]
-\includegraphics[height=.6\linewidth]{../media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot}
-
-\caption{\label{fig:New-Operator-invitation}New Operator invitation form on
-the FLA portal website.}
-\end{figure}
-
+to fill in a report with TODO...
+\end{minipage}% 
+\hfill% 
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[width=.8\textwidth]{../media/fla_portal_screenshots/FLAPortalFieldOperatorsScreenShot}\\[\baselineskip]
+    \includegraphics[height=1\linewidth]{../media/fla_portal_screenshots/FLAPortalInviteNewOperatorScreenShot}
+\end{minipage}
 
 
 \subsection{Assigning an FLA to the Group}
@@ -1753,13 +1810,6 @@ Each group needs to have at least one Forensic Link Adapter assigned
 to it. To assign an FLA to a group, click the button to see a list
 of available FLAs for your organization. Only people in the group
 can see the data on the FLA assigned to that group
-
-\begin{figure}[h]
-\includegraphics[width=1\textwidth]{../media/fla_portal_screenshots/FLAPortalAssignedFLASuccessScreenShot}
-
-\caption{Assigned FLAs}
-\end{figure}
-
 
 
 \chapter{Suggested Practices}
@@ -1802,106 +1852,6 @@ display a message indicating the work is finished.
 button to return the FLA to normal operational mode.
 \end{enumerate}
 
-\section{Installing PC Software}
-
-
-\subsection{RP 1210 Drivers}
-
-The FLA can operate as an RP1210 device. This is used for connecting
-OEM software to ECMs. A computer does not need the RP 1210 drivers
-to access the FLA Preview, and the FLA Portal. You will need administrative
-privileges to install these drivers.
-
-To install the RP1210 Drivers, follow these steps
-\begin{enumerate}
-\item Connect to the FLA Preview described in the above section (Either In-Field,
-or In-Office methods will work)
-\item Select the Download Drivers option from the menu at the top of the
-web page
-\item Select ``Download Drivers''
-\item Once the file is downloaded, extract the .zip file to a folder
-\item Open the folder, and double-click ``DPA4Plus\_RP1210.exe''
-\item Follow the on-screen instructions to install the drivers
-\end{enumerate}
-After the drivers are installed, they can be tested with the following
-steps
-\begin{enumerate}
-\item Make sure the FLA is powered on, and connected to an ECM (It is possible
-to test the drivers without a live ECM, to do so see the special instructions)
-
-\begin{enumerate}
-\item Skip steps 2,3,and 4 if not connected to a live ECM
-\item Begin a scan on the vehicle
-\item After the scan has completed and you see the "Enable
-RP1210 Mode" screen
-\item Confirm the top line of the FLA read "CAN/J1939 Pass
-Mode."
-\item Search on your computer for the program "Adapter Validation
-Tool" and run it
-\item Select "MD/HD"
-\item Set the Vendor to "DG1210xx - Dearborn Group RP1210"
-(the xx will likely be 32)
-\item Set the Device to "DG DPA 4 Plus USB"
-\end{enumerate}
-
-\begin{enumerate}
-\item Skip to step 14 if the ECM does not support J1939
-\end{enumerate}
-\item Set Protocol to "J1939"
-\item plug the USB cable into the FLA and the computer
-\item Click "Run Test"
-\item The text boxes labeled "RP1210 Status Window (PC-VDA)"
-and "RP1210 Data Message Window (VDA-Vehicle)"
-should turn green
-
-\begin{enumerate}
-\item If you are not connected to a live ECM, the "RP1210
-Data Message Window" will turn red as there are no messages
-\end{enumerate}
-\item A text box will appear and will describe the results of the test.
-\item Click "Quit" on the pop-up window titled
-"Test Results Discussion"
-
-\begin{enumerate}
-\item If the ECM does not support J1708, the test is complete.If it does,
-continue
-\end{enumerate}\label{enu:J1708-pass-mode}
-\item Change the protocol to J1708
-\item On the FLA click the Green button to enable J1708 passthrough
-\item Confirm the top line of the FLA read "J1708 Pass Mode
-for"
-\item Click "Run Test"
-\item A text box will appear and will describe the results of the test
-\item Click "Quit" on the pop-up window titled
-"Test Results Discussion"
-\item Close out of the adapter validation test
-\end{enumerate}
-
-\section{Performing a download on a Heavy Vehicle}
-
-This section provides a very high level overview of a typical download.
-\begin{enumerate}
-\item Plug in the FLA to the 9-Pin Diagnostics Connector
-\item Turn on the ignition key to run
-\item Run a vehicle Scan
-\item Download Supported Data (if available)
-\item Enable RP1210 Mode (Optional depending on the ECM and user's procedure)
-
-\begin{enumerate}
-\item Connect the USB Cable
-\item Run OEM Software
-\end{enumerate}
-\item Verify the data collected via the FLA Preview
-
-\begin{enumerate}
-\item If desired, repeat steps 3-6 until satisfied
-\end{enumerate}
-\item Shutdown the FLA
-\item Reach a location that has a working Ethernet port
-\item Connect the FLA to the Internet
-\item Upload the data from the field
-\item View the full report on the FLA Portal
-\end{enumerate}
 
 \section{Connecting to Engine Control Modules on a Bench}
 
@@ -2199,7 +2149,7 @@ If you need to extend an extending an FLA subscription, or are interested in pur
 \paragraph{  }
 While we strive to provide the highest quality products, if you have
 an issue with our products and need to contact us, please send an
-email to \textbackslash{}email\{support@synercontechnologies.com\}.
+email to \href{mailto:support@synercontechnologies.com}{\nolinkurl{support@synercontechnologies.com}}.
 
 When requesting support, please include the following:
 
