@@ -946,8 +946,8 @@ When the FLA is being used in the field, the DHCP service may be turned on. This
 \chapter{The FLA Preview}\label{sec:fla_preview}
 \paragraph{  }
 The FLA Preview is a website that each FLA hosts. This allows operators
-to interact with the FLA in ways the front panel is not able to
-support, such as previewing reports.
+to verify data they aquire in the field. No internet connection is required to
+view the FLA Preview.
 
 
 \section{Accessing the FLA Preview}
@@ -973,8 +973,7 @@ This will load the FLA Preview main page, shown below.
 \includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/main_page}
 \end{center}
 \paragraph{  }
-This page provides an overview of the current status of the device. The ``At a glance section'' will display the number of pending data packages, that is the number of data packages that have been downloaded to the FLA but not yet uploaded to the FLA Portal, and if there is a download
-in progress.
+This page provides an overview of the current status of the device. The ``Pending Data Packages'' section will display all data packages that have not been uploaded to the FLA Portal. Each line provides a brief description of the package. Clicking on a row will display a detailed preview of that data package. The ``Device Information'' section will display information related to the status of the device. Free space and vehicle voltage are live values that are updated every second. The ``GPS Information '' section will display information about the current GPS fix the FLA has. All values in this section are live and updated every second.
 
 
 \section{Using the FLA Preview}
@@ -984,59 +983,38 @@ The FLA Preview has many uses, including allowing operators to preview data in t
 
 \subsection{View Local Data}
 \paragraph{  }
-Under the View Local Data page, the operator is able to view data
-on the FLA. There are two sections to local data, Pending Uploads,
-and Archived Data. Pending Uploads will show any data packages that
-are ready to be uploaded to the FLA Portal.
+Under the Home page, the operator is able to view pending data
+on the FLA. Pending packages are data packages that have not been uploaded to the FLA Portal. Archived Data Packages are data packages
+that have been uploaded. The FLA never deletes data packages, so at any point an operator can view old data packages.
 \begin{center}
 \includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/local_data}
 \end{center}
 
-This page will give an overview of each pending data package. The value in the
-OEM data column will be YES if the FLA was able to recover OEM
-data for that download, and NO if the FLA could not. The yellow Archive button will
-remove the data package from being uploaded, and move it to the archived section. If an archive is unintentionally archived, the FLA will have to be serviced to retrieve the data. For more information about servicing the FLA, see the Service section.
+This section will give an overview of each pending data package. The value in the
+OEM data column will be a check if the FLA was able to recover OEM
+data for that download, and a warning sign if the FLA could not.
 \paragraph{  }
-When a download is in progress, the row for that entry will indicate the download is in progress, and will not provide the ``View Data'' button. Once the user finishes the download, the operator can refresh the page, and will see the ``View Data'' button. For more information about when a download is finished, and how to perform a download, refer to the Field Guide.
+When a download is in progress, the row for that entry will indicate the download is in progress, and will not be clickable. Once the user finishes the download, the operator can refresh the page, and be able to click the row. For more information about when a download is finished, and how to perform a download, refer to the Field Guide.
 \paragraph{  }
-Selecting the ``View Data'' will provide the user with a preview of the report. This preview includes all of the standards-based information, the components found, and any identification information, as well as any in-field non-standards-based previews. Non-standards-based information is any data that is provided by OEM software, such as DDEC reports' XTR files, and CAT Snapshots. The operator will get a preview of this data here in accordance with the type of ECM being analyzed. The full reports will be available through the FLA Portal when the operator uploads the data. Typically, the following will be available:
+Clicking the row will provide the user with a preview of the report. This preview includes all of the standards-based information, the components found, and any identification information, as well as any in-field non-standards-based previews. Non-standards-based information is any data that is provided by OEM software, such as DDEC reports' XTR files, and CAT Snapshots. The operator will get a preview of this data here in accordance with the type of ECM being analyzed. The full reports will be available through the FLA Portal when the operator uploads the data. Typically, the following will be available:
 \\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
-	\begin{center} 
-		\textbf{Preview of DDEC ECMs}\\[\baselineskip] 
-	\end{center} 
-	If non-standards-based data is collected from a DDEC ECM, an XTR file will be available for download.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/xtr_download}
-\end{minipage}\\[\baselineskip]
-\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs 
-	\begin{center} 
-		\textbf{Preview of CAT ECMs}\\[\baselineskip] 
-	\end{center}
-	If non-standards-based data is collected from a CAT ECM, a CSV file will be available containing 5 frames around the trigger for any quick stop records.
-\end{minipage}% 
-\hfill% 
-\begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/csv_download}
-\end{minipage}
-\\[\baselineskip]
+\begin{center}
+	\includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/event_graph}
+\end{center}
+
 \paragraph{  }
-The preview will also contain a SHA 256 Sums file for the operator
+The preview will also contain a list of the SHA 256 Sums the operator
 to download. This file contains the SHA 256 sums of all data files
-the FLA has created. The operator can download this file, and confirm
+the FLA has created. The operator can download all files individually, and confirm
 the data uploaded to the FLA Portal was the same data the FLA created.
-For more information on SHA 256 sums, as well as recommended use,
-see the SHA 256 sums of suggested practices.
 \paragraph{  }
-The operator can also click on the ``Archived Data'' button on the
-View Local Data page to view data packages that were archived. Data
+The operator can also navigate to ``Archived Data Packages''
+ to view data packages that were archived. Data
 packages that are uploaded to the FLA Portal are automatically archived.
 From here the user can access all of the same downloads and information
 as when the data package was pending uploading. Meaning, once the
-data is uploaded, the user can still download XTR, CSV, or SHA 256
-Sum files, as well as any standards-based data acquired. If the FLA
+data is uploaded, the user can still download files and see SHA 256
+Sums. If the FLA
 has a large number of archived data packages, the archived page may
 take several moments to load.
 \begin{center}
@@ -1716,7 +1694,7 @@ The operator can also view archived data with the button at the bottom. Note, th
 \paragraph{  }
 \begin{wrapfigure}{r}{0.3\linewidth}
 \centering
-\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/download_sha_button}
+\includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/sha_sums}
 \end{wrapfigure}
 Under each report, the user can download the SHA256 Sums file.
 This file contains the SHA 256 sums of all of the files the FLA generated at the time of the download. These sums are cryptographic fingerprints of the files that can be used to determine if the file has changed since the FLA created the file. The user can save this file to perform verification of integrity of data obtained. For more information about SHA256 sums, refer to section~\ref{subsec:using_shas}.
