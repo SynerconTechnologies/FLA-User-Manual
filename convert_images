@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd media_original
+find . -iname \*.png -exec convert -verbose -background white -flatten -resize x720 "{}" "../media/{}.jpg" \;
+
+cd fla_screens
+find . -iname \*.png -exec convert -verbose -background white -flatten -resize x480 "{}" "../../media/fla_screens/{}.jpg" \;
+
+
+cd ../../media
+find . -iname \*.png.jpg -type f -exec bash -c 'mv "$1" "${1/.png/}"' -- {} \;
+find . -iname \*.png -type f -exec bash -c 'rm "$1"' -- {} \;
+
+cd ..
+
