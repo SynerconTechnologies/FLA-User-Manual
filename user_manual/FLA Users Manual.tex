@@ -1224,6 +1224,7 @@ If the ECM being downloaded is not supported by the FLA, please ensure a compute
 
 \chapter{Downloading ECMs With the FLA}
 \paragraph{  }
+\section{Basic Procedure}
 Downloading ECMs will require the FLA, the vehicle to download or the ECMs and a Smart Sensor Simulator, and permission to perform the download.
 \\
 These are the general steps to perform a download. Some screens may be different depending on the type of ECM being downloaded.
@@ -1317,6 +1318,49 @@ If the ECM is not supported, please see chapter \ref{chap:oem_software} to extra
 \begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/get_ecm_specific}
 \end{minipage}
+
+\section{Connecting to Engine Control Modules on a Bench}
+
+When performing bench downloads, it is recommended to use a Smart
+Sensor Simulator to minimize the chance of throwing additional faults
+as compared to a traditional calibration harness. For more information
+about Smart Sensor Simulators, visit \url{synercontechnologies.com}.
+Once connected, use the FLA in accordance to the recommended practices
+outlined in the Field Guide and accompanying Quick Start guides.
+
+The following are typical steps taken during a download.
+\begin{enumerate}
+\item Confirm the correct SSS is being used for the ECM
+\item Connect the SSS to the ECM
+\item Connect power to the SSS via the included power adapter
+\item Press the Key Switch until the Key On lamp is illuminated, about two
+seconds
+\item Verify the Key On lamp stays illuminated for one second before proceeding.
+If not, refer to the troubleshooting section
+\item Plug in the FLA to the 9-Pin Diagnostics Connector located on the
+SSS
+\item Run a vehicle Scan
+\item Download Supported Data (if available)
+\item Enable RP1210 Mode (Optional depending on the ECM and user's procedure)
+
+\begin{enumerate}
+\item Connect the USB Cable
+\item Run OEM Software
+\end{enumerate}
+\item Verify the data collected via the FLA Preview
+
+\begin{enumerate}
+\item If desired, repeat steps 3-6 until satisfied
+\item Skip to step 13 if there is a working Ethernet port where the bench
+download is occurring
+\end{enumerate}
+\item Shutdown the FLA
+\item Reach a location that has a working Ethernet port
+\item Connect the FLA to the Internet
+\item Upload the data from the field
+\item View the full report on the FLA Portal
+\end{enumerate}
+
 
 \section{Supported ECMs}
 \paragraph{  }
@@ -1872,49 +1916,6 @@ display a message indicating the work is finished.
 \item The FLA will automatically reboot.
 \item After the device loads the Title Screen, then click the ``Close Support''
 button to return the FLA to normal operational mode.
-\end{enumerate}
-
-
-\section{Connecting to Engine Control Modules on a Bench}
-
-When performing bench downloads, it is recommended to use a Smart
-Sensor Simulator to minimize the chance of throwing additional faults
-as compared to a traditional calibration harness. For more information
-about Smart Sensor Simulators, visit \textbackslash{}url\{synercontechnologies.com\}.
-Once connected, use the FLA in accordance to the recommended practices
-outlined in the Field Guide and accompanying Quick Start guides.
-
-The following are typical steps taken during a download.
-\begin{enumerate}
-\item Confirm the correct SSS is being used for the ECM
-\item Connect the SSS to the ECM
-\item Connect power to the SSS via the included power adapter
-\item Press the Key Switch until the Key On lamp is illuminated, about two
-seconds
-\item Verify the Key On lamp stays illuminated for one second before proceeding.
-If not, refer to the troubleshooting section
-\item Plug in the FLA to the 9-Pin Diagnostics Connector located on the
-SSS
-\item Run a vehicle Scan
-\item Download Supported Data (if available)
-\item Enable RP1210 Mode (Optional depending on the ECM and user's procedure)
-
-\begin{enumerate}
-\item Connect the USB Cable
-\item Run OEM Software
-\end{enumerate}
-\item Verify the data collected via the FLA Preview
-
-\begin{enumerate}
-\item If desired, repeat steps 3-6 until satisfied
-\item Skip to step 13 if there is a working Ethernet port where the bench
-download is occurring
-\end{enumerate}
-\item Shutdown the FLA
-\item Reach a location that has a working Ethernet port
-\item Connect the FLA to the Internet
-\item Upload the data from the field
-\item View the full report on the FLA Portal
 \end{enumerate}
 
 
