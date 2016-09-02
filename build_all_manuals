@@ -17,18 +17,8 @@ build
 cd ..
 
 
-cd ./quick_references
+cd ./quick_reference
 
-cd ./cat_download
 build
-cd ..
-
-cd ./cummins
-build
-cd ..
-
-cd ./ddec_download
-build
-cd ..
 
 cd ..
