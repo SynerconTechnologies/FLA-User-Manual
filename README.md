@@ -20,21 +20,25 @@ make```
 
 To clean up the extra latex files:
 ```Bash
-make clean```
+make clean
+```
 
 Do not run the makefiles inside the directories, to only build the manual:
 ```Bash
-make user_manual```
+make user_manual
+```
 
 To only build the quick reference:
 ```Bash
-make quick_reference```
+make quick_reference
+```
 
 ## Directory structure ##
 All media needs to be placed in media_src as a png. If adding a new directory to this file, update the makefile to include it.
 If changes are made to the media folders, simply delete the media/ directory and re-compile it using the makefile:
 ```Bash
-make media```
+make media
+```
 This is a dependancy of all, so no need to do this if you wish to compile the entire manual.
 
 ## Make all ##
