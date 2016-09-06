@@ -33,7 +33,7 @@ all: media
 	make -C $(MANUAL_DIR)
 	make -C $(QUICK_DIR)
 	mkdir -p 'FLA Manuals'
-	cp $(MANUAL_DIR)/*.pdf FLA\ Manuals/FLA\ User\ Manual.pdf
+	cp $(MANUAL_DIR)/user_manual.pdf FLA\ Manuals/FLA\ User\ Manual.pdf
 	cp $(QUICK_DIR)/*.pdf FLA\ Manuals/FLA\ Quick\ Reference.pdf
 	zip -vr ./FLA\ Manuals.zip FLA\ Manuals
 	rm -r 'FLA Manuals'
