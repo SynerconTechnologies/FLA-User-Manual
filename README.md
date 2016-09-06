@@ -16,7 +16,8 @@ To build the user manual, you will need latex. It is recommended to use the make
 
 ## Building the manual ##
 ```Bash
-make```
+make
+```
 
 To clean up the extra latex files:
 ```Bash
