@@ -1,5 +1,0 @@
-#!/bin/bash
-
-
-find . -iname \*.png -exec convert -verbose -resize x720 "{}" "../media/{}.jpg" \;
-find . -iname \*.png.jpg -type f -exec bash -c 'mv "$1" "${1/\.png//}"' -- {} \;

@@ -5,20 +5,8 @@ CALL :build
 cd ..
 
 
-cd .\quick_references
-
-cd .\cat_download
+cd .\quick_reference
 CALL :build
-cd ..
-
-cd .\cummins
-CALL :build
-cd ..
-
-cd .\ddec_download
-CALL :build
-cd ..
-
 cd ..
 
 

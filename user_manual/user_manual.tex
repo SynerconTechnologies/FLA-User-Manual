@@ -996,14 +996,14 @@ data for that download, and a warning sign if the FLA could not.
 \paragraph{  }
 When a download is in progress, the row for that entry will indicate the download is in progress, and will not be clickable. Once the user finishes the download, the operator can refresh the page, and be able to click the row. For more information about when a download is finished, and how to perform a download, refer to the Field Guide.
 \paragraph{  }
-Clicking the row will provide the user with a preview of the report. This preview includes all of the standards-based information, the components found, and any identification information, as well as any in-field non-standards-based previews. Non-standards-based information is any data that is provided by OEM software, such as DDEC reports' XTR files, and CAT Snapshots. The operator will get a preview of this data here in accordance with the type of ECM being analyzed. The full reports will be available through the FLA Portal when the operator uploads the data. Typically, the following will be available:
+Clicking the row will provide the user with a preview of the report. This preview includes all of the standards-based information, the components found, and any identification information, as well as any in-field non-standards-based previews. Non-standards-based information is any data that is provided by OEM software, such as DDEC reports' XTR files, and CAT Snapshots. The operator will get a preview of this data here in accordance with the type of ECM being analyzed. The full reports will be available through the FLA Portal when the operator uploads the data. On supported ECMs, a graph of speed records similar to the following will be available:
 \\[\baselineskip]
 \begin{center}
 	\includegraphics[width=.9\linewidth]{../media/fla_preview_screenshots/event_graph}
 \end{center}
 
 \paragraph{  }
-The preview will also contain a list of the SHA 256 Sums the operator
+The preview will also contain a list of the SHA 256 sums for the operator
 to download. This file contains the SHA 256 sums of all data files
 the FLA has created. The operator can download all files individually, and confirm
 the data uploaded to the FLA Portal was the same data the FLA created.
@@ -1314,6 +1314,10 @@ The FLA can obtain additional information from the following ECMs
 \item Some DDEC VI
 \item Some VCU/PLD
 \end{itemize}
+\item PACCAR
+  \begin{itemize}
+  \item{PACCAR MX}
+  \end{itemize}
 \end{itemize}
 
 \section{Connecting to Engine Control Modules on a Bench}
