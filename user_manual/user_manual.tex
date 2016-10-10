@@ -1,5 +1,3 @@
-%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
 \documentclass[11pt, oneside]{book}
 %\usepackage{mathpazo}
 %\usepackage{helvet}
@@ -9,12 +7,13 @@
 \pagestyle{headings}
 %\setcounter{secnumdepth}{3}
 %\setcounter{tocdepth}{3}
-%\setlength{\parskip}{\medskipamount}
-%\setlength{\parindent}{0pt}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
 %\usepackage{color}
 %\usepackage{babel}
-%\usepackage{varioref}
+\usepackage{varioref}
 %\usepackage{textcomp}
+\usepackage{float}
 \usepackage{makeidx}
 %\makeindex
 %\usepackage{graphicx}
@@ -59,27 +58,21 @@
 \usepackage{fancyhdr}
 \usepackage{wrapfig}
 
-% \AtBeginDocument{
-%  \def\labelitemiii{\(\circ\)}
-%  \def\labelitemiv{\(\diamond\)}
-%}
-%
-%\makeatother
 
 \newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
 	\centering % Center all text
 	\vspace*{\baselineskip} % White space at the top of the page 
 	\begin{figure}[tbph] 
 		\centering 
-		\includegraphics[width=0.15\linewidth]{../media/logos/synercon_logo_v3_only}
+		\includegraphics[width=0.25\linewidth]{../media/logos/synercon_logo_v3_only}
 		\label{fig:logo}
 	\end{figure}
 	\vspace{4cm}
 	{\Huge \textbf{Forensic Link Adapter Users Manual}}\\[2\baselineskip] % Title
 	{\Huge Synercon Technologies LLC}\\[2\baselineskip]
-	{\Large For Software Version 1.3}
+	{\Large for Software Version 1.3}
 	\vfill % Whitespace between editor names and publisher logo
-	\textcopyright {\scshape 2016 v  } \\[0.3\baselineskip] % Year 
+	\textcopyright {\scshape 2016} \\[0.3\baselineskip] % Year 
 	\begin{center}
 		Synercon Technologies LLC
 	\end{center}
@@ -174,62 +167,73 @@ It is suggested that operators examine this document entirely before using
 the FLA to help ensure that they can get the most out of using the FLA.
 
 
-\part{Introduction to Synercon Products}
+\part{Introduction to Synercon Technologies Products}
 
 
-\chapter{Synercon Products}
-\paragraph{  }
-There are four main Synercon Technologies products.
-They will be referred to in the rest of this manual, so readers
-are advised to familiarize themselves with these components to better understand the rest of this manual.
-\paragraph{  }
-The 4 Synercon products are
+\chapter{Synercon Technologies Products}
+Synercon Technologies produces the following hardware and software solutions for digital forensics:
 \begin{itemize}
-\item The Forensic Link Adapter (FLA)
-\item The FLA Preview Website
-\item The FLA Portal Website
-\item The Smart Sensor Simulator (SSS)
+	\item Forensic Link Adapter (FLA)
+	\item TruckCRYPT Software System
+	\begin{itemize}
+		\item Data Extraction Algorithms
+		\item FLA Preview Website
+		\item FLA Portal Website
+	\end{itemize}
+	\item Smart Sensor Simulator (SSS)
 \end{itemize}
-\paragraph{  }
 All of these products work together to create an easy, secure system to extract digital forensic data from heavy vehicles.
-Furthermore, operators can use the FLA as an RP1210 compliang interface to allow the use manufacturers' software.
+Furthermore, operators can use the FLA as an RP1210 compliant interface to allow the use manufacturers' software.
+\begin{figure}[H]
 \begin{center}
-	\includegraphics[width=.9\linewidth]{../media/syercon_synergisics/single_laptop}
+\includegraphics[width=.9\linewidth]{../media/syercon_synergisics/single_laptop}
 \end{center}
-\newpage
+\caption{\label{CompleteSystem}The Synercon Technologies Systems connected and communicating with a Caterpillar ADEM III ECU. The Smart Sensor Simulator provides a fault free communications system. The FLA plugs into the SSS to download the data and uploads encrypted forensic data to a server so users can see the information through a web interface.}
+\end{figure}
+%%\newpage
+
 \section{The Forensic Link Adapter (FLA)}
-\vspace{1cm}
-\paragraph{  }
-The FLA is the device used to extract data from heavy vehicle electronic control units (ECUs) or electronic control modules (ECMs) by communicating with those units over the vehicle network. The FLA is designed to extract data from ECUs in a forensically secure way. It uses the SAE J1939 and SAE J1708/J1587 standard protocols to communicate with ECMs. The FLA can extract data from ECMs by itself for select ECMs, meaning there is no need to carry a computer with manufacturer's software to obtain data. For ECMs that the FLA cannot directly support, the FLA can be an RP1210-compliant diagnostic connector. This allows the operator to use RP1210 compliant software to collect data through the FLA.
-\vspace{1cm}
-\begin{center}
+%%\vspace{1cm}
+%%\paragraph{  }
+The FLA is the device used to extract data from heavy vehicle electronic control units (ECUs) or electronic control modules (ECMs) by communicating with those units over the vehicle network. The FLA is designed to extract data from ECUs in a forensically secure way. It uses the SAE J1939 and SAE J1708/J1587 standard protocols to communicate with ECMs. The FLA can extract data from ECMs by itself for select ECMs, meaning there is no need to carry a computer with manufacturer's software to obtain data. For ECMs that the FLA cannot directly support, the FLA can be used as an RP1210-compliant diagnostic connector. This allows the operator to use RP1210 compliant software to collect data through the FLA.
+%%\vspace{1cm}
+
+\begin{figure}[H] \begin{center}
+	\vspace*{0.5cm}
 	\includegraphics[width=.9\linewidth]{../media/fla_angled/fla_angle_1}
-\end{center}
-\vspace{1cm}
-\paragraph{  }
+	\vspace*{0.5cm}
+	\caption{\label{fla_angled_1} The Forensic Link Adapter }
+\end{center} \end{figure}
+%%\vspace{1cm}
+%%\paragraph{  }
+
+
 FLA Features
 \begin{itemize}
-\item Forensically secure data collection
-\item Stand alone data collection for select ECMs
-\item Easy to read OLED screen
-\item Simple and durable two button interface
-\item Built in GPS antenna
-\item Easy software updates over the Internet
+	\item Forensically secure data collection
+	\item Stand alone data collection for select ECMs
+	\item Easy to read OLED screen
+	\item Simple and durable two button interface
+	\item Built in GPS antenna
+	\item Easy software updates over the Internet
 \end{itemize}
-\newpage
+%%\newpage
 
 
 \section{The FLA Preview Website}
-\vspace{1cm}
-\paragraph{  }
+%%\vspace{1cm}
+%%\paragraph{  }
 The FLA Preview provides an expanded interface to the FLA while out in the field. The FLA Preview is used to preview reports while in the field to confirm the operator has the data they wish to obtain. The FLA Preview is a website hosted by each FLA. It is accessed by
 entering the IP address of the FLA into a web browser.
+
 The FLA Preview can be accessed without an Internet connection, though the computer on which the FLA Preview site is accessed must be on the same Local Area Network (LAN) as the FLA.
-\vspace{1cm}
+%%\vspace{1cm}
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/main_page}
 \end{center}
-\vspace{1cm}
+\end{figure}
+%%\vspace{1cm}
 FLA Preview Features
 \begin{itemize}
 \item Ability to preview ECM data in field
@@ -240,9 +244,9 @@ FLA Preview Features
 
 \section{The FLA Portal Website}
 \vspace{1cm}
-The FLA Portal Webiste is hosted on Synercon Technologies' servers. It is accessed by the uniform resource locator (URL)  \url{https://fla.synercontechnologies.com}.
-Data collected with the FLA is uploaded to this web site service so it can be preserved, verified, and displayed. Operators can veiw and print
-view full Forensic  Link Adapter reports from the FLA Portal Website.
+The FLA Portal Website is hosted on Synercon Technologies' servers. It is accessed by the uniform resource locator (URL)  \url{https://fla.synercontechnologies.com}.
+Data collected with the FLA is securely uploaded to this web site service so it can be preserved, verified, and displayed. Operators can veiw and print
+view full Forensic  Link Adapter reports from the FLA Portal Website. Users access the FLA Portal after signing up for a secure account 
 \vspace{1cm}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../media/fla_portal_screenshots/user_landing_page}
