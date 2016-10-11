@@ -1,5 +1,3 @@
-%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
 \documentclass[11pt, oneside]{book}
 %\usepackage{mathpazo}
 %\usepackage{helvet}
@@ -9,12 +7,13 @@
 \pagestyle{headings}
 %\setcounter{secnumdepth}{3}
 %\setcounter{tocdepth}{3}
-%\setlength{\parskip}{\medskipamount}
-%\setlength{\parindent}{0pt}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
 %\usepackage{color}
 %\usepackage{babel}
-%\usepackage{varioref}
+\usepackage{varioref}
 %\usepackage{textcomp}
+\usepackage{float}
 \usepackage{makeidx}
 %\makeindex
 %\usepackage{graphicx}
@@ -59,27 +58,21 @@
 \usepackage{fancyhdr}
 \usepackage{wrapfig}
 
-% \AtBeginDocument{
-%  \def\labelitemiii{\(\circ\)}
-%  \def\labelitemiv{\(\diamond\)}
-%}
-%
-%\makeatother
 
 \newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
 	\centering % Center all text
 	\vspace*{\baselineskip} % White space at the top of the page 
 	\begin{figure}[tbph] 
 		\centering 
-		\includegraphics[width=0.15\linewidth]{../media/logos/synercon_logo_v3_only}
+		\includegraphics[width=0.25\linewidth]{../media/logos/synercon_logo_v3_only}
 		\label{fig:logo}
 	\end{figure}
 	\vspace{4cm}
 	{\Huge \textbf{Forensic Link Adapter Users Manual}}\\[2\baselineskip] % Title
 	{\Huge Synercon Technologies LLC}\\[2\baselineskip]
-	{\Large For Software Version 1.3}
+	{\Large for Software Version 1.3}
 	\vfill % Whitespace between editor names and publisher logo
-	\textcopyright {\scshape 2016 v  } \\[0.3\baselineskip] % Year 
+	\textcopyright {\scshape 2016} \\[0.3\baselineskip] % Year 
 	\begin{center}
 		Synercon Technologies LLC
 	\end{center}
@@ -174,62 +167,73 @@ It is suggested that operators examine this document entirely before using
 the FLA to help ensure that they can get the most out of using the FLA.
 
 
-\part{Introduction to Synercon Products}
+\part{Introduction to Synercon Technologies Products}
 
 
-\chapter{Synercon Products}
-\paragraph{  }
-There are four main Synercon Technologies products.
-They will be referred to in the rest of this manual, so readers
-are advised to familiarize themselves with these components to better understand the rest of this manual.
-\paragraph{  }
-The 4 Synercon products are
+\chapter{Synercon Technologies Products}
+Synercon Technologies produces the following hardware and software solutions for digital forensics:
 \begin{itemize}
-\item The Forensic Link Adapter (FLA)
-\item The FLA Preview Website
-\item The FLA Portal Website
-\item The Smart Sensor Simulator (SSS)
+	\item Forensic Link Adapter (FLA)
+	\item TruckCRYPT Software System
+	\begin{itemize}
+		\item Data Extraction Algorithms
+		\item FLA Preview Website
+		\item FLA Portal Website
+	\end{itemize}
+	\item Smart Sensor Simulator (SSS)
 \end{itemize}
-\paragraph{  }
 All of these products work together to create an easy, secure system to extract digital forensic data from heavy vehicles.
-Furthermore, operators can use the FLA as an RP1210 compliang interface to allow the use manufacturers' software.
+Furthermore, operators can use the FLA as an RP1210 compliant interface to allow the use manufacturers' software.
+\begin{figure}[H]
 \begin{center}
-	\includegraphics[width=.9\linewidth]{../media/syercon_synergisics/single_laptop}
+\includegraphics[width=.9\linewidth]{../media/syercon_synergisics/single_laptop}
 \end{center}
-\newpage
+\caption{\label{CompleteSystem}The Synercon Technologies Systems connected and communicating with a Caterpillar ADEM III ECU. The Smart Sensor Simulator provides a fault free communications system. The FLA plugs into the SSS to download the data and uploads encrypted forensic data to a server so users can see the information through a web interface.}
+\end{figure}
+%%\newpage
+
 \section{The Forensic Link Adapter (FLA)}
-\vspace{1cm}
-\paragraph{  }
-The FLA is the device used to extract data from heavy vehicle electronic control units (ECUs) or electronic control modules (ECMs) by communicating with those units over the vehicle network. The FLA is designed to extract data from ECUs in a forensically secure way. It uses the SAE J1939 and SAE J1708/J1587 standard protocols to communicate with ECMs. The FLA can extract data from ECMs by itself for select ECMs, meaning there is no need to carry a computer with manufacturer's software to obtain data. For ECMs that the FLA cannot directly support, the FLA can be an RP1210-compliant diagnostic connector. This allows the operator to use RP1210 compliant software to collect data through the FLA.
-\vspace{1cm}
-\begin{center}
+%%\vspace{1cm}
+%%\paragraph{  }
+The FLA is the device used to extract data from heavy vehicle electronic control units (ECUs) or electronic control modules (ECMs) by communicating with those units over the vehicle network. The FLA is designed to extract data from ECUs in a forensically secure way. It uses the SAE J1939 and SAE J1708/J1587 standard protocols to communicate with ECMs. The FLA can extract data from ECMs by itself for select ECMs, meaning there is no need to carry a computer with manufacturer's software to obtain data. For ECMs that the FLA cannot directly support, the FLA can be used as an RP1210-compliant diagnostic connector. This allows the operator to use RP1210 compliant software to collect data through the FLA.
+%%\vspace{1cm}
+
+\begin{figure}[H] \begin{center}
+	\vspace*{0.5cm}
 	\includegraphics[width=.9\linewidth]{../media/fla_angled/fla_angle_1}
-\end{center}
-\vspace{1cm}
-\paragraph{  }
+	\vspace*{0.5cm}
+	\caption{\label{fla_angled_1} The Forensic Link Adapter }
+\end{center} \end{figure}
+%%\vspace{1cm}
+%%\paragraph{  }
+
+
 FLA Features
 \begin{itemize}
-\item Forensically secure data collection
-\item Stand alone data collection for select ECMs
-\item Easy to read OLED screen
-\item Simple and durable two button interface
-\item Built in GPS antenna
-\item Easy software updates over the Internet
+	\item Forensically secure data collection
+	\item Stand alone data collection for select ECMs
+	\item Easy to read OLED screen
+	\item Simple and durable two button interface
+	\item Built in GPS antenna
+	\item Easy software updates over the Internet
 \end{itemize}
-\newpage
+%%\newpage
 
 
 \section{The FLA Preview Website}
-\vspace{1cm}
-\paragraph{  }
+%%\vspace{1cm}
+%%\paragraph{  }
 The FLA Preview provides an expanded interface to the FLA while out in the field. The FLA Preview is used to preview reports while in the field to confirm the operator has the data they wish to obtain. The FLA Preview is a website hosted by each FLA. It is accessed by
 entering the IP address of the FLA into a web browser.
+
 The FLA Preview can be accessed without an Internet connection, though the computer on which the FLA Preview site is accessed must be on the same Local Area Network (LAN) as the FLA.
-\vspace{1cm}
+%%\vspace{1cm}
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=1\linewidth]{../media/fla_preview_screenshots/main_page}
 \end{center}
-\vspace{1cm}
+\end{figure}
+%%\vspace{1cm}
 FLA Preview Features
 \begin{itemize}
 \item Ability to preview ECM data in field
@@ -240,9 +244,9 @@ FLA Preview Features
 
 \section{The FLA Portal Website}
 \vspace{1cm}
-The FLA Portal Webiste is hosted on Synercon Technologies' servers. It is accessed by the uniform resource locator (URL)  \url{https://fla.synercontechnologies.com}.
-Data collected with the FLA is uploaded to this web site service so it can be preserved, verified, and displayed. Operators can veiw and print
-view full Forensic  Link Adapter reports from the FLA Portal Website.
+The FLA Portal Website is hosted on Synercon Technologies' servers. It is accessed by the uniform resource locator (URL)  \url{https://fla.synercontechnologies.com}.
+Data collected with the FLA is securely uploaded to this web site service so it can be preserved, verified, and displayed. Operators can veiw and print
+view full Forensic  Link Adapter reports from the FLA Portal Website. Users access the FLA Portal after signing up for a secure account 
 \vspace{1cm}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../media/fla_portal_screenshots/user_landing_page}
@@ -461,7 +465,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/02_shutdown_menu}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -473,7 +477,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/upload_data}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/03_upload_data_screen}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -483,7 +487,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/show_faults}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/04_view_active_faults}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -493,7 +497,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/gps} 
+	\includegraphics[width=\linewidth]{../media/pstricks_files/05_gps_screen} 
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -503,7 +507,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/06_system_configuration}
 \end{minipage}\\[\baselineskip]
 
 
@@ -518,7 +522,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/07_update_fla_software}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -528,7 +532,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_dissabled}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/08_change_ip_settings}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -539,7 +543,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/09_update_system_clock}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -549,7 +553,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/10_change_time_zone}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -559,7 +563,7 @@ the FLA will not allow the operator to initiate a vehicle scan if the FLA does n
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/mac} 
+	\includegraphics[width=\linewidth]{../media/pstricks_files/11_ethernet_mac}
 \end{minipage}\\[\baselineskip]
 
 
@@ -627,7 +631,7 @@ The FLA can accept power from both the wall adapter or 12v cigarette adapter and
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen}
 \end{minipage}\\[\baselineskip]
 \paragraph{  }
 When this screen appears, the device is ready to operate. If the device does not reach this screen in 60 seconds, see the troubleshooting section of this manual.
@@ -649,7 +653,7 @@ Failure to shut down the FLA correctly can cause loss of data. To shutdown the F
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/02_shutdown_menu}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -659,7 +663,7 @@ Failure to shut down the FLA correctly can cause loss of data. To shutdown the F
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_confirm}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/02_shutdown_confirm}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -669,7 +673,7 @@ Failure to shut down the FLA correctly can cause loss of data. To shutdown the F
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_in_progress} 
+	\includegraphics[width=\linewidth]{../media/pstricks_files/02_shutdown_in_progress}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -679,7 +683,7 @@ Failure to shut down the FLA correctly can cause loss of data. To shutdown the F
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/shutdown_complete}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/02_shutdown_complete}
 \end{minipage}\\[\baselineskip]
 
 \subsection{Connect the FLA to the Internet}\label{subsec:internet_connect}
@@ -711,7 +715,7 @@ To correct the FLA time, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf} 
+	\includegraphics[width=\linewidth]{../media/pstricks_files/06_system_configuration}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -721,7 +725,7 @@ To correct the FLA time, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/09_update_system_clock}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -731,7 +735,7 @@ To correct the FLA time, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_time_recieved}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/09_update_system_clock_received}
 \end{minipage}\\
 
 
@@ -748,7 +752,7 @@ To set the system timezone, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/06_system_configuration}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -758,7 +762,7 @@ To set the system timezone, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone} 
+	\includegraphics[width=\linewidth]{../media/pstricks_files/10_change_time_zone}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -768,7 +772,7 @@ To set the system timezone, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/change_timezone_select}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/10_change_time_zone_select}
 \end{minipage}\\
 
 
@@ -788,7 +792,7 @@ To perform an update, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -798,7 +802,7 @@ To perform an update, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/06_system_configuration}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -808,7 +812,7 @@ To perform an update, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software} 
+	\includegraphics[width=\linewidth]{../media/pstricks_files/07_update_fla_software}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -818,7 +822,7 @@ To perform an update, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_confirm}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/07_update_confirm}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
@@ -828,21 +832,21 @@ To perform an update, follow these steps:
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_upgrading_apt}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/07_update_apt}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
-		\textbf{5}
+		\textbf{6}
 	\end{center}
 	When the FLA is finished updating, it will need to shutdown and be rebooted for the updates to be applied. Select ``Shutdown.''
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software_complete}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/07_update_complete}
 \end{minipage}\\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 	\begin{center}
-		\textbf{5}
+		\textbf{7}
 	\end{center}
 	After the FLA has completed the shutdown, unplug all sources of power, If the operator wishes to continue interacting with the device, wait 10 seconds before plugging in power.
 \end{minipage}% 
@@ -869,7 +873,7 @@ Scroll to the system configuration screen.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\includegraphics[width=\linewidth]{../media/pstricks_files/06_system_configuration}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -880,7 +884,7 @@ Scroll to the Change IP Settings screen, and select ``Enable.''
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_dissabled}
+\includegraphics[width=\linewidth]{../media/pstricks_files/08_change_ip_settings}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -891,7 +895,7 @@ Confirm the request.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_enabling}
+\includegraphics[width=\linewidth]{../media/pstricks_files/08_dhcp_warning}
 \end{minipage}
 \subsection{Turning DHCP OFF}\label{subsec:disable_dhcp}
 \paragraph{  }
@@ -905,7 +909,7 @@ Scroll to the system configuration screen.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\includegraphics[width=\linewidth]{../media/pstricks_files/06_system_configuration}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -916,7 +920,7 @@ Scroll to the Change IP Settings screen, and select ``Disable.''
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/dhcp_enabled}
+\includegraphics[width=\linewidth]{../media/pstricks_files/08_dhcp_server_enabled}
 \end{minipage}
 
 \chapter{Setting Up the FLA}
@@ -965,7 +969,7 @@ IP Address exactly as it appears on the IP Address line.
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_no_net}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_1_128_ip}
 \end{minipage}
 \\[\baselineskip]
 This will load the FLA Preview main page, shown below.
@@ -1162,7 +1166,7 @@ Once the device boots, scroll to the System Configuration screen.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/sys_conf}
+\includegraphics[width=\linewidth]{../media/pstricks_files/06_system_configuration}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -1173,7 +1177,7 @@ Enter the configuration sub-menu. This will take you to the Update Software scre
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/sys_conf/update_software}
+\includegraphics[width=\linewidth]{../media/pstricks_files/07_update_fla_software}
 \end{minipage}
 \\[\baselineskip]
 From this screen, select update. A confirmation screen will appear to prevent accidental updates.\newline
@@ -1189,7 +1193,7 @@ Or on the FLA Preview site.
 \paragraph{  }
 The FLA Preview site is a website that is generated by the FLA. To access it, first ensure it is powered on, and has an IP address. This can be confirmed by the title screen shown below.
 \begin{center}
-\includegraphics[width=0.5\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}\label{fig:fla_title_screen}
+\includegraphics[width=0.5\linewidth]{../media/pstricks_files/01_main_screen_can_bus_only}\label{fig:fla_title_screen}
 \end{center}
 On a computer connected to the same network, type the IP address into a web browser. The following page should appear.
 \begin{center}
@@ -1214,7 +1218,7 @@ Start at the Title Page and select scan to begin the scan. If the scan option is
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_gps}
 \end{minipage}
 \\[\baselineskip]\noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
 \begin{center}
@@ -1224,7 +1228,7 @@ The device will ask if the operator has sufficient permission to perform the sca
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/permission}
+\includegraphics[width=\linewidth]{../media/pstricks_files/12_proper_permission}
 \end{minipage}
 \\[\baselineskip]
 
@@ -1238,7 +1242,7 @@ of the components on each network.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/analyzing_55}
+\includegraphics[width=\linewidth]{../media/pstricks_files/13_scanning_network_components}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -1249,7 +1253,7 @@ The FLA will then begin the standards-based scan, collecting information such as
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/scan_25}
+\includegraphics[width=\linewidth]{../media/pstricks_files/14_scanning_network_count}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -1260,7 +1264,7 @@ The FLA will display the Component Id of the engine, as well as the first 15 cha
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/comp_id}
+\includegraphics[width=\linewidth]{../media/pstricks_files/15_ecm_identification}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -1271,7 +1275,7 @@ The FLA will attempt to detect a supported ECM to extract proprietary data.
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/check_ecm}
+\includegraphics[width=\linewidth]{../media/pstricks_files/16_ecm_specific_checking}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -1282,7 +1286,7 @@ If the ECM is supported, this screen will ask if the user wishes to collect non-
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/get_ecm_specific}
+\includegraphics[width=\linewidth]{../media/pstricks_files/16_ecm_specific_supported}
 \end{minipage}
 \\[\baselineskip]
 \noindent\begin{minipage}{0.45\textwidth}% adapt widths of minipages to your needs
@@ -1293,7 +1297,7 @@ If the ECM is not supported, please see chapter \ref{chap:oem_software} to extra
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/veh_scan/get_ecm_specific}
+\includegraphics[width=\linewidth]{../media/pstricks_files/16_ecm_specific_data}
 \end{minipage}
 
 \section{Supported ECMs}
@@ -1378,11 +1382,11 @@ If the operator is in an office, or at home, they can set the FLA up for home us
 	%\begin{center} 
 	%	\textbf{Correct:}\\[\baselineskip] 
 	%\end{center} 
-	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct} 
+	\includegraphics[width=\linewidth]{../media/fla_preview_screenshots/url_correct_2} 
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_1_128_ip}
 \end{minipage}
 \subsection{In-Field}
 \paragraph{  }
@@ -1396,7 +1400,7 @@ The first step in accessing the FLA Preview is to have the FLA in the correct mo
 \end{minipage}% 
 \hfill% 
 \begin{minipage}{0.45\textwidth} 
-	\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_both}
+	\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_10_42_ip}
 \end{minipage}
 \section{Using the FLA Preview}
 \paragraph{}
@@ -1590,7 +1594,7 @@ The FLA Title Screen does not allow the user to scan the vehicle
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_no_net}
+\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_no_connections}
 \end{minipage}\\
 Solution:\\
 \begin{itemize}
@@ -1625,7 +1629,7 @@ Solution:\\
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/main/title_no_net}
+\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_10_42_ip}
 \end{minipage}
 \begin{itemize}
 \item Ensure the FLA is on the same network as the computer used to access it. Depending on the configuration, if the computer is connected to a wireless network, try to plug into an Ethernet cable near the port the FLA is plugged into.
@@ -1640,7 +1644,7 @@ The IP line of the FLA Title screen says Ethernet Unplugged
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/no_ethernet/title_both}
+\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_ethernet_unplugged}
 \end{minipage}\\
 Solution:\\
 \begin{itemize}
@@ -1657,7 +1661,7 @@ The IP line of the FLA Title screen says Ethernet Unplugged
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/no_ethernet/title_both_finding_ip}
+\includegraphics[width=\linewidth]{../media/pstricks_files/01_main_screen_finding_ip}
 \end{minipage}\\
 Solution:\\
 \begin{itemize}
@@ -1682,7 +1686,7 @@ The FLA reaches this screen, and does not proceed to the Title screen for more t
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{../media/fla_screens/ethernet_and_others/boot/please_wait}
+\includegraphics[width=\linewidth]{../media/pstricks_files/00_startup_screen}
 \end{minipage}\\
 Solution:\\
 \begin{itemize}
