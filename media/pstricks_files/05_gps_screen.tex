@@ -1,0 +1,33 @@
+\documentclass[12pt]{standalone}
+
+\usepackage{bold-extra}
+
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+
+\usepackage{epsf}
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+
+%enable the use of colored fonts. 
+\let\oldtexttt\texttt% Store \texttt
+\renewcommand{\texttt}[2][black]{\textcolor{#1}{\ttfamily #2}}% \texttt[<color>]{<stuff>}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\psset{unit=1cm,arrowscale=2,linewidth=3pt,linecolor=blue,nodesep=3pt}
+\begin{pspicture}(-0.6,-0.4)(7.5,3.1)
+
+	\uput[ur](-0.6,-0.5){\epsfbox{ScreenBackground.eps}}
+	%\psgrid[gridcolor=lightgray]
+	\uput[ur](0,1.95){\Large \texttt[cyan]{\textbf{Current GPS Fix Data}}}
+  	\uput[ur](0,1.25) {\Large \texttt[cyan]{\textbf{~+36.0549,~~-95.8454}}}
+  	\uput[ur](0, .55) {\Large \texttt[cyan]{\textbf{19 Sep 2016 21:14CDT}}}
+  	\uput[ur](0,0)   {\Large \texttt[cyan]{\textbf{Scroll~~~~~~Set Time}}} %%Latex inserts 2 spaces behind a colon.
+  
+  
+\end{pspicture}
+
+\end{document}

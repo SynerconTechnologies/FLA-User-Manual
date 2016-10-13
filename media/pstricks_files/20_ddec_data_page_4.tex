@@ -1,0 +1,34 @@
+\documentclass[12pt]{standalone}
+
+\usepackage{bold-extra}
+
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+
+\usepackage{epsf}
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+
+%enable the use of colored fonts. 
+\let\oldtexttt\texttt% Store \texttt
+\renewcommand{\texttt}[2][black]{\textcolor{#1}{\ttfamily #2}}% \texttt[<color>]{<stuff>}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\psset{unit=1cm,arrowscale=2,linewidth=3pt,linecolor=blue,nodesep=3pt}
+\begin{pspicture}(-0.6,-0.4)(7.5,3.1)
+
+	\uput[ur](-0.6,-0.5){\epsfbox{ScreenBackground.eps}}
+	%\psgrid[gridcolor=lightgray]
+	\uput[ur](0,1.82){\Large \texttt[cyan]{\textbf{~Getting ECM Data...}}}
+  	\uput[ur](0,1.18) {\Large \texttt[cyan]{\textbf{Getting Data Page 4}}}
+  	\uput[ur](0,.65) {\Large \texttt[cyan]{\textbf{Trip Tables}}}
+  	\uput[ur](0,0)   {\Large \texttt[cyan]{\textbf{[****~~~~~~~~~~] XX\%}}} %%Latex inserts 2 spaces behind a colon.
+  
+%% if characters drop below the baseline, subtract 15 from the y coordinate on the /uput command.
+  
+\end{pspicture}
+
+\end{document}

@@ -247,3 +247,4 @@ quick_reference/*.pdf
 #Packaged Manuals
 FLA\ Manuals.tar.gz
 FLA\ Manuals.zip
+*.gz

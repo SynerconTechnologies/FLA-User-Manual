@@ -1,0 +1,33 @@
+\documentclass[12pt]{standalone}
+
+\usepackage{bold-extra}
+
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+
+\usepackage{epsf}
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+
+%enable the use of colored fonts. 
+\let\oldtexttt\texttt% Store \texttt
+\renewcommand{\texttt}[2][black]{\textcolor{#1}{\ttfamily #2}}% \texttt[<color>]{<stuff>}
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\psset{unit=1cm,arrowscale=2,linewidth=3pt,linecolor=blue,nodesep=3pt}
+\begin{pspicture}(-0.6,-0.4)(7.5,3.1)
+
+	\uput[ur](-0.6,-0.5){\epsfbox{ScreenBackground.eps}}
+	%\psgrid[gridcolor=lightgray]
+	\uput[ur](0,1.95){\Large \texttt[cyan]{\textbf{19 Oct 2016 18:29CDT}}}
+  	\uput[ur](0,1.17) {\Large \texttt[cyan]{\textbf{Ethernet~Unplugged}}}
+  	\uput[ur](0,.65) {\Large \texttt[cyan]{\textbf{No Vehicle Net~12.1V}}}
+  	\uput[ur](0,0)   {\Large \texttt[cyan]{\textbf{Scroll~~~~~GPS~~~}}} %%Latex inserts 2 spaces behind a colon.
+  
+  
+\end{pspicture}
+
+\end{document}
